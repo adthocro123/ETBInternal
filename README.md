@@ -11,7 +11,7 @@ This software is intended for educational purposes only. Using it in online mult
 
 ### Features
 
-*   **Player Cheats:**s
+*   **Player Cheats:**
     *   Infinite Stamina
     *   Infinite Sanity
 *   **Item Spawner:**
