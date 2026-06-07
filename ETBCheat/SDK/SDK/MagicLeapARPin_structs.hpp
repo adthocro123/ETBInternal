@@ -13,8 +13,7 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum MagicLeapARPin.EMagicLeapARPinType
 // NumValues: 0x0004
@@ -92,5 +91,4 @@ public:
 };
 DUMPER7_ASSERTS_FMagicLeapARPinObjectIdList;
 
-}
-
+SDK_NAMESPACE_END

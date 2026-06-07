@@ -14,8 +14,8 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_FireworkProjectile.BP_FireworkProjectile_C.ExecuteUbergraph_BP_FireworkProjectile
 // 0x0108 (0x0108 - 0x0000)
@@ -61,5 +61,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_FireworkProjectile_C_ExecuteUbergraph_BP_FireworkProjectile;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

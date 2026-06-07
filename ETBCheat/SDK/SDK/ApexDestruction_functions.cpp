@@ -14,8 +14,7 @@
 #include "ApexDestruction_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function ApexDestruction.DestructibleComponent.ApplyDamage
 // (Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
@@ -130,5 +129,5 @@ void UDestructibleComponent::SetDestructibleMesh(class UDestructibleMesh* NewMes
 	Func->FunctionFlags = Flgs;
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -14,8 +14,8 @@
 #include "FluidTerrainModes_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function ShallowWaterSimComponent.ShallowWaterSimComponent_C.ExecuteUbergraph_ShallowWaterSimComponent
 // 0x0028 (0x0028 - 0x0000)
@@ -268,5 +268,5 @@ public:
 };
 DUMPER7_ASSERTS_ShallowWaterSimComponent_C_PingPong_Velocity;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

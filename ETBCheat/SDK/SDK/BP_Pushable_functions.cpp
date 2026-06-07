@@ -14,8 +14,7 @@
 #include "BP_Pushable_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Pushable.BP_Pushable_C.ExecuteUbergraph_BP_Pushable
 // (Final, UbergraphFunction, HasDefaults)
@@ -191,5 +190,5 @@ void ABP_Pushable_C::OnRep_Index()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

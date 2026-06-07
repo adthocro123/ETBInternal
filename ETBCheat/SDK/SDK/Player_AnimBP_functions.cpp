@@ -14,8 +14,7 @@
 #include "Player_AnimBP_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function Player_AnimBP.Player_AnimBP_C.ExecuteUbergraph_Player_AnimBP
 // (Final, UbergraphFunction)
@@ -601,5 +600,5 @@ void UPlayer_AnimBP_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 		*AnimGraph_0 = std::move(Parms.AnimGraph_0);
 }
 
-}
 
+SDK_NAMESPACE_END

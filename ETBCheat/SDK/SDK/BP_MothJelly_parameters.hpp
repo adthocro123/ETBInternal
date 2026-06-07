@@ -11,12 +11,12 @@
 #include "Basic.hpp"
 
 #include "Backrooms_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_MothJelly.BP_MothJelly_C.ExecuteUbergraph_BP_MothJelly
 // 0x0200 (0x0200 - 0x0000)
@@ -140,5 +140,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_MothJelly_C_ToggleEvent;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

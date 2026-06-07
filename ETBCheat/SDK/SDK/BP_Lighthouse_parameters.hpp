@@ -14,8 +14,8 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_Lighthouse.BP_Lighthouse_C.ExecuteUbergraph_BP_Lighthouse
 // 0x00E0 (0x00E0 - 0x0000)
@@ -88,5 +88,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_Lighthouse_C_Play_Lighthouse;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

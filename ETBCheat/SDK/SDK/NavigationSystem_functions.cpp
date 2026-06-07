@@ -14,8 +14,7 @@
 #include "NavigationSystem_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function NavigationSystem.NavigationPath.EnableDebugDrawing
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
@@ -1107,5 +1106,5 @@ bool ARecastNavMesh::K2_ReplaceAreaInTileBounds(const struct FBox& Bounds, TSubc
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

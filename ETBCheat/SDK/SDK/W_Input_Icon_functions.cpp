@@ -14,8 +14,7 @@
 #include "W_Input_Icon_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function W_Input_Icon.W_Input_Icon_C.ExecuteUbergraph_W_Input_Icon
 // (Final, UbergraphFunction, HasDefaults)
@@ -118,5 +117,37 @@ void UW_Input_Icon_C::OnLoaded_ED0A6EA547ADA5E1277085BE13103EF7(class UObject* L
 	UObject::ProcessEvent(Func, &Parms);
 }
 
+
+// Function W_Input_Icon.W_Input_Icon_C.IsDefaultKey
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EFancyInputDevice                       InputDevice                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             InputActionName                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FText&                      InputActionDefaultKey                                  (BlueprintVisible, BlueprintReadOnly, Parm)
+// bool*                                   IsDefaultKey_0                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class FText*                            KeyTextToDisplay                                       (Parm, OutParm)
+
+void UW_Input_Icon_C::IsDefaultKey(EFancyInputDevice InputDevice, class FName InputActionName, const class FText& InputActionDefaultKey, bool* IsDefaultKey_0, class FText* KeyTextToDisplay)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("W_Input_Icon_C", "IsDefaultKey");
+
+	Params::W_Input_Icon_C_IsDefaultKey Parms{};
+
+	Parms.InputDevice = InputDevice;
+	Parms.InputActionName = InputActionName;
+	Parms.InputActionDefaultKey = std::move(InputActionDefaultKey);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (IsDefaultKey_0 != nullptr)
+		*IsDefaultKey_0 = Parms.IsDefaultKey_0;
+
+	if (KeyTextToDisplay != nullptr)
+		*KeyTextToDisplay = std::move(Parms.KeyTextToDisplay);
 }
 
+
+SDK_NAMESPACE_END

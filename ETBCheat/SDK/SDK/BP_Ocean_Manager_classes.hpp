@@ -14,8 +14,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Ocean_Manager.BP_Ocean_Manager_C
 // 0x0098 (0x02B8 - 0x0220)
@@ -84,5 +83,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_Ocean_Manager_C;
 
-}
-
+SDK_NAMESPACE_END

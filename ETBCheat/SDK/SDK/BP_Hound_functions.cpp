@@ -14,8 +14,7 @@
 #include "BP_Hound_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Hound.BP_Hound_C.ExecuteUbergraph_BP_Hound
 // (Final, UbergraphFunction, HasDefaults)
@@ -693,5 +692,5 @@ void ABP_Hound_C::OnRep_CanHowl()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

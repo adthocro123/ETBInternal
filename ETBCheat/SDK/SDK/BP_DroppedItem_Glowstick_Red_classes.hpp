@@ -13,8 +13,7 @@
 #include "BP_DroppedItem_Glowstick_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_DroppedItem_Glowstick_Red.BP_DroppedItem_Glowstick_Red_C
 // 0x0000 (0x02B8 - 0x02B8)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_DroppedItem_Glowstick_Red_C;
 
-}
-
+SDK_NAMESPACE_END

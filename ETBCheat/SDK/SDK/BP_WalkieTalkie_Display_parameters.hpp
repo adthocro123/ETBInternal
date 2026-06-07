@@ -13,8 +13,8 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_WalkieTalkie_Display.BP_WalkieTalkie_Display_C.Construct Core
 // 0x0020 (0x0020 - 0x0000)
@@ -120,5 +120,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_WalkieTalkie_Display_C_SetDisplayValue;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

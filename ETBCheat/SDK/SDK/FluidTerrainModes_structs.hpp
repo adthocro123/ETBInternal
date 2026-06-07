@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedEnum FluidTerrainModes.FluidTerrainModes
 // NumValues: 0x0005
@@ -25,5 +24,4 @@ enum class EFluidTerrainModes : uint8
 	FluidTerrainModes_MAX                    = 4,
 };
 
-}
-
+SDK_NAMESPACE_END

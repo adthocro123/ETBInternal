@@ -14,8 +14,7 @@
 #include "MP_PS_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function MP_PS.MP_PS_C.ExecuteUbergraph_MP_PS
 // (Final, UbergraphFunction, HasDefaults)
@@ -54,26 +53,6 @@ void AMP_PS_C::InvSwap(int32 Index1, int32 Index2)
 
 	Parms.Index1 = Index1;
 	Parms.Index2 = Index2;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function MP_PS.MP_PS_C.UpdateIsTalking
-// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsTalking_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void AMP_PS_C::UpdateIsTalking(bool IsTalking_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MP_PS_C", "UpdateIsTalking");
-
-	Params::MP_PS_C_UpdateIsTalking Parms{};
-
-	Parms.IsTalking_0 = IsTalking_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -490,5 +469,5 @@ void AMP_PS_C::OnRep_Level()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

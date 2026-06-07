@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum AudioMixer.EMusicalNoteName
 // NumValues: 0x000D
@@ -182,5 +181,4 @@ public:
 };
 DUMPER7_ASSERTS_FSubmixEffectReverbSettings;
 
-}
-
+SDK_NAMESPACE_END

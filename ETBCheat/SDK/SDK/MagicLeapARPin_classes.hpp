@@ -16,8 +16,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class MagicLeapARPin.MagicLeapARPinComponent
 // 0x01B0 (0x03B0 - 0x0200)
@@ -249,5 +248,4 @@ public:
 };
 DUMPER7_ASSERTS_UMagicLeapARPinContentBindings;
 
-}
-
+SDK_NAMESPACE_END

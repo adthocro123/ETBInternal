@@ -13,8 +13,7 @@
 #include "MeshDescription_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class StaticMeshDescription.StaticMeshDescription
 // 0x0000 (0x0390 - 0x0390)
@@ -43,5 +42,4 @@ public:
 };
 DUMPER7_ASSERTS_UStaticMeshDescription;
 
-}
-
+SDK_NAMESPACE_END

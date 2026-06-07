@@ -10,14 +10,13 @@
 
 #include "Basic.hpp"
 
+#include "FluidTerrainModes_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "FluidTerrainModes_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass ShallowWaterSimComponent.ShallowWaterSimComponent_C
 // 0x00C0 (0x0170 - 0x00B0)
@@ -82,5 +81,4 @@ public:
 };
 DUMPER7_ASSERTS_UShallowWaterSimComponent_C;
 
-}
-
+SDK_NAMESPACE_END

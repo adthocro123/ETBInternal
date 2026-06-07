@@ -13,8 +13,7 @@
 #include "AIModule_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass PlayerEQSQuery.PlayerEQSQuery_C
 // 0x0000 (0x0030 - 0x0030)
@@ -39,5 +38,4 @@ public:
 };
 DUMPER7_ASSERTS_PlayerEQSQuery_0__UPlayerEQSQuery_C;
 
-}
-
+SDK_NAMESPACE_END

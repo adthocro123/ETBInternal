@@ -14,8 +14,8 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_Item_BugSpray.BP_Item_BugSpray_C.ExecuteUbergraph_BP_Item_BugSpray
 // 0x02B0 (0x02B0 - 0x0000)
@@ -154,5 +154,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_Item_BugSpray_C_OnNotifyEnd_0696912D47A3DC8FA5836F835E2CF98A;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

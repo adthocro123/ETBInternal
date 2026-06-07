@@ -15,8 +15,7 @@
 #include "AnimGraphRuntime_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass AnimBP_Ragdoll.AnimBP_Ragdoll_C
 // 0x0100 (0x03C0 - 0x02C0)
@@ -49,5 +48,4 @@ public:
 };
 DUMPER7_ASSERTS_UAnimBP_Ragdoll_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "CinematicCamera_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
-#include "CinematicCamera_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum DatasmithContent.EDatasmithAreaLightActorType
 // NumValues: 0x0004
@@ -334,5 +333,4 @@ public:
 };
 DUMPER7_ASSERTS_FDatasmithMeshBuildSettingsTemplate;
 
-}
-
+SDK_NAMESPACE_END

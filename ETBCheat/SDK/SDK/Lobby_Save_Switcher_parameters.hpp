@@ -13,8 +13,8 @@
 #include "SlateCore_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function Lobby_Save_Switcher.Lobby_Save_Switcher_C.ExecuteUbergraph_Lobby_Save_Switcher
 // 0x0008 (0x0008 - 0x0000)
@@ -70,9 +70,9 @@ public:
 };
 DUMPER7_ASSERTS_Lobby_Save_Switcher_C_Set_SelectedOption;
 
-// Function Lobby_Save_Switcher.Lobby_Save_Switcher_C.Setup
+// Function Lobby_Save_Switcher.Lobby_Save_Switcher_C.SetUp
 // 0x0070 (0x0070 - 0x0000)
-struct Lobby_Save_Switcher_C_Setup final
+struct Lobby_Save_Switcher_C_SetUp final
 {
 public:
 	struct FSlateFontInfo                         K2Node_MakeStruct_SlateFontInfo;                   // 0x0000(0x0058)(HasGetValueTypeHash)
@@ -80,7 +80,7 @@ public:
 	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Array_Get_Item;                           // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Lobby_Save_Switcher_C_Setup;
+DUMPER7_ASSERTS_Lobby_Save_Switcher_C_SetUp;
 
 // Function Lobby_Save_Switcher.Lobby_Save_Switcher_C.Set_OptionButtons_Visibility
 // 0x0001 (0x0001 - 0x0000)
@@ -92,7 +92,7 @@ public:
 DUMPER7_ASSERTS_Lobby_Save_Switcher_C_Set_OptionButtons_Visibility;
 
 // Function Lobby_Save_Switcher.Lobby_Save_Switcher_C.Update Options
-// 0x0120 (0x0120 - 0x0000)
+// 0x0128 (0x0128 - 0x0000)
 struct Lobby_Save_Switcher_C_Update_Options final
 {
 public:
@@ -125,10 +125,11 @@ public:
 	uint8                                         Pad_E9[0x7];                                       // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x00F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x0100(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_DoesSaveGameExist_ReturnValue;            // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_111[0x3];                                      // 0x0111(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFancySaveSubsystem*                    CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_DoesSaveGameExist_ReturnValue;            // 0x011C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_11D[0x3];                                      // 0x011D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue_1;                  // 0x0120(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_Lobby_Save_Switcher_C_Update_Options;
 
@@ -151,5 +152,5 @@ public:
 };
 DUMPER7_ASSERTS_Lobby_Save_Switcher_C_TitleCase;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

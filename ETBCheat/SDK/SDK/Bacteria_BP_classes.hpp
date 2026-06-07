@@ -15,8 +15,7 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Bacteria_BP.Bacteria_BP_C
 // 0x0080 (0x0540 - 0x04C0)
@@ -86,5 +85,4 @@ public:
 };
 DUMPER7_ASSERTS_ABacteria_BP_C;
 
-}
-
+SDK_NAMESPACE_END

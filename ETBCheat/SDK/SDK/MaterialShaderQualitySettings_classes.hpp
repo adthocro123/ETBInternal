@@ -14,8 +14,7 @@
 #include "MaterialShaderQualitySettings_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class MaterialShaderQualitySettings.MaterialShaderQualitySettings
 // 0x0050 (0x0078 - 0x0028)
@@ -64,5 +63,4 @@ public:
 };
 DUMPER7_ASSERTS_UShaderPlatformQualitySettings;
 
-}
-
+SDK_NAMESPACE_END

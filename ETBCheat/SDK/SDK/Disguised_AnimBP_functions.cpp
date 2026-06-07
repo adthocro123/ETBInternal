@@ -14,8 +14,7 @@
 #include "Disguised_AnimBP_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function Disguised_AnimBP.Disguised_AnimBP_C.ExecuteUbergraph_Disguised_AnimBP
 // (Final, UbergraphFunction)
@@ -139,5 +138,5 @@ void UDisguised_AnimBP_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 		*AnimGraph_0 = std::move(Parms.AnimGraph_0);
 }
 
-}
 
+SDK_NAMESPACE_END

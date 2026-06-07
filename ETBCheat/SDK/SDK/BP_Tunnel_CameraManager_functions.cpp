@@ -14,8 +14,7 @@
 #include "BP_Tunnel_CameraManager_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Tunnel_CameraManager.BP_Tunnel_CameraManager_C.ExecuteUbergraph_BP_Tunnel_CameraManager
 // (Final, UbergraphFunction, HasDefaults)
@@ -176,5 +175,5 @@ void ABP_Tunnel_CameraManager_C::CheckTargets(TArray<class AActor*>& Targets, cl
 		*Completed = Parms.Completed;
 }
 
-}
 
+SDK_NAMESPACE_END

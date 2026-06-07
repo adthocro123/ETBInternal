@@ -14,8 +14,8 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function Swim_AnimBP.Swim_AnimBP_C.ExecuteUbergraph_Swim_AnimBP
 // 0x0038 (0x0038 - 0x0000)
@@ -96,5 +96,5 @@ public:
 };
 DUMPER7_ASSERTS_Swim_AnimBP_C_AnimGraph;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

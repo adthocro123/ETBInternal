@@ -15,8 +15,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class GameplayTasks.GameplayTask
 // 0x0040 (0x0068 - 0x0028)
@@ -251,5 +250,4 @@ public:
 };
 DUMPER7_ASSERTS_UGameplayTasksComponent;
 
-}
-
+SDK_NAMESPACE_END

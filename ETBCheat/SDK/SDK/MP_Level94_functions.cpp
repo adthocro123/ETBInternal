@@ -14,8 +14,7 @@
 #include "MP_Level94_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function MP_Level94.MP_Level94_C.ExecuteUbergraph_MP_Level94
 // (Final, UbergraphFunction, HasDefaults)
@@ -171,5 +170,5 @@ class AActor* AMP_Level94_C::ChoosePlayerStart(class AController* Player)
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

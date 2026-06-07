@@ -14,8 +14,7 @@
 #include "BP_Item_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_WalkieTalkie.BP_WalkieTalkie_C
 // 0x0048 (0x02A0 - 0x0258)
@@ -73,5 +72,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_WalkieTalkie_C;
 
-}
-
+SDK_NAMESPACE_END

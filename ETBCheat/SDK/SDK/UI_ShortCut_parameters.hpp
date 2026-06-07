@@ -14,8 +14,8 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function UI_ShortCut.UI_ShortCut_C.ExecuteUbergraph_UI_ShortCut
 // 0x0110 (0x0110 - 0x0000)
@@ -81,5 +81,5 @@ public:
 };
 DUMPER7_ASSERTS_UI_ShortCut_C_CustomNavigation;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

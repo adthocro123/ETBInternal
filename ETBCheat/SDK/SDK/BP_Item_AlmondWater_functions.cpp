@@ -14,8 +14,7 @@
 #include "BP_Item_AlmondWater_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Item_AlmondWater.BP_Item_AlmondWater_C.ExecuteUbergraph_BP_Item_AlmondWater
 // (Final, UbergraphFunction, HasDefaults)
@@ -274,5 +273,5 @@ void ABP_Item_AlmondWater_C::SetMaterial(bool EnabledFOV_0)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

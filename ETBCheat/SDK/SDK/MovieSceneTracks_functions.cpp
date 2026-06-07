@@ -14,8 +14,7 @@
 #include "MovieSceneTracks_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function MovieSceneTracks.MovieScene3DConstraintSection.SetConstraintBindingID
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
@@ -754,5 +753,5 @@ void UMovieSceneParameterSection::GetParameterNames(TSet<class FName>* Parameter
 		*ParameterNames = std::move(Parms.ParameterNames);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -11,19 +11,18 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedEnum E_MainMenu.E_MainMenu
-// NumValues: 0x0005
+// NumValues: 0x0006
 enum class E_MainMenu : uint8
 {
 	NewEnumerator0                           = 0,
 	NewEnumerator7                           = 1,
 	NewEnumerator3                           = 2,
 	NewEnumerator1                           = 3,
-	E_MAX                                    = 4,
+	NewEnumerator8                           = 4,
+	E_MAX                                    = 5,
 };
 
-}
-
+SDK_NAMESPACE_END

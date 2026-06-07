@@ -15,8 +15,8 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function OnlineSubsystemUtils.AchievementWriteCallbackProxy.WriteAchievementProgress
 // 0x0028 (0x0028 - 0x0000)
@@ -267,17 +267,6 @@ public:
 };
 DUMPER7_ASSERTS_InAppPurchaseCallbackProxy2_CreateProxyObjectForInAppPurchaseUnprocessedPurchases;
 
-// Function OnlineSubsystemUtils.LeaderboardQueryCallbackProxy.CreateProxyObjectForIntQuery
-// 0x0018 (0x0018 - 0x0000)
-struct LeaderboardQueryCallbackProxy_CreateProxyObjectForIntQuery final
-{
-public:
-	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   StatName;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ULeaderboardQueryCallbackProxy*         ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_LeaderboardQueryCallbackProxy_CreateProxyObjectForIntQuery;
-
 // Function OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy.CreateProxyObjectForInAppPurchaseQuery
 // 0x0020 (0x0020 - 0x0000)
 struct InAppPurchaseQueryCallbackProxy_CreateProxyObjectForInAppPurchaseQuery final
@@ -358,6 +347,17 @@ public:
 	class ULeaderboardFlushCallbackProxy*         ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_LeaderboardFlushCallbackProxy_CreateProxyObjectForFlush;
+
+// Function OnlineSubsystemUtils.LeaderboardQueryCallbackProxy.CreateProxyObjectForIntQuery
+// 0x0018 (0x0018 - 0x0000)
+struct LeaderboardQueryCallbackProxy_CreateProxyObjectForIntQuery final
+{
+public:
+	class APlayerController*                      PlayerController;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   StatName;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ULeaderboardQueryCallbackProxy*         ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_LeaderboardQueryCallbackProxy_CreateProxyObjectForIntQuery;
 
 // Function OnlineSubsystemUtils.LogoutCallbackProxy.Logout
 // 0x0018 (0x0018 - 0x0000)
@@ -578,5 +578,5 @@ public:
 };
 DUMPER7_ASSERTS_VoipListenerSynthComponent_IsIdling;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

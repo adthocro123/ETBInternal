@@ -14,8 +14,7 @@
 #include "MagicLeapPrivileges_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class MagicLeapPrivileges.MagicLeapPrivilegesFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -42,5 +41,4 @@ public:
 };
 DUMPER7_ASSERTS_UMagicLeapPrivilegesFunctionLibrary;
 
-}
-
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "BP_MothJelly_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_MothJelly.BP_MothJelly_C.ExecuteUbergraph_BP_MothJelly
 // (Final, UbergraphFunction, HasDefaults)
@@ -246,5 +245,5 @@ void ABP_MothJelly_C::UseItem()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

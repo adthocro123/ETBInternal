@@ -14,8 +14,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_FallDamage.BP_FallDamage_C
 // 0x0008 (0x00B8 - 0x00B0)
@@ -45,5 +44,4 @@ public:
 };
 DUMPER7_ASSERTS_UBP_FallDamage_C;
 
-}
-
+SDK_NAMESPACE_END

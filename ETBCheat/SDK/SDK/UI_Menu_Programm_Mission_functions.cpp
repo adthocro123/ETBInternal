@@ -14,8 +14,7 @@
 #include "UI_Menu_Programm_Mission_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function UI_Menu_Programm_Mission.UI_Menu_Programm_Mission_C.ExecuteUbergraph_UI_Menu_Programm_Mission
 // (Final, UbergraphFunction, HasDefaults)
@@ -232,5 +231,5 @@ void UUI_Menu_Programm_Mission_C::Get_Text_Color(struct FSlateColor* SlateColor)
 		*SlateColor = std::move(Parms.SlateColor);
 }
 
-}
 
+SDK_NAMESPACE_END

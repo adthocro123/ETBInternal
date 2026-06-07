@@ -14,8 +14,7 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BTTask_PlaySound.BTTask_PlaySound_C
 // 0x0008 (0x00B0 - 0x00A8)
@@ -45,5 +44,4 @@ public:
 };
 DUMPER7_ASSERTS_UBTTask_PlaySound_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "UI_Menu_Evaluation_XpBar_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function UI_Menu_Evaluation_XpBar.UI_Menu_Evaluation_XpBar_C.ExecuteUbergraph_UI_Menu_Evaluation_XpBar
 // (Final, UbergraphFunction, HasDefaults)
@@ -203,5 +202,5 @@ void UUI_Menu_Evaluation_XpBar_C::PlayGainXPSound()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

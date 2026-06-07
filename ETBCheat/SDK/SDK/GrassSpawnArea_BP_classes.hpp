@@ -15,8 +15,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GrassSpawnArea_BP.GrassSpawnArea_BP_C
 // 0x0060 (0x0280 - 0x0220)
@@ -26,7 +25,7 @@ public:
 	class UInstancedStaticMeshComponent*          HeightVisPillars;                                  // 0x0220(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UProceduralMeshComponent*               ProceduralMesh;                                    // 0x0228(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0230(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FFoliageToSpawnInArea>          foliageToSpawn;                                    // 0x0238(0x0010)(Edit, BlueprintVisible)
+	TArray<struct FFoliageToSpawnInArea>          FoliageToSpawn;                                    // 0x0238(0x0010)(Edit, BlueprintVisible)
 	float                                         areaHeight;                                        // 0x0248(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_24C[0x4];                                      // 0x024C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FVector>                        V;                                                 // 0x0250(0x0010)(Edit, BlueprintVisible)
@@ -52,5 +51,4 @@ public:
 };
 DUMPER7_ASSERTS_AGrassSpawnArea_BP_C;
 
-}
-
+SDK_NAMESPACE_END

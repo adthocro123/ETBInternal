@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct MagicLeapAudio.MagicLeapAudioDummyStruct
 // 0x0001 (0x0001 - 0x0000)
@@ -23,5 +22,4 @@ public:
 };
 DUMPER7_ASSERTS_FMagicLeapAudioDummyStruct;
 
-}
-
+SDK_NAMESPACE_END

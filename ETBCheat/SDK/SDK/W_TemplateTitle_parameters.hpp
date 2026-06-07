@@ -13,8 +13,8 @@
 #include "SlateCore_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function W_TemplateTitle.W_TemplateTitle_C.ExecuteUbergraph_W_TemplateTitle
 // 0x0018 (0x0018 - 0x0000)
@@ -50,5 +50,5 @@ public:
 };
 DUMPER7_ASSERTS_W_TemplateTitle_C_ChangeTitleColor;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

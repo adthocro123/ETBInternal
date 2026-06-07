@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum PhysicsCore.EBodyCollisionResponse
 // NumValues: 0x0003
@@ -190,5 +189,4 @@ public:
 };
 DUMPER7_ASSERTS_FBodyInstanceCore;
 
-}
-
+SDK_NAMESPACE_END

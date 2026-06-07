@@ -15,27 +15,27 @@
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass UI_Menu_Lobby_Switcher.UI_Menu_Lobby_Switcher_C
-// 0x0058 (0x02B8 - 0x0260)
+// 0x0058 (0x02C8 - 0x0270)
 class UUI_Menu_Lobby_Switcher_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0260(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 Background;                                        // 0x0268(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UUI_Menu_Lobby_Switcher_Button_C*       Btn_Left;                                          // 0x0270(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UUI_Menu_Lobby_Switcher_Button_C*       Btn_Right;                                         // 0x0278(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Txt_Name;                                          // 0x0280(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<class FText>                           ModeNames;                                         // 0x0288(0x0010)(Edit, BlueprintVisible)
-	int32                                         CurrentModeIndex;                                  // 0x0298(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29C[0x4];                                      // 0x029C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(int32 SelectedOption)> OnSwitched;                                 // 0x02A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          HideDifficulty;                                    // 0x02B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0270(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 Background;                                        // 0x0278(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UUI_Menu_Lobby_Switcher_Button_C*       Btn_Left;                                          // 0x0280(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UUI_Menu_Lobby_Switcher_Button_C*       Btn_Right;                                         // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Txt_Name;                                          // 0x0290(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<class FText>                           ModeNames;                                         // 0x0298(0x0010)(Edit, BlueprintVisible)
+	int32                                         CurrentModeIndex;                                  // 0x02A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2AC[0x4];                                      // 0x02AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(int32 SelectedOption)> OnSwitched;                                 // 0x02B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	bool                                          HideDifficulty;                                    // 0x02C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_UI_Menu_Lobby_Switcher(int32 EntryPoint);
+	void ManualSetCurrentIndex(int32 CurrentModeIndex_0);
 	void ToggleEnabled(bool IsEnabled);
 	void UpdateButtonVisibilityOnly();
 	void ManualRight();
@@ -44,9 +44,9 @@ public:
 	void ToggleHover(bool IsHovered_0);
 	void PreConstruct(bool IsDesignTime);
 	void Construct();
-	void UpdateButtons();
 	void BndEvt__UI_Menu_Lobby_Switcher_Btn_Right_K2Node_ComponentBoundEvent_1_OnClick__DelegateSignature();
 	void BndEvt__UI_Menu_Lobby_Switcher_Btn_Left_K2Node_ComponentBoundEvent_0_OnClick__DelegateSignature();
+	void UpdateButtons();
 	void GetCurrentMode(class FText* ModeName);
 	struct FEventReply OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
 
@@ -66,5 +66,4 @@ public:
 };
 DUMPER7_ASSERTS_UUI_Menu_Lobby_Switcher_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -13,8 +13,7 @@
 #include "AdvancedSessions_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct S_ChatMessage.S_ChatMessage
 // 0x0048 (0x0048 - 0x0000)
@@ -27,5 +26,4 @@ public:
 };
 DUMPER7_ASSERTS_FS_ChatMessage;
 
-}
-
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "SunPosition_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function SunPosition.SunPositionFunctionLibrary.GetSunPosition
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
@@ -63,5 +62,5 @@ void USunPositionFunctionLibrary::GetSunPosition(float Latitude, float Longitude
 		*SunPositionData = std::move(Parms.SunPositionData);
 }
 
-}
 
+SDK_NAMESPACE_END

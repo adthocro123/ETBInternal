@@ -14,8 +14,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Ambience_Manager.BP_Ambience_Manager_C
 // 0x0020 (0x0240 - 0x0220)
@@ -49,5 +48,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_Ambience_Manager_C;
 
-}
-
+SDK_NAMESPACE_END

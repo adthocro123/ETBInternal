@@ -16,8 +16,7 @@
 #include "DeveloperSettings_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class PhysicsCore.BodySetupCore
 // 0x0020 (0x0048 - 0x0028)
@@ -185,5 +184,4 @@ public:
 };
 DUMPER7_ASSERTS_UPhysicsSettingsCore;
 
-}
-
+SDK_NAMESPACE_END

@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_Photo_Image.BP_Photo_Image_C.ExecuteUbergraph_BP_Photo_Image
 // 0x0028 (0x0028 - 0x0000)
@@ -76,5 +76,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_Photo_Image_C_UserConstructionScript;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

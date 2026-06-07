@@ -14,8 +14,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class NiagaraAnimNotifies.AnimNotify_PlayNiagaraEffect
 // 0x0058 (0x0090 - 0x0038)
@@ -109,5 +108,4 @@ public:
 };
 DUMPER7_ASSERTS_UAnimNotifyState_TimedNiagaraEffectAdvanced;
 
-}
-
+SDK_NAMESPACE_END

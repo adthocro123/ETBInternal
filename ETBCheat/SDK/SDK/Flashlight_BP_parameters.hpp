@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function Flashlight_BP.Flashlight_BP_C.ExecuteUbergraph_Flashlight_BP
 // 0x0050 (0x0050 - 0x0000)
@@ -43,5 +43,5 @@ public:
 };
 DUMPER7_ASSERTS_Flashlight_BP_C_ExecuteUbergraph_Flashlight_BP;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

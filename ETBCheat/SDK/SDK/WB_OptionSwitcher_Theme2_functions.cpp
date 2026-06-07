@@ -14,11 +14,10 @@
 #include "WB_OptionSwitcher_Theme2_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WB_OptionSwitcher_Theme2.WB_OptionSwitcher_Theme2_C.ExecuteUbergraph_WB_OptionSwitcher_Theme2
-// (Final, UbergraphFunction, HasDefaults)
+// (Final, UbergraphFunction)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -183,8 +182,9 @@ void UWB_OptionSwitcher_Theme2_C::Switch_Option(bool Decrease_)
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const class FText&                      SelectedOption_0                                       (BlueprintVisible, BlueprintReadOnly, Parm)
+// int32                                   OptionIndex                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWB_OptionSwitcher_Theme2_C::Set_SelectedOption(const class FText& SelectedOption_0)
+void UWB_OptionSwitcher_Theme2_C::Set_SelectedOption(const class FText& SelectedOption_0, int32 OptionIndex)
 {
 	static class UFunction* Func = nullptr;
 
@@ -194,20 +194,21 @@ void UWB_OptionSwitcher_Theme2_C::Set_SelectedOption(const class FText& Selected
 	Params::WB_OptionSwitcher_Theme2_C_Set_SelectedOption Parms{};
 
 	Parms.SelectedOption_0 = std::move(SelectedOption_0);
+	Parms.OptionIndex = OptionIndex;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WB_OptionSwitcher_Theme2.WB_OptionSwitcher_Theme2_C.Setup
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function WB_OptionSwitcher_Theme2.WB_OptionSwitcher_Theme2_C.SetUp
+// (Public, BlueprintCallable, BlueprintEvent)
 
-void UWB_OptionSwitcher_Theme2_C::Setup()
+void UWB_OptionSwitcher_Theme2_C::SetUp()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WB_OptionSwitcher_Theme2_C", "Setup");
+		Func = Class->GetFunction("WB_OptionSwitcher_Theme2_C", "SetUp");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -237,5 +238,5 @@ struct FEventReply UWB_OptionSwitcher_Theme2_C::OnKeyDown(const struct FGeometry
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

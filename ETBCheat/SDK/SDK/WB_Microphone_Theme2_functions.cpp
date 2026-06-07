@@ -14,8 +14,7 @@
 #include "WB_Microphone_Theme2_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WB_Microphone_Theme2.WB_Microphone_Theme2_C.ExecuteUbergraph_WB_Microphone_Theme2
 // (Final, UbergraphFunction)
@@ -189,5 +188,5 @@ struct FEventReply UWB_Microphone_Theme2_C::OnPreviewKeyDown(const struct FGeome
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

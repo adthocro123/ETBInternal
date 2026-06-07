@@ -13,8 +13,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class CustomMeshComponent.CustomMeshComponent
 // 0x0010 (0x0490 - 0x0480)
@@ -44,5 +43,4 @@ public:
 };
 DUMPER7_ASSERTS_UCustomMeshComponent;
 
-}
-
+SDK_NAMESPACE_END

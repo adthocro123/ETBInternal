@@ -13,8 +13,7 @@
 #include "S_WorldCommon_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct S_LevelStats.S_LevelStats
 // 0x0038 (0x0038 - 0x0000)
@@ -31,5 +30,4 @@ public:
 };
 DUMPER7_ASSERTS_FS_LevelStats;
 
-}
-
+SDK_NAMESPACE_END

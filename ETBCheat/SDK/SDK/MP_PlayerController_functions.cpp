@@ -14,8 +14,7 @@
 #include "MP_PlayerController_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function MP_PlayerController.MP_PlayerController_C.ExecuteUbergraph_MP_PlayerController
 // (Final, UbergraphFunction, HasDefaults)
@@ -37,31 +36,57 @@ void AMP_PlayerController_C::ExecuteUbergraph_MP_PlayerController(int32 EntryPoi
 }
 
 
-// Function MP_PlayerController.MP_PlayerController_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// Function MP_PlayerController.MP_PlayerController_C.HandleHostConnectionLoss
+// (Net, NetReliable, NetClient, BlueprintCallable, BlueprintEvent)
 
-void AMP_PlayerController_C::ReceiveBeginPlay()
+void AMP_PlayerController_C::HandleHostConnectionLoss()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MP_PlayerController_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("MP_PlayerController_C", "HandleHostConnectionLoss");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function MP_PlayerController.MP_PlayerController_C.ClientHUDInit
-// (BlueprintCosmetic, Event, Protected, BlueprintEvent)
+// Function MP_PlayerController.MP_PlayerController_C.ResetInputModeToDefault
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class UWidget*                          PreviousFocusedWidget                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AMP_PlayerController_C::ClientHUDInit()
+void AMP_PlayerController_C::ResetInputModeToDefault(class UWidget* PreviousFocusedWidget)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MP_PlayerController_C", "ClientHUDInit");
+		Func = Class->GetFunction("MP_PlayerController_C", "ResetInputModeToDefault");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::MP_PlayerController_C_ResetInputModeToDefault Parms{};
+
+	Parms.PreviousFocusedWidget = PreviousFocusedWidget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function MP_PlayerController.MP_PlayerController_C.ShowNonModalMessage
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const class FText&                      Message                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void AMP_PlayerController_C::ShowNonModalMessage(const class FText& Message)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MP_PlayerController_C", "ShowNonModalMessage");
+
+	Params::MP_PlayerController_C_ShowNonModalMessage Parms{};
+
+	Parms.Message = std::move(Message);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -87,6 +112,32 @@ void AMP_PlayerController_C::OC_CompleteMission(const struct FMissionStructure& 
 }
 
 
+// Function MP_PlayerController.MP_PlayerController_C.Client_RecieveVoiceData
+// (Net, NetReliable, HasOutParams, NetClient, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ABPCharacter_Demo_C*              Player_0                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TArray<uint8>&                    Voice                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// bool                                    bUseRadio                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const struct FBPUniqueNetId&            Sender                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void AMP_PlayerController_C::Client_RecieveVoiceData(class ABPCharacter_Demo_C* Player_0, const TArray<uint8>& Voice, bool bUseRadio, const struct FBPUniqueNetId& Sender)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MP_PlayerController_C", "Client_RecieveVoiceData");
+
+	Params::MP_PlayerController_C_Client_RecieveVoiceData Parms{};
+
+	Parms.Player_0 = Player_0;
+	Parms.Voice = std::move(Voice);
+	Parms.bUseRadio = bUseRadio;
+	Parms.Sender = std::move(Sender);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function MP_PlayerController.MP_PlayerController_C.CaveHint
 // (Net, NetReliable, NetClient, BlueprintCallable, BlueprintEvent)
 
@@ -98,6 +149,32 @@ void AMP_PlayerController_C::CaveHint()
 		Func = Class->GetFunction("MP_PlayerController_C", "CaveHint");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MP_PlayerController.MP_PlayerController_C.SRV_SendVoiceData
+// (Net, NetReliable, NetServer, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const TArray<uint8>&                    CompressedVoiceData                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// bool                                    bUseRadio                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    IsUnderwater                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const struct FBPUniqueNetId&            Sender                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void AMP_PlayerController_C::SRV_SendVoiceData(const TArray<uint8>& CompressedVoiceData, bool bUseRadio, bool IsUnderwater, const struct FBPUniqueNetId& Sender)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MP_PlayerController_C", "SRV_SendVoiceData");
+
+	Params::MP_PlayerController_C_SRV_SendVoiceData Parms{};
+
+	Parms.CompressedVoiceData = std::move(CompressedVoiceData);
+	Parms.bUseRadio = bUseRadio;
+	Parms.IsUnderwater = IsUnderwater;
+	Parms.Sender = std::move(Sender);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -174,26 +251,6 @@ void AMP_PlayerController_C::ShowCameraFade()
 		Func = Class->GetFunction("MP_PlayerController_C", "ShowCameraFade");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MP_PlayerController.MP_PlayerController_C.ReceiveEndPlay
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AMP_PlayerController_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MP_PlayerController_C", "ReceiveEndPlay");
-
-	Params::MP_PlayerController_C_ReceiveEndPlay Parms{};
-
-	Parms.EndPlayReason = EndPlayReason;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -331,8 +388,9 @@ void AMP_PlayerController_C::OC_RemoveKillScreen()
 // (Net, NetReliable, NetClient, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const class FString&                    Spectating                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// EFancyPlatform                          PlayerPlatform                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AMP_PlayerController_C::OC_SetSpectating(const class FString& Spectating)
+void AMP_PlayerController_C::OC_SetSpectating(const class FString& Spectating, EFancyPlatform PlayerPlatform)
 {
 	static class UFunction* Func = nullptr;
 
@@ -342,6 +400,7 @@ void AMP_PlayerController_C::OC_SetSpectating(const class FString& Spectating)
 	Params::MP_PlayerController_C_OC_SetSpectating Parms{};
 
 	Parms.Spectating = std::move(Spectating);
+	Parms.PlayerPlatform = PlayerPlatform;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -361,6 +420,54 @@ void AMP_PlayerController_C::StartSpectating()
 }
 
 
+// Function MP_PlayerController.MP_PlayerController_C.BndEvt__MP_PlayerController_FancyVoipManager_K2Node_ComponentBoundEvent_0_VoiceGenerated__DelegateSignature
+// (HasOutParams, BlueprintEvent)
+// Parameters:
+// const TArray<uint8>&                    VoiceData                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const float                             MicLevel                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AMP_PlayerController_C::BndEvt__MP_PlayerController_FancyVoipManager_K2Node_ComponentBoundEvent_0_VoiceGenerated__DelegateSignature(const TArray<uint8>& VoiceData, const float MicLevel)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MP_PlayerController_C", "BndEvt__MP_PlayerController_FancyVoipManager_K2Node_ComponentBoundEvent_0_VoiceGenerated__DelegateSignature");
+
+	Params::MP_PlayerController_C_BndEvt__MP_PlayerController_FancyVoipManager_K2Node_ComponentBoundEvent_0_VoiceGenerated__DelegateSignature Parms{};
+
+	Parms.VoiceData = std::move(VoiceData);
+	Parms.MicLevel = MicLevel;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function MP_PlayerController.MP_PlayerController_C.Client_ReceiveVoiceDataViaInteractable
+// (Net, NetReliable, HasOutParams, NetClient, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AInteractablePawn*                InteractablePawn                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const TArray<uint8>&                    Voice                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// bool                                    bUseRadio                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const struct FBPUniqueNetId&            Sender                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void AMP_PlayerController_C::Client_ReceiveVoiceDataViaInteractable(class AInteractablePawn* InteractablePawn, const TArray<uint8>& Voice, bool bUseRadio, const struct FBPUniqueNetId& Sender)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MP_PlayerController_C", "Client_ReceiveVoiceDataViaInteractable");
+
+	Params::MP_PlayerController_C_Client_ReceiveVoiceDataViaInteractable Parms{};
+
+	Parms.InteractablePawn = InteractablePawn;
+	Parms.Voice = std::move(Voice);
+	Parms.bUseRadio = bUseRadio;
+	Parms.Sender = std::move(Sender);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function MP_PlayerController.MP_PlayerController_C.Unlock HUB
 // (Net, NetReliable, NetClient, BlueprintCallable, BlueprintEvent)
 
@@ -370,6 +477,20 @@ void AMP_PlayerController_C::Unlock_HUB()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("MP_PlayerController_C", "Unlock HUB");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MP_PlayerController.MP_PlayerController_C.UpdatePushToTalk
+// (BlueprintCallable, BlueprintEvent)
+
+void AMP_PlayerController_C::UpdatePushToTalk()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MP_PlayerController_C", "UpdatePushToTalk");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -389,134 +510,6 @@ void AMP_PlayerController_C::PlayNoiseAtLocation()
 }
 
 
-// Function MP_PlayerController.MP_PlayerController_C.OC_SetupVoice
-// (BlueprintCallable, BlueprintEvent)
-
-void AMP_PlayerController_C::OC_SetupVoice()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MP_PlayerController_C", "OC_SetupVoice");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MP_PlayerController.MP_PlayerController_C.BndEvt__VoipManager_K2Node_ComponentBoundEvent_1_VoiceGenerated__DelegateSignature
-// (HasOutParams, BlueprintEvent)
-// Parameters:
-// const TArray<uint8>&                    VoiceData                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// const float                             MicLevel                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void AMP_PlayerController_C::BndEvt__VoipManager_K2Node_ComponentBoundEvent_1_VoiceGenerated__DelegateSignature(const TArray<uint8>& VoiceData, const float MicLevel)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MP_PlayerController_C", "BndEvt__VoipManager_K2Node_ComponentBoundEvent_1_VoiceGenerated__DelegateSignature");
-
-	Params::MP_PlayerController_C_BndEvt__VoipManager_K2Node_ComponentBoundEvent_1_VoiceGenerated__DelegateSignature Parms{};
-
-	Parms.VoiceData = std::move(VoiceData);
-	Parms.MicLevel = MicLevel;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function MP_PlayerController.MP_PlayerController_C.SRV_SendVoiceData
-// (Net, NetReliable, NetServer, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const TArray<uint8>&                    CompressedVoiceData                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// bool                                    bUseRadio                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    IsUnderwater                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void AMP_PlayerController_C::SRV_SendVoiceData(const TArray<uint8>& CompressedVoiceData, bool bUseRadio, bool IsUnderwater)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MP_PlayerController_C", "SRV_SendVoiceData");
-
-	Params::MP_PlayerController_C_SRV_SendVoiceData Parms{};
-
-	Parms.CompressedVoiceData = std::move(CompressedVoiceData);
-	Parms.bUseRadio = bUseRadio;
-	Parms.IsUnderwater = IsUnderwater;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function MP_PlayerController.MP_PlayerController_C.BndEvt__MP_PlayerController_VoipManager_K2Node_ComponentBoundEvent_2_PlayerStartTalking__DelegateSignature
-// (BlueprintEvent)
-
-void AMP_PlayerController_C::BndEvt__MP_PlayerController_VoipManager_K2Node_ComponentBoundEvent_2_PlayerStartTalking__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MP_PlayerController_C", "BndEvt__MP_PlayerController_VoipManager_K2Node_ComponentBoundEvent_2_PlayerStartTalking__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MP_PlayerController.MP_PlayerController_C.BndEvt__MP_PlayerController_VoipManager_K2Node_ComponentBoundEvent_0_PlayerStopTalking__DelegateSignature
-// (BlueprintEvent)
-
-void AMP_PlayerController_C::BndEvt__MP_PlayerController_VoipManager_K2Node_ComponentBoundEvent_0_PlayerStopTalking__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MP_PlayerController_C", "BndEvt__MP_PlayerController_VoipManager_K2Node_ComponentBoundEvent_0_PlayerStopTalking__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MP_PlayerController.MP_PlayerController_C.Client_RecieveVoiceData
-// (Net, NetReliable, HasOutParams, NetClient, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class ABPCharacter_Demo_C*              Player_0                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const TArray<uint8>&                    Voice                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// bool                                    bUseRadio                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// bool                                    IsUnderwater                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void AMP_PlayerController_C::Client_RecieveVoiceData(class ABPCharacter_Demo_C* Player_0, const TArray<uint8>& Voice, bool bUseRadio, bool IsUnderwater)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MP_PlayerController_C", "Client_RecieveVoiceData");
-
-	Params::MP_PlayerController_C_Client_RecieveVoiceData Parms{};
-
-	Parms.Player_0 = Player_0;
-	Parms.Voice = std::move(Voice);
-	Parms.bUseRadio = bUseRadio;
-	Parms.IsUnderwater = IsUnderwater;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function MP_PlayerController.MP_PlayerController_C.UpdatePushToTalk
-// (BlueprintCallable, BlueprintEvent)
-
-void AMP_PlayerController_C::UpdatePushToTalk()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MP_PlayerController_C", "UpdatePushToTalk");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function MP_PlayerController.MP_PlayerController_C.DeleteVoice
 // (Net, NetReliable, NetClient, BlueprintCallable, BlueprintEvent)
 
@@ -531,43 +524,45 @@ void AMP_PlayerController_C::DeleteVoice()
 }
 
 
-// Function MP_PlayerController.MP_PlayerController_C.InpActEvt_PlayerList_K2Node_InputActionEvent_0
-// (BlueprintEvent)
-// Parameters:
-// const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// Function MP_PlayerController.MP_PlayerController_C.OC_SetupVoice
+// (BlueprintCallable, BlueprintEvent)
 
-void AMP_PlayerController_C::InpActEvt_PlayerList_K2Node_InputActionEvent_0(const struct FKey& Key)
+void AMP_PlayerController_C::OC_SetupVoice()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MP_PlayerController_C", "InpActEvt_PlayerList_K2Node_InputActionEvent_0");
+		Func = Class->GetFunction("MP_PlayerController_C", "OC_SetupVoice");
 
-	Params::MP_PlayerController_C_InpActEvt_PlayerList_K2Node_InputActionEvent_0 Parms{};
-
-	Parms.Key = std::move(Key);
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function MP_PlayerController.MP_PlayerController_C.InpActEvt_PlayerList_K2Node_InputActionEvent_1
-// (BlueprintEvent)
-// Parameters:
-// const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// Function MP_PlayerController.MP_PlayerController_C.OnSuccess_D92EF3EE4A6E7A975F8BCA9D183D866E
+// (BlueprintCallable, BlueprintEvent)
 
-void AMP_PlayerController_C::InpActEvt_PlayerList_K2Node_InputActionEvent_1(const struct FKey& Key)
+void AMP_PlayerController_C::OnSuccess_D92EF3EE4A6E7A975F8BCA9D183D866E()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MP_PlayerController_C", "InpActEvt_PlayerList_K2Node_InputActionEvent_1");
+		Func = Class->GetFunction("MP_PlayerController_C", "OnSuccess_D92EF3EE4A6E7A975F8BCA9D183D866E");
 
-	Params::MP_PlayerController_C_InpActEvt_PlayerList_K2Node_InputActionEvent_1 Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.Key = std::move(Key);
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function MP_PlayerController.MP_PlayerController_C.OnFailure_D92EF3EE4A6E7A975F8BCA9D183D866E
+// (BlueprintCallable, BlueprintEvent)
+
+void AMP_PlayerController_C::OnFailure_D92EF3EE4A6E7A975F8BCA9D183D866E()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MP_PlayerController_C", "OnFailure_D92EF3EE4A6E7A975F8BCA9D183D866E");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -599,19 +594,19 @@ void AMP_PlayerController_C::OnFailure_BF5727364B76E93ECB1A5EB5C2750E7E()
 }
 
 
-// Function MP_PlayerController.MP_PlayerController_C.InpActEvt_Chat_K2Node_InputActionEvent_2
+// Function MP_PlayerController.MP_PlayerController_C.InpActEvt_Chat_K2Node_InputActionEvent_0
 // (BlueprintEvent)
 // Parameters:
 // const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void AMP_PlayerController_C::InpActEvt_Chat_K2Node_InputActionEvent_2(const struct FKey& Key)
+void AMP_PlayerController_C::InpActEvt_Chat_K2Node_InputActionEvent_0(const struct FKey& Key)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MP_PlayerController_C", "InpActEvt_Chat_K2Node_InputActionEvent_2");
+		Func = Class->GetFunction("MP_PlayerController_C", "InpActEvt_Chat_K2Node_InputActionEvent_0");
 
-	Params::MP_PlayerController_C_InpActEvt_Chat_K2Node_InputActionEvent_2 Parms{};
+	Params::MP_PlayerController_C_InpActEvt_Chat_K2Node_InputActionEvent_0 Parms{};
 
 	Parms.Key = std::move(Key);
 
@@ -647,19 +642,19 @@ void AMP_PlayerController_C::OnFailure_C095D11342852DAE8D2D159151BDAA40()
 }
 
 
-// Function MP_PlayerController.MP_PlayerController_C.InpActEvt_Settings_K2Node_InputActionEvent_3
+// Function MP_PlayerController.MP_PlayerController_C.InpActEvt_Settings_K2Node_InputActionEvent_1
 // (BlueprintEvent)
 // Parameters:
 // const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void AMP_PlayerController_C::InpActEvt_Settings_K2Node_InputActionEvent_3(const struct FKey& Key)
+void AMP_PlayerController_C::InpActEvt_Settings_K2Node_InputActionEvent_1(const struct FKey& Key)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MP_PlayerController_C", "InpActEvt_Settings_K2Node_InputActionEvent_3");
+		Func = Class->GetFunction("MP_PlayerController_C", "InpActEvt_Settings_K2Node_InputActionEvent_1");
 
-	Params::MP_PlayerController_C_InpActEvt_Settings_K2Node_InputActionEvent_3 Parms{};
+	Params::MP_PlayerController_C_InpActEvt_Settings_K2Node_InputActionEvent_1 Parms{};
 
 	Parms.Key = std::move(Key);
 
@@ -667,19 +662,19 @@ void AMP_PlayerController_C::InpActEvt_Settings_K2Node_InputActionEvent_3(const 
 }
 
 
-// Function MP_PlayerController.MP_PlayerController_C.InpActEvt_Talk_K2Node_InputActionEvent_4
+// Function MP_PlayerController.MP_PlayerController_C.InpActEvt_Talk_K2Node_InputActionEvent_2
 // (BlueprintEvent)
 // Parameters:
 // const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void AMP_PlayerController_C::InpActEvt_Talk_K2Node_InputActionEvent_4(const struct FKey& Key)
+void AMP_PlayerController_C::InpActEvt_Talk_K2Node_InputActionEvent_2(const struct FKey& Key)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MP_PlayerController_C", "InpActEvt_Talk_K2Node_InputActionEvent_4");
+		Func = Class->GetFunction("MP_PlayerController_C", "InpActEvt_Talk_K2Node_InputActionEvent_2");
 
-	Params::MP_PlayerController_C_InpActEvt_Talk_K2Node_InputActionEvent_4 Parms{};
+	Params::MP_PlayerController_C_InpActEvt_Talk_K2Node_InputActionEvent_2 Parms{};
 
 	Parms.Key = std::move(Key);
 
@@ -687,19 +682,19 @@ void AMP_PlayerController_C::InpActEvt_Talk_K2Node_InputActionEvent_4(const stru
 }
 
 
-// Function MP_PlayerController.MP_PlayerController_C.InpActEvt_Talk_K2Node_InputActionEvent_5
+// Function MP_PlayerController.MP_PlayerController_C.InpActEvt_Talk_K2Node_InputActionEvent_3
 // (BlueprintEvent)
 // Parameters:
 // const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void AMP_PlayerController_C::InpActEvt_Talk_K2Node_InputActionEvent_5(const struct FKey& Key)
+void AMP_PlayerController_C::InpActEvt_Talk_K2Node_InputActionEvent_3(const struct FKey& Key)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MP_PlayerController_C", "InpActEvt_Talk_K2Node_InputActionEvent_5");
+		Func = Class->GetFunction("MP_PlayerController_C", "InpActEvt_Talk_K2Node_InputActionEvent_3");
 
-	Params::MP_PlayerController_C_InpActEvt_Talk_K2Node_InputActionEvent_5 Parms{};
+	Params::MP_PlayerController_C_InpActEvt_Talk_K2Node_InputActionEvent_3 Parms{};
 
 	Parms.Key = std::move(Key);
 
@@ -741,19 +736,19 @@ void AMP_PlayerController_C::TogglePushToTalk(bool Activated)
 }
 
 
-// Function MP_PlayerController.MP_PlayerController_C.GetCanTalk
+// Function MP_PlayerController.MP_PlayerController_C.GetGameplayAllowTalking
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool*                                   CanTalk                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void AMP_PlayerController_C::GetCanTalk(bool* CanTalk)
+void AMP_PlayerController_C::GetGameplayAllowTalking(bool* CanTalk)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MP_PlayerController_C", "GetCanTalk");
+		Func = Class->GetFunction("MP_PlayerController_C", "GetGameplayAllowTalking");
 
-	Params::MP_PlayerController_C_GetCanTalk Parms{};
+	Params::MP_PlayerController_C_GetGameplayAllowTalking Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -849,5 +844,67 @@ void AMP_PlayerController_C::SaveMissionProgress(const struct FMissionStructure&
 	UObject::ProcessEvent(Func, &Parms);
 }
 
+
+// Function MP_PlayerController.MP_PlayerController_C.CreateVoipPlayerList
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void AMP_PlayerController_C::CreateVoipPlayerList()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MP_PlayerController_C", "CreateVoipPlayerList");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
+
+// Function MP_PlayerController.MP_PlayerController_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void AMP_PlayerController_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MP_PlayerController_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MP_PlayerController.MP_PlayerController_C.ClientHUDInit
+// (BlueprintCosmetic, Event, Protected, BlueprintEvent)
+
+void AMP_PlayerController_C::ClientHUDInit()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MP_PlayerController_C", "ClientHUDInit");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function MP_PlayerController.MP_PlayerController_C.ReceiveEndPlay
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AMP_PlayerController_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MP_PlayerController_C", "ReceiveEndPlay");
+
+	Params::MP_PlayerController_C_ReceiveEndPlay Parms{};
+
+	Parms.EndPlayReason = EndPlayReason;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "UI_SignIn_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function UI_SignIn.UI_SignIn_C.ExecuteUbergraph_UI_SignIn
 // (Final, UbergraphFunction, HasDefaults)
@@ -78,5 +77,5 @@ void UUI_SignIn_C::BndEvt__LoginBtn_K2Node_ComponentBoundEvent_0_OnButtonPressed
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

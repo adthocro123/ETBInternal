@@ -14,8 +14,7 @@
 #include "Bacteria_AIC_2_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function Bacteria_AIC_2.Bacteria_AIC_2_C.ExecuteUbergraph_Bacteria_AIC_2
 // (Final, UbergraphFunction)
@@ -84,5 +83,5 @@ void ABacteria_AIC_2_C::ReceiveBeginPlay()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

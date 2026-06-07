@@ -14,8 +14,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Storm_Volume.BP_Storm_Volume_C
 // 0x0020 (0x0248 - 0x0228)
@@ -52,5 +51,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_Storm_Volume_C;
 
-}
-
+SDK_NAMESPACE_END

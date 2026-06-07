@@ -13,8 +13,7 @@
 #include "CoreUObject_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class SlateCore.FontBulkData
 // 0x0050 (0x0078 - 0x0028)
@@ -192,5 +191,4 @@ public:
 };
 DUMPER7_ASSERTS_ISlateWidgetStyleContainerInterface;
 
-}
-
+SDK_NAMESPACE_END

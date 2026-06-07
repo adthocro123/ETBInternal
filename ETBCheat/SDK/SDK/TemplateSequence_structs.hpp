@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "MovieScene_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum TemplateSequence.ETemplateSectionPropertyScaleType
 // NumValues: 0x0004
@@ -50,5 +49,4 @@ public:
 };
 DUMPER7_ASSERTS_FTemplateSectionPropertyScale;
 
-}
-
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "BP_FallingPlank_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_FallingPlank.BP_FallingPlank_C.ExecuteUbergraph_BP_FallingPlank
 // (Final, UbergraphFunction, HasDefaults)
@@ -140,5 +139,5 @@ void ABP_FallingPlank_C::OnRep_DidFall()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

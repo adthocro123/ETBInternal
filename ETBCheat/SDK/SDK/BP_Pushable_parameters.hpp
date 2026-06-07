@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
+#include "HE_Subtitle_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
-#include "HE_Subtitle_structs.hpp"
 #include "HE_SubtitleSeq_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_Pushable.BP_Pushable_C.ExecuteUbergraph_BP_Pushable
 // 0x00D0 (0x00D0 - 0x0000)
@@ -227,5 +227,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_Pushable_C_OnRep_Index;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

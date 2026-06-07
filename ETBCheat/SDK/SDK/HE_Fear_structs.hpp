@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct HE_Fear.HE_Fear
 // 0x0018 (0x0018 - 0x0000)
@@ -27,5 +26,4 @@ public:
 };
 DUMPER7_ASSERTS_FHE_Fear;
 
-}
-
+SDK_NAMESPACE_END

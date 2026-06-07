@@ -14,8 +14,7 @@
 #include "BP_Menu_Computer_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Menu_Computer.BP_Menu_Computer_C.ExecuteUbergraph_BP_Menu_Computer
 // (Final, UbergraphFunction, HasDefaults)
@@ -298,5 +297,5 @@ void ABP_Menu_Computer_C::Update_Beam()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

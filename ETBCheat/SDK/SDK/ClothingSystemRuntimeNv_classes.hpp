@@ -10,15 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "ClothingSystemRuntimeNv_structs.hpp"
 #include "ClothingSystemRuntimeCommon_structs.hpp"
 #include "ClothingSystemRuntimeCommon_classes.hpp"
+#include "CoreUObject_structs.hpp"
+#include "ClothingSystemRuntimeNv_structs.hpp"
 #include "ClothingSystemRuntimeInterface_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class ClothingSystemRuntimeNv.ClothConfigNv
 // 0x0118 (0x0140 - 0x0028)
@@ -149,5 +148,4 @@ public:
 };
 DUMPER7_ASSERTS_UClothPhysicalMeshDataNv_Legacy;
 
-}
-
+SDK_NAMESPACE_END

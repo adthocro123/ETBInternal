@@ -15,8 +15,7 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class AudioSynesthesia.AudioSynesthesiaNRT
 // 0x0000 (0x0078 - 0x0078)
@@ -233,5 +232,4 @@ public:
 };
 DUMPER7_ASSERTS_UOnsetNRTSettings;
 
-}
-
+SDK_NAMESPACE_END

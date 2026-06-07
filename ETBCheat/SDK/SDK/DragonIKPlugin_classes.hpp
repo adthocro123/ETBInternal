@@ -17,8 +17,7 @@
 #include "DragonIKPlugin_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class DragonIKPlugin.DragonIK_Library
 // 0x0008 (0x0030 - 0x0028)
@@ -164,5 +163,4 @@ public:
 };
 DUMPER7_ASSERTS_ADragonIKPhysicsHolder;
 
-}
-
+SDK_NAMESPACE_END

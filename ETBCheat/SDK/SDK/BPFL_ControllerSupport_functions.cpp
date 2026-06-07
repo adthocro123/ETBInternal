@@ -14,8 +14,7 @@
 #include "BPFL_ControllerSupport_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPFL_ControllerSupport.BPFL_ControllerSupport_C.GetGridNavigationNextIndex
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
@@ -48,5 +47,5 @@ void UBPFL_ControllerSupport_C::GetGridNavigationNextIndex(int32 CurrentIndex, i
 		*NewIndex = Parms.NewIndex;
 }
 
-}
 
+SDK_NAMESPACE_END

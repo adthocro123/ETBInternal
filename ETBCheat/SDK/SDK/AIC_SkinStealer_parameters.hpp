@@ -13,8 +13,8 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function AIC_SkinStealer.AIC_SkinStealer_C.ExecuteUbergraph_AIC_SkinStealer
 // 0x0130 (0x0130 - 0x0000)
@@ -120,5 +120,5 @@ public:
 };
 DUMPER7_ASSERTS_AIC_SkinStealer_C_Setup_AI;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

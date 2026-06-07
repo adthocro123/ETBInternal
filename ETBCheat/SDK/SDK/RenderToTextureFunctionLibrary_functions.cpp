@@ -14,8 +14,7 @@
 #include "RenderToTextureFunctionLibrary_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function RenderToTextureFunctionLibrary.RenderToTextureFunctionLibrary_C.Array to HLSL Int Array
 // (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
@@ -92,5 +91,5 @@ void URenderToTextureFunctionLibrary_C::Set_Canvas_Material_Scale_and_Position(c
 		*Screen_Size = std::move(Parms.Screen_Size);
 }
 
-}
 
+SDK_NAMESPACE_END

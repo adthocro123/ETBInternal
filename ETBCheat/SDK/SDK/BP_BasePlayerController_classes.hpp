@@ -13,20 +13,30 @@
 #include "Engine_structs.hpp"
 #include "Backrooms_structs.hpp"
 #include "Backrooms_classes.hpp"
+#include "AdvancedSessions_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_BasePlayerController.BP_BasePlayerController_C
-// 0x0008 (0x0588 - 0x0580)
-class ABP_BasePlayerController_C : public AFancyPlayerController
+// 0x0030 (0x0620 - 0x05F0)
+#pragma pack(push, 0x1)
+class alignas(0x10) ABP_BasePlayerController_C : public AFancyPlayerController
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0580(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x05F0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FTimerHandle                           XboxUpdateCommunicationBlockTimer;                 // 0x05F8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FBPUniqueNetId>                 XSXAdditionalBlockedPlayers;                       // 0x0600(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          bXSXCommChecksPerformed;                           // 0x0610(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bIsVoiceBlockedForLoadingScreen;                   // 0x0611(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_BP_BasePlayerController(int32 EntryPoint);
+	void UpdateUsingMultiplayerFeatures(bool bUsingMP);
+	void EndCurrentActivity(EActivityCompletionStatus Status);
+	void XboxUpdateCommBlocked();
+	void ReceiveBeginPlay();
+	void HandleKickedBP();
 	void ServerRemoveRemoteVoiceForPlayer(class APlayerState* TargetPlayerState);
 	void ServerInitializeRemotePlayerVoice(class APlayerState* TargetPlayerState);
 	void UpdatePlayersOnBlockList(const TArray<struct FBPUniqueNetId>& PlayerBlockList);
@@ -37,20 +47,20 @@ public:
 	void EndActivity(const class FString& ActivityName, EActivityCompletionStatus Status);
 	void StartActivity(const class FString& ActivityName);
 	void PrintLevelTimes();
-	void OnActiveUserChanged(bool bIsSameUser);
 	void ClientHUDInit();
 	void FadeOutOnBegin();
-	void BindOnControllerDisconnect();
-	void OnControllerDisconnected(EEstablishUserReason reason);
 	void UnlockMission(class FName LevelName);
 	void VoteToSkipVideo();
 	void UnlockAchievement(class FName AchievementName);
+	void OnSuccess_CCA713C34E25CEC47F87468916FB9E32(const struct FFancyGDKCalcCannotCommunicateResult& CannotCommunicateWith);
+	void OnFailure_CCA713C34E25CEC47F87468916FB9E32(const struct FFancyGDKCalcCannotCommunicateResult& CannotCommunicateWith);
 	void OnSuccess_25FE2EED481770906869D8BE77840F55(const TArray<struct FBPUniqueNetId>& Results);
 	void OnFailure_25FE2EED481770906869D8BE77840F55(const TArray<struct FBPUniqueNetId>& Results);
 	void OnSuccess_7A38069049F41D425743B08026BC0075(const TArray<struct FBPUniqueNetId>& Results);
 	void OnFailure_7A38069049F41D425743B08026BC0075(const TArray<struct FBPUniqueNetId>& Results);
 	void InpActEvt_SkipVideo_K2Node_InputActionEvent_0(const struct FKey& Key);
 	void GetPlayerControllerFromPlayerState(class APlayerState* PlayerState_0, class ABP_BasePlayerController_C** PlayerController);
+	void Should_Block_VOIPAudio_for_Player(const struct FBPUniqueNetId& Player_0, bool* ShouldBlock);
 
 public:
 	static class UClass* StaticClass()
@@ -66,7 +76,7 @@ public:
 		return GetDefaultObjImpl<ABP_BasePlayerController_C>();
 	}
 };
+#pragma pack(pop)
 DUMPER7_ASSERTS_ABP_BasePlayerController_C;
 
-}
-
+SDK_NAMESPACE_END

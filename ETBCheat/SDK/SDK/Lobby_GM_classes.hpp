@@ -12,10 +12,10 @@
 
 #include "Engine_structs.hpp"
 #include "Base_GM_classes.hpp"
+#include "AdvancedSessions_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Lobby_GM.Lobby_GM_C
 // 0x0010 (0x0338 - 0x0328)
@@ -27,12 +27,14 @@ public:
 
 public:
 	void ExecuteUbergraph_Lobby_GM(int32 EntryPoint);
+	void DisconnectAllPlayers();
+	void UpdateCanJoin();
 	void ReceiveBeginPlay();
 	void ServerTravel();
 	void K2_OnLogout(class AController* ExitingController);
 	void K2_PostLogin(class APlayerController* NewPlayer);
-	void OnSuccess_E592F5794EC3412E2E9F60B53D12F091();
-	void OnFailure_E592F5794EC3412E2E9F60B53D12F091();
+	void OnSuccess_F50D1CF648B7A4D4DBC83AAEA611330C();
+	void OnFailure_F50D1CF648B7A4D4DBC83AAEA611330C();
 	void Create_MapTravel_loadingScreens(class FName* Current_Map);
 
 public:
@@ -51,5 +53,4 @@ public:
 };
 DUMPER7_ASSERTS_ALobby_GM_C;
 
-}
-
+SDK_NAMESPACE_END

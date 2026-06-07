@@ -14,8 +14,7 @@
 #include "AnimBP_Ragdoll_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function AnimBP_Ragdoll.AnimBP_Ragdoll_C.ExecuteUbergraph_AnimBP_Ragdoll
 // (Final, UbergraphFunction)
@@ -57,5 +56,5 @@ void UAnimBP_Ragdoll_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 		*AnimGraph_0 = std::move(Parms.AnimGraph_0);
 }
 
-}
 
+SDK_NAMESPACE_END

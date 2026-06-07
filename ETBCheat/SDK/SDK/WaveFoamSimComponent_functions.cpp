@@ -14,8 +14,7 @@
 #include "WaveFoamSimComponent_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WaveFoamSimComponent.WaveFoamSimComponent_C.ExecuteUbergraph_WaveFoamSimComponent
 // (Final, UbergraphFunction)
@@ -144,5 +143,5 @@ void UWaveFoamSimComponent_C::Render_Waves_to_RT(TArray<struct FGerstnerWave>& N
 	NewParam = std::move(Parms.NewParam);
 }
 
-}
 
+SDK_NAMESPACE_END

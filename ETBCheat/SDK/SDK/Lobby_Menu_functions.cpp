@@ -14,8 +14,7 @@
 #include "Lobby_Menu_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function Lobby_Menu.Lobby_Menu_C.ExecuteUbergraph_Lobby_Menu
 // (Final, UbergraphFunction, HasDefaults)
@@ -228,5 +227,5 @@ void ULobby_Menu_C::Init_ReadyUpButton()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

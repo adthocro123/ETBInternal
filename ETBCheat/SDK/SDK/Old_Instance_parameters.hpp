@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "OnlineSubsystemUtils_structs.hpp"
 #include "AdvancedSessions_structs.hpp"
+#include "OnlineSubsystemUtils_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function Old_Instance.Old_Instance_C.ExecuteUbergraph_Old_Instance
 // 0x0820 (0x0820 - 0x0000)
@@ -24,7 +24,7 @@ struct Old_Instance_C_ExecuteUbergraph_Old_Instance final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetLocalPlayerController_ReturnValue;     // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FBPUniqueNetId                         CallFunc_GetUniqueNetID_UniqueNetId;               // 0x0010(0x0028)()
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0038(0x0010)(ZeroConstructor, NoDestructor)
 	class FName                                   K2Node_CustomEvent_WrittenAchievementName_1;       // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -118,35 +118,36 @@ public:
 	TArray<struct FSessionsSearchSetting>         K2Node_MakeArray_Array_2;                          // 0x0618(0x0010)(ConstParm, ReferenceParm)
 	class UFindSessionsCallbackProxyAdvanced*     CallFunc_FindSessionsAdvanced_ReturnValue_1;       // 0x0628(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_7;                    // 0x0630(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_631[0x3];                                      // 0x0631(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          K2Node_Event_bWasSuccessful;                       // 0x0631(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_632[0x2];                                      // 0x0632(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_Event_LocalPlayerNum;                       // 0x0634(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FBPUniqueNetId                         K2Node_Event_PersonInvited;                        // 0x0638(0x0028)()
 	struct FBlueprintSessionResult                K2Node_Event_SessionToJoin;                        // 0x0660(0x0108)(ConstParm)
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue_1;        // 0x0768(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UDestroySessionCallbackProxy*           CallFunc_DestroySession_ReturnValue;               // 0x0770(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_12;           // 0x0778(0x0010)(ZeroConstructor, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_8;                    // 0x0788(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_789[0x7];                                      // 0x0789(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UJoinSessionCallbackProxy*              CallFunc_JoinSession_ReturnValue_1;                // 0x0790(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_9;                    // 0x0798(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_799[0x7];                                      // 0x0799(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBPUniqueNetId                         K2Node_Event_PlayerId;                             // 0x07A0(0x0028)()
-	bool                                          K2Node_Event_bIsTalking;                           // 0x07C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_7C9[0x3];                                      // 0x07C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_13;           // 0x07CC(0x0010)(ZeroConstructor, NoDestructor)
-	bool                                          CallFunc_EqualEqual_UNetIDUnetID_ReturnValue;      // 0x07DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_7DD[0x3];                                      // 0x07DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   K2Node_CustomEvent_AchievementName;                // 0x07E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue_2;        // 0x07E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue_3;        // 0x07F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAchievementWriteCallbackProxy*         CallFunc_WriteAchievementProgress_ReturnValue;     // 0x07F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_12;           // 0x0768(0x0010)(ZeroConstructor, NoDestructor)
+	struct FBPUniqueNetId                         K2Node_Event_PlayerId;                             // 0x0778(0x0028)()
+	bool                                          K2Node_Event_bIsTalking;                           // 0x07A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7A1[0x3];                                      // 0x07A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_13;           // 0x07A4(0x0010)(ZeroConstructor, NoDestructor)
+	bool                                          CallFunc_EqualEqual_UNetIDUnetID_ReturnValue;      // 0x07B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7B5[0x3];                                      // 0x07B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   K2Node_CustomEvent_AchievementName;                // 0x07B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetLocalPlayerController_ReturnValue_1;   // 0x07C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetLocalPlayerController_ReturnValue_2;   // 0x07C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UDestroySessionCallbackProxy*           CallFunc_DestroySession_ReturnValue;               // 0x07D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAchievementWriteCallbackProxy*         CallFunc_WriteAchievementProgress_ReturnValue;     // 0x07D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_8;                    // 0x07E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_9;                    // 0x07E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_10;                   // 0x07E2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7E3[0x5];                                      // 0x07E3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UJoinSessionCallbackProxy*              CallFunc_JoinSession_ReturnValue_1;                // 0x07E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_11;                   // 0x07F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7F1[0x7];                                      // 0x07F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetLocalPlayerController_ReturnValue_3;   // 0x07F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AMP_PlayerController_C*                 K2Node_DynamicCast_AsMP_Player_Controller;         // 0x0800(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0808(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_10;                   // 0x0809(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_80A[0x6];                                      // 0x080A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_809[0x7];                                      // 0x0809(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ALobby_PlayerController_C*              K2Node_DynamicCast_AsLobby_Player_Controller;      // 0x0810(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0818(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_11;                   // 0x0819(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_Old_Instance_C_ExecuteUbergraph_Old_Instance;
 
@@ -174,8 +175,9 @@ DUMPER7_ASSERTS_Old_Instance_C_OnPlayerTalkingStateChanged;
 struct Old_Instance_C_OnSessionInviteAccepted final
 {
 public:
-	int32                                         LocalPlayerNum;                                    // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bWasSuccessful;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         LocalPlayerNum;                                    // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FBPUniqueNetId                         PersonInvited;                                     // 0x0008(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm)
 	struct FBlueprintSessionResult                SessionToJoin;                                     // 0x0030(0x0108)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 };
@@ -335,5 +337,5 @@ public:
 };
 DUMPER7_ASSERTS_Old_Instance_C_ToggleVoiceIngame;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

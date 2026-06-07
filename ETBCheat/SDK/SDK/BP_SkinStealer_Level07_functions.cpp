@@ -14,8 +14,7 @@
 #include "BP_SkinStealer_Level07_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_SkinStealer_Level07.BP_SkinStealer_Level07_C.ExecuteUbergraph_BP_SkinStealer_Level07
 // (Final, UbergraphFunction, HasDefaults)
@@ -126,5 +125,5 @@ void ABP_SkinStealer_Level07_C::Timeline_0__FinishedFunc()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

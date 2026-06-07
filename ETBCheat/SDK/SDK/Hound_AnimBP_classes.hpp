@@ -15,8 +15,7 @@
 #include "AnimGraphRuntime_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass Hound_AnimBP.Hound_AnimBP_C
 // 0x0250 (0x0510 - 0x02C0)
@@ -53,5 +52,4 @@ public:
 };
 DUMPER7_ASSERTS_UHound_AnimBP_C;
 
-}
-
+SDK_NAMESPACE_END

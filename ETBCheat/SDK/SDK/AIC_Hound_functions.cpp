@@ -14,8 +14,7 @@
 #include "AIC_Hound_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function AIC_Hound.AIC_Hound_C.ExecuteUbergraph_AIC_Hound
 // (Final, UbergraphFunction)
@@ -182,5 +181,5 @@ void AAIC_Hound_C::Setup_AI(class UBehaviorTree* BTAsset)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

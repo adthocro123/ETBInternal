@@ -13,8 +13,7 @@
 #include "CoreUObject_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class AssetRegistry.AssetRegistryImpl
 // 0x0828 (0x0850 - 0x0028)
@@ -126,5 +125,4 @@ public:
 };
 DUMPER7_ASSERTS_IAssetRegistry;
 
-}
-
+SDK_NAMESPACE_END

@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "MagicLeapPlanes_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class MagicLeapPlanes.MagicLeapPlanesComponent
 // 0x0060 (0x0260 - 0x0200)
@@ -87,5 +86,4 @@ public:
 };
 DUMPER7_ASSERTS_UMagicLeapPlanesFunctionLibrary;
 
-}
-
+SDK_NAMESPACE_END

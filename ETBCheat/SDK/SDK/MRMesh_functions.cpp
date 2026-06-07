@@ -14,8 +14,7 @@
 #include "MRMesh_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function MRMesh.MeshReconstructorBase.ConnectMRMesh
 // (Native, Public)
@@ -455,5 +454,5 @@ bool UMRMeshComponent::IsConnected() const
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

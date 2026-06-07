@@ -14,8 +14,7 @@
 #include "W_VOIPIndicator_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function W_VOIPIndicator.W_VOIPIndicator_C.ExecuteUbergraph_W_VOIPIndicator
 // (Final, UbergraphFunction, HasDefaults)
@@ -50,5 +49,5 @@ void UW_VOIPIndicator_C::Construct()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

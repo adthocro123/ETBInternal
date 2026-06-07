@@ -14,8 +14,7 @@
 #include "Lobby_GM_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function Lobby_GM.Lobby_GM_C.ExecuteUbergraph_Lobby_GM
 // (Final, UbergraphFunction, HasDefaults)
@@ -34,6 +33,34 @@ void ALobby_GM_C::ExecuteUbergraph_Lobby_GM(int32 EntryPoint)
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Lobby_GM.Lobby_GM_C.DisconnectAllPlayers
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+
+void ALobby_GM_C::DisconnectAllPlayers()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Lobby_GM_C", "DisconnectAllPlayers");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Lobby_GM.Lobby_GM_C.UpdateCanJoin
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+
+void ALobby_GM_C::UpdateCanJoin()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Lobby_GM_C", "UpdateCanJoin");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -105,29 +132,29 @@ void ALobby_GM_C::K2_PostLogin(class APlayerController* NewPlayer)
 }
 
 
-// Function Lobby_GM.Lobby_GM_C.OnSuccess_E592F5794EC3412E2E9F60B53D12F091
+// Function Lobby_GM.Lobby_GM_C.OnSuccess_F50D1CF648B7A4D4DBC83AAEA611330C
 // (BlueprintCallable, BlueprintEvent)
 
-void ALobby_GM_C::OnSuccess_E592F5794EC3412E2E9F60B53D12F091()
+void ALobby_GM_C::OnSuccess_F50D1CF648B7A4D4DBC83AAEA611330C()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Lobby_GM_C", "OnSuccess_E592F5794EC3412E2E9F60B53D12F091");
+		Func = Class->GetFunction("Lobby_GM_C", "OnSuccess_F50D1CF648B7A4D4DBC83AAEA611330C");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Lobby_GM.Lobby_GM_C.OnFailure_E592F5794EC3412E2E9F60B53D12F091
+// Function Lobby_GM.Lobby_GM_C.OnFailure_F50D1CF648B7A4D4DBC83AAEA611330C
 // (BlueprintCallable, BlueprintEvent)
 
-void ALobby_GM_C::OnFailure_E592F5794EC3412E2E9F60B53D12F091()
+void ALobby_GM_C::OnFailure_F50D1CF648B7A4D4DBC83AAEA611330C()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Lobby_GM_C", "OnFailure_E592F5794EC3412E2E9F60B53D12F091");
+		Func = Class->GetFunction("Lobby_GM_C", "OnFailure_F50D1CF648B7A4D4DBC83AAEA611330C");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -153,5 +180,5 @@ void ALobby_GM_C::Create_MapTravel_loadingScreens(class FName* Current_Map)
 		*Current_Map = Parms.Current_Map;
 }
 
-}
 
+SDK_NAMESPACE_END

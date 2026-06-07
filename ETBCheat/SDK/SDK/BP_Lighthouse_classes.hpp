@@ -15,8 +15,7 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Lighthouse.BP_Lighthouse_C
 // 0x00B8 (0x02D8 - 0x0220)
@@ -88,5 +87,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_Lighthouse_C;
 
-}
-
+SDK_NAMESPACE_END

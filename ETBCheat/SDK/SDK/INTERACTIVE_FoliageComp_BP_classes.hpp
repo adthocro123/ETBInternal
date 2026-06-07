@@ -10,15 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "InstanceStatus_structs.hpp"
-#include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "InstanceData_structs.hpp"
 #include "Foliage_classes.hpp"
+#include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
+#include "InstanceData_structs.hpp"
+#include "InstanceStatus_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass INTERACTIVE_FoliageComp_BP.INTERACTIVE_FoliageComp_BP_C
 // 0x0150 (0x0800 - 0x06B0)
@@ -94,5 +93,4 @@ public:
 };
 DUMPER7_ASSERTS_UINTERACTIVE_FoliageComp_BP_C;
 
-}
-
+SDK_NAMESPACE_END

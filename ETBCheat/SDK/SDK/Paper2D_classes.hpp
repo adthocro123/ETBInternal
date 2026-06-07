@@ -11,13 +11,12 @@
 #include "Basic.hpp"
 
 #include "Engine_classes.hpp"
+#include "Paper2D_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "Paper2D_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class Paper2D.PaperRuntimeSettings
 // 0x0008 (0x0030 - 0x0028)
@@ -745,5 +744,4 @@ public:
 };
 DUMPER7_ASSERTS_UTileMapBlueprintLibrary;
 
-}
-
+SDK_NAMESPACE_END

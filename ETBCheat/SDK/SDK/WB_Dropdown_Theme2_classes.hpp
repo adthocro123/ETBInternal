@@ -16,21 +16,20 @@
 #include "SlateCore_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WB_Dropdown_Theme2.WB_Dropdown_Theme2_C
-// 0x0040 (0x02A0 - 0x0260)
+// 0x0040 (0x02B0 - 0x0270)
 class UWB_Dropdown_Theme2_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0260(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UComboBoxString*                        ComboBox;                                          // 0x0268(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UBorder*                                FocusBorder;                                       // 0x0270(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	TArray<class FText>                           Options;                                           // 0x0278(0x0010)(Edit, BlueprintVisible)
-	int32                                         SelectedOption;                                    // 0x0288(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_28C[0x4];                                      // 0x028C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(int32 SelectedOption)> OnOptionSwitched;                           // 0x0290(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0270(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UComboBoxString*                        ComboBox;                                          // 0x0278(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UBorder*                                FocusBorder;                                       // 0x0280(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	TArray<class FText>                           Options;                                           // 0x0288(0x0010)(Edit, BlueprintVisible)
+	int32                                         SelectedOption;                                    // 0x0298(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_29C[0x4];                                      // 0x029C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(int32 SelectedOption)> OnOptionSwitched;                           // 0x02A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void ExecuteUbergraph_WB_Dropdown_Theme2(int32 EntryPoint);
@@ -41,8 +40,9 @@ public:
 	void ToggleEnabled(bool IsEnabled);
 	void ToggleHover(bool IsHovered_0);
 	void Set_SelectedOption(int32 Option);
-	void Setup();
+	void SetUp();
 	void FindOption(const class FString& Option, int32* Index_0);
+	void Set_Combo_Box_Selection(bool bSelected);
 
 public:
 	static class UClass* StaticClass()
@@ -60,5 +60,4 @@ public:
 };
 DUMPER7_ASSERTS_UWB_Dropdown_Theme2_C;
 
-}
-
+SDK_NAMESPACE_END

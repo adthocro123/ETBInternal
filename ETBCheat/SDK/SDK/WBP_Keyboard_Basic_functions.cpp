@@ -14,8 +14,7 @@
 #include "WBP_Keyboard_Basic_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Keyboard_Basic.WBP_Keyboard_Basic_C.ExecuteUbergraph_WBP_Keyboard_Basic
 // (Final, UbergraphFunction, HasDefaults)
@@ -260,5 +259,5 @@ void UWBP_Keyboard_Basic_C::SetButtonArray()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

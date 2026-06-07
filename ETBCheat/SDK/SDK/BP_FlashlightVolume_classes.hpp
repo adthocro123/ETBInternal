@@ -14,8 +14,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_FlashlightVolume.BP_FlashlightVolume_C
 // 0x0018 (0x0238 - 0x0220)
@@ -47,5 +46,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_FlashlightVolume_C;
 
-}
-
+SDK_NAMESPACE_END

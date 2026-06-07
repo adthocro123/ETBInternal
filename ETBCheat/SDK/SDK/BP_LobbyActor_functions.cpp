@@ -14,8 +14,7 @@
 #include "BP_LobbyActor_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_LobbyActor.BP_LobbyActor_C.ExecuteUbergraph_BP_LobbyActor
 // (Final, UbergraphFunction, HasDefaults)
@@ -240,5 +239,5 @@ void ABP_LobbyActor_C::Update_Beam()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

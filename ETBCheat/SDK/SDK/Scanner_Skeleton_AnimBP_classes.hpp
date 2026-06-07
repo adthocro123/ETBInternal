@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "AnimGraphRuntime_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "AnimGraphRuntime_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass Scanner_Skeleton_AnimBP.Scanner_Skeleton_AnimBP_C
 // 0x0BB0 (0x0E70 - 0x02C0)
@@ -77,5 +76,4 @@ public:
 };
 DUMPER7_ASSERTS_UScanner_Skeleton_AnimBP_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "BP_Item_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Liquid_Pain.BP_Liquid_Pain_C
 // 0x0038 (0x0290 - 0x0258)
@@ -63,5 +62,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_Liquid_Pain_C;
 
-}
-
+SDK_NAMESPACE_END

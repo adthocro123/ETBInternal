@@ -15,28 +15,7 @@
 #include "LiveLinkInterface_structs.hpp"
 
 
-namespace SDK
-{
-
-// Class LiveLinkInterface.LiveLinkRole
-// 0x0000 (0x0028 - 0x0028)
-class ULiveLinkRole : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("LiveLinkRole")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"LiveLinkRole")
-	}
-	static class ULiveLinkRole* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ULiveLinkRole>();
-	}
-};
-DUMPER7_ASSERTS_ULiveLinkRole;
+SDK_NAMESPACE_START
 
 // Class LiveLinkInterface.LiveLinkSourceFactory
 // 0x0000 (0x0028 - 0x0028)
@@ -57,6 +36,26 @@ public:
 	}
 };
 DUMPER7_ASSERTS_ULiveLinkSourceFactory;
+
+// Class LiveLinkInterface.LiveLinkRole
+// 0x0000 (0x0028 - 0x0028)
+class ULiveLinkRole : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("LiveLinkRole")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"LiveLinkRole")
+	}
+	static class ULiveLinkRole* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULiveLinkRole>();
+	}
+};
+DUMPER7_ASSERTS_ULiveLinkRole;
 
 // Class LiveLinkInterface.LiveLinkBasicRole
 // 0x0000 (0x0028 - 0x0028)
@@ -345,5 +344,4 @@ public:
 };
 DUMPER7_ASSERTS_ULiveLinkVirtualSubject;
 
-}
-
+SDK_NAMESPACE_END

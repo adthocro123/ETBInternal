@@ -14,8 +14,7 @@
 #include "UI_Inventory_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function UI_Inventory.UI_Inventory_C.ExecuteUbergraph_UI_Inventory
 // (Final, UbergraphFunction)
@@ -243,20 +242,6 @@ bool UUI_Inventory_C::OnDrop(const struct FGeometry& MyGeometry, const struct FP
 }
 
 
-// Function UI_Inventory.UI_Inventory_C.CheckFont
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UUI_Inventory_C::CheckFont()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Inventory_C", "CheckFont");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function UI_Inventory.UI_Inventory_C.InputDown
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -451,5 +436,5 @@ class FText UUI_Inventory_C::UpdateFocusedItemGamepad()
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

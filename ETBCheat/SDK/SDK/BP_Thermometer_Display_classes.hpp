@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Enum_SegmentDisplayType_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Thermometer_Display.BP_Thermometer_Display_C
 // 0x0058 (0x0278 - 0x0220)
@@ -63,5 +62,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_Thermometer_Display_C;
 
-}
-
+SDK_NAMESPACE_END

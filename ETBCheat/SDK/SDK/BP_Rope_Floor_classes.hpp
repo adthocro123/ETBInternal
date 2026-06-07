@@ -13,8 +13,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Rope_Floor.BP_Rope_Floor_C
 // 0x0008 (0x0228 - 0x0220)
@@ -39,5 +38,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_Rope_Floor_C;
 
-}
-
+SDK_NAMESPACE_END

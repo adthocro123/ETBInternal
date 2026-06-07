@@ -14,8 +14,7 @@
 #include "BP_RowBoat_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_RowBoat.BP_RowBoat_C.ExecuteUbergraph_BP_RowBoat
 // (Final, UbergraphFunction, HasDefaults)
@@ -794,5 +793,5 @@ void ABP_RowBoat_C::UpdateWaterLevel()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

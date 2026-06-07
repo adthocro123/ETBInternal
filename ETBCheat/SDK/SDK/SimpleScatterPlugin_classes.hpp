@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "SimpleScatterPlugin_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "SimpleScatterPlugin_structs.hpp"
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class SimpleScatterPlugin.SimpleScatter
 // 0x0168 (0x0388 - 0x0220)
@@ -134,5 +133,4 @@ public:
 };
 DUMPER7_ASSERTS_ASimpleScatterSplineActor;
 
-}
-
+SDK_NAMESPACE_END

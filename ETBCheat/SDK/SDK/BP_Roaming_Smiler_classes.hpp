@@ -16,8 +16,7 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Roaming_Smiler.BP_Roaming_Smiler_C
 // 0x00B0 (0x0570 - 0x04C0)
@@ -107,5 +106,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_Roaming_Smiler_C;
 
-}
-
+SDK_NAMESPACE_END

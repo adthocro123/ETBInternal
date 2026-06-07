@@ -14,8 +14,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass AC_VineGrowth.AC_VineGrowth_C
 // 0x0040 (0x00F0 - 0x00B0)
@@ -67,5 +66,4 @@ public:
 };
 DUMPER7_ASSERTS_UAC_VineGrowth_C;
 
-}
-
+SDK_NAMESPACE_END

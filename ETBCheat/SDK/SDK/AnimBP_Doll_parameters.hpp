@@ -14,8 +14,8 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function AnimBP_Doll.AnimBP_Doll_C.ExecuteUbergraph_AnimBP_Doll
 // 0x0028 (0x0028 - 0x0000)
@@ -49,5 +49,5 @@ public:
 };
 DUMPER7_ASSERTS_AnimBP_Doll_C_AnimGraph;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

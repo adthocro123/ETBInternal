@@ -13,8 +13,8 @@
 #include "EModifierKeys_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WBP_Keyboard_Basic.WBP_Keyboard_Basic_C.ExecuteUbergraph_WBP_Keyboard_Basic
 // 0x0078 (0x0078 - 0x0000)
@@ -139,5 +139,5 @@ public:
 };
 DUMPER7_ASSERTS_WBP_Keyboard_Basic_C_SetButtonArray;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

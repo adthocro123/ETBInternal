@@ -11,12 +11,12 @@
 #include "Basic.hpp"
 
 #include "Backrooms_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_Item_AlmondWater.BP_Item_AlmondWater_C.ExecuteUbergraph_BP_Item_AlmondWater
 // 0x0280 (0x0280 - 0x0000)
@@ -154,5 +154,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_Item_AlmondWater_C_SetMaterial;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

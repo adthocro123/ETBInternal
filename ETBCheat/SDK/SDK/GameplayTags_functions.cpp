@@ -14,8 +14,7 @@
 #include "GameplayTags_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function GameplayTags.BlueprintGameplayTagLibrary.AddGameplayTag
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
@@ -1016,5 +1015,5 @@ bool IGameplayTagAssetInterface::HasMatchingGameplayTag(const struct FGameplayTa
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

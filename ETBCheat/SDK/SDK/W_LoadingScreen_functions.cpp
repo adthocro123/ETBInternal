@@ -14,8 +14,7 @@
 #include "W_LoadingScreen_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function W_LoadingScreen.W_LoadingScreen_C.ExecuteUbergraph_W_LoadingScreen
 // (Final, UbergraphFunction, HasDefaults)
@@ -98,5 +97,5 @@ void UW_LoadingScreen_C::CloseLoading()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

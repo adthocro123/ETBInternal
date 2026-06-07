@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct S_Gamemode.S_Gamemode
 // 0x0040 (0x0040 - 0x0000)
@@ -26,5 +25,4 @@ public:
 };
 DUMPER7_ASSERTS_FS_Gamemode;
 
-}
-
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "AIC_Moth_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function AIC_Moth.AIC_Moth_C.ExecuteUbergraph_AIC_Moth
 // (Final, UbergraphFunction)
@@ -176,5 +175,5 @@ void AAIC_Moth_C::Setup_AI()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

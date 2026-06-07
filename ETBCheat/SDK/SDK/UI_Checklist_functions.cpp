@@ -14,8 +14,7 @@
 #include "UI_Checklist_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function UI_Checklist.UI_Checklist_C.ExecuteUbergraph_UI_Checklist
 // (Final, UbergraphFunction)
@@ -84,5 +83,5 @@ void UUI_Checklist_C::GetSurvivorsText()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

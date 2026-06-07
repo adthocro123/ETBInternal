@@ -14,8 +14,7 @@
 #include "BP_DivingHelmet_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_DivingHelmet.BP_DivingHelmet_C.ExecuteUbergraph_BP_DivingHelmet
 // (Final, UbergraphFunction)
@@ -56,5 +55,5 @@ void ABP_DivingHelmet_C::UpdateLight(class AActor* Player)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

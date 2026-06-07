@@ -14,8 +14,7 @@
 #include "Paper2D_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function Paper2D.PaperFlipbook.GetKeyFrameIndexAtTime
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
@@ -1836,5 +1835,5 @@ struct FPaperTileInfo UTileMapBlueprintLibrary::MakeTile(int32 TileIndex, class 
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

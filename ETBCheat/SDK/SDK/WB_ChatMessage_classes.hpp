@@ -16,19 +16,17 @@
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WB_ChatMessage.WB_ChatMessage_C
-// 0x00A0 (0x0300 - 0x0260)
+// 0x0090 (0x0300 - 0x0270)
 class UWB_ChatMessage_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0260(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UTextBlock*                             ChatMessage_Text;                                  // 0x0268(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Username_Text;                                     // 0x0270(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FS_ChatMessage                         ChatMessage;                                       // 0x0278(0x0048)(Edit, BlueprintVisible, ExposeOnSpawn, HasGetValueTypeHash)
-	class FString                                 OwnerName;                                         // 0x02C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0270(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             ChatMessage_Text;                                  // 0x0278(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class URichTextBlock*                         Username_Text;                                     // 0x0280(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FS_ChatMessage                         ChatMessage;                                       // 0x0288(0x0048)(Edit, BlueprintVisible, ExposeOnSpawn, HasGetValueTypeHash)
 	struct FLinearColor                           Player_Message_Color;                              // 0x02D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           System_Message_Color;                              // 0x02E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           Global_Message_Color;                              // 0x02F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -40,10 +38,9 @@ public:
 	void Construct_ChatMessage();
 	void Set_Username();
 	void Set_ChatMessage_Color(const struct FLinearColor& Specified_Color);
-	void Set_Username_Global(const class FString& Chat_sender);
+	void Set_Username_Global(const struct FBPUniqueNetId& NetId);
 	void Set_Username_Color(const struct FLinearColor& SpecifiedColor);
 	void IsFiltering(bool* IsFiltering_0);
-	void CheckFont();
 
 public:
 	static class UClass* StaticClass()
@@ -61,5 +58,4 @@ public:
 };
 DUMPER7_ASSERTS_UWB_ChatMessage_C;
 
-}
-
+SDK_NAMESPACE_END

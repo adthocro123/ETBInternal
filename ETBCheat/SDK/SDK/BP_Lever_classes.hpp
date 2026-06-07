@@ -14,8 +14,7 @@
 #include "Backrooms_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Lever.BP_Lever_C
 // 0x0020 (0x0268 - 0x0248)
@@ -49,5 +48,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_Lever_C;
 
-}
-
+SDK_NAMESPACE_END

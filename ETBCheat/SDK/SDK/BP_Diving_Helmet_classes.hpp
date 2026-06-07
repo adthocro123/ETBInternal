@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "BP_Item_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Diving_Helmet.BP_Diving_Helmet_C
 // 0x0078 (0x02D0 - 0x0258)
@@ -62,5 +61,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_Diving_Helmet_C;
 
-}
-
+SDK_NAMESPACE_END

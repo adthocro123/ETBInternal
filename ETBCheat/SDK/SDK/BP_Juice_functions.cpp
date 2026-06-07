@@ -14,8 +14,7 @@
 #include "BP_Juice_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Juice.BP_Juice_C.ExecuteUbergraph_BP_Juice
 // (Final, UbergraphFunction, HasDefaults)
@@ -240,5 +239,5 @@ void ABP_Juice_C::SetMaterial(bool EnabledFOV)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

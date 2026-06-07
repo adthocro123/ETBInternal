@@ -15,8 +15,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass Player_Legs_AnimBP.Player_Legs_AnimBP_C
 // 0x13D0 (0x1690 - 0x02C0)
@@ -117,5 +116,4 @@ public:
 };
 DUMPER7_ASSERTS_UPlayer_Legs_AnimBP_C;
 
-}
-
+SDK_NAMESPACE_END

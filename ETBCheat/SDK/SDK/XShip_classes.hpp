@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "XShip_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class XShip.XShipComponent
 // 0x00D8 (0x0188 - 0x00B0)
@@ -124,5 +123,4 @@ public:
 };
 DUMPER7_ASSERTS_AXShipPawn;
 
-}
-
+SDK_NAMESPACE_END

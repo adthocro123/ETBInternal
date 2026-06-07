@@ -13,15 +13,14 @@
 #include "SlateCore_structs.hpp"
 #include "Backrooms_structs.hpp"
 #include "UMG_structs.hpp"
-#include "InputCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function UI_MainMenu_Button.UI_MainMenu_Button_C.ExecuteUbergraph_UI_MainMenu_Button
-// 0x03D0 (0x03D0 - 0x0000)
+// 0x0378 (0x0378 - 0x0000)
 struct UI_MainMenu_Button_C_ExecuteUbergraph_UI_MainMenu_Button final
 {
 public:
@@ -63,26 +62,25 @@ public:
 	struct FPointerEvent                          K2Node_Event_MouseEvent;                           // 0x0170(0x0070)(ConstParm)
 	class UTexture2D*                             K2Node_Select_Default_1;                           // 0x01E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UTexture2D*                             K2Node_Select_Default_2;                           // 0x01E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSlateFontInfo                         CallFunc_Get_Font_Culture_Checked_OutFont;         // 0x01F0(0x0058)(HasGetValueTypeHash)
-	struct FLinearColor                           K2Node_Select_Default_3;                           // 0x0248(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0258(0x0028)()
-	struct FLinearColor                           K2Node_Select_Default_4;                           // 0x0280(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x0290(0x0028)()
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_2;                    // 0x02B8(0x0028)()
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_3;                    // 0x02E0(0x0028)()
-	struct FLinearColor                           K2Node_Select_Default_5;                           // 0x0308(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_4;                    // 0x0318(0x0028)()
-	bool                                          K2Node_Event_IsFocused;                            // 0x0340(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_341[0x7];                                      // 0x0341(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateColor                            K2Node_Select_Default_6;                           // 0x0348(0x0028)()
-	EFancyInputDevice                             CallFunc_GetCurrentInputDevice_ReturnValue;        // 0x0370(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_371[0x3];                                      // 0x0371(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakVector2D_X;                          // 0x0374(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakVector2D_Y;                          // 0x0378(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x037C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_37D[0x3];                                      // 0x037D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_5;                    // 0x0380(0x0028)()
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_6;                    // 0x03A8(0x0028)()
+	struct FLinearColor                           K2Node_Select_Default_3;                           // 0x01F0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0200(0x0028)()
+	struct FLinearColor                           K2Node_Select_Default_4;                           // 0x0228(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x0238(0x0028)()
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_2;                    // 0x0260(0x0028)()
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_3;                    // 0x0288(0x0028)()
+	struct FLinearColor                           K2Node_Select_Default_5;                           // 0x02B0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_4;                    // 0x02C0(0x0028)()
+	bool                                          K2Node_Event_IsFocused;                            // 0x02E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2E9[0x7];                                      // 0x02E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateColor                            K2Node_Select_Default_6;                           // 0x02F0(0x0028)()
+	EFancyInputDevice                             CallFunc_GetCurrentInputDevice_ReturnValue;        // 0x0318(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_319[0x3];                                      // 0x0319(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakVector2D_X;                          // 0x031C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakVector2D_Y;                          // 0x0320(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0324(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_325[0x3];                                      // 0x0325(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_5;                    // 0x0328(0x0028)()
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_6;                    // 0x0350(0x0028)()
 };
 DUMPER7_ASSERTS_UI_MainMenu_Button_C_ExecuteUbergraph_UI_MainMenu_Button;
 
@@ -181,20 +179,21 @@ public:
 DUMPER7_ASSERTS_UI_MainMenu_Button_C_OnMouseButtonUp;
 
 // Function UI_MainMenu_Button.UI_MainMenu_Button_C.OnPreviewKeyDown
-// 0x02B8 (0x02B8 - 0x0000)
+// 0x02A8 (0x02A8 - 0x0000)
 struct UI_MainMenu_Button_C_OnPreviewKeyDown final
 {
 public:
 	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	struct FKeyEvent                              InKeyEvent;                                        // 0x0038(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm)
 	struct FEventReply                            ReturnValue;                                       // 0x0070(0x00B8)(Parm, OutParm, ReturnParm)
-	struct FKey                                   CallFunc_GetKey_ReturnValue;                       // 0x0128(0x0018)(HasGetValueTypeHash)
-	struct FEventReply                            CallFunc_Unhandled_ReturnValue;                    // 0x0140(0x00B8)()
-	bool                                          CallFunc_EqualEqual_KeyKey_ReturnValue;            // 0x01F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1F9[0x7];                                      // 0x01F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x0200(0x00B8)()
+	EUINavigationAction                           CallFunc_Key_GetNavigationActionFromKey_ReturnValue; // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_129[0x7];                                      // 0x0129(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FEventReply                            CallFunc_Unhandled_ReturnValue;                    // 0x0130(0x00B8)()
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1E9[0x7];                                      // 0x01E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FEventReply                            CallFunc_Handled_ReturnValue;                      // 0x01F0(0x00B8)()
 };
 DUMPER7_ASSERTS_UI_MainMenu_Button_C_OnPreviewKeyDown;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

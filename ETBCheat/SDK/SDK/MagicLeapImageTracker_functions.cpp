@@ -14,8 +14,7 @@
 #include "MagicLeapImageTracker_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function MagicLeapImageTracker.MagicLeapImageTrackerComponent.RemoveTargetAsync
 // (Final, Native, Public, BlueprintCallable)
@@ -169,5 +168,5 @@ void UMagicLeapImageTrackerFunctionLibrary::SetMaxSimultaneousTargets(int32 MaxS
 	Func->FunctionFlags = Flgs;
 }
 
-}
 
+SDK_NAMESPACE_END

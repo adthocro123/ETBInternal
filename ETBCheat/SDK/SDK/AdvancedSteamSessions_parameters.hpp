@@ -14,8 +14,8 @@
 #include "AdvancedSteamSessions_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function AdvancedSteamSessions.AdvancedSteamFriendsLibrary.CreateSteamIDFromString
 // 0x0038 (0x0038 - 0x0000)
@@ -83,7 +83,7 @@ public:
 	struct FBPUniqueNetId                         UniqueNetId;                                       // 0x0000(0x0028)(ConstParm, Parm, NativeAccessSpecifierPublic)
 	EBlueprintResultSwitch                        Result;                                            // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         AppId;                                             // 0x002C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         AppID;                                             // 0x002C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AdvancedSteamFriendsLibrary_GetSteamFriendGamePlayed;
 
@@ -199,5 +199,5 @@ public:
 };
 DUMPER7_ASSERTS_SteamWSRequestUGCDetailsCallbackProxy_GetWorkshopItemDetails;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

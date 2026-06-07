@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum BinkMediaPlayer.EBinkMediaPlayerBinkDrawStyle
 // NumValues: 0x0006
@@ -74,5 +73,4 @@ enum class EBinkMoviePlayerBinkBufferModes : uint8
 	MP_Bink_MAX                              = 3,
 };
 
-}
-
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "Bacteria_BP_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function Bacteria_BP.Bacteria_BP_C.ExecuteUbergraph_Bacteria_BP
 // (Final, UbergraphFunction, HasDefaults)
@@ -399,5 +398,5 @@ void ABacteria_BP_C::CheckPlayersTimer()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

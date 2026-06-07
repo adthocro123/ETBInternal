@@ -13,8 +13,8 @@
 #include "E_CameraSetting_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_FL_GameSettings.BP_FL_GameSettings_C.Set_AudioSettings
 // 0x0020 (0x0020 - 0x0000)
@@ -55,33 +55,37 @@ public:
 DUMPER7_ASSERTS_BP_FL_GameSettings_C_Load_ControlSettings;
 
 // Function BP_FL_GameSettings.BP_FL_GameSettings_C.SetHasSeenVHS
-// 0x0018 (0x0018 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct BP_FL_GameSettings_C_SetHasSeenVHS final
 {
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UBP_SG_GameSettings_C*                  CallFunc_LoadSettings_SaveGame;                    // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SaveGameToSlot_ReturnValue;               // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	class UFancySaveSubsystem*                    CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SaveGameToDisk_ReturnValue;               // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_BP_FL_GameSettings_C_SetHasSeenVHS;
 
 // Function BP_FL_GameSettings.BP_FL_GameSettings_C.LoadSettings
-// 0x0048 (0x0048 - 0x0000)
+// 0x0060 (0x0060 - 0x0000)
 struct BP_FL_GameSettings_C_LoadSettings final
 {
 public:
 	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UBP_SG_GameSettings_C*                  SaveGame;                                          // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 GameSettings_SlotName;                             // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	class UBP_SG_GameSettings_C*                  CallFunc_CreateSaveGameObject_ReturnValue;         // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USaveGame*                              CallFunc_LoadGameFromSlot_ReturnValue;             // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SaveGameToSlot_ReturnValue;               // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_SG_GameSettings_C*                  K2Node_DynamicCast_AsBP_SG_Game_Settings;          // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_DoesSaveGameExist_ReturnValue;            // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	class UFancySaveSubsystem*                    CallFunc_GetGameInstanceSubsystem_ReturnValue;     // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFancySaveSubsystem*                    CallFunc_GetGameInstanceSubsystem_ReturnValue_1;   // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UFancySaveSubsystem*                    CallFunc_GetGameInstanceSubsystem_ReturnValue_2;   // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBP_SG_GameSettings_C*                  CallFunc_CreateSaveGameObject_ReturnValue;         // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USaveGame*                              CallFunc_LoadGameFromSlot_ReturnValue;             // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SaveGameToDisk_ReturnValue;               // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_SG_GameSettings_C*                  K2Node_DynamicCast_AsBP_SG_Game_Settings;          // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_DoesSaveGameExist_ReturnValue;            // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_BP_FL_GameSettings_C_LoadSettings;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

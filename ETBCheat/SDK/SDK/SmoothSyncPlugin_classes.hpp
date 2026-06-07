@@ -14,8 +14,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class SmoothSyncPlugin.SmoothSync
 // 0x02C0 (0x0370 - 0x00B0)
@@ -99,5 +98,4 @@ public:
 };
 DUMPER7_ASSERTS_USmoothSync;
 
-}
-
+SDK_NAMESPACE_END

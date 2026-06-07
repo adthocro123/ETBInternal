@@ -10,12 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "MeshDescription_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "MeshDescription_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum EditableMesh.ETriangleTessellationMode
 // NumValues: 0x0003
@@ -421,5 +420,4 @@ public:
 };
 DUMPER7_ASSERTS_FRenderingPolygon;
 
-}
-
+SDK_NAMESPACE_END

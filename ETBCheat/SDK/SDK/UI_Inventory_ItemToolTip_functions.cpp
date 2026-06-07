@@ -14,8 +14,7 @@
 #include "UI_Inventory_ItemToolTip_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function UI_Inventory_ItemToolTip.UI_Inventory_ItemToolTip_C.ExecuteUbergraph_UI_Inventory_ItemToolTip
 // (Final, UbergraphFunction, HasDefaults)
@@ -50,5 +49,5 @@ void UUI_Inventory_ItemToolTip_C::Construct()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

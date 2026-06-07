@@ -13,8 +13,7 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct HE_LookAtLocationSeq.HE_LookAtLocationSeq
 // 0x0018 (0x0018 - 0x0000)
@@ -29,5 +28,4 @@ public:
 };
 DUMPER7_ASSERTS_FHE_LookAtLocationSeq;
 
-}
-
+SDK_NAMESPACE_END

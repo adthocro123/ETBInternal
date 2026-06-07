@@ -14,8 +14,7 @@
 #include "BTDecorator_ShouldRoam_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BTDecorator_ShouldRoam.BTDecorator_ShouldRoam_C.PerformConditionCheckAI
 // (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
@@ -41,5 +40,5 @@ bool UBTDecorator_ShouldRoam_C::PerformConditionCheckAI(class AAIController* Own
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

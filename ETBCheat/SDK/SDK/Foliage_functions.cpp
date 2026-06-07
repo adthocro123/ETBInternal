@@ -14,8 +14,7 @@
 #include "Foliage_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function Foliage.FoliageStatistics.FoliageOverlappingBoxCount
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
@@ -142,5 +141,5 @@ void UProceduralFoliageSpawner::Simulate(int32 NumSteps)
 	Func->FunctionFlags = Flgs;
 }
 
-}
 
+SDK_NAMESPACE_END

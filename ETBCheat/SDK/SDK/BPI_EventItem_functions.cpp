@@ -14,8 +14,7 @@
 #include "BPI_EventItem_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPI_EventItem.BPI_EventItem_C.ToggleEvent
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -36,5 +35,5 @@ void IBPI_EventItem_C::ToggleEvent(bool Enable)
 	AsUObject()->ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -11,12 +11,11 @@
 #include "Basic.hpp"
 
 #include "MovieScene_classes.hpp"
-#include "MovieSceneTracks_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "MovieSceneTracks_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class MediaCompositing.MovieSceneMediaPlayerPropertySection
 // 0x0010 (0x00F8 - 0x00E8)
@@ -121,5 +120,4 @@ public:
 };
 DUMPER7_ASSERTS_UMovieSceneMediaTrack;
 
-}
-
+SDK_NAMESPACE_END

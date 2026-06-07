@@ -14,8 +14,7 @@
 #include "UI_Drag_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function UI_Drag.UI_Drag_C.ExecuteUbergraph_UI_Drag
 // (Final, UbergraphFunction)
@@ -225,5 +224,5 @@ struct FEventReply UUI_Drag_C::OnKeyDown(const struct FGeometry& MyGeometry, con
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

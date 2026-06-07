@@ -14,8 +14,7 @@
 #include "EndCutscene_UI_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function EndCutscene_UI.EndCutscene_UI_C.ExecuteUbergraph_EndCutscene_UI
 // (Final, UbergraphFunction)
@@ -84,5 +83,5 @@ void UEndCutscene_UI_C::Construct()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

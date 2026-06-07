@@ -14,8 +14,7 @@
 #include "W_VHS_Filter_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function W_VHS_Filter.W_VHS_Filter_C.ExecuteUbergraph_W_VHS_Filter
 // (Final, UbergraphFunction, HasDefaults)
@@ -199,5 +198,5 @@ struct FEventReply UW_VHS_Filter_C::OnMouseButtonUp(const struct FGeometry& MyGe
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

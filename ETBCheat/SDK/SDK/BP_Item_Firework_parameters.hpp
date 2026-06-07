@@ -13,8 +13,8 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_Item_Firework.BP_Item_Firework_C.ExecuteUbergraph_BP_Item_Firework
 // 0x0290 (0x0290 - 0x0000)
@@ -234,5 +234,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_Item_Firework_C_OnNotifyEnd_2A0F3273455CB03AB9B90EA95723A9CF;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

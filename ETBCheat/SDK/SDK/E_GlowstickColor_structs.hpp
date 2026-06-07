@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedEnum E_GlowstickColor.E_GlowstickColor
 // NumValues: 0x0006
@@ -26,5 +25,4 @@ enum class E_GlowstickColor : uint8
 	E_MAX                                    = 5,
 };
 
-}
-
+SDK_NAMESPACE_END

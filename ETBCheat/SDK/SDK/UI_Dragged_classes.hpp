@@ -14,8 +14,7 @@
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass UI_Dragged.UI_Dragged_C
 // 0x0010 (0x0098 - 0x0088)
@@ -41,5 +40,4 @@ public:
 };
 DUMPER7_ASSERTS_UUI_Dragged_C;
 
-}
-
+SDK_NAMESPACE_END

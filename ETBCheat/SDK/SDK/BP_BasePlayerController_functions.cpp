@@ -14,8 +14,7 @@
 #include "BP_BasePlayerController_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_BasePlayerController.BP_BasePlayerController_C.ExecuteUbergraph_BP_BasePlayerController
 // (Final, UbergraphFunction, HasDefaults)
@@ -34,6 +33,88 @@ void ABP_BasePlayerController_C::ExecuteUbergraph_BP_BasePlayerController(int32 
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_BasePlayerController.BP_BasePlayerController_C.UpdateUsingMultiplayerFeatures
+// (Net, NetReliable, NetClient, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bUsingMP                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_BasePlayerController_C::UpdateUsingMultiplayerFeatures(bool bUsingMP)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BasePlayerController_C", "UpdateUsingMultiplayerFeatures");
+
+	Params::BP_BasePlayerController_C_UpdateUsingMultiplayerFeatures Parms{};
+
+	Parms.bUsingMP = bUsingMP;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_BasePlayerController.BP_BasePlayerController_C.EndCurrentActivity
+// (Net, NetReliable, NetClient, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EActivityCompletionStatus               Status                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_BasePlayerController_C::EndCurrentActivity(EActivityCompletionStatus Status)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BasePlayerController_C", "EndCurrentActivity");
+
+	Params::BP_BasePlayerController_C_EndCurrentActivity Parms{};
+
+	Parms.Status = Status;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_BasePlayerController.BP_BasePlayerController_C.XboxUpdateCommBlocked
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_BasePlayerController_C::XboxUpdateCommBlocked()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BasePlayerController_C", "XboxUpdateCommBlocked");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_BasePlayerController.BP_BasePlayerController_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ABP_BasePlayerController_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BasePlayerController_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_BasePlayerController.BP_BasePlayerController_C.HandleKickedBP
+// (Event, Protected, BlueprintEvent)
+
+void ABP_BasePlayerController_C::HandleKickedBP()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BasePlayerController_C", "HandleKickedBP");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -227,26 +308,6 @@ void ABP_BasePlayerController_C::PrintLevelTimes()
 }
 
 
-// Function BP_BasePlayerController.BP_BasePlayerController_C.OnActiveUserChanged
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bIsSameUser                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void ABP_BasePlayerController_C::OnActiveUserChanged(bool bIsSameUser)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BasePlayerController_C", "OnActiveUserChanged");
-
-	Params::BP_BasePlayerController_C_OnActiveUserChanged Parms{};
-
-	Parms.bIsSameUser = bIsSameUser;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_BasePlayerController.BP_BasePlayerController_C.ClientHUDInit
 // (BlueprintCosmetic, Event, Protected, BlueprintEvent)
 
@@ -272,40 +333,6 @@ void ABP_BasePlayerController_C::FadeOutOnBegin()
 		Func = Class->GetFunction("BP_BasePlayerController_C", "FadeOutOnBegin");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_BasePlayerController.BP_BasePlayerController_C.BindOnControllerDisconnect
-// (BlueprintCallable, BlueprintEvent)
-
-void ABP_BasePlayerController_C::BindOnControllerDisconnect()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BasePlayerController_C", "BindOnControllerDisconnect");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_BasePlayerController.BP_BasePlayerController_C.OnControllerDisconnected
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EEstablishUserReason                    reason                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_BasePlayerController_C::OnControllerDisconnected(EEstablishUserReason reason)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BasePlayerController_C", "OnControllerDisconnected");
-
-	Params::BP_BasePlayerController_C_OnControllerDisconnected Parms{};
-
-	Parms.reason = reason;
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -358,6 +385,46 @@ void ABP_BasePlayerController_C::UnlockAchievement(class FName AchievementName)
 	Params::BP_BasePlayerController_C_UnlockAchievement Parms{};
 
 	Parms.AchievementName = AchievementName;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_BasePlayerController.BP_BasePlayerController_C.OnSuccess_CCA713C34E25CEC47F87468916FB9E32
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FFancyGDKCalcCannotCommunicateResult&CannotCommunicateWith                                  (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void ABP_BasePlayerController_C::OnSuccess_CCA713C34E25CEC47F87468916FB9E32(const struct FFancyGDKCalcCannotCommunicateResult& CannotCommunicateWith)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BasePlayerController_C", "OnSuccess_CCA713C34E25CEC47F87468916FB9E32");
+
+	Params::BP_BasePlayerController_C_OnSuccess_CCA713C34E25CEC47F87468916FB9E32 Parms{};
+
+	Parms.CannotCommunicateWith = std::move(CannotCommunicateWith);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_BasePlayerController.BP_BasePlayerController_C.OnFailure_CCA713C34E25CEC47F87468916FB9E32
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FFancyGDKCalcCannotCommunicateResult&CannotCommunicateWith                                  (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void ABP_BasePlayerController_C::OnFailure_CCA713C34E25CEC47F87468916FB9E32(const struct FFancyGDKCalcCannotCommunicateResult& CannotCommunicateWith)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BasePlayerController_C", "OnFailure_CCA713C34E25CEC47F87468916FB9E32");
+
+	Params::BP_BasePlayerController_C_OnFailure_CCA713C34E25CEC47F87468916FB9E32 Parms{};
+
+	Parms.CannotCommunicateWith = std::move(CannotCommunicateWith);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -486,5 +553,29 @@ void ABP_BasePlayerController_C::GetPlayerControllerFromPlayerState(class APlaye
 		*PlayerController = Parms.PlayerController;
 }
 
+
+// Function BP_BasePlayerController.BP_BasePlayerController_C.Should Block VOIPAudio for Player
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// const struct FBPUniqueNetId&            Player_0                                               (BlueprintVisible, BlueprintReadOnly, Parm)
+// bool*                                   ShouldBlock                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_BasePlayerController_C::Should_Block_VOIPAudio_for_Player(const struct FBPUniqueNetId& Player_0, bool* ShouldBlock)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BasePlayerController_C", "Should Block VOIPAudio for Player");
+
+	Params::BP_BasePlayerController_C_Should_Block_VOIPAudio_for_Player Parms{};
+
+	Parms.Player_0 = std::move(Player_0);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (ShouldBlock != nullptr)
+		*ShouldBlock = Parms.ShouldBlock;
 }
 
+
+SDK_NAMESPACE_END

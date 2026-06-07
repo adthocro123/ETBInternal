@@ -15,8 +15,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Animation.BP_Animation_C
 // 0x0030 (0x04F0 - 0x04C0)
@@ -70,5 +69,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_Animation_C;
 
-}
-
+SDK_NAMESPACE_END

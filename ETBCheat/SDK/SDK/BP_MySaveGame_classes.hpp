@@ -13,13 +13,13 @@
 #include "S_LevelStats_structs.hpp"
 #include "ST_UI_Mission_structs.hpp"
 #include "Engine_classes.hpp"
+#include "E_Difficulty_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_MySaveGame.BP_MySaveGame_C
-// 0x0098 (0x00C0 - 0x0028)
+// 0x00E8 (0x0110 - 0x0028)
 class UBP_MySaveGame_C final : public USaveGame
 {
 public:
@@ -39,6 +39,13 @@ public:
 	TArray<struct FST_UI_Mission>                 MissionData;                                       // 0x00A8(0x0010)(Edit, BlueprintVisible)
 	int32                                         CurrentXP;                                         // 0x00B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         SaveGameVersion;                                   // 0x00BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMap<class FString, class FString>            SaveDisplayNamesLookup;                            // 0x00C0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+
+public:
+	void GetSaveGameDisplayName(const class FString& SlotName, class FString* Value);
+	void GenerateNewSaveGameName(E_Difficulty Difficulty, class FString* SlotName);
+	void DoesSimilarGameEntryExist(const class FString& DisplayName, E_Difficulty Difficulty, bool* Result);
+	E_Difficulty GetDifficultyForSlot(const class FString& Slot);
 
 public:
 	static class UClass* StaticClass()
@@ -56,5 +63,4 @@ public:
 };
 DUMPER7_ASSERTS_UBP_MySaveGame_C;
 
-}
-
+SDK_NAMESPACE_END

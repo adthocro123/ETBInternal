@@ -13,8 +13,7 @@
 #include "DeveloperSettings_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class BacktraceSettingsLibrary.BacktraceSettings
 // 0x0048 (0x0080 - 0x0038)
@@ -47,5 +46,4 @@ public:
 };
 DUMPER7_ASSERTS_UBacktraceSettings;
 
-}
-
+SDK_NAMESPACE_END

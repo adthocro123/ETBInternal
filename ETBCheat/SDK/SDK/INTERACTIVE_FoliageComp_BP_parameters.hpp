@@ -12,12 +12,12 @@
 
 #include "CoreUObject_structs.hpp"
 #include "InstanceData_structs.hpp"
-#include "Engine_structs.hpp"
 #include "InstanceStatus_structs.hpp"
+#include "Engine_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function INTERACTIVE_FoliageComp_BP.INTERACTIVE_FoliageComp_BP_C.ExecuteUbergraph_INTERACTIVE_FoliageComp_BP
 // 0x02B0 (0x02B0 - 0x0000)
@@ -360,5 +360,5 @@ public:
 };
 DUMPER7_ASSERTS_INTERACTIVE_FoliageComp_BP_C_Start_New_Instance_Offset;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

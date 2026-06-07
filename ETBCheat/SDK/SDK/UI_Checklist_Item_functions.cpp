@@ -14,8 +14,7 @@
 #include "UI_Checklist_Item_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function UI_Checklist_Item.UI_Checklist_Item_C.ExecuteUbergraph_UI_Checklist_Item
 // (Final, UbergraphFunction, HasDefaults)
@@ -50,5 +49,5 @@ void UUI_Checklist_Item_C::Construct()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

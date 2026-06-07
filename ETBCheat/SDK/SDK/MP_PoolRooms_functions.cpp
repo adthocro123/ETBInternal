@@ -14,8 +14,7 @@
 #include "MP_PoolRooms_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function MP_PoolRooms.MP_PoolRooms_C.ExecuteUbergraph_MP_PoolRooms
 // (Final, UbergraphFunction, HasDefaults)
@@ -149,5 +148,5 @@ class AActor* AMP_PoolRooms_C::ChoosePlayerStart(class AController* Player)
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

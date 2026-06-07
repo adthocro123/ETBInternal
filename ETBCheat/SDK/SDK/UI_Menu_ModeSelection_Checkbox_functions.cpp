@@ -14,8 +14,7 @@
 #include "UI_Menu_ModeSelection_Checkbox_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function UI_Menu_ModeSelection_Checkbox.UI_Menu_ModeSelection_Checkbox_C.ExecuteUbergraph_UI_Menu_ModeSelection_Checkbox
 // (Final, UbergraphFunction)
@@ -121,5 +120,5 @@ struct FEventReply UUI_Menu_ModeSelection_Checkbox_C::OnKeyDown(const struct FGe
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

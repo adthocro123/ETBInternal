@@ -13,8 +13,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Dummy_Pawn_2.BP_Dummy_Pawn_2_C
 // 0x0010 (0x0290 - 0x0280)
@@ -40,5 +39,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_Dummy_Pawn_2_C;
 
-}
-
+SDK_NAMESPACE_END

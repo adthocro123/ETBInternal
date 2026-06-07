@@ -14,8 +14,7 @@
 #include "Lobby_Name_Box_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function Lobby_Name_Box.Lobby_Name_Box_C.ExecuteUbergraph_Lobby_Name_Box
 // (Final, UbergraphFunction, HasDefaults)
@@ -70,5 +69,5 @@ void ULobby_Name_Box_C::CanClose()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

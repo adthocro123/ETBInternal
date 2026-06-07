@@ -14,8 +14,7 @@
 #include "Lobby_MapSelection_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function Lobby_MapSelection.Lobby_MapSelection_C.ExecuteUbergraph_Lobby_MapSelection
 // (Final, UbergraphFunction, HasDefaults)
@@ -151,15 +150,15 @@ void ULobby_MapSelection_C::BndEvt__Lobby_MapSelection_Lobby_Level_Switcher_C_0_
 }
 
 
-// Function Lobby_MapSelection.Lobby_MapSelection_C.Setup
+// Function Lobby_MapSelection.Lobby_MapSelection_C.SetUp
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void ULobby_MapSelection_C::Setup()
+void ULobby_MapSelection_C::SetUp()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Lobby_MapSelection_C", "Setup");
+		Func = Class->GetFunction("Lobby_MapSelection_C", "SetUp");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -445,18 +444,4 @@ void ULobby_MapSelection_C::CheckName(bool* IsValid)
 }
 
 
-// Function Lobby_MapSelection.Lobby_MapSelection_C.CheckFont
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ULobby_MapSelection_C::CheckFont()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Lobby_MapSelection_C", "CheckFont");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-}
-
+SDK_NAMESPACE_END

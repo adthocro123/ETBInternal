@@ -14,8 +14,7 @@
 #include "BP_Item_AlmondBottle_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Item_AlmondBottle.BP_Item_AlmondBottle_C.SetMaterial
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -36,5 +35,5 @@ void ABP_Item_AlmondBottle_C::SetMaterial(bool EnabledFOV)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

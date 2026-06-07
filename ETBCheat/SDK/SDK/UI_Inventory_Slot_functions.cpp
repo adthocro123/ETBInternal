@@ -14,8 +14,7 @@
 #include "UI_Inventory_Slot_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function UI_Inventory_Slot.UI_Inventory_Slot_C.ExecuteUbergraph_UI_Inventory_Slot
 // (Final, UbergraphFunction, HasDefaults)
@@ -315,5 +314,5 @@ struct FEventReply UUI_Inventory_Slot_C::OnFocusReceived(const struct FGeometry&
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

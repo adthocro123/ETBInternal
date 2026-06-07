@@ -14,8 +14,7 @@
 #include "BP_Destructible_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Destructible.BP_Destructible_C.Damage
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -36,5 +35,5 @@ void IBP_Destructible_C::Damage(class ACharacter* Character)
 	AsUObject()->ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

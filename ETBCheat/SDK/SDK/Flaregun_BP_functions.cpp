@@ -14,8 +14,7 @@
 #include "Flaregun_BP_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function Flaregun_BP.Flaregun_BP_C.ExecuteUbergraph_Flaregun_BP
 // (Final, UbergraphFunction)
@@ -50,5 +49,5 @@ void AFlaregun_BP_C::ReceiveBeginPlay()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

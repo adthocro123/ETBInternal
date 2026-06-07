@@ -14,8 +14,7 @@
 #include "InteractiveToolsFramework_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function InteractiveToolsFramework.GizmoBaseComponent.UpdateHoverState
 // (Final, Native, Public)
@@ -460,5 +459,5 @@ struct FVector2D IGizmoVec2ParameterSource::GetParameter() const
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

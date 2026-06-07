@@ -14,8 +14,8 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_FallingPlank.BP_FallingPlank_C.ExecuteUbergraph_BP_FallingPlank
 // 0x01D0 (0x01D0 - 0x0000)
@@ -99,5 +99,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_FallingPlank_C_BndEvt__BP_FallingPlank_PlankMesh_K2Node_ComponentBoundEvent_1_ComponentHitSignature__DelegateSignature;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

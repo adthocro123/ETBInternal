@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum SmoothSyncPlugin.RestState
 // NumValues: 0x0004
@@ -49,5 +48,4 @@ enum class ESyncMode : uint8
 	SyncMode_MAX                             = 8,
 };
 
-}
-
+SDK_NAMESPACE_END

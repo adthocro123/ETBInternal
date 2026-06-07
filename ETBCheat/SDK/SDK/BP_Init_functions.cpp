@@ -14,8 +14,7 @@
 #include "BP_Init_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Init.BP_Init_C.ExecuteUbergraph_BP_Init
 // (Final, UbergraphFunction)
@@ -70,5 +69,5 @@ void ABP_Init_C::Logined(class UUI_SignIn_C* Widget)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

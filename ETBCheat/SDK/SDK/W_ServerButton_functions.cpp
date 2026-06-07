@@ -14,8 +14,7 @@
 #include "W_ServerButton_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function W_ServerButton.W_ServerButton_C.ExecuteUbergraph_W_ServerButton
 // (Final, UbergraphFunction, HasDefaults)
@@ -37,51 +36,65 @@ void UW_ServerButton_C::ExecuteUbergraph_W_ServerButton(int32 EntryPoint)
 }
 
 
-// Function W_ServerButton.W_ServerButton_C.ToggleFocus
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsFocused                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UW_ServerButton_C::ToggleFocus(bool IsFocused)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_ServerButton_C", "ToggleFocus");
-
-	Params::W_ServerButton_C_ToggleFocus Parms{};
-
-	Parms.IsFocused = IsFocused;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function W_ServerButton.W_ServerButton_C.BndEvt__W_ServerButton_Button_164_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UW_ServerButton_C::BndEvt__W_ServerButton_Button_164_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_ServerButton_C", "BndEvt__W_ServerButton_Button_164_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function W_ServerButton.W_ServerButton_C.CustomEvent
+// Function W_ServerButton.W_ServerButton_C.RefreshStyle
 // (BlueprintCallable, BlueprintEvent)
 
-void UW_ServerButton_C::CustomEvent()
+void UW_ServerButton_C::RefreshStyle()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("W_ServerButton_C", "CustomEvent");
+		Func = Class->GetFunction("W_ServerButton_C", "RefreshStyle");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function W_ServerButton.W_ServerButton_C.EnterLobby
+// (BlueprintCallable, BlueprintEvent)
+
+void UW_ServerButton_C::EnterLobby()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("W_ServerButton_C", "EnterLobby");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function W_ServerButton.W_ServerButton_C.BndEvt__Button_Load_K2Node_ComponentBoundEvent_30_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UW_ServerButton_C::BndEvt__Button_Load_K2Node_ComponentBoundEvent_30_OnButtonClickedEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("W_ServerButton_C", "BndEvt__Button_Load_K2Node_ComponentBoundEvent_30_OnButtonClickedEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function W_ServerButton.W_ServerButton_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UW_ServerButton_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("W_ServerButton_C", "PreConstruct");
+
+	Params::W_ServerButton_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -127,233 +140,6 @@ void UW_ServerButton_C::Construct()
 }
 
 
-// Function W_ServerButton.W_ServerButton_C.BndEvt__Button_Load_K2Node_ComponentBoundEvent_30_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UW_ServerButton_C::BndEvt__Button_Load_K2Node_ComponentBoundEvent_30_OnButtonClickedEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_ServerButton_C", "BndEvt__Button_Load_K2Node_ComponentBoundEvent_30_OnButtonClickedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function W_ServerButton.W_ServerButton_C.MouseLeave
-// (BlueprintCallable, BlueprintEvent)
-
-void UW_ServerButton_C::MouseLeave()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_ServerButton_C", "MouseLeave");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function W_ServerButton.W_ServerButton_C.MouseEnter
-// (BlueprintCallable, BlueprintEvent)
-
-void UW_ServerButton_C::MouseEnter()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_ServerButton_C", "MouseEnter");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function W_ServerButton.W_ServerButton_C.OnMouseLeave
-// (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UW_ServerButton_C::OnMouseLeave(const struct FPointerEvent& MouseEvent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_ServerButton_C", "OnMouseLeave");
-
-	Params::W_ServerButton_C_OnMouseLeave Parms{};
-
-	Parms.MouseEvent = std::move(MouseEvent);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function W_ServerButton.W_ServerButton_C.OnMouseEnter
-// (BlueprintCosmetic, Event, Public, HasOutParams, BlueprintEvent)
-// Parameters:
-// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// const struct FPointerEvent&             MouseEvent                                             (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UW_ServerButton_C::OnMouseEnter(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_ServerButton_C", "OnMouseEnter");
-
-	Params::W_ServerButton_C_OnMouseEnter Parms{};
-
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.MouseEvent = std::move(MouseEvent);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function W_ServerButton.W_ServerButton_C.ToggleHover
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsHovered_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UW_ServerButton_C::ToggleHover(bool IsHovered_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_ServerButton_C", "ToggleHover");
-
-	Params::W_ServerButton_C_ToggleHover Parms{};
-
-	Parms.IsHovered_0 = IsHovered_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function W_ServerButton.W_ServerButton_C.MakeAnim
-// (BlueprintCallable, BlueprintEvent)
-
-void UW_ServerButton_C::MakeAnim()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_ServerButton_C", "MakeAnim");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function W_ServerButton.W_ServerButton_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UW_ServerButton_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_ServerButton_C", "PreConstruct");
-
-	Params::W_ServerButton_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function W_ServerButton.W_ServerButton_C.ToggleEnabled
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsEnabled                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UW_ServerButton_C::ToggleEnabled(bool IsEnabled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_ServerButton_C", "ToggleEnabled");
-
-	Params::W_ServerButton_C_ToggleEnabled Parms{};
-
-	Parms.IsEnabled = IsEnabled;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function W_ServerButton.W_ServerButton_C.CustomNavigation_Left
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-class UWidget* UW_ServerButton_C::CustomNavigation_Left(EUINavigation Navigation_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_ServerButton_C", "CustomNavigation_Left");
-
-	Params::W_ServerButton_C_CustomNavigation_Left Parms{};
-
-	Parms.Navigation_0 = Navigation_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function W_ServerButton.W_ServerButton_C.CustomNavigation_Up
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-class UWidget* UW_ServerButton_C::CustomNavigation_Up(EUINavigation Navigation_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_ServerButton_C", "CustomNavigation_Up");
-
-	Params::W_ServerButton_C_CustomNavigation_Up Parms{};
-
-	Parms.Navigation_0 = Navigation_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function W_ServerButton.W_ServerButton_C.CustomNavigation_Down
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-class UWidget* UW_ServerButton_C::CustomNavigation_Down(EUINavigation Navigation_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_ServerButton_C", "CustomNavigation_Down");
-
-	Params::W_ServerButton_C_CustomNavigation_Down Parms{};
-
-	Parms.Navigation_0 = Navigation_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
 // Function W_ServerButton.W_ServerButton_C.Get_TextBlock_Ping_ColorAndOpacity
 // (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -373,5 +159,141 @@ struct FSlateColor UW_ServerButton_C::Get_TextBlock_Ping_ColorAndOpacity()
 	return Parms.ReturnValue;
 }
 
+
+// Function W_ServerButton.W_ServerButton_C.OnFocusReceived
+// (BlueprintCosmetic, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// const struct FFocusEvent&               InFocusEvent                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// struct FEventReply                      ReturnValue                                            (Parm, OutParm, ReturnParm)
+
+struct FEventReply UW_ServerButton_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("W_ServerButton_C", "OnFocusReceived");
+
+	Params::W_ServerButton_C_OnFocusReceived Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InFocusEvent = std::move(InFocusEvent);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
+
+// Function W_ServerButton.W_ServerButton_C.OnFocusLost
+// (BlueprintCosmetic, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FFocusEvent&               InFocusEvent                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+
+void UW_ServerButton_C::OnFocusLost(const struct FFocusEvent& InFocusEvent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("W_ServerButton_C", "OnFocusLost");
+
+	Params::W_ServerButton_C_OnFocusLost Parms{};
+
+	Parms.InFocusEvent = std::move(InFocusEvent);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function W_ServerButton.W_ServerButton_C.OnKeyDown
+// (BlueprintCosmetic, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FGeometry&                 MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// const struct FKeyEvent&                 InKeyEvent                                             (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FEventReply                      ReturnValue                                            (Parm, OutParm, ReturnParm)
+
+struct FEventReply UW_ServerButton_C::OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("W_ServerButton_C", "OnKeyDown");
+
+	Params::W_ServerButton_C_OnKeyDown Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InKeyEvent = std::move(InKeyEvent);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function W_ServerButton.W_ServerButton_C.GetSessionName
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FBlueprintSessionResult&         SessionRef_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class FString*                          Name_0                                                 (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+
+void UW_ServerButton_C::GetSessionName(struct FBlueprintSessionResult& SessionRef_0, class FString* Name_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("W_ServerButton_C", "GetSessionName");
+
+	Params::W_ServerButton_C_GetSessionName Parms{};
+
+	Parms.SessionRef_0 = std::move(SessionRef_0);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	SessionRef_0 = std::move(Parms.SessionRef_0);
+
+	if (Name_0 != nullptr)
+		*Name_0 = std::move(Parms.Name_0);
+}
+
+
+// Function W_ServerButton.W_ServerButton_C.GetSessionPlatform
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FBlueprintSessionResult&         SessionRef_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// class FString*                          Platform                                               (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+
+void UW_ServerButton_C::GetSessionPlatform(struct FBlueprintSessionResult& SessionRef_0, class FString* Platform)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("W_ServerButton_C", "GetSessionPlatform");
+
+	Params::W_ServerButton_C_GetSessionPlatform Parms{};
+
+	Parms.SessionRef_0 = std::move(SessionRef_0);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	SessionRef_0 = std::move(Parms.SessionRef_0);
+
+	if (Platform != nullptr)
+		*Platform = std::move(Parms.Platform);
+}
+
+
+// Function W_ServerButton.W_ServerButton_C.SetPlatformIcon
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UW_ServerButton_C::SetPlatformIcon()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("W_ServerButton_C", "SetPlatformIcon");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+SDK_NAMESPACE_END

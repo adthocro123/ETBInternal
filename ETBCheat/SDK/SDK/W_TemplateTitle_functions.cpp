@@ -14,8 +14,7 @@
 #include "W_TemplateTitle_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function W_TemplateTitle.W_TemplateTitle_C.ExecuteUbergraph_W_TemplateTitle
 // (Final, UbergraphFunction)
@@ -76,5 +75,5 @@ void UW_TemplateTitle_C::ChangeTitleColor(const struct FSlateColor& NewColorAndO
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

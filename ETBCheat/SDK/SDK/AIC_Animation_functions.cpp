@@ -14,8 +14,7 @@
 #include "AIC_Animation_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function AIC_Animation.AIC_Animation_C.ExecuteUbergraph_AIC_Animation
 // (Final, UbergraphFunction)
@@ -56,5 +55,5 @@ void AAIC_Animation_C::BndEvt__PartyGoer_BP_PawnSensing_K2Node_ComponentBoundEve
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

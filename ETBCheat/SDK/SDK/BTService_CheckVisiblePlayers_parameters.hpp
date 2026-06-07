@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BTService_CheckVisiblePlayers.BTService_CheckVisiblePlayers_C.ExecuteUbergraph_BTService_CheckVisiblePlayers
 // 0x0078 (0x0078 - 0x0000)
@@ -50,5 +50,5 @@ public:
 };
 DUMPER7_ASSERTS_BTService_CheckVisiblePlayers_C_ReceiveTickAI;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

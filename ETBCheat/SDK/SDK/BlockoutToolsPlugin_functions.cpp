@@ -13,8 +13,7 @@
 #include "BlockoutToolsPlugin_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BlockoutToolsPlugin.BlockoutToolsParent.BlockoutSetMaterial
 // (Final, Native, Private, BlueprintCallable)
@@ -53,5 +52,5 @@ void ABlockoutToolsParent::RerunConstructionScript()
 	Func->FunctionFlags = Flgs;
 }
 
-}
 
+SDK_NAMESPACE_END

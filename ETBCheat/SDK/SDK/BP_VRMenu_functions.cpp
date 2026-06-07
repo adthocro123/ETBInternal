@@ -14,8 +14,7 @@
 #include "BP_VRMenu_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_VRMenu.BP_VRMenu_C.ExecuteUbergraph_BP_VRMenu
 // (Final, UbergraphFunction, HasDefaults)
@@ -78,5 +77,5 @@ void ABP_VRMenu_C::RefreshFocus()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

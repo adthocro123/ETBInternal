@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct S_TV_Data.S_TV_Data
 // 0x000C (0x000C - 0x0000)
@@ -25,5 +24,4 @@ public:
 };
 DUMPER7_ASSERTS_FS_TV_Data;
 
-}
-
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "PlayerStats_UI_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function PlayerStats_UI.PlayerStats_UI_C.ExecuteUbergraph_PlayerStats_UI
 // (Final, UbergraphFunction, HasDefaults)
@@ -380,5 +379,5 @@ ESlateVisibility UPlayerStats_UI_C::Get_XSXGamerCardButton_Visibility_0()
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

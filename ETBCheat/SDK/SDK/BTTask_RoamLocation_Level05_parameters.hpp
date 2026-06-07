@@ -13,8 +13,8 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BTTask_RoamLocation_Level05.BTTask_RoamLocation_Level05_C.ExecuteUbergraph_BTTask_RoamLocation_Level05
 // 0x0058 (0x0058 - 0x0000)
@@ -48,5 +48,5 @@ public:
 };
 DUMPER7_ASSERTS_BTTask_RoamLocation_Level05_C_ReceiveExecuteAI;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

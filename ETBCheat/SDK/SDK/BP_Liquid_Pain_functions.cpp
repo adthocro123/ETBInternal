@@ -14,8 +14,7 @@
 #include "BP_Liquid_Pain_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Liquid_Pain.BP_Liquid_Pain_C.ExecuteUbergraph_BP_Liquid_Pain
 // (Final, UbergraphFunction, HasDefaults)
@@ -240,5 +239,5 @@ void ABP_Liquid_Pain_C::SetMaterial(bool EnabledFOV)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

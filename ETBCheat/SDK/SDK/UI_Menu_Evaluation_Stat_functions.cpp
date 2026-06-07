@@ -14,8 +14,7 @@
 #include "UI_Menu_Evaluation_Stat_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function UI_Menu_Evaluation_Stat.UI_Menu_Evaluation_Stat_C.ExecuteUbergraph_UI_Menu_Evaluation_Stat
 // (Final, UbergraphFunction, HasDefaults)
@@ -32,6 +31,40 @@ void UUI_Menu_Evaluation_Stat_C::ExecuteUbergraph_UI_Menu_Evaluation_Stat(int32 
 	Params::UI_Menu_Evaluation_Stat_C_ExecuteUbergraph_UI_Menu_Evaluation_Stat Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function UI_Menu_Evaluation_Stat.UI_Menu_Evaluation_Stat_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UUI_Menu_Evaluation_Stat_C::Construct()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UI_Menu_Evaluation_Stat_C", "Construct");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function UI_Menu_Evaluation_Stat.UI_Menu_Evaluation_Stat_C.UpdateSelect
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bSelected_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UUI_Menu_Evaluation_Stat_C::UpdateSelect(bool bSelected_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UI_Menu_Evaluation_Stat_C", "UpdateSelect");
+
+	Params::UI_Menu_Evaluation_Stat_C_UpdateSelect Parms{};
+
+	Parms.bSelected_0 = bSelected_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -79,40 +112,6 @@ void UUI_Menu_Evaluation_Stat_C::OnMouseEnter(const struct FGeometry& MyGeometry
 }
 
 
-// Function UI_Menu_Evaluation_Stat.UI_Menu_Evaluation_Stat_C.UpdateSelect
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bSelected_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UUI_Menu_Evaluation_Stat_C::UpdateSelect(bool bSelected_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Menu_Evaluation_Stat_C", "UpdateSelect");
-
-	Params::UI_Menu_Evaluation_Stat_C_UpdateSelect Parms{};
-
-	Parms.bSelected_0 = bSelected_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function UI_Menu_Evaluation_Stat.UI_Menu_Evaluation_Stat_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UUI_Menu_Evaluation_Stat_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Menu_Evaluation_Stat_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function UI_Menu_Evaluation_Stat.UI_Menu_Evaluation_Stat_C.OnMouseButtonDown
 // (BlueprintCosmetic, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -137,5 +136,5 @@ struct FEventReply UUI_Menu_Evaluation_Stat_C::OnMouseButtonDown(const struct FG
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

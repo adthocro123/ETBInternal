@@ -10,14 +10,13 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "AIModule_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Moth.BP_Moth_C
 // 0x0100 (0x05C0 - 0x04C0)
@@ -108,5 +107,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_Moth_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum GooglePAD.EGooglePADConfirmationDialogStatus
 // NumValues: 0x0005
@@ -92,5 +91,4 @@ enum class EGooglePADErrorCode : uint8
 	AssetPack_MAX                            = 17,
 };
 
-}
-
+SDK_NAMESPACE_END

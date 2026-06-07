@@ -13,8 +13,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass InteractiveFoliageChunk_BP.InteractiveFoliageChunk_BP_C
 // 0x0030 (0x0250 - 0x0220)
@@ -48,5 +47,4 @@ public:
 };
 DUMPER7_ASSERTS_AInteractiveFoliageChunk_BP_C;
 
-}
-
+SDK_NAMESPACE_END

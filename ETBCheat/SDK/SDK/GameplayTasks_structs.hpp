@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum GameplayTasks.ETaskResourceOverlapPolicy
 // NumValues: 0x0003
@@ -56,5 +55,4 @@ public:
 };
 DUMPER7_ASSERTS_FGameplayResourceSet;
 
-}
-
+SDK_NAMESPACE_END

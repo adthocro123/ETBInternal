@@ -14,8 +14,7 @@
 #include "UI_ShortCut_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function UI_ShortCut.UI_ShortCut_C.ExecuteUbergraph_UI_ShortCut
 // (Final, UbergraphFunction, HasDefaults)
@@ -121,5 +120,5 @@ class UWidget* UUI_ShortCut_C::CustomNavigation(EUINavigation Navigation_0)
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

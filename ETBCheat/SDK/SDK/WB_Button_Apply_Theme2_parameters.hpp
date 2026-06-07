@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WB_Button_Apply_Theme2.WB_Button_Apply_Theme2_C.ExecuteUbergraph_WB_Button_Apply_Theme2
 // 0x0004 (0x0004 - 0x0000)
@@ -23,5 +23,5 @@ public:
 };
 DUMPER7_ASSERTS_WB_Button_Apply_Theme2_C_ExecuteUbergraph_WB_Button_Apply_Theme2;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

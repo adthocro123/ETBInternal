@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedEnum Waterline_Cameras.Waterline_Cameras
 // NumValues: 0x0005
@@ -25,5 +24,4 @@ enum class EWaterline_Cameras : uint8
 	Waterline_MAX                            = 4,
 };
 
-}
-
+SDK_NAMESPACE_END

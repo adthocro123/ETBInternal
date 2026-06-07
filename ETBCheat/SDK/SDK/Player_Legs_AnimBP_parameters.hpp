@@ -14,8 +14,8 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function Player_Legs_AnimBP.Player_Legs_AnimBP_C.ExecuteUbergraph_Player_Legs_AnimBP
 // 0x01A0 (0x01A0 - 0x0000)
@@ -82,5 +82,5 @@ public:
 };
 DUMPER7_ASSERTS_Player_Legs_AnimBP_C_AnimGraph;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

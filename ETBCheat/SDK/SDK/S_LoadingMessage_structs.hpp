@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct S_LoadingMessage.S_LoadingMessage
 // 0x0010 (0x0010 - 0x0000)
@@ -23,5 +22,4 @@ public:
 };
 DUMPER7_ASSERTS_FS_LoadingMessage;
 
-}
-
+SDK_NAMESPACE_END

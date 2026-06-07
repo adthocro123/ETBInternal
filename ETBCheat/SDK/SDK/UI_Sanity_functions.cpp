@@ -14,8 +14,7 @@
 #include "UI_Sanity_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function UI_Sanity.UI_Sanity_C.ExecuteUbergraph_UI_Sanity
 // (Final, UbergraphFunction, HasDefaults)
@@ -132,5 +131,5 @@ ESlateVisibility UUI_Sanity_C::GetVisibility_0()
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

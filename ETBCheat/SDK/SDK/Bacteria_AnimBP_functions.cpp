@@ -14,8 +14,7 @@
 #include "Bacteria_AnimBP_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function Bacteria_AnimBP.Bacteria_AnimBP_C.ExecuteUbergraph_Bacteria_AnimBP
 // (Final, UbergraphFunction)
@@ -105,5 +104,5 @@ void UBacteria_AnimBP_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 		*AnimGraph_0 = std::move(Parms.AnimGraph_0);
 }
 
-}
 
+SDK_NAMESPACE_END

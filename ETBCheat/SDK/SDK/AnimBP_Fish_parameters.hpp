@@ -13,8 +13,8 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function AnimBP_Fish.AnimBP_Fish_C.ExecuteUbergraph_AnimBP_Fish
 // 0x0004 (0x0004 - 0x0000)
@@ -34,5 +34,5 @@ public:
 };
 DUMPER7_ASSERTS_AnimBP_Fish_C_AnimGraph;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

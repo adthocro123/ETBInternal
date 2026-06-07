@@ -14,8 +14,7 @@
 #include "BP_Glowstick_Component_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Glowstick_Component.BP_Glowstick_Component_C.ExecuteUbergraph_BP_Glowstick_Component
 // (Final, UbergraphFunction, HasDefaults)
@@ -78,5 +77,5 @@ void UBP_Glowstick_Component_C::TickSpotlight(class USpotLightComponent* SpotLig
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "BTTask_RoamLocation_Level05_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BTTask_RoamLocation_Level05.BTTask_RoamLocation_Level05_C.ExecuteUbergraph_BTTask_RoamLocation_Level05
 // (Final, UbergraphFunction)
@@ -58,5 +57,5 @@ void UBTTask_RoamLocation_Level05_C::ReceiveExecuteAI(class AAIController* Owner
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

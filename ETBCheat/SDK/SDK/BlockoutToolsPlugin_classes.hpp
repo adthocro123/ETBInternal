@@ -16,8 +16,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class BlockoutToolsPlugin.BlockoutToolsParent
 // 0x0098 (0x02B8 - 0x0220)
@@ -107,5 +106,4 @@ public:
 };
 DUMPER7_ASSERTS_UBlockoutToolsSettings;
 
-}
-
+SDK_NAMESPACE_END

@@ -13,8 +13,8 @@
 #include "E_GlowstickColor_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function Glowstick_BP.Glowstick_BP_C.ExecuteUbergraph_Glowstick_BP
 // 0x0004 (0x0004 - 0x0000)
@@ -41,5 +41,5 @@ public:
 };
 DUMPER7_ASSERTS_Glowstick_BP_C_UserConstructionScript;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

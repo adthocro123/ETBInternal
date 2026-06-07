@@ -10,27 +10,27 @@
 
 #include "Basic.hpp"
 
-#include "AdvancedSessions_structs.hpp"
 #include "S_UserProfile_structs.hpp"
-#include "S_PlayerConnectionInfo_structs.hpp"
 #include "Engine_structs.hpp"
-#include "Engine_classes.hpp"
+#include "S_PlayerConnectionInfo_structs.hpp"
 #include "E_HeadsetType_structs.hpp"
+#include "Backrooms_structs.hpp"
+#include "Backrooms_classes.hpp"
+#include "AdvancedSessions_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BasePS.BasePS_C
-// 0x0040 (0x0360 - 0x0320)
-class ABasePS_C : public APlayerState
+// 0x0040 (0x0398 - 0x0358)
+class ABasePS_C : public AFancyPlayerState
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0320(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0328(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	struct FS_PlayerConnectionInfo                PlayerConnection;                                  // 0x0330(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	struct FS_UserProfile                         UserInfo;                                          // 0x0338(0x0018)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, RepNotify, ContainsInstancedReference, HasGetValueTypeHash)
-	TArray<struct FBPUniqueNetId>                 BlockedPlayersList;                                // 0x0350(0x0010)(Edit, BlueprintVisible, Net)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0358(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0360(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FS_PlayerConnectionInfo                PlayerConnection;                                  // 0x0368(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	struct FS_UserProfile                         UserInfo;                                          // 0x0370(0x0018)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, RepNotify, ContainsInstancedReference, HasGetValueTypeHash)
+	TArray<struct FBPUniqueNetId>                 BlockedPlayersList;                                // 0x0388(0x0010)(Edit, BlueprintVisible, Net)
 
 public:
 	void ExecuteUbergraph_BasePS(int32 EntryPoint);
@@ -63,5 +63,4 @@ public:
 };
 DUMPER7_ASSERTS_ABasePS_C;
 
-}
-
+SDK_NAMESPACE_END

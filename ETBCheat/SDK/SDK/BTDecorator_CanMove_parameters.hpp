@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BTDecorator_CanMove.BTDecorator_CanMove_C.PerformConditionCheckAI
 // 0x0038 (0x0038 - 0x0000)
@@ -31,5 +31,5 @@ public:
 };
 DUMPER7_ASSERTS_BTDecorator_CanMove_C_PerformConditionCheckAI;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

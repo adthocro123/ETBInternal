@@ -14,8 +14,7 @@
 #include "WaterExit_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WaterExit.SequenceDirector_C.ExecuteUbergraph_SequenceDirector
 // (Final, UbergraphFunction)
@@ -64,5 +63,5 @@ void WaterExit::USequenceDirector_C::SequenceEvent__ENTRYPOINTSequenceDirector_0
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

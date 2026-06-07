@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BT_CallEntitySighted_Mission.BT_CallEntitySighted_Mission_C.ExecuteUbergraph_BT_CallEntitySighted_Mission
 // 0x0018 (0x0018 - 0x0000)
@@ -36,5 +36,5 @@ public:
 };
 DUMPER7_ASSERTS_BT_CallEntitySighted_Mission_C_ReceiveExecuteAI;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

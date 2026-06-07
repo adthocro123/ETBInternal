@@ -20,8 +20,7 @@
 #include "DeveloperSettings_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class Water.EnvQueryTest_InsideWaterBody
 // 0x0008 (0x0200 - 0x01F8)
@@ -447,7 +446,7 @@ DUMPER7_ASSERTS_UOceanBoxCollisionComponent;
 // Class Water.WaterBody
 // 0x0BD0 (0x0DF0 - 0x0220)
 #pragma pack(push, 0x1)
-class alignas(0x10) AWaterBody : public AActor
+class SDK_ALIGN(0x10) AWaterBody : public AActor
 {
 public:
 	uint8                                         Pad_220[0x10];                                     // 0x0220(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
@@ -1024,5 +1023,4 @@ public:
 };
 DUMPER7_ASSERTS_UWaterWavesAssetReference;
 
-}
-
+SDK_NAMESPACE_END

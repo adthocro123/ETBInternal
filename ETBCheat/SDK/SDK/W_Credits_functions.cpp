@@ -14,8 +14,7 @@
 #include "W_Credits_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function W_Credits.W_Credits_C.ExecuteUbergraph_W_Credits
 // (Final, UbergraphFunction, HasDefaults)
@@ -37,15 +36,35 @@ void UW_Credits_C::ExecuteUbergraph_W_Credits(int32 EntryPoint)
 }
 
 
-// Function W_Credits.W_Credits_C.CloseCreditsMenu
-// (BlueprintCallable, BlueprintEvent)
+// Function W_Credits.W_Credits_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UW_Credits_C::CloseCreditsMenu()
+void UW_Credits_C::PreConstruct(bool IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("W_Credits_C", "CloseCreditsMenu");
+		Func = Class->GetFunction("W_Credits_C", "PreConstruct");
+
+	Params::W_Credits_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function W_Credits.W_Credits_C.UpdateCanJoinFromPlayerCount
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+
+void UW_Credits_C::UpdateCanJoinFromPlayerCount()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("W_Credits_C", "UpdateCanJoinFromPlayerCount");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -65,23 +84,17 @@ void UW_Credits_C::Construct()
 }
 
 
-// Function W_Credits.W_Credits_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// Function W_Credits.W_Credits_C.CloseCreditsMenu
+// (BlueprintCallable, BlueprintEvent)
 
-void UW_Credits_C::PreConstruct(bool IsDesignTime)
+void UW_Credits_C::CloseCreditsMenu()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("W_Credits_C", "PreConstruct");
+		Func = Class->GetFunction("W_Credits_C", "CloseCreditsMenu");
 
-	Params::W_Credits_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -133,29 +146,29 @@ void UW_Credits_C::OnBackgroundClick()
 }
 
 
-// Function W_Credits.W_Credits_C.OnSuccess_0AB2B5A44CEFDE7C980CA4B0CF9A0891
+// Function W_Credits.W_Credits_C.OnSuccess_AFC1947D48EF0CA3A913A0B322E8732B
 // (BlueprintCallable, BlueprintEvent)
 
-void UW_Credits_C::OnSuccess_0AB2B5A44CEFDE7C980CA4B0CF9A0891()
+void UW_Credits_C::OnSuccess_AFC1947D48EF0CA3A913A0B322E8732B()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("W_Credits_C", "OnSuccess_0AB2B5A44CEFDE7C980CA4B0CF9A0891");
+		Func = Class->GetFunction("W_Credits_C", "OnSuccess_AFC1947D48EF0CA3A913A0B322E8732B");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function W_Credits.W_Credits_C.OnFailure_0AB2B5A44CEFDE7C980CA4B0CF9A0891
+// Function W_Credits.W_Credits_C.OnFailure_AFC1947D48EF0CA3A913A0B322E8732B
 // (BlueprintCallable, BlueprintEvent)
 
-void UW_Credits_C::OnFailure_0AB2B5A44CEFDE7C980CA4B0CF9A0891()
+void UW_Credits_C::OnFailure_AFC1947D48EF0CA3A913A0B322E8732B()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("W_Credits_C", "OnFailure_0AB2B5A44CEFDE7C980CA4B0CF9A0891");
+		Func = Class->GetFunction("W_Credits_C", "OnFailure_AFC1947D48EF0CA3A913A0B322E8732B");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -277,5 +290,5 @@ struct FEventReply UW_Credits_C::OnPreviewKeyDown(const struct FGeometry& MyGeom
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

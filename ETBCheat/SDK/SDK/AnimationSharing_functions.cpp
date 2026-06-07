@@ -14,8 +14,7 @@
 #include "AnimationSharing_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function AnimationSharing.AnimSharingStateInstance.GetInstancedActors
 // (Final, Native, Protected, HasOutParams, BlueprintCallable)
@@ -72,10 +71,10 @@ bool UAnimationSharingManager::AnimationSharingEnabled()
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class UAnimationSharingSetup*     Setup                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UAnimationSharingSetup*     SetUp                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UAnimationSharingManager::CreateAnimationSharingManager(class UObject* WorldContextObject, const class UAnimationSharingSetup* Setup)
+bool UAnimationSharingManager::CreateAnimationSharingManager(class UObject* WorldContextObject, const class UAnimationSharingSetup* SetUp)
 {
 	static class UFunction* Func = nullptr;
 
@@ -85,7 +84,7 @@ bool UAnimationSharingManager::CreateAnimationSharingManager(class UObject* Worl
 	Params::AnimationSharingManager_CreateAnimationSharingManager Parms{};
 
 	Parms.WorldContextObject = WorldContextObject;
-	Parms.Setup = Setup;
+	Parms.SetUp = SetUp;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -214,5 +213,5 @@ void UAnimationSharingStateProcessor::ProcessActorState(int32* OutState, class A
 		*bShouldProcess = Parms.bShouldProcess;
 }
 
-}
 
+SDK_NAMESPACE_END

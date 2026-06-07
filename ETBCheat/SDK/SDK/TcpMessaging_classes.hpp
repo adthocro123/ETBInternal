@@ -13,8 +13,7 @@
 #include "CoreUObject_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class TcpMessaging.TcpMessagingSettings
 // 0x0030 (0x0058 - 0x0028)
@@ -45,5 +44,4 @@ public:
 };
 DUMPER7_ASSERTS_UTcpMessagingSettings;
 
-}
-
+SDK_NAMESPACE_END

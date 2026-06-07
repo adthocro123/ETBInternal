@@ -14,8 +14,7 @@
 #include "Niagara_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function Niagara.NiagaraActor.OnNiagaraSystemFinished
 // (Final, Native, Private)
@@ -4015,5 +4014,5 @@ void UNiagaraScript::RaiseOnGPUCompilationComplete()
 	Func->FunctionFlags = Flgs;
 }
 
-}
 
+SDK_NAMESPACE_END

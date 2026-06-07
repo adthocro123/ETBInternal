@@ -14,8 +14,7 @@
 #include "BP_DroppedItem_AlmondWater_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_DroppedItem_AlmondWater.BP_DroppedItem_AlmondWater_C.ExecuteUbergraph_BP_DroppedItem_AlmondWater
 // (Final, UbergraphFunction)
@@ -76,5 +75,5 @@ void ABP_DroppedItem_AlmondWater_C::OnEventLoaded(EEventType EventType)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

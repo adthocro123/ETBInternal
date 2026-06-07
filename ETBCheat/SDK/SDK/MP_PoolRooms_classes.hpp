@@ -14,17 +14,16 @@
 #include "MP_GameMode_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass MP_PoolRooms.MP_PoolRooms_C
-// 0x0010 (0x0398 - 0x0388)
+// 0x0010 (0x03A0 - 0x0390)
 class AMP_PoolRooms_C final : public AMP_GameMode_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_MP_PoolRooms_C;                     // 0x0388(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	int32                                         CurrentSpawnIndex;                                 // 0x0390(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsHubOrExit;                                       // 0x0394(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame_MP_PoolRooms_C;                     // 0x0390(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	int32                                         CurrentSpawnIndex;                                 // 0x0398(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsHubOrExit;                                       // 0x039C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_MP_PoolRooms(int32 EntryPoint);
@@ -52,5 +51,4 @@ public:
 };
 DUMPER7_ASSERTS_AMP_PoolRooms_C;
 
-}
-
+SDK_NAMESPACE_END

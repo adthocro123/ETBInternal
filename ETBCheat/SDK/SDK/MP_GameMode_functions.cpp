@@ -14,8 +14,7 @@
 #include "MP_GameMode_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function MP_GameMode.MP_GameMode_C.ExecuteUbergraph_MP_GameMode
 // (Final, UbergraphFunction, HasDefaults)
@@ -34,6 +33,20 @@ void AMP_GameMode_C::ExecuteUbergraph_MP_GameMode(int32 EntryPoint)
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function MP_GameMode.MP_GameMode_C.DisconnectAllPlayers
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+
+void AMP_GameMode_C::DisconnectAllPlayers()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MP_GameMode_C", "DisconnectAllPlayers");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -115,21 +128,15 @@ void AMP_GameMode_C::BndEvt__MP_GameMode_FancyEntitySightingManager_K2Node_Compo
 
 // Function MP_GameMode.MP_GameMode_C.UpdateCanJoin
 // (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    CanJoin                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void AMP_GameMode_C::UpdateCanJoin(bool CanJoin)
+void AMP_GameMode_C::UpdateCanJoin()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("MP_GameMode_C", "UpdateCanJoin");
 
-	Params::MP_GameMode_C_UpdateCanJoin Parms{};
-
-	Parms.CanJoin = CanJoin;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -333,57 +340,29 @@ void AMP_GameMode_C::ReceiveBeginPlay()
 }
 
 
-// Function MP_GameMode.MP_GameMode_C.OnSuccess_CA7DD11641B925C28CE4CCA1C71CF85E
+// Function MP_GameMode.MP_GameMode_C.OnSuccess_04D54AD34C4B45BD0B6D9DB54C537A29
 // (BlueprintCallable, BlueprintEvent)
 
-void AMP_GameMode_C::OnSuccess_CA7DD11641B925C28CE4CCA1C71CF85E()
+void AMP_GameMode_C::OnSuccess_04D54AD34C4B45BD0B6D9DB54C537A29()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MP_GameMode_C", "OnSuccess_CA7DD11641B925C28CE4CCA1C71CF85E");
+		Func = Class->GetFunction("MP_GameMode_C", "OnSuccess_04D54AD34C4B45BD0B6D9DB54C537A29");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function MP_GameMode.MP_GameMode_C.OnFailure_CA7DD11641B925C28CE4CCA1C71CF85E
+// Function MP_GameMode.MP_GameMode_C.OnFailure_04D54AD34C4B45BD0B6D9DB54C537A29
 // (BlueprintCallable, BlueprintEvent)
 
-void AMP_GameMode_C::OnFailure_CA7DD11641B925C28CE4CCA1C71CF85E()
+void AMP_GameMode_C::OnFailure_04D54AD34C4B45BD0B6D9DB54C537A29()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MP_GameMode_C", "OnFailure_CA7DD11641B925C28CE4CCA1C71CF85E");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MP_GameMode.MP_GameMode_C.OnSuccess_17C4EA7D4066C891CBFD7585716BD16C
-// (BlueprintCallable, BlueprintEvent)
-
-void AMP_GameMode_C::OnSuccess_17C4EA7D4066C891CBFD7585716BD16C()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MP_GameMode_C", "OnSuccess_17C4EA7D4066C891CBFD7585716BD16C");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function MP_GameMode.MP_GameMode_C.OnFailure_17C4EA7D4066C891CBFD7585716BD16C
-// (BlueprintCallable, BlueprintEvent)
-
-void AMP_GameMode_C::OnFailure_17C4EA7D4066C891CBFD7585716BD16C()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MP_GameMode_C", "OnFailure_17C4EA7D4066C891CBFD7585716BD16C");
+		Func = Class->GetFunction("MP_GameMode_C", "OnFailure_04D54AD34C4B45BD0B6D9DB54C537A29");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -764,5 +743,69 @@ bool AMP_GameMode_C::IsOnline()
 	return Parms.ReturnValue;
 }
 
+
+// Function MP_GameMode.MP_GameMode_C.UpdateActivityCompletion
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EActivityCompletionStatus               Status                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AMP_GameMode_C::UpdateActivityCompletion(EActivityCompletionStatus Status)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MP_GameMode_C", "UpdateActivityCompletion");
+
+	Params::MP_GameMode_C_UpdateActivityCompletion Parms{};
+
+	Parms.Status = Status;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
+
+// Function MP_GameMode.MP_GameMode_C.StartActivityForPlayer
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AMP_PlayerController_C*           PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AMP_GameMode_C::StartActivityForPlayer(class AMP_PlayerController_C* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MP_GameMode_C", "StartActivityForPlayer");
+
+	Params::MP_GameMode_C_StartActivityForPlayer Parms{};
+
+	Parms.PlayerController = PlayerController;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function MP_GameMode.MP_GameMode_C.EndActivityForPlayer
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AMP_PlayerController_C*           PlayerController                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    ActivityName                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// EActivityCompletionStatus               Status                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void AMP_GameMode_C::EndActivityForPlayer(class AMP_PlayerController_C* PlayerController, const class FString& ActivityName, EActivityCompletionStatus Status)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MP_GameMode_C", "EndActivityForPlayer");
+
+	Params::MP_GameMode_C_EndActivityForPlayer Parms{};
+
+	Parms.PlayerController = PlayerController;
+	Parms.ActivityName = std::move(ActivityName);
+	Parms.Status = Status;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+SDK_NAMESPACE_END

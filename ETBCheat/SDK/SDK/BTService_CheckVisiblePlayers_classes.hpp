@@ -14,8 +14,7 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BTService_CheckVisiblePlayers.BTService_CheckVisiblePlayers_C
 // 0x0008 (0x00A0 - 0x0098)
@@ -44,5 +43,4 @@ public:
 };
 DUMPER7_ASSERTS_UBTService_CheckVisiblePlayers_C;
 
-}
-
+SDK_NAMESPACE_END

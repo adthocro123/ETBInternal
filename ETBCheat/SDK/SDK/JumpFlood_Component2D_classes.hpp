@@ -15,8 +15,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass JumpFlood_Component2D.JumpFlood_Component2D_C
 // 0x0060 (0x0110 - 0x00B0)
@@ -66,5 +65,4 @@ public:
 };
 DUMPER7_ASSERTS_UJumpFlood_Component2D_C;
 
-}
-
+SDK_NAMESPACE_END

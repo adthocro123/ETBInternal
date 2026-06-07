@@ -14,8 +14,7 @@
 #include "UI_Console_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function UI_Console.UI_Console_C.ExecuteUbergraph_UI_Console
 // (Final, UbergraphFunction, HasDefaults)
@@ -58,5 +57,5 @@ void UUI_Console_C::BndEvt__Input_K2Node_ComponentBoundEvent_0_OnEditableTextBox
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

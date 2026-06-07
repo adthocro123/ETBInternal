@@ -14,8 +14,7 @@
 #include "Lobby_GS_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function Lobby_GS.Lobby_GS_C.ExecuteUbergraph_Lobby_GS
 // (Final, UbergraphFunction, HasDefaults)
@@ -37,6 +36,20 @@ void ALobby_GS_C::ExecuteUbergraph_Lobby_GS(int32 EntryPoint)
 }
 
 
+// Function Lobby_GS.Lobby_GS_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ALobby_GS_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Lobby_GS_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function Lobby_GS.Lobby_GS_C.UpdateCanJoin
 // (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -54,34 +67,6 @@ void ALobby_GS_C::UpdateCanJoin(bool CanJoin)
 	Parms.CanJoin = CanJoin;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Lobby_GS.Lobby_GS_C.OnSuccess_311C34B5477FF004435A3FB2EB96F2B7
-// (BlueprintCallable, BlueprintEvent)
-
-void ALobby_GS_C::OnSuccess_311C34B5477FF004435A3FB2EB96F2B7()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Lobby_GS_C", "OnSuccess_311C34B5477FF004435A3FB2EB96F2B7");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Lobby_GS.Lobby_GS_C.OnFailure_311C34B5477FF004435A3FB2EB96F2B7
-// (BlueprintCallable, BlueprintEvent)
-
-void ALobby_GS_C::OnFailure_311C34B5477FF004435A3FB2EB96F2B7()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Lobby_GS_C", "OnFailure_311C34B5477FF004435A3FB2EB96F2B7");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -385,5 +370,19 @@ void ALobby_GS_C::OnRep_CurrentMissionData()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
+
+// Function Lobby_GS.Lobby_GS_C.OnRep_MaxPlayers
+// (BlueprintCallable, BlueprintEvent)
+
+void ALobby_GS_C::OnRep_MaxPlayers()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Lobby_GS_C", "OnRep_MaxPlayers");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
+
+SDK_NAMESPACE_END

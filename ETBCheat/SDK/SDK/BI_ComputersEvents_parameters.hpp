@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BI_ComputersEvents.BI_ComputersEvents_C.LaunchShortcut
 // 0x0048 (0x0048 - 0x0000)
@@ -29,5 +29,5 @@ public:
 };
 DUMPER7_ASSERTS_BI_ComputersEvents_C_LaunchShortcut;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

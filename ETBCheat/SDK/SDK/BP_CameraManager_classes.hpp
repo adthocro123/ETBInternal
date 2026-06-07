@@ -13,8 +13,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_CameraManager.BP_CameraManager_C
 // 0x0000 (0x2810 - 0x2810)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_CameraManager_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -10,14 +10,13 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "AIModule_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Hound.BP_Hound_C
 // 0x00A0 (0x0560 - 0x04C0)
@@ -105,5 +104,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_Hound_C;
 
-}
-
+SDK_NAMESPACE_END

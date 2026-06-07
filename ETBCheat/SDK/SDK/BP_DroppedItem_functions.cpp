@@ -14,8 +14,7 @@
 #include "BP_DroppedItem_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_DroppedItem.BP_DroppedItem_C.ExecuteUbergraph_BP_DroppedItem
 // (Final, UbergraphFunction, HasDefaults)
@@ -174,5 +173,5 @@ void ABP_DroppedItem_C::ExamineModeOn()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

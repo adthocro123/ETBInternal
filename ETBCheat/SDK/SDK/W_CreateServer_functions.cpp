@@ -14,8 +14,7 @@
 #include "W_CreateServer_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function W_CreateServer.W_CreateServer_C.ExecuteUbergraph_W_CreateServer
 // (Final, UbergraphFunction, HasDefaults)
@@ -378,5 +377,5 @@ struct FEventReply UW_CreateServer_C::OnPreviewKeyDown(const struct FGeometry& M
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

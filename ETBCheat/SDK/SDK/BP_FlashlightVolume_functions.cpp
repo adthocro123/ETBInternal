@@ -14,8 +14,7 @@
 #include "BP_FlashlightVolume_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_FlashlightVolume.BP_FlashlightVolume_C.ExecuteUbergraph_BP_FlashlightVolume
 // (Final, UbergraphFunction, HasDefaults)
@@ -92,5 +91,5 @@ void ABP_FlashlightVolume_C::BndEvt__BP_FlashlightVolume_Box_K2Node_ComponentBou
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

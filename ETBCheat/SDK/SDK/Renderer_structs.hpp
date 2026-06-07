@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct Renderer.LightPropagationVolumeSettings
 // 0x0040 (0x0040 - 0x0000)
@@ -51,5 +50,4 @@ public:
 };
 DUMPER7_ASSERTS_FLightPropagationVolumeSettings;
 
-}
-
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "BP_WalkieTalkie_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_WalkieTalkie.BP_WalkieTalkie_C.ExecuteUbergraph_BP_WalkieTalkie
 // (Final, UbergraphFunction, HasDefaults)
@@ -382,5 +381,5 @@ void ABP_WalkieTalkie_C::SetMaterial(bool EnabledFOV)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "Backrooms_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Pushable.BP_Pushable_C
 // 0x0048 (0x0298 - 0x0250)
@@ -62,5 +61,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_Pushable_C;
 
-}
-
+SDK_NAMESPACE_END

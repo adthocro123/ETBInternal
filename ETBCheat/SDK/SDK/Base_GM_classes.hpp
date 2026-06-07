@@ -14,8 +14,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Base_GM.Base_GM_C
 // 0x0020 (0x0328 - 0x0308)
@@ -28,6 +27,7 @@ public:
 
 public:
 	void ExecuteUbergraph_Base_GM(int32 EntryPoint);
+	void HandleStartingNewPlayer(class APlayerController* NewPlayer);
 	void K2_OnLogout(class AController* ExitingController);
 	void K2_OnSwapPlayerControllers(class APlayerController* OldPC, class APlayerController* NewPC);
 	void K2_PostLogin(class APlayerController* NewPlayer);
@@ -53,5 +53,4 @@ public:
 };
 DUMPER7_ASSERTS_ABase_GM_C;
 
-}
-
+SDK_NAMESPACE_END

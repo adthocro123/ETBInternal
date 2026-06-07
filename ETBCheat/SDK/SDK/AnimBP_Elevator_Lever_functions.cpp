@@ -14,8 +14,7 @@
 #include "AnimBP_Elevator_Lever_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function AnimBP_Elevator_Lever.AnimBP_Elevator_Lever_C.ExecuteUbergraph_AnimBP_Elevator_Lever
 // (Final, UbergraphFunction)
@@ -77,5 +76,5 @@ void UAnimBP_Elevator_Lever_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 		*AnimGraph_0 = std::move(Parms.AnimGraph_0);
 }
 
-}
 
+SDK_NAMESPACE_END

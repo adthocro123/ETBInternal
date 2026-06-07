@@ -14,8 +14,7 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class ArchVisCharacter.ArchVisCharacter
 // 0x0060 (0x0520 - 0x04C0)
@@ -78,5 +77,4 @@ public:
 };
 DUMPER7_ASSERTS_UArchVisCharMovementComponent;
 
-}
-
+SDK_NAMESPACE_END

@@ -11,13 +11,12 @@
 #include "Basic.hpp"
 
 #include "LiveLinkInterface_classes.hpp"
-#include "MagicLeapHandTracking_structs.hpp"
 #include "Engine_classes.hpp"
+#include "MagicLeapHandTracking_structs.hpp"
 #include "InputCore_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class MagicLeapHandTracking.LiveLinkMagicLeapHandTrackingSourceFactory
 // 0x0000 (0x0028 - 0x0028)
@@ -45,19 +44,19 @@ class UMagicLeapHandTrackingFunctionLibrary final : public UBlueprintFunctionLib
 {
 public:
 	static bool GetConfiguration(TArray<EMagicLeapHandTrackingGesture>* ActiveStaticGestures, EMagicLeapHandTrackingKeypointFilterLevel* KeypointsFilterLevel, EMagicLeapHandTrackingGestureFilterLevel* GestureFilterLevel, bool* bTrackingEnabled);
-	static bool GetCurrentGesture(EControllerHand hand, EMagicLeapHandTrackingGesture* Gesture);
-	static bool GetCurrentGestureConfidence(EControllerHand hand, float* Confidence);
-	static bool GetGestureKeypoints(EControllerHand hand, TArray<struct FTransform>* Keypoints);
-	static bool GetGestureKeypointTransform(EControllerHand hand, EMagicLeapHandTrackingKeypoint Keypoint, EMagicLeapGestureTransformSpace TransformSpace, struct FTransform* Transform);
-	static bool GetHandCenter(EControllerHand hand, struct FTransform* HandCenter);
-	static bool GetHandCenterNormalized(EControllerHand hand, struct FVector* HandCenterNormalized);
-	static bool GetHandIndexFingerTip(EControllerHand hand, EMagicLeapGestureTransformSpace TransformSpace, struct FTransform* Pointer);
+	static bool GetCurrentGesture(EControllerHand Hand, EMagicLeapHandTrackingGesture* Gesture);
+	static bool GetCurrentGestureConfidence(EControllerHand Hand, float* Confidence);
+	static bool GetGestureKeypoints(EControllerHand Hand, TArray<struct FTransform>* Keypoints);
+	static bool GetGestureKeypointTransform(EControllerHand Hand, EMagicLeapHandTrackingKeypoint Keypoint, EMagicLeapGestureTransformSpace TransformSpace, struct FTransform* Transform);
+	static bool GetHandCenter(EControllerHand Hand, struct FTransform* HandCenter);
+	static bool GetHandCenterNormalized(EControllerHand Hand, struct FVector* HandCenterNormalized);
+	static bool GetHandIndexFingerTip(EControllerHand Hand, EMagicLeapGestureTransformSpace TransformSpace, struct FTransform* Pointer);
 	static bool GetHandKeypointForMotionSource(class FName MotionSource, EMagicLeapHandTrackingKeypoint* OutKeyPoint);
-	static bool GetHandThumbTip(EControllerHand hand, EMagicLeapGestureTransformSpace TransformSpace, struct FTransform* Secondary);
+	static bool GetHandThumbTip(EControllerHand Hand, EMagicLeapGestureTransformSpace TransformSpace, struct FTransform* Secondary);
 	static bool GetMagicLeapHandTrackingLiveLinkSource(struct FLiveLinkSourceHandle* SourceHandle);
-	static bool GetMotionSourceForHandKeypoint(EControllerHand hand, EMagicLeapHandTrackingKeypoint Keypoint, class FName* OutMotionSource);
+	static bool GetMotionSourceForHandKeypoint(EControllerHand Hand, EMagicLeapHandTrackingKeypoint Keypoint, class FName* OutMotionSource);
 	static float GetStaticGestureConfidenceThreshold(EMagicLeapHandTrackingGesture Gesture);
-	static bool IsHoldingControl(EControllerHand hand);
+	static bool IsHoldingControl(EControllerHand Hand);
 	static bool SetConfiguration(const TArray<EMagicLeapHandTrackingGesture>& StaticGesturesToActivate, EMagicLeapHandTrackingKeypointFilterLevel KeypointsFilterLevel, EMagicLeapHandTrackingGestureFilterLevel GestureFilterLevel, bool bTrackingEnabled);
 	static void SetStaticGestureConfidenceThreshold(EMagicLeapHandTrackingGesture Gesture, float Confidence);
 
@@ -77,5 +76,4 @@ public:
 };
 DUMPER7_ASSERTS_UMagicLeapHandTrackingFunctionLibrary;
 
-}
-
+SDK_NAMESPACE_END

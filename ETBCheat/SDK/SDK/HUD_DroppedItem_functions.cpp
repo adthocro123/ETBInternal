@@ -14,8 +14,7 @@
 #include "HUD_DroppedItem_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function HUD_DroppedItem.HUD_DroppedItem_C.ExecuteUbergraph_HUD_DroppedItem
 // (Final, UbergraphFunction)
@@ -50,5 +49,5 @@ void UHUD_DroppedItem_C::Construct()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

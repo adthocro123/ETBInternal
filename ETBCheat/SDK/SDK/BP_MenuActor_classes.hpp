@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_MenuActor.BP_MenuActor_C
 // 0x00E0 (0x0360 - 0x0280)
@@ -47,19 +46,20 @@ public:
 
 public:
 	void ExecuteUbergraph_BP_MenuActor(int32 EntryPoint);
+	void SetMainMenuShakeActive(bool Active);
 	void HeldRight(bool Down);
 	void HeldLeft(bool Down);
 	void CloseWarning();
 	void MoveTo();
 	void OpenSettings();
-	void ReceiveBeginPlay();
 	void CloseSettings();
+	void ReceiveBeginPlay();
 	void ToggleKeyboard(bool Hide);
-	void InpActEvt_Use_K2Node_InputActionEvent_0(const struct FKey& Key);
-	void InpActEvt_Use_K2Node_InputActionEvent_1(const struct FKey& Key);
+	void InpActEvt_Interact_K2Node_InputActionEvent_0(const struct FKey& Key);
+	void InpActEvt_Secondary_K2Node_InputActionEvent_1(const struct FKey& Key);
 	void InpActEvt_Secondary_K2Node_InputActionEvent_2(const struct FKey& Key);
-	void InpActEvt_Secondary_K2Node_InputActionEvent_3(const struct FKey& Key);
-	void InpActEvt_Interact_K2Node_InputActionEvent_4(const struct FKey& Key);
+	void InpActEvt_Use_K2Node_InputActionEvent_3(const struct FKey& Key);
+	void InpActEvt_Use_K2Node_InputActionEvent_4(const struct FKey& Key);
 	void SmoothMove__UpdateFunc();
 	void SmoothMove__FinishedFunc();
 	void RefreshFocus();
@@ -82,5 +82,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_MenuActor_C;
 
-}
-
+SDK_NAMESPACE_END

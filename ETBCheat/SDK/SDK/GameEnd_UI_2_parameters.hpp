@@ -13,8 +13,8 @@
 #include "SlateCore_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function GameEnd_UI_2.GameEnd_UI_2_C.ExecuteUbergraph_GameEnd_UI_2
 // 0x0178 (0x0178 - 0x0000)
@@ -82,5 +82,5 @@ public:
 };
 DUMPER7_ASSERTS_GameEnd_UI_2_C_GetTime;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

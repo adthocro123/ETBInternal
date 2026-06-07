@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedEnum FluidBoundary.FluidBoundary
 // NumValues: 0x0003
@@ -23,5 +22,4 @@ enum class EFluidBoundary : uint8
 	FluidBoundary_MAX                        = 2,
 };
 
-}
-
+SDK_NAMESPACE_END

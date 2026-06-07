@@ -14,8 +14,7 @@
 #include "Backrooms_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_GarageDoor.BP_GarageDoor_C
 // 0x0018 (0x0260 - 0x0248)
@@ -53,5 +52,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_GarageDoor_C;
 
-}
-
+SDK_NAMESPACE_END

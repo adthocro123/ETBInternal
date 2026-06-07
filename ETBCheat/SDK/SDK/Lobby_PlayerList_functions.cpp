@@ -14,8 +14,7 @@
 #include "Lobby_PlayerList_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function Lobby_PlayerList.Lobby_PlayerList_C.ExecuteUbergraph_Lobby_PlayerList
 // (Final, UbergraphFunction, HasDefaults)
@@ -98,5 +97,5 @@ void ULobby_PlayerList_C::Update_PlayerCount()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

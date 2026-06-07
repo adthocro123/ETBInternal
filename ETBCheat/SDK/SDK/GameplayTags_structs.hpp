@@ -13,8 +13,7 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum GameplayTags.EGameplayTagQueryExprType
 // NumValues: 0x0008
@@ -195,5 +194,4 @@ public:
 };
 DUMPER7_ASSERTS_FGameplayTagCategoryRemap;
 
-}
-
+SDK_NAMESPACE_END

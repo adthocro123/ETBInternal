@@ -14,8 +14,7 @@
 #include "BP_Moth_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Moth.BP_Moth_C.ExecuteUbergraph_BP_Moth
 // (Final, UbergraphFunction, HasDefaults)
@@ -622,5 +621,5 @@ void ABP_Moth_C::OnRep_IsIdle()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

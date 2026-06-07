@@ -13,8 +13,8 @@
 #include "ST_Item_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function UI_Inventory_ItemToolTip.UI_Inventory_ItemToolTip_C.ExecuteUbergraph_UI_Inventory_ItemToolTip
 // 0x00C0 (0x00C0 - 0x0000)
@@ -30,5 +30,5 @@ public:
 };
 DUMPER7_ASSERTS_UI_Inventory_ItemToolTip_C_ExecuteUbergraph_UI_Inventory_ItemToolTip;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_RefreshWaterBodies.BP_RefreshWaterBodies_C
 // 0x0018 (0x0238 - 0x0220)
@@ -46,5 +45,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_RefreshWaterBodies_C;
 
-}
-
+SDK_NAMESPACE_END

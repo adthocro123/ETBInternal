@@ -14,8 +14,7 @@
 #include "PlayerCard_UI_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function PlayerCard_UI.PlayerCard_UI_C.ExecuteUbergraph_PlayerCard_UI
 // (Final, UbergraphFunction, HasDefaults)
@@ -91,5 +90,5 @@ void UPlayerCard_UI_C::GetLevelColor(struct FLinearColor* Color)
 		*Color = std::move(Parms.Color);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -15,8 +15,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass AnimBP_Elevator_Lever.AnimBP_Elevator_Lever_C
 // 0x05C0 (0x0880 - 0x02C0)
@@ -62,5 +61,4 @@ public:
 };
 DUMPER7_ASSERTS_UAnimBP_Elevator_Lever_C;
 
-}
-
+SDK_NAMESPACE_END

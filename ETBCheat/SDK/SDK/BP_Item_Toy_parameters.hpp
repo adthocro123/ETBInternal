@@ -13,8 +13,8 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_Item_Toy.BP_Item_Toy_C.ExecuteUbergraph_BP_Item_Toy
 // 0x0140 (0x0140 - 0x0000)
@@ -108,5 +108,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_Item_Toy_C_OnNotifyEnd_E7C10CF145CF5799DFA524820188E4F6;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

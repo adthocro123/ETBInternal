@@ -15,8 +15,8 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function Bacteria_AIC.Bacteria_AIC_C.ExecuteUbergraph_Bacteria_AIC
 // 0x0180 (0x0180 - 0x0000)
@@ -94,5 +94,5 @@ public:
 };
 DUMPER7_ASSERTS_Bacteria_AIC_C_Setup_AI;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

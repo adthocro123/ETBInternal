@@ -14,8 +14,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Flaregun_BP.Flaregun_BP_C
 // 0x0018 (0x0238 - 0x0220)
@@ -46,5 +45,4 @@ public:
 };
 DUMPER7_ASSERTS_AFlaregun_BP_C;
 
-}
-
+SDK_NAMESPACE_END

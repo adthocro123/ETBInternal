@@ -14,8 +14,7 @@
 #include "EIntTypes_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass RenderToTextureFunctionLibrary.RenderToTextureFunctionLibrary_C
 // 0x0000 (0x0028 - 0x0028)
@@ -41,5 +40,4 @@ public:
 };
 DUMPER7_ASSERTS_URenderToTextureFunctionLibrary_C;
 
-}
-
+SDK_NAMESPACE_END

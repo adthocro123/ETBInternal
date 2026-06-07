@@ -14,8 +14,7 @@
 #include "BP_SkinStealer_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_SkinStealer.BP_SkinStealer_C.ExecuteUbergraph_BP_SkinStealer
 // (Final, UbergraphFunction, HasDefaults)
@@ -430,17 +429,37 @@ void ABP_SkinStealer_C::CanSeePlayer(class ABPCharacter_Demo_C* Target, bool* Ca
 
 
 // Function BP_SkinStealer.BP_SkinStealer_C.SetPlayerMaterials
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ABPCharacter_Demo_C*              Player_Character                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_SkinStealer_C::SetPlayerMaterials()
+void ABP_SkinStealer_C::SetPlayerMaterials(class ABPCharacter_Demo_C* Player_Character)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_SkinStealer_C", "SetPlayerMaterials");
 
+	Params::BP_SkinStealer_C_SetPlayerMaterials Parms{};
+
+	Parms.Player_Character = Player_Character;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_SkinStealer.BP_SkinStealer_C.OnRep_Player Costume
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_SkinStealer_C::OnRep_Player_Costume()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SkinStealer_C", "OnRep_Player Costume");
+
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

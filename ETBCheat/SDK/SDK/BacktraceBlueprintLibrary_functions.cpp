@@ -13,8 +13,7 @@
 #include "BacktraceBlueprintLibrary_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BacktraceBlueprintLibrary.BacktraceBlueprintLibrary.Crash
 // (Final, Native, Static, Public, BlueprintCallable)
@@ -34,5 +33,5 @@ void UBacktraceBlueprintLibrary::Crash()
 	Func->FunctionFlags = Flgs;
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -15,8 +15,7 @@
 #include "Backrooms_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_ScannerDirector.BP_ScannerDirector_C
 // 0x0038 (0x02E0 - 0x02A8)
@@ -60,5 +59,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_ScannerDirector_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "BPFL_XP_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPFL_XP.BPFL_XP_C.AddEXP
 // (Static, Public, BlueprintCallable, BlueprintEvent)
@@ -130,5 +129,5 @@ void UBPFL_XP_C::CalculateXPNeededForNextLevel(int32 CurrentXP, class UObject* _
 		*XPNeeded = Parms.XPNeeded;
 }
 
-}
 
+SDK_NAMESPACE_END

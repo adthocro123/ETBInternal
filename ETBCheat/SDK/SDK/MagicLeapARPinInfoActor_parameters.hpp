@@ -11,12 +11,12 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "MagicLeapARPin_structs.hpp"
 #include "Engine_structs.hpp"
+#include "MagicLeapARPin_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function MagicLeapARPinInfoActor.MagicLeapARPinInfoActor_C.ExecuteUbergraph_MagicLeapARPinInfoActor
 // 0x02D8 (0x02D8 - 0x0000)
@@ -80,5 +80,5 @@ public:
 };
 DUMPER7_ASSERTS_MagicLeapARPinInfoActor_C_UserConstructionScript;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

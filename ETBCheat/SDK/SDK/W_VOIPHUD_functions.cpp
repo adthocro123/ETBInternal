@@ -14,8 +14,7 @@
 #include "W_VOIPHUD_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function W_VOIPHUD.W_VOIPHUD_C.ExecuteUbergraph_W_VOIPHUD
 // (Final, UbergraphFunction)
@@ -70,5 +69,5 @@ void UW_VOIPHUD_C::Construct()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

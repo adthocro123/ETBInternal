@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BTDecorator_ShouldMove.BTDecorator_ShouldMove_C.PerformConditionCheckAI
 // 0x0028 (0x0028 - 0x0000)
@@ -26,7 +26,7 @@ public:
 	class ABacteria_BP_C*                         K2Node_DynamicCast_AsBacteria_BP;                  // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-//DUMPER7_ASSERTS_BTDecorator_ShouldMove_C_PerformConditionCheckAI;
+DUMPER7_ASSERTS_BTDecorator_ShouldMove_C_PerformConditionCheckAI;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

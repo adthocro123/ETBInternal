@@ -14,8 +14,7 @@
 #include "DragonIKPlugin_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function DragonIKPlugin.DragonIK_Library.CustomLookRotation
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
@@ -409,5 +408,5 @@ void UDragonIKPhysicsComponent::UpdatePhysanimData(int32 LinearStrength, int32 A
 	Func->FunctionFlags = Flgs;
 }
 
-}
 
+SDK_NAMESPACE_END

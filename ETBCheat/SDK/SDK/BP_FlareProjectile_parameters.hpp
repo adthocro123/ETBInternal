@@ -13,8 +13,8 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_FlareProjectile.BP_FlareProjectile_C.ExecuteUbergraph_BP_FlareProjectile
 // 0x0070 (0x0070 - 0x0000)
@@ -55,5 +55,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_FlareProjectile_C_ReceiveTick;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

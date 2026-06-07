@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedEnum Mesh_Switch.Mesh_Switch
 // NumValues: 0x0004
@@ -24,5 +23,4 @@ enum class EMesh_Switch : uint8
 	Mesh_MAX                                 = 3,
 };
 
-}
-
+SDK_NAMESPACE_END

@@ -11,13 +11,13 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
+#include "HE_LookAtLocation_structs.hpp"
 #include "Engine_structs.hpp"
 #include "HE_LookAtLocationSeq_structs.hpp"
-#include "HE_LookAtLocation_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function Bacteria_Roaming_BP.Bacteria_Roaming_BP_C.ExecuteUbergraph_Bacteria_Roaming_BP
 // 0x0260 (0x0260 - 0x0000)
@@ -285,5 +285,5 @@ public:
 };
 DUMPER7_ASSERTS_Bacteria_Roaming_BP_C_CheckPlayersTimer;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

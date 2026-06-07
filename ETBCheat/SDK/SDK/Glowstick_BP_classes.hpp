@@ -15,8 +15,7 @@
 #include "E_GlowstickColor_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Glowstick_BP.Glowstick_BP_C
 // 0x0020 (0x0240 - 0x0220)
@@ -49,5 +48,4 @@ public:
 };
 DUMPER7_ASSERTS_AGlowstick_BP_C;
 
-}
-
+SDK_NAMESPACE_END

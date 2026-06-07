@@ -14,8 +14,7 @@
 #include "BP_Rope_Trigger_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Rope_Trigger.BP_Rope_Trigger_C.ExecuteUbergraph_BP_Rope_Trigger
 // (Final, UbergraphFunction, HasDefaults)
@@ -98,5 +97,5 @@ void ABP_Rope_Trigger_C::OnRep_bSnapRope()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

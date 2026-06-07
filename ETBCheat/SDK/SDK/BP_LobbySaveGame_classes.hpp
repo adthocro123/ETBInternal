@@ -14,8 +14,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_LobbySaveGame.BP_LobbySaveGame_C
 // 0x0030 (0x0058 - 0x0028)
@@ -42,5 +41,4 @@ public:
 };
 DUMPER7_ASSERTS_UBP_LobbySaveGame_C;
 
-}
-
+SDK_NAMESPACE_END

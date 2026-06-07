@@ -14,19 +14,18 @@
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WB_SettingsItem_Text_Theme2.WB_SettingsItem_Text_Theme2_C
-// 0x0048 (0x02A8 - 0x0260)
+// 0x0048 (0x02B8 - 0x0270)
 class UWB_SettingsItem_Text_Theme2_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0260(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UTextBlock*                             Description_Text;                                  // 0x0268(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Title_Text;                                        // 0x0270(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   Title;                                             // 0x0278(0x0018)(Edit, BlueprintVisible)
-	class FText                                   Description;                                       // 0x0290(0x0018)(Edit, BlueprintVisible)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0270(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             Description_Text;                                  // 0x0278(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Title_Text;                                        // 0x0280(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FText                                   Title;                                             // 0x0288(0x0018)(Edit, BlueprintVisible)
+	class FText                                   Description;                                       // 0x02A0(0x0018)(Edit, BlueprintVisible)
 
 public:
 	void ExecuteUbergraph_WB_SettingsItem_Text_Theme2(int32 EntryPoint);
@@ -49,5 +48,4 @@ public:
 };
 DUMPER7_ASSERTS_UWB_SettingsItem_Text_Theme2_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "Shocked_UI_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function Shocked_UI.Shocked_UI_C.ExecuteUbergraph_Shocked_UI
 // (Final, UbergraphFunction)
@@ -50,5 +49,5 @@ void UShocked_UI_C::CanClose()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

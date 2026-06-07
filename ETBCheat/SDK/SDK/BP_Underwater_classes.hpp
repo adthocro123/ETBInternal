@@ -15,8 +15,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Underwater.BP_Underwater_C
 // 0x0230 (0x0450 - 0x0220)
@@ -96,5 +95,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_Underwater_C;
 
-}
-
+SDK_NAMESPACE_END

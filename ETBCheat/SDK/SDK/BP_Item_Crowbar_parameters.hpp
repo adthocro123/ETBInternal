@@ -14,8 +14,8 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_Item_Crowbar.BP_Item_Crowbar_C.ExecuteUbergraph_BP_Item_Crowbar
 // 0x0340 (0x0340 - 0x0000)
@@ -212,5 +212,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_Item_Crowbar_C_OnNotifyEnd_751D76F146E38F09943798A236AB1CAA;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

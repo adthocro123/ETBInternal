@@ -13,8 +13,7 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum AdvancedSessions.EBPOnlinePresenceState
 // NumValues: 0x0007
@@ -146,15 +145,6 @@ public:
 };
 DUMPER7_ASSERTS_FBPOnlineRecentPlayer;
 
-// ScriptStruct AdvancedSessions.BPUserOnlineAccount
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x08) FBPUserOnlineAccount final
-{
-public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FBPUserOnlineAccount;
-
 // ScriptStruct AdvancedSessions.BPFriendPresenceInfo
 // 0x0018 (0x0018 - 0x0000)
 struct FBPFriendPresenceInfo final
@@ -205,5 +195,13 @@ public:
 };
 DUMPER7_ASSERTS_FSessionPropertyKeyPair;
 
-}
+// ScriptStruct AdvancedSessions.BPUserOnlineAccount
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FBPUserOnlineAccount final
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FBPUserOnlineAccount;
 
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "TemplateSequence_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function TemplateSequence.TemplateSequenceActor.SetBinding
 // (Final, Native, Public, BlueprintCallable)
@@ -179,5 +178,5 @@ class UTemplateSequencePlayer* UTemplateSequencePlayer::CreateTemplateSequencePl
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

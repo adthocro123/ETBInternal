@@ -14,8 +14,7 @@
 #include "PlayerEQSQuery_0_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function PlayerEQSQuery.PlayerEQSQuery_C.ProvideActorsSet
 // (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
@@ -42,5 +41,5 @@ void PlayerEQSQuery_0::UPlayerEQSQuery_C::ProvideActorsSet(class UObject* Querie
 		*ResultingActorsSet = std::move(Parms.ResultingActorsSet);
 }
 
-}
 
+SDK_NAMESPACE_END

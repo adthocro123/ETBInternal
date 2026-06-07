@@ -14,8 +14,7 @@
 #include "BP_GarageDoor_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_GarageDoor.BP_GarageDoor_C.ExecuteUbergraph_BP_GarageDoor
 // (Final, UbergraphFunction, HasDefaults)
@@ -126,5 +125,5 @@ void ABP_GarageDoor_C::OpenDoor__FinishedFunc()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

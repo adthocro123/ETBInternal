@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedEnum EN_ItemRarity.EN_ItemRarity
 // NumValues: 0x0006
@@ -26,5 +25,4 @@ enum class EN_ItemRarity : uint8
 	EN_MAX                                   = 5,
 };
 
-}
-
+SDK_NAMESPACE_END

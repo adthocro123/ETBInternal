@@ -13,8 +13,7 @@
 #include "InteractWithGrass_BP_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Grass_Interaction.Grass_Interaction_C
 // 0x0000 (0x0340 - 0x0340)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_UGrass_Interaction_C;
 
-}
-
+SDK_NAMESPACE_END

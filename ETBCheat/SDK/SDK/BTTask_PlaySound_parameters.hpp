@@ -13,8 +13,8 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BTTask_PlaySound.BTTask_PlaySound_C.ExecuteUbergraph_BTTask_PlaySound
 // 0x0038 (0x0038 - 0x0000)
@@ -49,5 +49,5 @@ public:
 };
 DUMPER7_ASSERTS_BTTask_PlaySound_C_ReceiveExecuteAI;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

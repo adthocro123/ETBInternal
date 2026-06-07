@@ -14,8 +14,8 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_Elevator.BP_Elevator_C.ExecuteUbergraph_BP_Elevator
 // 0x0194 (0x0194 - 0x0000)
@@ -71,5 +71,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_Elevator_C_ReceiveTick;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

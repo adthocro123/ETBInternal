@@ -13,8 +13,7 @@
 #include "S_LevelStats_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct S_HubLevels.S_HubLevels
 // 0x0010 (0x0010 - 0x0000)
@@ -25,5 +24,4 @@ public:
 };
 DUMPER7_ASSERTS_FS_HubLevels;
 
-}
-
+SDK_NAMESPACE_END

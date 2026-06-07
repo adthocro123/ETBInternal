@@ -14,8 +14,7 @@
 #include "ShallowWaterSimComponent_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function ShallowWaterSimComponent.ShallowWaterSimComponent_C.ExecuteUbergraph_ShallowWaterSimComponent
 // (Final, UbergraphFunction)
@@ -233,5 +232,5 @@ void UShallowWaterSimComponent_C::PingPong_Velocity(class UTextureRenderTarget2D
 		*Write_RT = Parms.Write_RT;
 }
 
-}
 
+SDK_NAMESPACE_END

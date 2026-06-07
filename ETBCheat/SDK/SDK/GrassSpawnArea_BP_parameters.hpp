@@ -14,8 +14,8 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function GrassSpawnArea_BP.GrassSpawnArea_BP_C.UserConstructionScript
 // 0x0160 (0x0160 - 0x0000)
@@ -51,5 +51,5 @@ public:
 };
 DUMPER7_ASSERTS_GrassSpawnArea_BP_C_UserConstructionScript;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

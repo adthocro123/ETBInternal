@@ -14,8 +14,7 @@
 #include "WB_Chat_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WB_Chat.WB_Chat_C.ExecuteUbergraph_WB_Chat
 // (Final, UbergraphFunction, HasDefaults)
@@ -305,20 +304,6 @@ void UWB_Chat_C::FadeChatPanel(float Input)
 }
 
 
-// Function WB_Chat.WB_Chat_C.CheckFont
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWB_Chat_C::CheckFont()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_Chat_C", "CheckFont");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function WB_Chat.WB_Chat_C.GetVisibilityOnConsoles
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -338,5 +323,5 @@ ESlateVisibility UWB_Chat_C::GetVisibilityOnConsoles()
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

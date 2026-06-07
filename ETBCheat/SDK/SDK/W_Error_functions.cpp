@@ -14,8 +14,7 @@
 #include "W_Error_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function W_Error.W_Error_C.ExecuteUbergraph_W_Error
 // (Final, UbergraphFunction, HasDefaults)
@@ -274,5 +273,5 @@ struct FEventReply UW_Error_C::OnPreviewKeyDown(const struct FGeometry& MyGeomet
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "WB_Slider_Theme2_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WB_Slider_Theme2.WB_Slider_Theme2_C.ExecuteUbergraph_WB_Slider_Theme2
 // (Final, UbergraphFunction)
@@ -209,5 +208,5 @@ struct FEventReply UWB_Slider_Theme2_C::OnPreviewKeyDown(const struct FGeometry&
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

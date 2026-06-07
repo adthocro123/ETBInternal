@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedEnum EN_UI_StatState.EN_UI_StatState
 // NumValues: 0x0007
@@ -27,5 +26,4 @@ enum class EN_UI_StatState : uint8
 	EN_UI_MAX                                = 6,
 };
 
-}
-
+SDK_NAMESPACE_END

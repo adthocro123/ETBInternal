@@ -15,18 +15,21 @@
 #include "Backrooms_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass W_Input_Icon.W_Input_Icon_C
-// 0x0028 (0x0290 - 0x0268)
+// 0x0050 (0x02C8 - 0x0278)
 class UW_Input_Icon_C final : public UFancyInputIconWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0268(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UImage*                                 Icon;                                              // 0x0270(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	struct FDataTableRowHandle                    InputIcon;                                         // 0x0278(0x0010)(Edit, BlueprintVisible, NoDestructor)
-	bool                                          ShowActionName;                                    // 0x0288(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0278(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UImage*                                 Icon;                                              // 0x0280(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             IconAltText;                                       // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	struct FDataTableRowHandle                    InputIcon;                                         // 0x0290(0x0010)(Edit, BlueprintVisible, NoDestructor)
+	int32                                         Index_0;                                           // 0x02A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   InputAction_Name;                                  // 0x02A4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2AC[0x4];                                      // 0x02AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   InputAction_DefaultKey;                            // 0x02B0(0x0018)(Edit, BlueprintVisible)
 
 public:
 	void ExecuteUbergraph_W_Input_Icon(int32 EntryPoint);
@@ -34,6 +37,7 @@ public:
 	void OnInputDeviceChanged(EFancyInputDevice NewInputDevice);
 	void UpdateIcon(EFancyInputDevice InputDevice, bool Show);
 	void OnLoaded_ED0A6EA547ADA5E1277085BE13103EF7(class UObject* Loaded);
+	void IsDefaultKey(EFancyInputDevice InputDevice, class FName InputActionName, const class FText& InputActionDefaultKey, bool* IsDefaultKey_0, class FText* KeyTextToDisplay);
 
 public:
 	static class UClass* StaticClass()
@@ -51,5 +55,4 @@ public:
 };
 DUMPER7_ASSERTS_UW_Input_Icon_C;
 
-}
-
+SDK_NAMESPACE_END

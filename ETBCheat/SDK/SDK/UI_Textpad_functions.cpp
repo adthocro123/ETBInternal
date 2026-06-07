@@ -14,8 +14,7 @@
 #include "UI_Textpad_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function UI_Textpad.UI_Textpad_C.ExecuteUbergraph_UI_Textpad
 // (Final, UbergraphFunction, HasDefaults)
@@ -56,5 +55,5 @@ void UUI_Textpad_C::PresetText(const class FText& InText)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

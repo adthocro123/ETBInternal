@@ -13,8 +13,8 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_FlareGun.BP_FlareGun_C.ExecuteUbergraph_BP_FlareGun
 // 0x0130 (0x0130 - 0x0000)
@@ -102,5 +102,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_FlareGun_C_OnNotifyEnd_2B9968E342C281F2784D3CA1FF59D3F5;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

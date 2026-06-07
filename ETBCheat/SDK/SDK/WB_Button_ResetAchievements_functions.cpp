@@ -14,8 +14,7 @@
 #include "WB_Button_ResetAchievements_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WB_Button_ResetAchievements.WB_Button_ResetAchievements_C.ExecuteUbergraph_WB_Button_ResetAchievements
 // (Final, UbergraphFunction)
@@ -110,5 +109,5 @@ void UWB_Button_ResetAchievements_C::ToggleHover(bool IsHovered_0)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

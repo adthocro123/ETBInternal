@@ -14,8 +14,7 @@
 #include "BP_Computer_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Computer.BP_Computer_C.ExecuteUbergraph_BP_Computer
 // (Final, UbergraphFunction, HasDefaults)
@@ -356,5 +355,5 @@ void ABP_Computer_C::Update_Beam()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

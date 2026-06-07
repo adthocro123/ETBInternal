@@ -12,15 +12,14 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "Mesh_Switch_structs.hpp"
+#include "Waterline_Cameras_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Two_FFT_Resolution_structs.hpp"
 #include "Dyn_Foam_O_structs.hpp"
-#include "Mesh_Switch_structs.hpp"
-#include "Waterline_Cameras_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass 8_FFT_H_Ocean_Sim.8_FFT_H_Ocean_Sim_C
 // 0x0510 (0x0730 - 0x0220)
@@ -231,5 +230,4 @@ public:
 };
 DUMPER7_ASSERTS_AEight_FFT_H_Ocean_Sim_C;
 
-}
-
+SDK_NAMESPACE_END

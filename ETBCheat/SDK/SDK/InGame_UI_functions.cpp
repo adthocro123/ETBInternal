@@ -14,8 +14,7 @@
 #include "InGame_UI_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function InGame_UI.InGame_UI_C.ExecuteUbergraph_InGame_UI
 // (Final, UbergraphFunction, HasDefaults)
@@ -264,5 +263,5 @@ void UInGame_UI_C::HideMap()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -13,8 +13,8 @@
 #include "SlateCore_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function UI_EvidenceShortcut.UI_EvidenceShortcut_C.ExecuteUbergraph_UI_EvidenceShortcut
 // 0x00E8 (0x00E8 - 0x0000)
@@ -51,5 +51,5 @@ public:
 };
 DUMPER7_ASSERTS_UI_EvidenceShortcut_C_ExecuteUbergraph_UI_EvidenceShortcut;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

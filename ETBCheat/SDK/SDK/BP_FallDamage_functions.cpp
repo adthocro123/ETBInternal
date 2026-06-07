@@ -14,8 +14,7 @@
 #include "BP_FallDamage_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_FallDamage.BP_FallDamage_C.ExecuteUbergraph_BP_FallDamage
 // (Final, UbergraphFunction)
@@ -70,5 +69,5 @@ void UBP_FallDamage_C::OnLanded()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

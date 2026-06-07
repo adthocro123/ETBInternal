@@ -14,8 +14,7 @@
 #include "BP_Ragdoll_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Ragdoll.BP_Ragdoll_C.ExecuteUbergraph_BP_Ragdoll
 // (Final, UbergraphFunction)
@@ -150,5 +149,5 @@ void ABP_Ragdoll_C::OnNotifyEnd_7CA886504E74A26B7124BE88FF3FEBF5(class FName Not
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

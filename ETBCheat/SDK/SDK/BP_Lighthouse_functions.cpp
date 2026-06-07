@@ -14,8 +14,7 @@
 #include "BP_Lighthouse_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Lighthouse.BP_Lighthouse_C.ExecuteUbergraph_BP_Lighthouse
 // (Final, UbergraphFunction, HasDefaults)
@@ -246,5 +245,5 @@ void ABP_Lighthouse_C::Play_Lighthouse()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

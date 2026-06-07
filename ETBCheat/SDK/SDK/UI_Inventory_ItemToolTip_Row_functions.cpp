@@ -14,8 +14,7 @@
 #include "UI_Inventory_ItemToolTip_Row_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function UI_Inventory_ItemToolTip_Row.UI_Inventory_ItemToolTip_Row_C.ExecuteUbergraph_UI_Inventory_ItemToolTip_Row
 // (Final, UbergraphFunction, HasDefaults)
@@ -76,5 +75,5 @@ void UUI_Inventory_ItemToolTip_Row_C::PreConstruct(bool IsDesignTime)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

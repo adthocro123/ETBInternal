@@ -12,12 +12,11 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "AnimGraphRuntime_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass Swim_AnimBP.Swim_AnimBP_C
 // 0x06B0 (0x0970 - 0x02C0)
@@ -82,5 +81,4 @@ public:
 };
 DUMPER7_ASSERTS_USwim_AnimBP_C;
 
-}
-
+SDK_NAMESPACE_END

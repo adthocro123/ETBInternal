@@ -13,8 +13,7 @@
 #include "BP_Ceiling_Gate_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Ceiling_Gate.BP_Ceiling_Gate_C.OnRep_IsOpen
 // (BlueprintCallable, BlueprintEvent)
@@ -29,5 +28,5 @@ void ABP_Ceiling_Gate_C::OnRep_IsOpen()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

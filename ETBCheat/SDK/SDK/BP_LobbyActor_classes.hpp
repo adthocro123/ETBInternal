@@ -14,8 +14,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_LobbyActor.BP_LobbyActor_C
 // 0x0060 (0x02E0 - 0x0280)
@@ -66,5 +65,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_LobbyActor_C;
 
-}
-
+SDK_NAMESPACE_END

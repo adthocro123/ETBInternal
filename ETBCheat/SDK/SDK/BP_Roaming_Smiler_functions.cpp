@@ -14,8 +14,7 @@
 #include "BP_Roaming_Smiler_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Roaming_Smiler.BP_Roaming_Smiler_C.ExecuteUbergraph_BP_Roaming_Smiler
 // (Final, UbergraphFunction, HasDefaults)
@@ -486,5 +485,5 @@ void ABP_Roaming_Smiler_C::SetupSmilerParticles()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

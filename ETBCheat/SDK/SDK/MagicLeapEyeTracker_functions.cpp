@@ -14,8 +14,7 @@
 #include "MagicLeapEyeTracker_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function MagicLeapEyeTracker.MagicLeapEyeTrackerFunctionLibrary.GetCalibrationStatus
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
@@ -70,5 +69,5 @@ bool UMagicLeapEyeTrackerFunctionLibrary::GetEyeBlinkState(struct FMagicLeapEyeB
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

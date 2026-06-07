@@ -14,8 +14,7 @@
 #include "W_Kicked_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function W_Kicked.W_Kicked_C.ExecuteUbergraph_W_Kicked
 // (Final, UbergraphFunction, HasDefaults)
@@ -268,5 +267,5 @@ struct FEventReply UW_Kicked_C::OnPreviewKeyDown(const struct FGeometry& MyGeome
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

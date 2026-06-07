@@ -14,8 +14,7 @@
 #include "BP_Item_Glowstick_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Item_Glowstick.BP_Item_Glowstick_C.ExecuteUbergraph_BP_Item_Glowstick
 // (Final, UbergraphFunction, HasDefaults)
@@ -274,5 +273,5 @@ void ABP_Item_Glowstick_C::UseItem()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

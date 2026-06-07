@@ -14,8 +14,7 @@
 #include "Rope_BP_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function Rope_BP.Rope_BP_C.ExecuteUbergraph_Rope_BP
 // (Final, UbergraphFunction)
@@ -50,5 +49,5 @@ void ARope_BP_C::ReceiveBeginPlay()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -15,8 +15,7 @@
 #include "CoreUObject_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class Slate.ButtonWidgetStyle
 // 0x0278 (0x02A8 - 0x0030)
@@ -315,5 +314,4 @@ public:
 };
 DUMPER7_ASSERTS_UToolMenuBase;
 
-}
-
+SDK_NAMESPACE_END

@@ -14,8 +14,8 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_Rope.BP_Rope_C.ExecuteUbergraph_BP_Rope
 // 0x0390 (0x0390 - 0x0000)
@@ -196,5 +196,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_Rope_C_OnRep_RopeZone;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

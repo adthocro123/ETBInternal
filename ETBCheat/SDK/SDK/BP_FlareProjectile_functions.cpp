@@ -14,8 +14,7 @@
 #include "BP_FlareProjectile_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_FlareProjectile.BP_FlareProjectile_C.ExecuteUbergraph_BP_FlareProjectile
 // (Final, UbergraphFunction)
@@ -98,5 +97,5 @@ void ABP_FlareProjectile_C::Fade__FinishedFunc()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

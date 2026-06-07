@@ -10,16 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "PhysicsCore_structs.hpp"
-#include "FootstepActionsEnum_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "AnimGraphRuntime_structs.hpp"
+#include "PhysicsCore_structs.hpp"
 #include "HorrorEngineSettings_structs.hpp"
+#include "FootstepActionsEnum_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass Disguised_AnimBP.Disguised_AnimBP_C
 // 0x03C0 (0x0680 - 0x02C0)
@@ -71,5 +70,4 @@ public:
 };
 DUMPER7_ASSERTS_UDisguised_AnimBP_C;
 
-}
-
+SDK_NAMESPACE_END

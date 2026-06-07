@@ -15,8 +15,7 @@
 #include "AnimGraphRuntime_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass Bacteria_AnimBP.Bacteria_AnimBP_C
 // 0x0310 (0x05D0 - 0x02C0)
@@ -58,5 +57,4 @@ public:
 };
 DUMPER7_ASSERTS_UBacteria_AnimBP_C;
 
-}
-
+SDK_NAMESPACE_END

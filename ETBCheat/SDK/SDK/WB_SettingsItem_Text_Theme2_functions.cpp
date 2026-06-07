@@ -14,8 +14,7 @@
 #include "WB_SettingsItem_Text_Theme2_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WB_SettingsItem_Text_Theme2.WB_SettingsItem_Text_Theme2_C.ExecuteUbergraph_WB_SettingsItem_Text_Theme2
 // (Final, UbergraphFunction)
@@ -70,5 +69,5 @@ void UWB_SettingsItem_Text_Theme2_C::PreConstruct(bool IsDesignTime)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

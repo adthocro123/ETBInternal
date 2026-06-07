@@ -14,8 +14,7 @@
 #include "BP_Ambience_Manager_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Ambience_Manager.BP_Ambience_Manager_C.ExecuteUbergraph_BP_Ambience_Manager
 // (Final, UbergraphFunction)
@@ -78,5 +77,5 @@ void ABP_Ambience_Manager_C::ResetAmbience()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

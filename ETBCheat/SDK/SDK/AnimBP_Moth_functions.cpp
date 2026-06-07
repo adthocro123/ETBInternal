@@ -14,8 +14,7 @@
 #include "AnimBP_Moth_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function AnimBP_Moth.AnimBP_Moth_C.ExecuteUbergraph_AnimBP_Moth
 // (Final, UbergraphFunction)
@@ -77,5 +76,5 @@ void UAnimBP_Moth_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 		*AnimGraph_0 = std::move(Parms.AnimGraph_0);
 }
 
-}
 
+SDK_NAMESPACE_END

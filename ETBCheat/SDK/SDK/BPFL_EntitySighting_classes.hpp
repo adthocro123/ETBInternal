@@ -13,8 +13,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPFL_EntitySighting.BPFL_EntitySighting_C
 // 0x0000 (0x0028 - 0x0028)
@@ -40,5 +39,4 @@ public:
 };
 DUMPER7_ASSERTS_UBPFL_EntitySighting_C;
 
-}
-
+SDK_NAMESPACE_END

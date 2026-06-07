@@ -14,8 +14,7 @@
 #include "BP_Item_Crowbar_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Item_Crowbar.BP_Item_Crowbar_C.ExecuteUbergraph_BP_Item_Crowbar
 // (Final, UbergraphFunction, HasDefaults)
@@ -300,5 +299,5 @@ void ABP_Item_Crowbar_C::UseItem()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

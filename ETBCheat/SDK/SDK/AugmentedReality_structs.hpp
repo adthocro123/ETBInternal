@@ -13,8 +13,7 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum AugmentedReality.EARTrackingState
 // NumValues: 0x0005
@@ -778,5 +777,4 @@ public:
 };
 DUMPER7_ASSERTS_FARSessionStatus;
 
-}
-
+SDK_NAMESPACE_END

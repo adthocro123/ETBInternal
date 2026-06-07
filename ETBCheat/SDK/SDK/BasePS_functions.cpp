@@ -14,8 +14,7 @@
 #include "BasePS_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BasePS.BasePS_C.ExecuteUbergraph_BasePS
 // (Final, UbergraphFunction, HasDefaults)
@@ -230,5 +229,5 @@ void ABasePS_C::Load_Player_Headset()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

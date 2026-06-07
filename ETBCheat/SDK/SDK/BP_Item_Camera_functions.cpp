@@ -14,8 +14,7 @@
 #include "BP_Item_Camera_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Item_Camera.BP_Item_Camera_C.ExecuteUbergraph_BP_Item_Camera
 // (Final, UbergraphFunction)
@@ -598,5 +597,5 @@ void ABP_Item_Camera_C::SetMaterial(bool EnabledFOV)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -10,19 +10,18 @@
 
 #include "Basic.hpp"
 
+#include "ST_UI_Mission_structs.hpp"
 #include "S_ConnectedPlayer_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "ST_UI_Mission_structs.hpp"
-#include "UMG_structs.hpp"
 #include "AdvancedSessions_structs.hpp"
+#include "UMG_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Lobby_GS.Lobby_GS_C
-// 0x00F8 (0x0388 - 0x0290)
+// 0x0110 (0x03A0 - 0x0290)
 class ALobby_GS_C final : public AGameState
 {
 public:
@@ -37,12 +36,13 @@ public:
 	class FName                                   CurrentLevel;                                      // 0x02E4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_2EC[0x4];                                      // 0x02EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FST_UI_Mission                         CurrentMissionData;                                // 0x02F0(0x0098)(Edit, BlueprintVisible, Net, DisableEditOnInstance, RepNotify, HasGetValueTypeHash)
+	class FString                                 LobbyCode;                                         // 0x0388(0x0010)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	int32                                         MaxPlayers;                                        // 0x0398(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_Lobby_GS(int32 EntryPoint);
+	void ReceiveBeginPlay();
 	void UpdateCanJoin(bool CanJoin);
-	void OnSuccess_311C34B5477FF004435A3FB2EB96F2B7();
-	void OnFailure_311C34B5477FF004435A3FB2EB96F2B7();
 	void OnSuccess_BAB015064C915C7C1CCCA3AAB0A02F3B();
 	void OnFailure_BAB015064C915C7C1CCCA3AAB0A02F3B();
 	void Update_ConnectedPlayers_Array();
@@ -62,6 +62,7 @@ public:
 	void Update_Lobby_Launchevent(bool LaunchingGame_);
 	void Update_Lobby_VoiceChat(bool CanTalk);
 	void OnRep_CurrentMissionData();
+	void OnRep_MaxPlayers();
 
 public:
 	static class UClass* StaticClass()
@@ -79,5 +80,4 @@ public:
 };
 DUMPER7_ASSERTS_ALobby_GS_C;
 
-}
-
+SDK_NAMESPACE_END

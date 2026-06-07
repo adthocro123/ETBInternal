@@ -14,8 +14,7 @@
 #include "AnimBP_Fish_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function AnimBP_Fish.AnimBP_Fish_C.ExecuteUbergraph_AnimBP_Fish
 // (Final, UbergraphFunction)
@@ -57,5 +56,5 @@ void UAnimBP_Fish_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 		*AnimGraph_0 = std::move(Parms.AnimGraph_0);
 }
 
-}
 
+SDK_NAMESPACE_END

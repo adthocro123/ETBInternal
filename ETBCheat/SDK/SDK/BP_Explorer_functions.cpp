@@ -14,8 +14,7 @@
 #include "BP_Explorer_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Explorer.BP_Explorer_C.ExecuteUbergraph_BP_Explorer
 // (Final, UbergraphFunction, HasDefaults)
@@ -126,5 +125,5 @@ void ABP_Explorer_C::ResetMaterial()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

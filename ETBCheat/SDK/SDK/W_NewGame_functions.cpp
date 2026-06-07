@@ -14,8 +14,7 @@
 #include "W_NewGame_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function W_NewGame.W_NewGame_C.ExecuteUbergraph_W_NewGame
 // (Final, UbergraphFunction, HasDefaults)
@@ -345,5 +344,5 @@ struct FEventReply UW_NewGame_C::OnKeyDown(const struct FGeometry& MyGeometry, c
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "UI_Inventory_SlotPanel_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function UI_Inventory_SlotPanel.UI_Inventory_SlotPanel_C.ExecuteUbergraph_UI_Inventory_SlotPanel
 // (Final, UbergraphFunction, HasDefaults)
@@ -56,5 +55,5 @@ void UUI_Inventory_SlotPanel_C::SetIcon(class FName Item_0)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

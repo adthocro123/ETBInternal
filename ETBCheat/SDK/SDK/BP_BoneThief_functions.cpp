@@ -14,8 +14,7 @@
 #include "BP_BoneThief_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_BoneThief.BP_BoneThief_C.ExecuteUbergraph_BP_BoneThief
 // (Final, UbergraphFunction, HasDefaults)
@@ -32,6 +31,26 @@ void ABP_BoneThief_C::ExecuteUbergraph_BP_BoneThief(int32 EntryPoint)
 	Params::BP_BoneThief_C_ExecuteUbergraph_BP_BoneThief Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_BoneThief.BP_BoneThief_C.Apply Costume To Skeletal Mesh
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ABPCharacter_Demo_C*              InTargetPlayer                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_BoneThief_C::Apply_Costume_To_Skeletal_Mesh(class ABPCharacter_Demo_C* InTargetPlayer)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BoneThief_C", "Apply Costume To Skeletal Mesh");
+
+	Params::BP_BoneThief_C_Apply_Costume_To_Skeletal_Mesh Parms{};
+
+	Parms.InTargetPlayer = InTargetPlayer;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -570,5 +589,19 @@ void ABP_BoneThief_C::OnRep_IsHidden()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
+
+// Function BP_BoneThief.BP_BoneThief_C.OnRep_TargetPlayer
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_BoneThief_C::OnRep_TargetPlayer()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BoneThief_C", "OnRep_TargetPlayer");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
+
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "BP_ScannerComponent_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_ScannerComponent.BP_ScannerComponent_C.ExecuteUbergraph_BP_ScannerComponent
 // (Final, UbergraphFunction)
@@ -132,5 +131,5 @@ void UBP_ScannerComponent_C::SetWavePosition()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

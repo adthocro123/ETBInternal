@@ -14,8 +14,7 @@
 #include "W_VOIP_Speaker_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function W_VOIP_Speaker.W_VOIP_Speaker_C.ExecuteUbergraph_W_VOIP_Speaker
 // (Final, UbergraphFunction)
@@ -50,5 +49,5 @@ void UW_VOIP_Speaker_C::Construct()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

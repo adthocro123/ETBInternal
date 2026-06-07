@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedEnum InstanceStatus.InstanceStatus
 // NumValues: 0x0002
@@ -22,5 +21,4 @@ enum class EInstanceStatus : uint8
 	InstanceStatus_MAX                       = 1,
 };
 
-}
-
+SDK_NAMESPACE_END

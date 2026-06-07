@@ -13,8 +13,7 @@
 #include "S_DroppedItem_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct S_WorldCommon.S_WorldCommon
 // 0x0018 (0x0018 - 0x0000)
@@ -27,5 +26,4 @@ public:
 };
 DUMPER7_ASSERTS_FS_WorldCommon;
 
-}
-
+SDK_NAMESPACE_END

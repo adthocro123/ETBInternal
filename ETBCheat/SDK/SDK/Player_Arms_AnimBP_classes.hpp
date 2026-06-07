@@ -15,8 +15,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass Player_Arms_AnimBP.Player_Arms_AnimBP_C
 // 0x0810 (0x0AD0 - 0x02C0)
@@ -81,5 +80,4 @@ public:
 };
 DUMPER7_ASSERTS_UPlayer_Arms_AnimBP_C;
 
-}
-
+SDK_NAMESPACE_END

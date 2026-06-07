@@ -13,8 +13,8 @@
 #include "SlateCore_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function UI_Console.UI_Console_C.ExecuteUbergraph_UI_Console
 // 0x0200 (0x0200 - 0x0000)
@@ -70,5 +70,5 @@ public:
 };
 DUMPER7_ASSERTS_UI_Console_C_BndEvt__Input_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "Backrooms_structs.hpp"
 #include "EN_ItemRarity_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Backrooms_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct ST_Item.ST_Item
 // 0x00A0 (0x00A0 - 0x0000)
@@ -39,5 +38,4 @@ public:
 };
 DUMPER7_ASSERTS_FST_Item;
 
-}
-
+SDK_NAMESPACE_END

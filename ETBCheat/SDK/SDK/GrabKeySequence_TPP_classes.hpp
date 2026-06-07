@@ -14,8 +14,7 @@
 #include "LevelSequence_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass GrabKeySequence_TPP.SequenceDirector_C
 // 0x0008 (0x0040 - 0x0038)
@@ -50,5 +49,4 @@ public:
 };
 DUMPER7_ASSERTS_GrabKeySequence_TPP__USequenceDirector_C;
 
-}
-
+SDK_NAMESPACE_END

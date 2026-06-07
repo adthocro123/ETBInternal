@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
+#include "E_CameraSetting_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "UMG_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass ChatComponent.ChatComponent_C
 // 0x0018 (0x00C8 - 0x00B0)
@@ -38,6 +38,8 @@ public:
 	void Create_Chat_Widget(bool IsInGame);
 	void Focus_Chat();
 	void Clear_Chat();
+	void Get_All_ChatComponents(TArray<class UChatComponent_C*>* PlayerControllers);
+	void GetSenderPlayerState(const struct FS_ChatMessage& ChatMessage, class APlayerState** PlayerState, bool* Success);
 
 public:
 	static class UClass* StaticClass()
@@ -55,5 +57,4 @@ public:
 };
 DUMPER7_ASSERTS_UChatComponent_C;
 
-}
-
+SDK_NAMESPACE_END

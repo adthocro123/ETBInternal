@@ -14,8 +14,7 @@
 #include "WBP_Button_Basic_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WBP_Button_Basic.WBP_Button_Basic_C.ExecuteUbergraph_WBP_Button_Basic
 // (Final, UbergraphFunction)
@@ -222,5 +221,5 @@ void UWBP_Button_Basic_C::ChangeTextToSymbols()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

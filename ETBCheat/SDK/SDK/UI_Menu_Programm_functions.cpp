@@ -14,8 +14,7 @@
 #include "UI_Menu_Programm_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function UI_Menu_Programm.UI_Menu_Programm_C.ExecuteUbergraph_UI_Menu_Programm
 // (Final, UbergraphFunction, HasDefaults)
@@ -377,5 +376,5 @@ class FText UUI_Menu_Programm_C::Get_Txt_Description_Text_0()
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

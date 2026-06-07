@@ -14,8 +14,7 @@
 #include "UI_Calc_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function UI_Calc.UI_Calc_C.ExecuteUbergraph_UI_Calc
 // (Final, UbergraphFunction, HasDefaults)
@@ -288,5 +287,5 @@ void UUI_Calc_C::BndEvt__2_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__De
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

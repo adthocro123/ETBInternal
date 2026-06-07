@@ -14,8 +14,7 @@
 #include "W_Confirmation_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function W_Confirmation.W_Confirmation_C.ExecuteUbergraph_W_Confirmation
 // (Final, UbergraphFunction, HasDefaults)
@@ -145,29 +144,29 @@ void UW_Confirmation_C::Construct()
 }
 
 
-// Function W_Confirmation.W_Confirmation_C.OnSuccess_5933F1CA4D0659E4BD885BA3802E84BB
+// Function W_Confirmation.W_Confirmation_C.OnSuccess_AE43B1B0445ACEED7EA184AEE80532E2
 // (BlueprintCallable, BlueprintEvent)
 
-void UW_Confirmation_C::OnSuccess_5933F1CA4D0659E4BD885BA3802E84BB()
+void UW_Confirmation_C::OnSuccess_AE43B1B0445ACEED7EA184AEE80532E2()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("W_Confirmation_C", "OnSuccess_5933F1CA4D0659E4BD885BA3802E84BB");
+		Func = Class->GetFunction("W_Confirmation_C", "OnSuccess_AE43B1B0445ACEED7EA184AEE80532E2");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function W_Confirmation.W_Confirmation_C.OnFailure_5933F1CA4D0659E4BD885BA3802E84BB
+// Function W_Confirmation.W_Confirmation_C.OnFailure_AE43B1B0445ACEED7EA184AEE80532E2
 // (BlueprintCallable, BlueprintEvent)
 
-void UW_Confirmation_C::OnFailure_5933F1CA4D0659E4BD885BA3802E84BB()
+void UW_Confirmation_C::OnFailure_AE43B1B0445ACEED7EA184AEE80532E2()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("W_Confirmation_C", "OnFailure_5933F1CA4D0659E4BD885BA3802E84BB");
+		Func = Class->GetFunction("W_Confirmation_C", "OnFailure_AE43B1B0445ACEED7EA184AEE80532E2");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -296,5 +295,5 @@ struct FEventReply UW_Confirmation_C::OnKeyDown(const struct FGeometry& MyGeomet
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

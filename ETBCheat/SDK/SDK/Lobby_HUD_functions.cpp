@@ -14,8 +14,7 @@
 #include "Lobby_HUD_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function Lobby_HUD.Lobby_HUD_C.ExecuteUbergraph_Lobby_HUD
 // (Final, UbergraphFunction, HasDefaults)
@@ -183,15 +182,15 @@ void ULobby_HUD_C::Init_LobbyStatus_Indicator()
 }
 
 
-// Function Lobby_HUD.Lobby_HUD_C.Setup
+// Function Lobby_HUD.Lobby_HUD_C.SetUp
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void ULobby_HUD_C::Setup()
+void ULobby_HUD_C::SetUp()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Lobby_HUD_C", "Setup");
+		Func = Class->GetFunction("Lobby_HUD_C", "SetUp");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -270,5 +269,5 @@ void ULobby_HUD_C::HideMicIcon(const struct FBPUniqueNetId& UniqueId)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

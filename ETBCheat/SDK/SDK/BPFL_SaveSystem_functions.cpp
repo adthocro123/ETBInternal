@@ -14,8 +14,7 @@
 #include "BPFL_SaveSystem_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPFL_SaveSystem.BPFL_SaveSystem_C.Found Ladder
 // (Static, Public, BlueprintCallable, BlueprintEvent)
@@ -180,12 +179,13 @@ void UBPFL_SaveSystem_C::Set_Collected_Key(class UObject* __WorldContext)
 // Function BPFL_SaveSystem.BPFL_SaveSystem_C.Create New Slot
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FString&                    SlotName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// const class FString&                    SaveType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const class FString&                    SaveGameName                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// E_Difficulty                            Difficulty                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool*                                   Success                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class FString*                          SlotName                                               (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
 
-void UBPFL_SaveSystem_C::Create_New_Slot(const class FString& SlotName, const class FString& SaveType, class UObject* __WorldContext, bool* Success)
+void UBPFL_SaveSystem_C::Create_New_Slot(const class FString& SaveGameName, E_Difficulty Difficulty, class UObject* __WorldContext, bool* Success, class FString* SlotName)
 {
 	static class UFunction* Func = nullptr;
 
@@ -194,14 +194,17 @@ void UBPFL_SaveSystem_C::Create_New_Slot(const class FString& SlotName, const cl
 
 	Params::BPFL_SaveSystem_C_Create_New_Slot Parms{};
 
-	Parms.SlotName = std::move(SlotName);
-	Parms.SaveType = std::move(SaveType);
+	Parms.SaveGameName = std::move(SaveGameName);
+	Parms.Difficulty = Difficulty;
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	if (Success != nullptr)
 		*Success = Parms.Success;
+
+	if (SlotName != nullptr)
+		*SlotName = std::move(Parms.SlotName);
 }
 
 
@@ -2160,5 +2163,32 @@ void UBPFL_SaveSystem_C::SetCollectedAllPlushies(class UObject* __WorldContext)
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 }
 
+
+// Function BPFL_SaveSystem.BPFL_SaveSystem_C.GetSlotNameForSaveGameName
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// const class FString&                    SaveGameName                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// E_Difficulty                            Difficulty                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
+
+class FString UBPFL_SaveSystem_C::GetSlotNameForSaveGameName(const class FString& SaveGameName, E_Difficulty Difficulty, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BPFL_SaveSystem_C", "GetSlotNameForSaveGameName");
+
+	Params::BPFL_SaveSystem_C_GetSlotNameForSaveGameName Parms{};
+
+	Parms.SaveGameName = std::move(SaveGameName);
+	Parms.Difficulty = Difficulty;
+	Parms.__WorldContext = __WorldContext;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
+
+SDK_NAMESPACE_END

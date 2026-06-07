@@ -14,8 +14,7 @@
 #include "BP_AimAssistComponent_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_AimAssistComponent.BP_AimAssistComponent_C.ExecuteUbergraph_BP_AimAssistComponent
 // (Final, UbergraphFunction)
@@ -90,5 +89,5 @@ bool UBP_AimAssistComponent_C::CheckCanMove()
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

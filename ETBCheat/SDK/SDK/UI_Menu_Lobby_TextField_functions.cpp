@@ -14,8 +14,7 @@
 #include "UI_Menu_Lobby_TextField_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function UI_Menu_Lobby_TextField.UI_Menu_Lobby_TextField_C.ExecuteUbergraph_UI_Menu_Lobby_TextField
 // (Final, UbergraphFunction, HasDefaults)
@@ -234,5 +233,5 @@ void UUI_Menu_Lobby_TextField_C::ToggleHover(bool IsHovered_0)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

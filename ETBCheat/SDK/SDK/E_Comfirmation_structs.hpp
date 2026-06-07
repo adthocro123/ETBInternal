@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedEnum E_Comfirmation.E_Comfirmation
 // NumValues: 0x0007
@@ -27,5 +26,4 @@ enum class E_Comfirmation : uint8
 	E_MAX                                    = 6,
 };
 
-}
-
+SDK_NAMESPACE_END

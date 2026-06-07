@@ -14,8 +14,7 @@
 #include "LobbyPS_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function LobbyPS.LobbyPS_C.ExecuteUbergraph_LobbyPS
 // (Final, UbergraphFunction)
@@ -215,5 +214,5 @@ void ALobbyPS_C::OnRep_Level()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

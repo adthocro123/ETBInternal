@@ -14,8 +14,7 @@
 #include "BP_Item_Firework_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Item_Firework.BP_Item_Firework_C.ExecuteUbergraph_BP_Item_Firework
 // (Final, UbergraphFunction, HasDefaults)
@@ -420,5 +419,5 @@ void ABP_Item_Firework_C::UseItem()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

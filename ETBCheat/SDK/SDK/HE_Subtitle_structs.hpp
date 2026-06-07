@@ -13,8 +13,7 @@
 #include "HE_SubtitleSub_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct HE_Subtitle.HE_Subtitle
 // 0x0050 (0x0050 - 0x0000)
@@ -30,5 +29,4 @@ public:
 };
 DUMPER7_ASSERTS_FHE_Subtitle;
 
-}
-
+SDK_NAMESPACE_END

@@ -13,8 +13,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class SteamSockets.SteamSocketsNetConnection
 // 0x0010 (0x1BB8 - 0x1BA8)
@@ -62,5 +61,4 @@ public:
 };
 DUMPER7_ASSERTS_USteamSocketsNetDriver;
 
-}
-
+SDK_NAMESPACE_END

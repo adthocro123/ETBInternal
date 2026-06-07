@@ -14,8 +14,7 @@
 #include "AC_VineGrowth_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function AC_VineGrowth.AC_VineGrowth_C.ExecuteUbergraph_AC_VineGrowth
 // (Final, UbergraphFunction, HasDefaults)
@@ -262,5 +261,5 @@ void UAC_VineGrowth_C::CheckAllPlayersTangled(bool* AllTangled, TArray<class ABP
 		*Characters = std::move(Parms.Characters);
 }
 
-}
 
+SDK_NAMESPACE_END

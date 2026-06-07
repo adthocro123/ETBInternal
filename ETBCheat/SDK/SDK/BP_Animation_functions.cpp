@@ -14,8 +14,7 @@
 #include "BP_Animation_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Animation.BP_Animation_C.ExecuteUbergraph_BP_Animation
 // (Final, UbergraphFunction, HasDefaults)
@@ -378,5 +377,5 @@ void ABP_Animation_C::LookAtEntity(class ABPCharacter_Demo_C* Target_0)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

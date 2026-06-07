@@ -10,15 +10,16 @@
 
 #include "Basic.hpp"
 
-#include "S_UserProfile_structs.hpp"
+#include "Backrooms_structs.hpp"
+#include "E_HeadsetType_structs.hpp"
 #include "AdvancedSessions_structs.hpp"
 #include "S_PlayerData_structs.hpp"
 #include "S_PlayerConnectionInfo_structs.hpp"
-#include "E_HeadsetType_structs.hpp"
+#include "S_UserProfile_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function MP_PS.MP_PS_C.ExecuteUbergraph_MP_PS
 // 0x00F8 (0x00F8 - 0x0000)
@@ -26,7 +27,8 @@ struct MP_PS_C_ExecuteUbergraph_MP_PS final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	EFancyPlatform                                CallFunc_GetPlatform_ReturnValue;                  // 0x0004(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerState*                           K2Node_Event_NewPlayerState;                       // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_11[0x3];                                       // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
@@ -69,9 +71,8 @@ public:
 	class AActor*                                 CallFunc_GetOwner_ReturnValue_1;                   // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      K2Node_DynamicCast_AsPlayer_Controller_1;          // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_CustomEvent_IsTalking;                      // 0x00E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsLocalPlayerController_ReturnValue;      // 0x00EA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_EB[0x1];                                       // 0x00EB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          CallFunc_IsLocalPlayerController_ReturnValue;      // 0x00E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_EA[0x2];                                       // 0x00EA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         K2Node_CustomEvent_Index1;                         // 0x00EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_CustomEvent_Index2;                         // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -86,15 +87,6 @@ public:
 	int32                                         Index2;                                            // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_MP_PS_C_InvSwap;
-
-// Function MP_PS.MP_PS_C.UpdateIsTalking
-// 0x0001 (0x0001 - 0x0000)
-struct MP_PS_C_UpdateIsTalking final
-{
-public:
-	bool                                          IsTalking_0;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_MP_PS_C_UpdateIsTalking;
 
 // Function MP_PS.MP_PS_C.UpdateLevel
 // 0x0004 (0x0004 - 0x0000)
@@ -182,6 +174,7 @@ public:
 	class UTexture2D*                             CallFunc_GetSteamFriendAvatar_ReturnValue;         // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FS_UserProfile                         K2Node_MakeStruct_S_UserProfile_1;                 // 0x0060(0x0018)(ZeroConstructor, ContainsInstancedReference, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsOnSteam_ReturnValue;                    // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_MP_PS_C_Load_Player_UserProfile;
 
@@ -235,5 +228,5 @@ public:
 };
 DUMPER7_ASSERTS_MP_PS_C_LoadPlayer;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

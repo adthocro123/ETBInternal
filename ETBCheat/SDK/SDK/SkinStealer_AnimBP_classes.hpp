@@ -15,8 +15,7 @@
 #include "AnimGraphRuntime_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass SkinStealer_AnimBP.SkinStealer_AnimBP_C
 // 0x0130 (0x03F0 - 0x02C0)
@@ -50,5 +49,4 @@ public:
 };
 DUMPER7_ASSERTS_USkinStealer_AnimBP_C;
 
-}
-
+SDK_NAMESPACE_END

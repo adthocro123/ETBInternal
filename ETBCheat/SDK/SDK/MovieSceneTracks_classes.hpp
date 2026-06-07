@@ -10,43 +10,15 @@
 
 #include "Basic.hpp"
 
+#include "MovieSceneTracks_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "MovieScene_structs.hpp"
 #include "MovieScene_classes.hpp"
 #include "Engine_structs.hpp"
-#include "MovieSceneTracks_structs.hpp"
 
 
-namespace SDK
-{
-
-// Class MovieSceneTracks.MovieSceneColorSection
-// 0x0288 (0x0370 - 0x00E8)
-class UMovieSceneColorSection final : public UMovieSceneSection
-{
-public:
-	uint8                                         Pad_E8[0x8];                                       // 0x00E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMovieSceneFloatChannel                RedCurve;                                          // 0x00F0(0x00A0)(NativeAccessSpecifierPrivate)
-	struct FMovieSceneFloatChannel                GreenCurve;                                        // 0x0190(0x00A0)(NativeAccessSpecifierPrivate)
-	struct FMovieSceneFloatChannel                BlueCurve;                                         // 0x0230(0x00A0)(NativeAccessSpecifierPrivate)
-	struct FMovieSceneFloatChannel                AlphaCurve;                                        // 0x02D0(0x00A0)(NativeAccessSpecifierPrivate)
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MovieSceneColorSection")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MovieSceneColorSection")
-	}
-	static class UMovieSceneColorSection* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMovieSceneColorSection>();
-	}
-};
-DUMPER7_ASSERTS_UMovieSceneColorSection;
+SDK_NAMESPACE_START
 
 // Class MovieSceneTracks.MovieSceneCameraShakeEvaluator
 // 0x0000 (0x0028 - 0x0028)
@@ -68,25 +40,25 @@ public:
 };
 DUMPER7_ASSERTS_UMovieSceneCameraShakeEvaluator;
 
-// Class MovieSceneTracks.ByteChannelEvaluatorSystem
+// Class MovieSceneTracks.FloatChannelEvaluatorSystem
 // 0x0000 (0x0040 - 0x0040)
-class UByteChannelEvaluatorSystem final : public UMovieSceneEntitySystem
+class UFloatChannelEvaluatorSystem final : public UMovieSceneEntitySystem
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("ByteChannelEvaluatorSystem")
+		STATIC_CLASS_IMPL("FloatChannelEvaluatorSystem")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"ByteChannelEvaluatorSystem")
+		STATIC_NAME_IMPL(L"FloatChannelEvaluatorSystem")
 	}
-	static class UByteChannelEvaluatorSystem* GetDefaultObj()
+	static class UFloatChannelEvaluatorSystem* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UByteChannelEvaluatorSystem>();
+		return GetDefaultObjImpl<UFloatChannelEvaluatorSystem>();
 	}
 };
-DUMPER7_ASSERTS_UByteChannelEvaluatorSystem;
+DUMPER7_ASSERTS_UFloatChannelEvaluatorSystem;
 
 // Class MovieSceneTracks.MovieScene3DConstraintSection
 // 0x0028 (0x0110 - 0x00E8)
@@ -117,36 +89,6 @@ public:
 };
 DUMPER7_ASSERTS_UMovieScene3DConstraintSection;
 
-// Class MovieSceneTracks.MovieScene3DPathSection
-// 0x00A8 (0x01B8 - 0x0110)
-class UMovieScene3DPathSection final : public UMovieScene3DConstraintSection
-{
-public:
-	struct FMovieSceneFloatChannel                TimingCurve;                                       // 0x0110(0x00A0)(NativeAccessSpecifierPublic)
-	EMovieScene3DPathSection_Axis                 FrontAxisEnum;                                     // 0x01B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMovieScene3DPathSection_Axis                 UpAxisEnum;                                        // 0x01B1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B2[0x2];                                      // 0x01B2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	uint8                                         bFollow : 1;                                       // 0x01B4(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bReverse : 1;                                      // 0x01B4(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bForceUpright : 1;                                 // 0x01B4(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1B5[0x3];                                      // 0x01B5(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MovieScene3DPathSection")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MovieScene3DPathSection")
-	}
-	static class UMovieScene3DPathSection* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMovieScene3DPathSection>();
-	}
-};
-DUMPER7_ASSERTS_UMovieScene3DPathSection;
-
 // Class MovieSceneTracks.MovieScenePropertyTrack
 // 0x0030 (0x00C0 - 0x0090)
 class UMovieScenePropertyTrack : public UMovieSceneNameableTrack
@@ -173,25 +115,45 @@ public:
 };
 DUMPER7_ASSERTS_UMovieScenePropertyTrack;
 
-// Class MovieSceneTracks.FloatChannelEvaluatorSystem
-// 0x0000 (0x0040 - 0x0040)
-class UFloatChannelEvaluatorSystem final : public UMovieSceneEntitySystem
+// Class MovieSceneTracks.MovieSceneFloatTrack
+// 0x0000 (0x00C0 - 0x00C0)
+class UMovieSceneFloatTrack : public UMovieScenePropertyTrack
 {
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("FloatChannelEvaluatorSystem")
+		STATIC_CLASS_IMPL("MovieSceneFloatTrack")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"FloatChannelEvaluatorSystem")
+		STATIC_NAME_IMPL(L"MovieSceneFloatTrack")
 	}
-	static class UFloatChannelEvaluatorSystem* GetDefaultObj()
+	static class UMovieSceneFloatTrack* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UFloatChannelEvaluatorSystem>();
+		return GetDefaultObjImpl<UMovieSceneFloatTrack>();
 	}
 };
-DUMPER7_ASSERTS_UFloatChannelEvaluatorSystem;
+DUMPER7_ASSERTS_UMovieSceneFloatTrack;
+
+// Class MovieSceneTracks.ByteChannelEvaluatorSystem
+// 0x0000 (0x0040 - 0x0040)
+class UByteChannelEvaluatorSystem final : public UMovieSceneEntitySystem
+{
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("ByteChannelEvaluatorSystem")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"ByteChannelEvaluatorSystem")
+	}
+	static class UByteChannelEvaluatorSystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UByteChannelEvaluatorSystem>();
+	}
+};
+DUMPER7_ASSERTS_UByteChannelEvaluatorSystem;
 
 // Class MovieSceneTracks.MovieSceneTransformOrigin
 // 0x0000 (0x0000 - 0x0000)
@@ -319,6 +281,36 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UMovieScene3DAttachTrack;
+
+// Class MovieSceneTracks.MovieScene3DPathSection
+// 0x00A8 (0x01B8 - 0x0110)
+class UMovieScene3DPathSection final : public UMovieScene3DConstraintSection
+{
+public:
+	struct FMovieSceneFloatChannel                TimingCurve;                                       // 0x0110(0x00A0)(NativeAccessSpecifierPublic)
+	EMovieScene3DPathSection_Axis                 FrontAxisEnum;                                     // 0x01B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMovieScene3DPathSection_Axis                 UpAxisEnum;                                        // 0x01B1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1B2[0x2];                                      // 0x01B2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         bFollow : 1;                                       // 0x01B4(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bReverse : 1;                                      // 0x01B4(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bForceUpright : 1;                                 // 0x01B4(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_1B5[0x3];                                      // 0x01B5(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieScene3DPathSection")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieScene3DPathSection")
+	}
+	static class UMovieScene3DPathSection* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieScene3DPathSection>();
+	}
+};
+DUMPER7_ASSERTS_UMovieScene3DPathSection;
 
 // Class MovieSceneTracks.MovieScene3DPathTrack
 // 0x0008 (0x00A8 - 0x00A0)
@@ -1042,6 +1034,33 @@ public:
 };
 DUMPER7_ASSERTS_UMovieSceneColorPropertySystem;
 
+// Class MovieSceneTracks.MovieSceneColorSection
+// 0x0288 (0x0370 - 0x00E8)
+class UMovieSceneColorSection final : public UMovieSceneSection
+{
+public:
+	uint8                                         Pad_E8[0x8];                                       // 0x00E8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMovieSceneFloatChannel                RedCurve;                                          // 0x00F0(0x00A0)(NativeAccessSpecifierPrivate)
+	struct FMovieSceneFloatChannel                GreenCurve;                                        // 0x0190(0x00A0)(NativeAccessSpecifierPrivate)
+	struct FMovieSceneFloatChannel                BlueCurve;                                         // 0x0230(0x00A0)(NativeAccessSpecifierPrivate)
+	struct FMovieSceneFloatChannel                AlphaCurve;                                        // 0x02D0(0x00A0)(NativeAccessSpecifierPrivate)
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MovieSceneColorSection")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MovieSceneColorSection")
+	}
+	static class UMovieSceneColorSection* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieSceneColorSection>();
+	}
+};
+DUMPER7_ASSERTS_UMovieSceneColorSection;
+
 // Class MovieSceneTracks.MovieSceneColorTrack
 // 0x0008 (0x00C8 - 0x00C0)
 class UMovieSceneColorTrack final : public UMovieScenePropertyTrack
@@ -1511,26 +1530,6 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UMovieSceneFadeSection;
-
-// Class MovieSceneTracks.MovieSceneFloatTrack
-// 0x0000 (0x00C0 - 0x00C0)
-class UMovieSceneFloatTrack : public UMovieScenePropertyTrack
-{
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MovieSceneFloatTrack")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MovieSceneFloatTrack")
-	}
-	static class UMovieSceneFloatTrack* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMovieSceneFloatTrack>();
-	}
-};
-DUMPER7_ASSERTS_UMovieSceneFloatTrack;
 
 // Class MovieSceneTracks.MovieSceneFadeTrack
 // 0x0008 (0x00C8 - 0x00C0)
@@ -2612,5 +2611,4 @@ public:
 };
 DUMPER7_ASSERTS_UWeightAndEasingEvaluatorSystem;
 
-}
-
+SDK_NAMESPACE_END

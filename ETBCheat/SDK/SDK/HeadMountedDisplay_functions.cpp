@@ -14,8 +14,7 @@
 #include "HeadMountedDisplay_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function HeadMountedDisplay.HandKeypointConversion.Conv_HandKeypointToInt32
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
@@ -118,9 +117,9 @@ void UMotionTrackedDeviceFunctionLibrary::DisableMotionTrackingOfControllersForP
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // int32                                   PlayerIndex                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EControllerHand                         hand                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EControllerHand                         Hand                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UMotionTrackedDeviceFunctionLibrary::DisableMotionTrackingOfDevice(int32 PlayerIndex, EControllerHand hand)
+void UMotionTrackedDeviceFunctionLibrary::DisableMotionTrackingOfDevice(int32 PlayerIndex, EControllerHand Hand)
 {
 	static class UFunction* Func = nullptr;
 
@@ -130,7 +129,7 @@ void UMotionTrackedDeviceFunctionLibrary::DisableMotionTrackingOfDevice(int32 Pl
 	Params::MotionTrackedDeviceFunctionLibrary_DisableMotionTrackingOfDevice Parms{};
 
 	Parms.PlayerIndex = PlayerIndex;
-	Parms.hand = hand;
+	Parms.Hand = Hand;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -200,10 +199,10 @@ bool UMotionTrackedDeviceFunctionLibrary::EnableMotionTrackingForComponent(class
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // int32                                   PlayerIndex                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EControllerHand                         hand                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EControllerHand                         Hand                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UMotionTrackedDeviceFunctionLibrary::EnableMotionTrackingOfDevice(int32 PlayerIndex, EControllerHand hand)
+bool UMotionTrackedDeviceFunctionLibrary::EnableMotionTrackingOfDevice(int32 PlayerIndex, EControllerHand Hand)
 {
 	static class UFunction* Func = nullptr;
 
@@ -213,7 +212,7 @@ bool UMotionTrackedDeviceFunctionLibrary::EnableMotionTrackingOfDevice(int32 Pla
 	Params::MotionTrackedDeviceFunctionLibrary_EnableMotionTrackingOfDevice Parms{};
 
 	Parms.PlayerIndex = PlayerIndex;
-	Parms.hand = hand;
+	Parms.Hand = Hand;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -443,10 +442,10 @@ bool UMotionTrackedDeviceFunctionLibrary::IsMotionTrackingEnabledForComponent(co
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int32                                   PlayerIndex                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EControllerHand                         hand                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EControllerHand                         Hand                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UMotionTrackedDeviceFunctionLibrary::IsMotionTrackingEnabledForDevice(int32 PlayerIndex, EControllerHand hand)
+bool UMotionTrackedDeviceFunctionLibrary::IsMotionTrackingEnabledForDevice(int32 PlayerIndex, EControllerHand Hand)
 {
 	static class UFunction* Func = nullptr;
 
@@ -456,7 +455,7 @@ bool UMotionTrackedDeviceFunctionLibrary::IsMotionTrackingEnabledForDevice(int32
 	Params::MotionTrackedDeviceFunctionLibrary_IsMotionTrackingEnabledForDevice Parms{};
 
 	Parms.PlayerIndex = PlayerIndex;
-	Parms.hand = hand;
+	Parms.Hand = Hand;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -807,12 +806,12 @@ bool UMotionControllerComponent::IsTracked() const
 // Parameters:
 // const struct FKey&                      InKey                                                  (Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString*                          InteractionProfile                                     (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EControllerHand*                        hand                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EControllerHand*                        Hand                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName*                            MotionSource                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString*                          Indentifier                                            (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString*                          Component                                              (Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UHeadMountedDisplayFunctionLibrary::BreakKey(const struct FKey& InKey, class FString* InteractionProfile, EControllerHand* hand, class FName* MotionSource, class FString* Indentifier, class FString* Component)
+void UHeadMountedDisplayFunctionLibrary::BreakKey(const struct FKey& InKey, class FString* InteractionProfile, EControllerHand* Hand, class FName* MotionSource, class FString* Indentifier, class FString* Component)
 {
 	static class UFunction* Func = nullptr;
 
@@ -833,8 +832,8 @@ void UHeadMountedDisplayFunctionLibrary::BreakKey(const struct FKey& InKey, clas
 	if (InteractionProfile != nullptr)
 		*InteractionProfile = std::move(Parms.InteractionProfile);
 
-	if (hand != nullptr)
-		*hand = Parms.hand;
+	if (Hand != nullptr)
+		*Hand = Parms.Hand;
 
 	if (MotionSource != nullptr)
 		*MotionSource = Parms.MotionSource;
@@ -1294,10 +1293,10 @@ EHMDWornState UHeadMountedDisplayFunctionLibrary::GetHMDWornState()
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContext                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const EControllerHand                   hand                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const EControllerHand                   Hand                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FXRMotionControllerData*         MotionControllerData                                   (Parm, OutParm, NativeAccessSpecifierPublic)
 
-void UHeadMountedDisplayFunctionLibrary::GetMotionControllerData(class UObject* WorldContext, const EControllerHand hand, struct FXRMotionControllerData* MotionControllerData)
+void UHeadMountedDisplayFunctionLibrary::GetMotionControllerData(class UObject* WorldContext, const EControllerHand Hand, struct FXRMotionControllerData* MotionControllerData)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1307,7 +1306,7 @@ void UHeadMountedDisplayFunctionLibrary::GetMotionControllerData(class UObject* 
 	Params::HeadMountedDisplayFunctionLibrary_GetMotionControllerData Parms{};
 
 	Parms.WorldContext = WorldContext;
-	Parms.hand = hand;
+	Parms.Hand = Hand;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2498,5 +2497,5 @@ void UXRLoadingScreenFunctionLibrary::ShowLoadingScreen()
 	Func->FunctionFlags = Flgs;
 }
 
-}
 
+SDK_NAMESPACE_END

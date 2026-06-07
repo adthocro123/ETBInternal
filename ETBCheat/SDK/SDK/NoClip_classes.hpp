@@ -14,8 +14,7 @@
 #include "LevelSequence_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass NoClip.SequenceDirector_C
 // 0x0008 (0x0040 - 0x0038)
@@ -45,5 +44,4 @@ public:
 };
 DUMPER7_ASSERTS_NoClip__USequenceDirector_C;
 
-}
-
+SDK_NAMESPACE_END

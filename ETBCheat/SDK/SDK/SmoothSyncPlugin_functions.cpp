@@ -14,8 +14,7 @@
 #include "SmoothSyncPlugin_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function SmoothSyncPlugin.SmoothSync.clearBuffer
 // (Final, Native, Public, BlueprintCallable)
@@ -285,5 +284,5 @@ void USmoothSync::teleport()
 	Func->FunctionFlags = Flgs;
 }
 
-}
 
+SDK_NAMESPACE_END

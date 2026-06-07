@@ -16,8 +16,7 @@
 #include "VariantManagerContent_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class VariantManagerContent.LevelVariantSets
 // 0x0068 (0x0090 - 0x0028)
@@ -413,5 +412,4 @@ public:
 };
 DUMPER7_ASSERTS_UVariantSet;
 
-}
-
+SDK_NAMESPACE_END

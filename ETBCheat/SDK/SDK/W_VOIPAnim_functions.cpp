@@ -14,8 +14,7 @@
 #include "W_VOIPAnim_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function W_VOIPAnim.W_VOIPAnim_C.ExecuteUbergraph_W_VOIPAnim
 // (Final, UbergraphFunction)
@@ -50,5 +49,5 @@ void UW_VOIPAnim_C::Construct()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

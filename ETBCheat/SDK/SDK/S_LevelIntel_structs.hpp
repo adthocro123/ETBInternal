@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct S_LevelIntel.S_LevelIntel
 // 0x0048 (0x0048 - 0x0000)
@@ -25,5 +24,4 @@ public:
 };
 DUMPER7_ASSERTS_FS_LevelIntel;
 
-}
-
+SDK_NAMESPACE_END

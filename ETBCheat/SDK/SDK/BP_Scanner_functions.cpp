@@ -14,8 +14,7 @@
 #include "BP_Scanner_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Scanner.BP_Scanner_C.ExecuteUbergraph_BP_Scanner
 // (Final, UbergraphFunction, HasDefaults)
@@ -707,5 +706,5 @@ void ABP_Scanner_C::SetMaterial(bool EnabledFOV)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

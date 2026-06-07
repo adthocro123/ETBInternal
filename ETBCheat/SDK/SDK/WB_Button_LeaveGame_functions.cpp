@@ -14,8 +14,7 @@
 #include "WB_Button_LeaveGame_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WB_Button_LeaveGame.WB_Button_LeaveGame_C.ExecuteUbergraph_WB_Button_LeaveGame
 // (Final, UbergraphFunction)
@@ -50,5 +49,5 @@ void UWB_Button_LeaveGame_C::BndEvt__WB_Button_Close_Button_K2Node_ComponentBoun
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "BI_ComputersEvents_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BI_ComputersEvents.BI_ComputersEvents_C.LaunchShortcut
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -60,5 +59,5 @@ void IBI_ComputersEvents_C::onClose()
 	AsUObject()->ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

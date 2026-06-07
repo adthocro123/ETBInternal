@@ -14,8 +14,7 @@
 #include "GameplayCameras_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function GameplayCameras.MatineeCameraShake.StartMatineeCameraShake
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
@@ -211,5 +210,5 @@ class UMatineeCameraShake* UMatineeCameraShakeFunctionLibrary::Conv_MatineeCamer
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

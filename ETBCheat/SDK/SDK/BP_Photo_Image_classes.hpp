@@ -14,8 +14,7 @@
 #include "Backrooms_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Photo_Image.BP_Photo_Image_C
 // 0x0018 (0x0260 - 0x0248)
@@ -49,5 +48,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_Photo_Image_C;
 
-}
-
+SDK_NAMESPACE_END

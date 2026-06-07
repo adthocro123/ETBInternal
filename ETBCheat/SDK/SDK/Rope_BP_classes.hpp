@@ -14,8 +14,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Rope_BP.Rope_BP_C
 // 0x0028 (0x0248 - 0x0220)
@@ -48,5 +47,4 @@ public:
 };
 DUMPER7_ASSERTS_ARope_BP_C;
 
-}
-
+SDK_NAMESPACE_END

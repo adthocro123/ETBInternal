@@ -13,8 +13,7 @@
 #include "BP_CloseableInterface_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_CloseableInterface.BP_CloseableInterface_C.CanClose
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -29,5 +28,5 @@ void IBP_CloseableInterface_C::CanClose()
 	AsUObject()->ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

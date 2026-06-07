@@ -11,22 +11,21 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UMG_classes.hpp"
 #include "EN_ItemRarity_structs.hpp"
+#include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass UI_Inventory_ItemToolTip_Row.UI_Inventory_ItemToolTip_Row_C
-// 0x0030 (0x0290 - 0x0260)
+// 0x0030 (0x02A0 - 0x0270)
 class UUI_Inventory_ItemToolTip_Row_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0260(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UTextBlock*                             Txt_Name;                                          // 0x0268(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UTextBlock*                             Txt_Rarity;                                        // 0x0270(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   Name_0;                                            // 0x0278(0x0018)(Edit, BlueprintVisible)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0270(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             Txt_Name;                                          // 0x0278(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                             Txt_Rarity;                                        // 0x0280(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FText                                   Name_0;                                            // 0x0288(0x0018)(Edit, BlueprintVisible)
 
 public:
 	void ExecuteUbergraph_UI_Inventory_ItemToolTip_Row(int32 EntryPoint);
@@ -49,5 +48,4 @@ public:
 };
 DUMPER7_ASSERTS_UUI_Inventory_ItemToolTip_Row_C;
 
-}
-
+SDK_NAMESPACE_END

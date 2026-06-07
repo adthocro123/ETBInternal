@@ -15,8 +15,7 @@
 #include "AnimGraphRuntime_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass AnimBP_Fish.AnimBP_Fish_C
 // 0x00A0 (0x0360 - 0x02C0)
@@ -49,5 +48,4 @@ public:
 };
 DUMPER7_ASSERTS_UAnimBP_Fish_C;
 
-}
-
+SDK_NAMESPACE_END

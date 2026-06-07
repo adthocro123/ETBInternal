@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct HorrorEngine_Footstep.HorrorEngine_Footstep
 // 0x00A0 (0x00A0 - 0x0000)
@@ -42,5 +41,4 @@ public:
 };
 DUMPER7_ASSERTS_FHorrorEngine_Footstep;
 
-}
-
+SDK_NAMESPACE_END

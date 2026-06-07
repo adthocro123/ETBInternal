@@ -14,8 +14,7 @@
 #include "CoreUObject_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class AppleImageUtils.AppleImageUtilsBaseAsyncTaskBlueprintProxy
 // 0x0060 (0x0088 - 0x0028)
@@ -80,5 +79,4 @@ public:
 };
 DUMPER7_ASSERTS_IAppleImageInterface;
 
-}
-
+SDK_NAMESPACE_END

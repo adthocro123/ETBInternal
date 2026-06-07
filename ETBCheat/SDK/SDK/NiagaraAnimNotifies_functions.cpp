@@ -14,8 +14,7 @@
 #include "NiagaraAnimNotifies_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function NiagaraAnimNotifies.AnimNotify_PlayNiagaraEffect.GetSpawnedEffect
 // (Final, Native, Public, BlueprintCallable, Const)
@@ -97,5 +96,5 @@ float UAnimNotifyState_TimedNiagaraEffectAdvanced::GetNotifyProgress(class UMesh
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

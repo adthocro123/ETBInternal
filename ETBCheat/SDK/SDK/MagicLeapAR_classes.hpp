@@ -10,16 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "MagicLeapPlanes_structs.hpp"
 #include "Engine_classes.hpp"
 #include "MagicLeapAR_structs.hpp"
 #include "AugmentedReality_classes.hpp"
 #include "MagicLeapImageTracker_structs.hpp"
+#include "MagicLeapPlanes_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class MagicLeapAR.LuminARSessionFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -207,5 +206,4 @@ public:
 };
 DUMPER7_ASSERTS_ULuminARCandidateImage;
 
-}
-
+SDK_NAMESPACE_END

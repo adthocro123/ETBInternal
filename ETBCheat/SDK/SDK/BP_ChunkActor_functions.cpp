@@ -14,8 +14,7 @@
 #include "BP_ChunkActor_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_ChunkActor.BP_ChunkActor_C.ExecuteUbergraph_BP_ChunkActor
 // (Final, UbergraphFunction)
@@ -51,18 +50,4 @@ void ABP_ChunkActor_C::ReceiveBeginPlay()
 }
 
 
-// Function BP_ChunkActor.BP_ChunkActor_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_ChunkActor_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ChunkActor_C", "UserConstructionScript");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-}
-
+SDK_NAMESPACE_END

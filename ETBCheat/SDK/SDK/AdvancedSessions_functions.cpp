@@ -14,8 +14,7 @@
 #include "AdvancedSessions_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function AdvancedSessions.AccountUpgradeDialogCallbackProxy.ShowAccountUpgradeUI
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
@@ -708,11 +707,12 @@ void UAdvancedFriendsGameInstance::OnPlayerTalkingStateChanged(const struct FBPU
 // Function AdvancedSessions.AdvancedFriendsGameInstance.OnSessionInviteAccepted
 // (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
+// bool                                    bWasSuccessful                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   LocalPlayerNum                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FBPUniqueNetId&            PersonInvited                                          (Parm, NativeAccessSpecifierPublic)
 // const struct FBlueprintSessionResult&   SessionToJoin                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
-void UAdvancedFriendsGameInstance::OnSessionInviteAccepted(int32 LocalPlayerNum, const struct FBPUniqueNetId& PersonInvited, const struct FBlueprintSessionResult& SessionToJoin)
+void UAdvancedFriendsGameInstance::OnSessionInviteAccepted(bool bWasSuccessful, int32 LocalPlayerNum, const struct FBPUniqueNetId& PersonInvited, const struct FBlueprintSessionResult& SessionToJoin)
 {
 	static class UFunction* Func = nullptr;
 
@@ -721,6 +721,7 @@ void UAdvancedFriendsGameInstance::OnSessionInviteAccepted(int32 LocalPlayerNum,
 
 	Params::AdvancedFriendsGameInstance_OnSessionInviteAccepted Parms{};
 
+	Parms.bWasSuccessful = bWasSuccessful;
 	Parms.LocalPlayerNum = LocalPlayerNum;
 	Parms.PersonInvited = std::move(PersonInvited);
 	Parms.SessionToJoin = std::move(SessionToJoin);
@@ -734,10 +735,10 @@ void UAdvancedFriendsGameInstance::OnSessionInviteAccepted(int32 LocalPlayerNum,
 // Parameters:
 // int32                                   LocalPlayerNum                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FBPUniqueNetId&            PersonInviting                                         (Parm, NativeAccessSpecifierPublic)
-// const class FString&                    AppId                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    AppID                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const struct FBlueprintSessionResult&   SessionToJoin                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
-void UAdvancedFriendsGameInstance::OnSessionInviteReceived(int32 LocalPlayerNum, const struct FBPUniqueNetId& PersonInviting, const class FString& AppId, const struct FBlueprintSessionResult& SessionToJoin)
+void UAdvancedFriendsGameInstance::OnSessionInviteReceived(int32 LocalPlayerNum, const struct FBPUniqueNetId& PersonInviting, const class FString& AppID, const struct FBlueprintSessionResult& SessionToJoin)
 {
 	static class UFunction* Func = nullptr;
 
@@ -748,7 +749,7 @@ void UAdvancedFriendsGameInstance::OnSessionInviteReceived(int32 LocalPlayerNum,
 
 	Parms.LocalPlayerNum = LocalPlayerNum;
 	Parms.PersonInviting = std::move(PersonInviting);
-	Parms.AppId = std::move(AppId);
+	Parms.AppID = std::move(AppID);
 	Parms.SessionToJoin = std::move(SessionToJoin);
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -3221,5 +3222,5 @@ class UUpdateSessionCallbackProxyAdvanced* UUpdateSessionCallbackProxyAdvanced::
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass AIC_Animation.AIC_Animation_C
 // 0x0018 (0x0340 - 0x0328)
@@ -46,5 +45,4 @@ public:
 };
 DUMPER7_ASSERTS_AAIC_Animation_C;
 
-}
-
+SDK_NAMESPACE_END

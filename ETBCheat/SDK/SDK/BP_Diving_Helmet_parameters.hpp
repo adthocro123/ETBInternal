@@ -14,8 +14,8 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_Diving_Helmet.BP_Diving_Helmet_C.ExecuteUbergraph_BP_Diving_Helmet
 // 0x0220 (0x0220 - 0x0000)
@@ -121,5 +121,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_Diving_Helmet_C_OnNotifyEnd_3FE3233945D5FF790518F1ADBD2F23FC;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

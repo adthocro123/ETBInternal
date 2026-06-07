@@ -14,8 +14,7 @@
 #include "AIC_SkinStealer_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function AIC_SkinStealer.AIC_SkinStealer_C.ExecuteUbergraph_AIC_SkinStealer
 // (Final, UbergraphFunction, HasDefaults)
@@ -156,5 +155,5 @@ void AAIC_SkinStealer_C::Setup_AI(class UBehaviorTree* Behavior_Tree, bool Extra
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

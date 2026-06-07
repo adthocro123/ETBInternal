@@ -13,8 +13,7 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct EngineMessages.EngineServiceNotification
 // 0x0018 (0x0018 - 0x0000)
@@ -91,5 +90,4 @@ public:
 };
 DUMPER7_ASSERTS_FEngineServicePing;
 
-}
-
+SDK_NAMESPACE_END

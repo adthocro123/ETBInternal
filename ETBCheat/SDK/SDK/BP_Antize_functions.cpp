@@ -14,8 +14,7 @@
 #include "BP_Antize_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Antize.BP_Antize_C.FinishedEndScene
 // (Static, Public, BlueprintCallable, BlueprintEvent)
@@ -390,5 +389,5 @@ void UBP_Antize_C::UnlockMission(const class FString& MissionDTRow, class UObjec
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "BP_Storm_Volume_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Storm_Volume.BP_Storm_Volume_C.ExecuteUbergraph_BP_Storm_Volume
 // (Final, UbergraphFunction, HasDefaults)
@@ -132,5 +131,5 @@ void ABP_Storm_Volume_C::ReceiveActorBeginOverlap(class AActor* OtherActor)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

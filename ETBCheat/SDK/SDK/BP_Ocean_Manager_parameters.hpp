@@ -14,8 +14,8 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_Ocean_Manager.BP_Ocean_Manager_C.ExecuteUbergraph_BP_Ocean_Manager
 // 0x0130 (0x0130 - 0x0000)
@@ -152,5 +152,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_Ocean_Manager_C_Find_Target_Player;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

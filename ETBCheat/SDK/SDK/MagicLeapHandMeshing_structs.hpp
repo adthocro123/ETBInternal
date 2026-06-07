@@ -13,8 +13,7 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct MagicLeapHandMeshing.MagicLeapHandMeshBlock
 // 0x0028 (0x0028 - 0x0000)
@@ -39,5 +38,4 @@ public:
 };
 DUMPER7_ASSERTS_FMagicLeapHandMesh;
 
-}
-
+SDK_NAMESPACE_END

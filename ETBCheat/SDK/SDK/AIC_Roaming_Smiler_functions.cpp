@@ -14,8 +14,7 @@
 #include "AIC_Roaming_Smiler_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function AIC_Roaming_Smiler.AIC_Roaming_Smiler_C.ExecuteUbergraph_AIC_Roaming_Smiler
 // (Final, UbergraphFunction, HasDefaults)
@@ -154,5 +153,5 @@ void AAIC_Roaming_Smiler_C::Setup_AI(class UBehaviorTree* Behavior_Tree)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

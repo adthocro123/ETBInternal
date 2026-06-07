@@ -14,8 +14,7 @@
 #include "MagicLeapSecureStorage_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function MagicLeapSecureStorage.MagicLeapSecureStorage.DeleteSecureData
 // (Final, Native, Static, Public, BlueprintCallable)
@@ -726,5 +725,5 @@ bool UMagicLeapSecureStorage::PutSecureVector(const class FString& Key, const st
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

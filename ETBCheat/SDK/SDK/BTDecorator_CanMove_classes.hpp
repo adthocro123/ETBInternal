@@ -13,8 +13,7 @@
 #include "AIModule_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BTDecorator_CanMove.BTDecorator_CanMove_C
 // 0x0000 (0x00A0 - 0x00A0)
@@ -39,5 +38,4 @@ public:
 };
 DUMPER7_ASSERTS_UBTDecorator_CanMove_C;
 
-}
-
+SDK_NAMESPACE_END

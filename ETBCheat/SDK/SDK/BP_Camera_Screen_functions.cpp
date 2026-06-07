@@ -14,8 +14,7 @@
 #include "BP_Camera_Screen_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Camera_Screen.BP_Camera_Screen_C.ExecuteUbergraph_BP_Camera_Screen
 // (Final, UbergraphFunction)
@@ -113,5 +112,5 @@ void ABP_Camera_Screen_C::SetFirstTexture(class UTexture** Texture_0)
 		*Texture_0 = Parms.Texture_0;
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "SubtitleTextWB_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function SubtitleTextWB.SubtitleTextWB_C.ExecuteUbergraph_SubtitleTextWB
 // (Final, UbergraphFunction)
@@ -74,5 +73,5 @@ void USubtitleTextWB_C::Construct()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

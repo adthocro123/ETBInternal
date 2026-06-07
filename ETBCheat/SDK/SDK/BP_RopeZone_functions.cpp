@@ -14,8 +14,7 @@
 #include "BP_RopeZone_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_RopeZone.BP_RopeZone_C.ExecuteUbergraph_BP_RopeZone
 // (Final, UbergraphFunction, HasDefaults)
@@ -140,5 +139,5 @@ void ABP_RopeZone_C::MoveUp__FinishedFunc()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

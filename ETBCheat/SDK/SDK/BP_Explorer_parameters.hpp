@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_Explorer.BP_Explorer_C.ExecuteUbergraph_BP_Explorer
 // 0x0070 (0x0070 - 0x0000)
@@ -56,5 +56,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_Explorer_C_TogglePassOut;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

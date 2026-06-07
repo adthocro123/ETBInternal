@@ -13,8 +13,8 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function AnimBP_Elevator_Lever.AnimBP_Elevator_Lever_C.ExecuteUbergraph_AnimBP_Elevator_Lever
 // 0x0020 (0x0020 - 0x0000)
@@ -49,5 +49,5 @@ public:
 };
 DUMPER7_ASSERTS_AnimBP_Elevator_Lever_C_AnimGraph;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

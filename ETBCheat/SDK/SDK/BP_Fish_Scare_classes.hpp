@@ -15,8 +15,7 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Fish_Scare.BP_Fish_Scare_C
 // 0x0070 (0x0530 - 0x04C0)
@@ -76,5 +75,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_Fish_Scare_C;
 
-}
-
+SDK_NAMESPACE_END

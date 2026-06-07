@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "HE_Subtitle_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "HE_Subtitle_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function SubtitleWB.SubtitleWB_C.ExecuteUbergraph_SubtitleWB
 // 0x0108 (0x0108 - 0x0000)
@@ -82,5 +82,5 @@ public:
 };
 DUMPER7_ASSERTS_SubtitleWB_C_SubtitleText;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "FadeOutLevelStart_UI_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function FadeOutLevelStart_UI.FadeOutLevelStart_UI_C.ExecuteUbergraph_FadeOutLevelStart_UI
 // (Final, UbergraphFunction)
@@ -50,5 +49,5 @@ void UFadeOutLevelStart_UI_C::Construct()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

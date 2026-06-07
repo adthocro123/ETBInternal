@@ -14,8 +14,8 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function Hound_AnimBP.Hound_AnimBP_C.ExecuteUbergraph_Hound_AnimBP
 // 0x0020 (0x0020 - 0x0000)
@@ -48,5 +48,5 @@ public:
 };
 DUMPER7_ASSERTS_Hound_AnimBP_C_AnimGraph;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

@@ -11,13 +11,13 @@
 #include "Basic.hpp"
 
 #include "EN_ItemRarity_structs.hpp"
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "SlateCore_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function UI_Inventory_ItemToolTip_Row.UI_Inventory_ItemToolTip_Row_C.ExecuteUbergraph_UI_Inventory_ItemToolTip_Row
 // 0x0128 (0x0128 - 0x0000)
@@ -63,5 +63,5 @@ public:
 };
 DUMPER7_ASSERTS_UI_Inventory_ItemToolTip_Row_C_PreConstruct;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

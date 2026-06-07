@@ -13,11 +13,11 @@
 #include "SlateCore_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function UI_Menu_Lobby_TextField.UI_Menu_Lobby_TextField_C.ExecuteUbergraph_UI_Menu_Lobby_TextField
-// 0x04C0 (0x04C0 - 0x0000)
+// 0x0468 (0x0468 - 0x0000)
 struct UI_Menu_Lobby_TextField_C_ExecuteUbergraph_UI_Menu_Lobby_TextField final
 {
 public:
@@ -25,41 +25,40 @@ public:
 	bool                                          Temp_bool_Variable;                                // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture2D*                             Temp_object_Variable;                              // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSlateFontInfo                         CallFunc_Get_Font_Culture_Checked_OutFont;         // 0x0010(0x0058)(HasGetValueTypeHash)
-	class UTexture2D*                             Temp_object_Variable_1;                            // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FEditableTextStyle                     K2Node_MakeStruct_EditableTextStyle;               // 0x0070(0x0220)()
-	bool                                          Temp_bool_Variable_1;                              // 0x0290(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_291[0x7];                                      // 0x0291(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTexture2D*                             Temp_object_Variable_2;                            // 0x0298(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UTexture2D*                             Temp_object_Variable_3;                            // 0x02A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_2;                              // 0x02A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2A9[0x7];                                      // 0x02A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTexture2D*                             Temp_object_Variable_4;                            // 0x02B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UTexture2D*                             Temp_object_Variable_5;                            // 0x02B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_3;                              // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_IsHovered;                            // 0x02C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2C2[0x6];                                      // 0x02C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTexture2D*                             K2Node_Select_Default;                             // 0x02C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsEnabled;                            // 0x02D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x02D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_CustomEvent_bEnable;                        // 0x02D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2D3[0x1];                                      // 0x02D3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x02D4(0x0038)(IsPlainOldData, NoDestructor)
-	uint8                                         Pad_30C[0x4];                                      // 0x030C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPointerEvent                          K2Node_Event_MouseEvent_1;                         // 0x0310(0x0070)(ConstParm)
-	struct FPointerEvent                          K2Node_Event_MouseEvent;                           // 0x0380(0x0070)(ConstParm)
-	class UTexture2D*                             K2Node_Select_Default_1;                           // 0x03F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UTexture2D*                             K2Node_Select_Default_2;                           // 0x03F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FText                                   K2Node_ComponentBoundEvent_Text_1;                 // 0x0400(0x0018)(ConstParm)
-	ETextCommit                                   K2Node_ComponentBoundEvent_CommitMethod;           // 0x0418(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_419[0x7];                                      // 0x0419(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_ComponentBoundEvent_Text;                   // 0x0420(0x0018)(ConstParm)
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x0438(0x0028)()
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x0460(0x0028)()
-	bool                                          K2Node_Event_IsFocused;                            // 0x0488(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_489[0x7];                                      // 0x0489(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateColor                            K2Node_Select_Default_3;                           // 0x0490(0x0028)()
-	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x04B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FEditableTextStyle                     K2Node_MakeStruct_EditableTextStyle;               // 0x0010(0x0220)()
+	class UTexture2D*                             Temp_object_Variable_1;                            // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x0238(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_239[0x7];                                      // 0x0239(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTexture2D*                             Temp_object_Variable_2;                            // 0x0240(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTexture2D*                             Temp_object_Variable_3;                            // 0x0248(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_2;                              // 0x0250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_251[0x7];                                      // 0x0251(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTexture2D*                             Temp_object_Variable_4;                            // 0x0258(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTexture2D*                             Temp_object_Variable_5;                            // 0x0260(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_3;                              // 0x0268(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_IsHovered;                            // 0x0269(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_26A[0x6];                                      // 0x026A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTexture2D*                             K2Node_Select_Default;                             // 0x0270(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsEnabled;                            // 0x0278(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x0279(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_CustomEvent_bEnable;                        // 0x027A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_27B[0x1];                                      // 0x027B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x027C(0x0038)(IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2B4[0x4];                                      // 0x02B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerEvent                          K2Node_Event_MouseEvent_1;                         // 0x02B8(0x0070)(ConstParm)
+	struct FPointerEvent                          K2Node_Event_MouseEvent;                           // 0x0328(0x0070)(ConstParm)
+	class UTexture2D*                             K2Node_Select_Default_1;                           // 0x0398(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UTexture2D*                             K2Node_Select_Default_2;                           // 0x03A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   K2Node_ComponentBoundEvent_Text_1;                 // 0x03A8(0x0018)(ConstParm)
+	ETextCommit                                   K2Node_ComponentBoundEvent_CommitMethod;           // 0x03C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3C1[0x7];                                      // 0x03C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_ComponentBoundEvent_Text;                   // 0x03C8(0x0018)(ConstParm)
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x03E0(0x0028)()
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x0408(0x0028)()
+	bool                                          K2Node_Event_IsFocused;                            // 0x0430(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_431[0x7];                                      // 0x0431(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateColor                            K2Node_Select_Default_3;                           // 0x0438(0x0028)()
+	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0460(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_UI_Menu_Lobby_TextField_C_ExecuteUbergraph_UI_Menu_Lobby_TextField;
 
@@ -146,5 +145,5 @@ public:
 };
 DUMPER7_ASSERTS_UI_Menu_Lobby_TextField_C_ToggleHover;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

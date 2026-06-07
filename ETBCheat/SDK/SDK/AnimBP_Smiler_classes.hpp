@@ -15,8 +15,7 @@
 #include "AnimGraphRuntime_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass AnimBP_Smiler.AnimBP_Smiler_C
 // 0x0350 (0x0610 - 0x02C0)
@@ -59,5 +58,4 @@ public:
 };
 DUMPER7_ASSERTS_UAnimBP_Smiler_C;
 
-}
-
+SDK_NAMESPACE_END

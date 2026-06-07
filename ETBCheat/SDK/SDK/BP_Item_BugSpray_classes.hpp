@@ -14,8 +14,7 @@
 #include "BP_Item_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Item_BugSpray.BP_Item_BugSpray_C
 // 0x0010 (0x0268 - 0x0258)
@@ -53,5 +52,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_Item_BugSpray_C;
 
-}
-
+SDK_NAMESPACE_END

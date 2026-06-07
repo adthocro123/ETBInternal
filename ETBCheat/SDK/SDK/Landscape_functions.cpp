@@ -14,8 +14,7 @@
 #include "Landscape_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function Landscape.LandscapeProxy.ChangeComponentScreenSizeToUseSubSections
 // (Native, Public, BlueprintCallable)
@@ -565,5 +564,5 @@ TArray<class USplineMeshComponent*> ULandscapeSplinesComponent::GetSplineMeshCom
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

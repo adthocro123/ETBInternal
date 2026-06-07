@@ -15,8 +15,7 @@
 #include "AnimGraphRuntime_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum DragonIKPlugin.EIK_Type_Plugin
 // NumValues: 0x0003
@@ -741,5 +740,4 @@ public:
 };
 DUMPER7_ASSERTS_FDragonData_PhysicsParentRelationship;
 
-}
-
+SDK_NAMESPACE_END

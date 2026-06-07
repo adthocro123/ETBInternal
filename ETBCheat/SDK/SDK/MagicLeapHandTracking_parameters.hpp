@@ -16,8 +16,8 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function MagicLeapHandTracking.MagicLeapHandTrackingFunctionLibrary.GetConfiguration
 // 0x0018 (0x0018 - 0x0000)
@@ -38,7 +38,7 @@ DUMPER7_ASSERTS_MagicLeapHandTrackingFunctionLibrary_GetConfiguration;
 struct MagicLeapHandTrackingFunctionLibrary_GetCurrentGesture final
 {
 public:
-	EControllerHand                               hand;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EControllerHand                               Hand;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMagicLeapHandTrackingGesture                 Gesture;                                           // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -49,7 +49,7 @@ DUMPER7_ASSERTS_MagicLeapHandTrackingFunctionLibrary_GetCurrentGesture;
 struct MagicLeapHandTrackingFunctionLibrary_GetCurrentGestureConfidence final
 {
 public:
-	EControllerHand                               hand;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EControllerHand                               Hand;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Confidence;                                        // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -62,7 +62,7 @@ DUMPER7_ASSERTS_MagicLeapHandTrackingFunctionLibrary_GetCurrentGestureConfidence
 struct MagicLeapHandTrackingFunctionLibrary_GetGestureKeypoints final
 {
 public:
-	EControllerHand                               hand;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EControllerHand                               Hand;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FTransform>                     Keypoints;                                         // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -75,7 +75,7 @@ DUMPER7_ASSERTS_MagicLeapHandTrackingFunctionLibrary_GetGestureKeypoints;
 struct MagicLeapHandTrackingFunctionLibrary_GetGestureKeypointTransform final
 {
 public:
-	EControllerHand                               hand;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EControllerHand                               Hand;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMagicLeapHandTrackingKeypoint                Keypoint;                                          // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMagicLeapGestureTransformSpace               TransformSpace;                                    // 0x0002(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_3[0xD];                                        // 0x0003(0x000D)(Fixing Size After Last Property [ Dumper-7 ])
@@ -90,7 +90,7 @@ DUMPER7_ASSERTS_MagicLeapHandTrackingFunctionLibrary_GetGestureKeypointTransform
 struct MagicLeapHandTrackingFunctionLibrary_GetHandCenter final
 {
 public:
-	EControllerHand                               hand;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EControllerHand                               Hand;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1[0xF];                                        // 0x0001(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             HandCenter;                                        // 0x0010(0x0030)(Parm, OutParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -103,7 +103,7 @@ DUMPER7_ASSERTS_MagicLeapHandTrackingFunctionLibrary_GetHandCenter;
 struct MagicLeapHandTrackingFunctionLibrary_GetHandCenterNormalized final
 {
 public:
-	EControllerHand                               hand;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EControllerHand                               Hand;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                HandCenterNormalized;                              // 0x0004(0x000C)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -116,7 +116,7 @@ DUMPER7_ASSERTS_MagicLeapHandTrackingFunctionLibrary_GetHandCenterNormalized;
 struct MagicLeapHandTrackingFunctionLibrary_GetHandIndexFingerTip final
 {
 public:
-	EControllerHand                               hand;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EControllerHand                               Hand;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMagicLeapGestureTransformSpace               TransformSpace;                                    // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2[0xE];                                        // 0x0002(0x000E)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Pointer;                                           // 0x0010(0x0030)(Parm, OutParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
@@ -142,7 +142,7 @@ DUMPER7_ASSERTS_MagicLeapHandTrackingFunctionLibrary_GetHandKeypointForMotionSou
 struct MagicLeapHandTrackingFunctionLibrary_GetHandThumbTip final
 {
 public:
-	EControllerHand                               hand;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EControllerHand                               Hand;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMagicLeapGestureTransformSpace               TransformSpace;                                    // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2[0xE];                                        // 0x0002(0x000E)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Secondary;                                         // 0x0010(0x0030)(Parm, OutParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
@@ -167,7 +167,7 @@ DUMPER7_ASSERTS_MagicLeapHandTrackingFunctionLibrary_GetMagicLeapHandTrackingLiv
 struct MagicLeapHandTrackingFunctionLibrary_GetMotionSourceForHandKeypoint final
 {
 public:
-	EControllerHand                               hand;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EControllerHand                               Hand;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMagicLeapHandTrackingKeypoint                Keypoint;                                          // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   OutMotionSource;                                   // 0x0004(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -192,7 +192,7 @@ DUMPER7_ASSERTS_MagicLeapHandTrackingFunctionLibrary_GetStaticGestureConfidenceT
 struct MagicLeapHandTrackingFunctionLibrary_IsHoldingControl final
 {
 public:
-	EControllerHand                               hand;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EControllerHand                               Hand;                                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_MagicLeapHandTrackingFunctionLibrary_IsHoldingControl;
@@ -222,5 +222,5 @@ public:
 };
 DUMPER7_ASSERTS_MagicLeapHandTrackingFunctionLibrary_SetStaticGestureConfidenceThreshold;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

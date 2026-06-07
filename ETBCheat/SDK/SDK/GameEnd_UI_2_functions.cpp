@@ -14,8 +14,7 @@
 #include "GameEnd_UI_2_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function GameEnd_UI_2.GameEnd_UI_2_C.ExecuteUbergraph_GameEnd_UI_2
 // (Final, UbergraphFunction, HasDefaults)
@@ -112,5 +111,5 @@ class FText UGameEnd_UI_2_C::GetTime()
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

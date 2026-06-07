@@ -14,8 +14,7 @@
 #include "UI_EvidenceShortcut_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function UI_EvidenceShortcut.UI_EvidenceShortcut_C.ExecuteUbergraph_UI_EvidenceShortcut
 // (Final, UbergraphFunction, HasDefaults)
@@ -78,5 +77,5 @@ void UUI_EvidenceShortcut_C::BndEvt__Click_K2Node_ComponentBoundEvent_0_OnButton
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -14,19 +14,18 @@
 #include "Backrooms_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WB_Dropdown_Theme2.WB_Dropdown_Theme2_C.ExecuteUbergraph_WB_Dropdown_Theme2
-// 0x0090 (0x0090 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct WB_Dropdown_Theme2_C_ExecuteUbergraph_WB_Dropdown_Theme2 final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsHovered;                            // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_IsEnabled;                            // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          K2Node_Event_IsEnabled;                            // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 K2Node_ComponentBoundEvent_SelectedItem;           // 0x0008(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	ESelectInfo                                   K2Node_ComponentBoundEvent_SelectionType;          // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -37,9 +36,8 @@ public:
 	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsOpen_ReturnValue;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	EFancyInputDevice                             CallFunc_GetCurrentInputDevice_ReturnValue;        // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_33[0x5];                                       // 0x0033(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateFontInfo                         CallFunc_Get_Font_Culture_Checked_OutFont;         // 0x0038(0x0058)(HasGetValueTypeHash)
+	bool                                          K2Node_Event_IsHovered;                            // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x0033(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_WB_Dropdown_Theme2_C_ExecuteUbergraph_WB_Dropdown_Theme2;
 
@@ -90,20 +88,17 @@ public:
 DUMPER7_ASSERTS_WB_Dropdown_Theme2_C_ToggleHover;
 
 // Function WB_Dropdown_Theme2.WB_Dropdown_Theme2_C.Set_SelectedOption
-// 0x0030 (0x0030 - 0x0000)
+// 0x0004 (0x0004 - 0x0000)
 struct WB_Dropdown_Theme2_C_Set_SelectedOption final
 {
 public:
 	int32                                         Option;                                            // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Array_Get_Item;                           // 0x0008(0x0018)()
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WB_Dropdown_Theme2_C_Set_SelectedOption;
 
-// Function WB_Dropdown_Theme2.WB_Dropdown_Theme2_C.Setup
+// Function WB_Dropdown_Theme2.WB_Dropdown_Theme2_C.SetUp
 // 0x0098 (0x0098 - 0x0000)
-struct WB_Dropdown_Theme2_C_Setup final
+struct WB_Dropdown_Theme2_C_SetUp final
 {
 public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -121,7 +116,7 @@ public:
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0094(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-DUMPER7_ASSERTS_WB_Dropdown_Theme2_C_Setup;
+DUMPER7_ASSERTS_WB_Dropdown_Theme2_C_SetUp;
 
 // Function WB_Dropdown_Theme2.WB_Dropdown_Theme2_C.FindOption
 // 0x0060 (0x0060 - 0x0000)
@@ -143,5 +138,25 @@ public:
 };
 DUMPER7_ASSERTS_WB_Dropdown_Theme2_C_FindOption;
 
-}
+// Function WB_Dropdown_Theme2.WB_Dropdown_Theme2_C.Set Combo Box Selection
+// 0x0FC0 (0x0FC0 - 0x0000)
+struct WB_Dropdown_Theme2_C_Set_Combo_Box_Selection final
+{
+public:
+	bool                                          bSelected;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMargin                                K2Node_MakeStruct_Margin;                          // 0x0004(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x0018(0x0088)()
+	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush_1;                    // 0x00A0(0x0088)()
+	struct FSlateBrush                            K2Node_Select_Default;                             // 0x0128(0x0088)()
+	struct FButtonStyle                           K2Node_MakeStruct_ButtonStyle;                     // 0x01B0(0x0278)()
+	struct FComboButtonStyle                      K2Node_MakeStruct_ComboButtonStyle;                // 0x0428(0x03B8)()
+	struct FComboBoxStyle                         K2Node_MakeStruct_ComboBoxStyle;                   // 0x07E0(0x03F0)()
+	struct FComboBoxStyle                         K2Node_MakeStruct_ComboBoxStyle_1;                 // 0x0BD0(0x03F0)()
+};
+DUMPER7_ASSERTS_WB_Dropdown_Theme2_C_Set_Combo_Box_Selection;
 
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

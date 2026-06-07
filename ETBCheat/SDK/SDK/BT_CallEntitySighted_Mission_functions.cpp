@@ -14,8 +14,7 @@
 #include "BT_CallEntitySighted_Mission_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BT_CallEntitySighted_Mission.BT_CallEntitySighted_Mission_C.ExecuteUbergraph_BT_CallEntitySighted_Mission
 // (Final, UbergraphFunction)
@@ -58,5 +57,5 @@ void UBT_CallEntitySighted_Mission_C::ReceiveExecuteAI(class AAIController* Owne
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

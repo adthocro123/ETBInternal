@@ -13,8 +13,7 @@
 #include "HorrorEngine_Footstep_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct HorrorEngineSettings.HorrorEngineSettings
 // 0x00A0 (0x00A0 - 0x0000)
@@ -25,5 +24,4 @@ public:
 };
 DUMPER7_ASSERTS_FHorrorEngineSettings;
 
-}
-
+SDK_NAMESPACE_END

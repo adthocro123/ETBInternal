@@ -11,12 +11,12 @@
 #include "Basic.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function ClimbSequence.SequenceDirector_C.ExecuteUbergraph_SequenceDirector
 // 0x0020 (0x0020 - 0x0000)
-struct SequenceDirector_C_ExecuteUbergraph_SequenceDirector_ClimbSequence final
+struct SequenceDirector_C_ExecuteUbergraph_SequenceDirector final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -26,7 +26,7 @@ public:
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsStandalone_ReturnValue;                 // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-//DUMPER7_ASSERTS_SequenceDirector_C_ExecuteUbergraph_SequenceDirector;
+DUMPER7_ASSERTS_SequenceDirector_C_ExecuteUbergraph_SequenceDirector;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

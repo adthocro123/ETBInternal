@@ -14,8 +14,7 @@
 #include "MagicLeapPlanes_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function MagicLeapPlanes.MagicLeapPlanesComponent.RequestPlanesAsync
 // (Final, Native, Public, BlueprintCallable)
@@ -326,5 +325,5 @@ void UMagicLeapPlanesFunctionLibrary::ReorderPlaneFlags(const TArray<EMagicLeapP
 		*OutReorderedFlags = std::move(Parms.OutReorderedFlags);
 }
 
-}
 
+SDK_NAMESPACE_END

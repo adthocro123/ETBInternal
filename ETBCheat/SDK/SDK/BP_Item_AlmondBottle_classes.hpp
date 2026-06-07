@@ -13,8 +13,7 @@
 #include "BP_Item_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Item_AlmondBottle.BP_Item_AlmondBottle_C
 // 0x0008 (0x0260 - 0x0258)
@@ -42,5 +41,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_Item_AlmondBottle_C;
 
-}
-
+SDK_NAMESPACE_END

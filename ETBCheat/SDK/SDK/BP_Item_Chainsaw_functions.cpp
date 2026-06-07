@@ -14,8 +14,7 @@
 #include "BP_Item_Chainsaw_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Item_Chainsaw.BP_Item_Chainsaw_C.ExecuteUbergraph_BP_Item_Chainsaw
 // (Final, UbergraphFunction, HasDefaults)
@@ -362,5 +361,5 @@ void ABP_Item_Chainsaw_C::SetMaterial(bool EnabledFOV)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

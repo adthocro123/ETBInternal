@@ -15,8 +15,7 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BTTask_RoamLocation_Level05.BTTask_RoamLocation_Level05_C
 // 0x0030 (0x00D8 - 0x00A8)
@@ -46,5 +45,4 @@ public:
 };
 DUMPER7_ASSERTS_UBTTask_RoamLocation_Level05_C;
 
-}
-
+SDK_NAMESPACE_END

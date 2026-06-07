@@ -14,8 +14,7 @@
 #include "BP_RefreshWaterBodies_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_RefreshWaterBodies.BP_RefreshWaterBodies_C.ExecuteUbergraph_BP_RefreshWaterBodies
 // (Final, UbergraphFunction)
@@ -56,5 +55,5 @@ void ABP_RefreshWaterBodies_C::ReceiveActorBeginOverlap(class AActor* OtherActor
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

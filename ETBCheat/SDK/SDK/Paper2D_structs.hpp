@@ -13,8 +13,7 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum Paper2D.EFlipbookCollisionMode
 // NumValues: 0x0004
@@ -266,5 +265,4 @@ public:
 };
 DUMPER7_ASSERTS_FSpriteAssetInitParameters;
 
-}
-
+SDK_NAMESPACE_END

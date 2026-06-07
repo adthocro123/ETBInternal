@@ -14,8 +14,7 @@
 #include "WB_Button_Sidebar_Theme2_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WB_Button_Sidebar_Theme2.WB_Button_Sidebar_Theme2_C.ExecuteUbergraph_WB_Button_Sidebar_Theme2
 // (Final, UbergraphFunction)
@@ -85,15 +84,15 @@ void UWB_Button_Sidebar_Theme2_C::PreConstruct(bool IsDesignTime)
 }
 
 
-// Function WB_Button_Sidebar_Theme2.WB_Button_Sidebar_Theme2_C.Setup
+// Function WB_Button_Sidebar_Theme2.WB_Button_Sidebar_Theme2_C.SetUp
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UWB_Button_Sidebar_Theme2_C::Setup()
+void UWB_Button_Sidebar_Theme2_C::SetUp()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WB_Button_Sidebar_Theme2_C", "Setup");
+		Func = Class->GetFunction("WB_Button_Sidebar_Theme2_C", "SetUp");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -126,5 +125,5 @@ void UWB_Button_Sidebar_Theme2_C::Set_ButtonIcon()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

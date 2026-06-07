@@ -14,8 +14,7 @@
 #include "BP_Item_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Thermometer.BP_Thermometer_C
 // 0x0020 (0x0278 - 0x0258)
@@ -52,5 +51,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_Thermometer_C;
 
-}
-
+SDK_NAMESPACE_END

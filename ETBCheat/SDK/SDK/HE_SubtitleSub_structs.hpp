@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct HE_SubtitleSub.HE_SubtitleSub
 // 0x0020 (0x0020 - 0x0000)
@@ -28,5 +27,4 @@ public:
 };
 DUMPER7_ASSERTS_FHE_SubtitleSub;
 
-}
-
+SDK_NAMESPACE_END

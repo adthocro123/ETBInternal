@@ -12,13 +12,12 @@
 
 #include "ClothingSystemRuntimeCommon_structs.hpp"
 #include "ClothingSystemRuntimeCommon_classes.hpp"
-#include "ChaosCloth_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "ChaosCloth_structs.hpp"
 #include "ClothingSystemRuntimeInterface_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class ChaosCloth.ChaosClothingSimulationInteractor
 // 0x0010 (0x00A0 - 0x0090)
@@ -191,5 +190,4 @@ public:
 };
 DUMPER7_ASSERTS_UChaosClothingInteractor;
 
-}
-
+SDK_NAMESPACE_END

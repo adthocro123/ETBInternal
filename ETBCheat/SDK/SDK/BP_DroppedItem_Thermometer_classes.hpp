@@ -13,8 +13,7 @@
 #include "BP_DroppedItem_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_DroppedItem_Thermometer.BP_DroppedItem_Thermometer_C
 // 0x0028 (0x0298 - 0x0270)
@@ -43,5 +42,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_DroppedItem_Thermometer_C;
 
-}
-
+SDK_NAMESPACE_END

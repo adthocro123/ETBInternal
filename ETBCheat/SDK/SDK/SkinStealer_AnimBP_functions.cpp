@@ -14,8 +14,7 @@
 #include "SkinStealer_AnimBP_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function SkinStealer_AnimBP.SkinStealer_AnimBP_C.ExecuteUbergraph_SkinStealer_AnimBP
 // (Final, UbergraphFunction)
@@ -77,5 +76,5 @@ void USkinStealer_AnimBP_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 		*AnimGraph_0 = std::move(Parms.AnimGraph_0);
 }
 
-}
 
+SDK_NAMESPACE_END

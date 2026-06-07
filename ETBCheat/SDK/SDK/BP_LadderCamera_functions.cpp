@@ -14,8 +14,7 @@
 #include "BP_LadderCamera_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_LadderCamera.BP_LadderCamera_C.ExecuteUbergraph_BP_LadderCamera
 // (Final, UbergraphFunction)
@@ -84,5 +83,5 @@ void ABP_LadderCamera_C::ReceiveBeginPlay()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

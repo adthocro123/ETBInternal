@@ -14,8 +14,7 @@
 #include "INTERACTIVE_FoliageComp_BP_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function INTERACTIVE_FoliageComp_BP.INTERACTIVE_FoliageComp_BP_C.ExecuteUbergraph_INTERACTIVE_FoliageComp_BP
 // (Final, UbergraphFunction, HasDefaults)
@@ -348,5 +347,5 @@ void UINTERACTIVE_FoliageComp_BP_C::Start_New_Instance_Offset(int32 Instance, co
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

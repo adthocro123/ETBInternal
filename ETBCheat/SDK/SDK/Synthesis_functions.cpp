@@ -14,8 +14,7 @@
 #include "Synthesis_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function Synthesis.SourceEffectEnvelopeFollowerPreset.RegisterEnvelopeFollowerListener
 // (Final, Native, Public, BlueprintCallable)
@@ -5268,5 +5267,5 @@ float USynthKnob::GetValue() const
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -11,12 +11,11 @@
 #include "Basic.hpp"
 
 #include "S_AudioSettings_structs.hpp"
-#include "E_CameraSetting_structs.hpp"
 #include "Engine_classes.hpp"
+#include "E_CameraSetting_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_SG_GameSettings.BP_SG_GameSettings_C
 // 0x0040 (0x0068 - 0x0028)
@@ -43,6 +42,8 @@ public:
 	bool                                          AimAssist;                                         // 0x0062(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          ControllerFeedback;                                // 0x0063(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          ShowChat;                                          // 0x0064(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          HasAcceptedEULA;                                   // 0x0065(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          EnableCrossplay;                                   // 0x0066(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	static class UClass* StaticClass()
@@ -60,5 +61,4 @@ public:
 };
 DUMPER7_ASSERTS_UBP_SG_GameSettings_C;
 
-}
-
+SDK_NAMESPACE_END

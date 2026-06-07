@@ -14,8 +14,7 @@
 #include "BP_Rope_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Rope.BP_Rope_C.ExecuteUbergraph_BP_Rope
 // (Final, UbergraphFunction, HasDefaults)
@@ -296,5 +295,5 @@ void ABP_Rope_C::UseItem()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

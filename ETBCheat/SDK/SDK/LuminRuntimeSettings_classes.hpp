@@ -15,8 +15,7 @@
 #include "CoreUObject_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class LuminRuntimeSettings.LuminRuntimeSettings
 // 0x0120 (0x0148 - 0x0028)
@@ -68,5 +67,4 @@ public:
 };
 DUMPER7_ASSERTS_ULuminRuntimeSettings;
 
-}
-
+SDK_NAMESPACE_END

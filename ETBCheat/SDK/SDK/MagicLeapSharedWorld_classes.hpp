@@ -14,8 +14,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class MagicLeapSharedWorld.MagicLeapSharedWorldGameMode
 // 0x00D0 (0x03D8 - 0x0308)
@@ -113,5 +112,4 @@ public:
 };
 DUMPER7_ASSERTS_AMagicLeapSharedWorldPlayerController;
 
-}
-
+SDK_NAMESPACE_END

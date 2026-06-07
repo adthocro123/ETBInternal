@@ -14,8 +14,7 @@
 #include "WB_Button_Close_Theme2_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WB_Button_Close_Theme2.WB_Button_Close_Theme2_C.ExecuteUbergraph_WB_Button_Close_Theme2
 // (Final, UbergraphFunction)
@@ -70,5 +69,5 @@ ESlateVisibility UWB_Button_Close_Theme2_C::GetVisibility_0()
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -13,8 +13,7 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct ClothingSystemRuntimeInterface.ClothCollisionPrim_Sphere
 // 0x0014 (0x0014 - 0x0000)
@@ -94,5 +93,4 @@ public:
 };
 DUMPER7_ASSERTS_FClothVertBoneData;
 
-}
-
+SDK_NAMESPACE_END

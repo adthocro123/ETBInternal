@@ -15,8 +15,7 @@
 #include "AnimGraphRuntime_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass AnimBP_Moth.AnimBP_Moth_C
 // 0x02A0 (0x0560 - 0x02C0)
@@ -56,5 +55,4 @@ public:
 };
 DUMPER7_ASSERTS_UAnimBP_Moth_C;
 
-}
-
+SDK_NAMESPACE_END

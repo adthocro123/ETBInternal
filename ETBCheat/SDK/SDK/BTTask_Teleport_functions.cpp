@@ -14,8 +14,7 @@
 #include "BTTask_Teleport_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BTTask_Teleport.BTTask_Teleport_C.ExecuteUbergraph_BTTask_Teleport
 // (Final, UbergraphFunction, HasDefaults)
@@ -58,5 +57,5 @@ void UBTTask_Teleport_C::ReceiveExecuteAI(class AAIController* OwnerController, 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

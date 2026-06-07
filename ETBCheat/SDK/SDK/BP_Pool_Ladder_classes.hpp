@@ -14,8 +14,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Pool_Ladder.BP_Pool_Ladder_C
 // 0x0030 (0x0250 - 0x0220)
@@ -54,5 +53,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_Pool_Ladder_C;
 
-}
-
+SDK_NAMESPACE_END

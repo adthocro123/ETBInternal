@@ -10,15 +10,14 @@
 
 #include "Basic.hpp"
 
+#include "Foliage_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "Foliage_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class Foliage.InteractiveFoliageComponent
 // 0x0010 (0x04F0 - 0x04E0)
@@ -470,5 +469,4 @@ public:
 };
 DUMPER7_ASSERTS_AProceduralFoliageVolume;
 
-}
-
+SDK_NAMESPACE_END

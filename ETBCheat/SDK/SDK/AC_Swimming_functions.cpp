@@ -14,8 +14,7 @@
 #include "AC_Swimming_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function AC_Swimming.AC_Swimming_C.ExecuteUbergraph_AC_Swimming
 // (Final, UbergraphFunction, HasDefaults)
@@ -552,5 +551,5 @@ void UAC_Swimming_C::SwimDownMovementLogic()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

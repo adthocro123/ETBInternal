@@ -14,8 +14,8 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function Lobby_Menu.Lobby_Menu_C.ExecuteUbergraph_Lobby_Menu
 // 0x0110 (0x0110 - 0x0000)
@@ -55,7 +55,6 @@ public:
 	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue_1; // 0x00E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x00F8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Create_New_Slot_Success;                  // 0x0109(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_Lobby_Menu_C_ExecuteUbergraph_Lobby_Menu;
 
@@ -83,7 +82,7 @@ struct Lobby_Menu_C_Init_Casts final
 {
 public:
 	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetLocalPlayerController_ReturnValue;     // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class ALobby_PlayerController_C*              K2Node_DynamicCast_AsLobby_Player_Controller;      // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
@@ -132,5 +131,5 @@ public:
 };
 DUMPER7_ASSERTS_Lobby_Menu_C_Init_ReadyUpButton;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

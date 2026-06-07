@@ -14,8 +14,7 @@
 #include "BP_Thermometer_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Thermometer.BP_Thermometer_C.ExecuteUbergraph_BP_Thermometer
 // (Final, UbergraphFunction, HasDefaults)
@@ -119,5 +118,5 @@ void ABP_Thermometer_C::SetMaterial(bool EnabledFOV)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

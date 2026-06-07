@@ -14,8 +14,7 @@
 #include "WB_ChatMessage_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WB_ChatMessage.WB_ChatMessage_C.ExecuteUbergraph_WB_ChatMessage
 // (Final, UbergraphFunction)
@@ -116,9 +115,9 @@ void UWB_ChatMessage_C::Set_ChatMessage_Color(const struct FLinearColor& Specifi
 // Function WB_ChatMessage.WB_ChatMessage_C.Set_Username_Global
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const class FString&                    Chat_sender                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// const struct FBPUniqueNetId&            NetId                                                  (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWB_ChatMessage_C::Set_Username_Global(const class FString& Chat_sender)
+void UWB_ChatMessage_C::Set_Username_Global(const struct FBPUniqueNetId& NetId)
 {
 	static class UFunction* Func = nullptr;
 
@@ -127,7 +126,7 @@ void UWB_ChatMessage_C::Set_Username_Global(const class FString& Chat_sender)
 
 	Params::WB_ChatMessage_C_Set_Username_Global Parms{};
 
-	Parms.Chat_sender = std::move(Chat_sender);
+	Parms.NetId = std::move(NetId);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -174,18 +173,4 @@ void UWB_ChatMessage_C::IsFiltering(bool* IsFiltering_0)
 }
 
 
-// Function WB_ChatMessage.WB_ChatMessage_C.CheckFont
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UWB_ChatMessage_C::CheckFont()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WB_ChatMessage_C", "CheckFont");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-}
-
+SDK_NAMESPACE_END

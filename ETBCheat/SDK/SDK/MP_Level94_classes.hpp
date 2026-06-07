@@ -16,19 +16,18 @@
 #include "MP_GameMode_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass MP_Level94.MP_Level94_C
-// 0x0070 (0x03F8 - 0x0388)
+// 0x0070 (0x0400 - 0x0390)
 class AMP_Level94_C final : public AMP_GameMode_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_MP_Level94_C;                       // 0x0388(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          IsNight;                                           // 0x0390(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_391[0x7];                                      // 0x0391(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<int32, class ABPCharacter_Demo_C*>       PlayerMap;                                         // 0x0398(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FVector                                RetreatLocation;                                   // 0x03E8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_MP_Level94_C;                       // 0x0390(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          IsNight;                                           // 0x0398(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_399[0x7];                                      // 0x0399(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<int32, class ABPCharacter_Demo_C*>       PlayerMap;                                         // 0x03A0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FVector                                RetreatLocation;                                   // 0x03F0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_MP_Level94(int32 EntryPoint);
@@ -57,5 +56,4 @@ public:
 };
 DUMPER7_ASSERTS_AMP_Level94_C;
 
-}
-
+SDK_NAMESPACE_END

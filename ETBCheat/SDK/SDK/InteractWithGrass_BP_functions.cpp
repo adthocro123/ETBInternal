@@ -14,8 +14,7 @@
 #include "InteractWithGrass_BP_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function InteractWithGrass_BP.InteractWithGrass_BP_C.ExecuteUbergraph_InteractWithGrass_BP
 // (Final, UbergraphFunction, HasDefaults)
@@ -256,11 +255,11 @@ void UInteractWithGrass_BP_C::ReceiveBeginPlay()
 // Function InteractWithGrass_BP.InteractWithGrass_BP_C.IsInDistanceToViewTarget
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                                   InDistance                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   inDistance                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool*                                   isInDistance                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // float*                                  currentDistance                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UInteractWithGrass_BP_C::IsInDistanceToViewTarget(float InDistance, bool* isInDistance, float* currentDistance)
+void UInteractWithGrass_BP_C::IsInDistanceToViewTarget(float inDistance, bool* isInDistance, float* currentDistance)
 {
 	static class UFunction* Func = nullptr;
 
@@ -269,7 +268,7 @@ void UInteractWithGrass_BP_C::IsInDistanceToViewTarget(float InDistance, bool* i
 
 	Params::InteractWithGrass_BP_C_IsInDistanceToViewTarget Parms{};
 
-	Parms.InDistance = InDistance;
+	Parms.inDistance = inDistance;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -280,5 +279,5 @@ void UInteractWithGrass_BP_C::IsInDistanceToViewTarget(float InDistance, bool* i
 		*currentDistance = Parms.currentDistance;
 }
 
-}
 
+SDK_NAMESPACE_END

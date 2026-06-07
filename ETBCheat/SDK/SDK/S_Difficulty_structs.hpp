@@ -13,8 +13,7 @@
 #include "E_Difficulty_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct S_Difficulty.S_Difficulty
 // 0x0038 (0x0038 - 0x0000)
@@ -27,5 +26,4 @@ public:
 };
 DUMPER7_ASSERTS_FS_Difficulty;
 
-}
-
+SDK_NAMESPACE_END

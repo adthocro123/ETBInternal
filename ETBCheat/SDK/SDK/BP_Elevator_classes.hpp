@@ -14,8 +14,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Elevator.BP_Elevator_C
 // 0x0058 (0x0278 - 0x0220)
@@ -66,5 +65,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_Elevator_C;
 
-}
-
+SDK_NAMESPACE_END

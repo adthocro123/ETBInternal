@@ -13,8 +13,7 @@
 #include "EN_UI_MissionState_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct ST_UI_Mission.ST_UI_Mission
 // 0x0098 (0x0098 - 0x0000)
@@ -37,5 +36,4 @@ public:
 };
 DUMPER7_ASSERTS_FST_UI_Mission;
 
-}
-
+SDK_NAMESPACE_END

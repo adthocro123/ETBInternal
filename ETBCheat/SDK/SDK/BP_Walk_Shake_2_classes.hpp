@@ -13,8 +13,7 @@
 #include "GameplayCameras_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Walk_Shake_2.BP_Walk_Shake_2_C
 // 0x0000 (0x01B0 - 0x01B0)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_UBP_Walk_Shake_2_C;
 
-}
-
+SDK_NAMESPACE_END

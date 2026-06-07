@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "S_CameraTarget_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "S_CameraTarget_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Tunnel_CameraManager.BP_Tunnel_CameraManager_C
 // 0x0058 (0x0278 - 0x0220)
@@ -62,5 +61,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_Tunnel_CameraManager_C;
 
-}
-
+SDK_NAMESPACE_END

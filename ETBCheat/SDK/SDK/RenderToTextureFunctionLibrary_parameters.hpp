@@ -14,8 +14,8 @@
 #include "EIntTypes_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function RenderToTextureFunctionLibrary.RenderToTextureFunctionLibrary_C.Array to HLSL Int Array
 // 0x05B0 (0x05B0 - 0x0000)
@@ -190,5 +190,5 @@ public:
 };
 DUMPER7_ASSERTS_RenderToTextureFunctionLibrary_C_Set_Canvas_Material_Scale_and_Position;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

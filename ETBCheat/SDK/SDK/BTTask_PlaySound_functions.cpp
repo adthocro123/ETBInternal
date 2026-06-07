@@ -14,8 +14,7 @@
 #include "BTTask_PlaySound_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BTTask_PlaySound.BTTask_PlaySound_C.ExecuteUbergraph_BTTask_PlaySound
 // (Final, UbergraphFunction)
@@ -78,5 +77,5 @@ void UBTTask_PlaySound_C::ReceiveExecuteAI(class AAIController* OwnerController,
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

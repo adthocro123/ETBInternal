@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedEnum EN_UI_MissionState.EN_UI_MissionState
 // NumValues: 0x0004
@@ -24,5 +23,4 @@ enum class EN_UI_MissionState : uint8
 	EN_UI_MAX                                = 3,
 };
 
-}
-
+SDK_NAMESPACE_END

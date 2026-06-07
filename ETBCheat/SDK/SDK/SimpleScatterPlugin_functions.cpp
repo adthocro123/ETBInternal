@@ -13,8 +13,7 @@
 #include "SimpleScatterPlugin_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function SimpleScatterPlugin.SimpleScatter.ManualRefresh
 // (Final, Native, Private)
@@ -34,5 +33,5 @@ void ASimpleScatter::ManualRefresh()
 	Func->FunctionFlags = Flgs;
 }
 
-}
 
+SDK_NAMESPACE_END

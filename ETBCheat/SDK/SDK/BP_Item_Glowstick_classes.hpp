@@ -11,13 +11,12 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "E_GlowstickColor_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "BP_Item_classes.hpp"
+#include "E_GlowstickColor_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Item_Glowstick.BP_Item_Glowstick_C
 // 0x0040 (0x0298 - 0x0258)
@@ -65,5 +64,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_Item_Glowstick_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -10,45 +10,43 @@
 
 #include "Basic.hpp"
 
-#include "E_HeadsetType_structs.hpp"
-#include "AdvancedSessions_structs.hpp"
 #include "S_UserProfile_structs.hpp"
-#include "S_PlayerConnectionInfo_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Team_structs.hpp"
+#include "S_PlayerConnectionInfo_structs.hpp"
+#include "AdvancedSessions_structs.hpp"
+#include "Backrooms_structs.hpp"
 #include "Backrooms_classes.hpp"
+#include "E_HeadsetType_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass MP_PS.MP_PS_C
-// 0x0078 (0x03B0 - 0x0338)
+// 0x0070 (0x03C8 - 0x0358)
 class AMP_PS_C final : public AFancyPlayerState
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0338(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0340(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	int32                                         Points;                                            // 0x0348(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	ETeam                                         Team;                                              // 0x034C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_34D[0x3];                                      // 0x034D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS_PlayerConnectionInfo                PlayerConnection;                                  // 0x0350(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	struct FS_UserProfile                         UserInfo;                                          // 0x0358(0x0018)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, RepNotify, ContainsInstancedReference, HasGetValueTypeHash)
-	bool                                          HasFlashlight;                                     // 0x0370(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_371[0x7];                                      // 0x0371(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           Items_Rep;                                         // 0x0378(0x0010)(Edit, BlueprintVisible, Net, DisableEditOnInstance)
-	float                                         LastSave;                                          // 0x0388(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	E_HeadsetType                                 HeadsetType;                                       // 0x038C(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_38D[0x3];                                      // 0x038D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Level;                                             // 0x0390(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_394[0x4];                                      // 0x0394(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMulticastInlineDelegate<void(int32 NewLevel)> OnLevelUpdated;                                   // 0x0398(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	bool                                          IsTalking;                                         // 0x03A8(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0358(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0360(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	int32                                         Points;                                            // 0x0368(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	ETeam                                         Team;                                              // 0x036C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_36D[0x3];                                      // 0x036D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS_PlayerConnectionInfo                PlayerConnection;                                  // 0x0370(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	struct FS_UserProfile                         UserInfo;                                          // 0x0378(0x0018)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, RepNotify, ContainsInstancedReference, HasGetValueTypeHash)
+	bool                                          HasFlashlight;                                     // 0x0390(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_391[0x7];                                      // 0x0391(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           Items_Rep;                                         // 0x0398(0x0010)(Edit, BlueprintVisible, Net, DisableEditOnInstance)
+	float                                         LastSave;                                          // 0x03A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_HeadsetType                                 HeadsetType;                                       // 0x03AC(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3AD[0x3];                                      // 0x03AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Level;                                             // 0x03B0(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_3B4[0x4];                                      // 0x03B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(int32 NewLevel)> OnLevelUpdated;                                   // 0x03B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void ExecuteUbergraph_MP_PS(int32 EntryPoint);
 	void InvSwap(int32 Index1, int32 Index2);
-	void UpdateIsTalking(bool IsTalking_0);
 	void UpdateLevel(int32 Level_0);
 	void ReceiveBeginPlay();
 	void ClearInventory();
@@ -91,5 +89,4 @@ public:
 };
 DUMPER7_ASSERTS_AMP_PS_C;
 
-}
-
+SDK_NAMESPACE_END

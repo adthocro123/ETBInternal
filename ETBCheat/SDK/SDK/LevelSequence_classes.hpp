@@ -13,15 +13,14 @@
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "Engine_classes.hpp"
-#include "LevelSequence_structs.hpp"
+#include "UMG_classes.hpp"
 #include "MovieScene_structs.hpp"
 #include "MovieScene_classes.hpp"
-#include "UMG_classes.hpp"
+#include "LevelSequence_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class LevelSequence.AnimSequenceLevelSequenceLink
 // 0x0028 (0x0050 - 0x0028)
@@ -270,12 +269,12 @@ public:
 DUMPER7_ASSERTS_ULevelSequenceAnimSequenceLink;
 
 // Class LevelSequence.LevelSequenceBurnIn
-// 0x00C0 (0x0320 - 0x0260)
+// 0x00C0 (0x0330 - 0x0270)
 class ULevelSequenceBurnIn final : public UUserWidget
 {
 public:
-	struct FLevelSequencePlayerSnapshot           FrameInformation;                                  // 0x0260(0x00B8)(BlueprintVisible, BlueprintReadOnly, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	class ALevelSequenceActor*                    LevelSequenceActor;                                // 0x0318(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FLevelSequencePlayerSnapshot           FrameInformation;                                  // 0x0270(0x00B8)(BlueprintVisible, BlueprintReadOnly, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	class ALevelSequenceActor*                    LevelSequenceActor;                                // 0x0328(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	void SetSettings(class UObject* InSettings);
@@ -443,5 +442,4 @@ public:
 };
 DUMPER7_ASSERTS_ALevelSequenceMediaController;
 
-}
-
+SDK_NAMESPACE_END

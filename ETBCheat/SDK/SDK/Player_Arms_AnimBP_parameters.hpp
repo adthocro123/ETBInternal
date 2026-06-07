@@ -11,12 +11,12 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "ST_Item_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function Player_Arms_AnimBP.Player_Arms_AnimBP_C.ExecuteUbergraph_Player_Arms_AnimBP
 // 0x0100 (0x0100 - 0x0000)
@@ -89,5 +89,5 @@ public:
 };
 DUMPER7_ASSERTS_Player_Arms_AnimBP_C_AnimGraph;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

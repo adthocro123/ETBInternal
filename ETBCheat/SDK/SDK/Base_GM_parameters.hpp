@@ -11,22 +11,32 @@
 #include "Basic.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function Base_GM.Base_GM_C.ExecuteUbergraph_Base_GM
-// 0x0028 (0x0028 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct Base_GM_C_ExecuteUbergraph_Base_GM final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AController*                            K2Node_Event_ExitingController;                    // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      K2Node_Event_NewPlayer;                            // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      K2Node_Event_NewPlayer;                            // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      K2Node_Event_NewPlayer_1;                          // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      K2Node_Event_OldPC;                                // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class APlayerController*                      K2Node_Event_NewPC;                                // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AController*                            K2Node_Event_ExitingController;                    // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_Base_GM_C_ExecuteUbergraph_Base_GM;
+
+// Function Base_GM.Base_GM_C.HandleStartingNewPlayer
+// 0x0008 (0x0008 - 0x0000)
+struct Base_GM_C_HandleStartingNewPlayer final
+{
+public:
+	class APlayerController*                      NewPlayer;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+DUMPER7_ASSERTS_Base_GM_C_HandleStartingNewPlayer;
 
 // Function Base_GM.Base_GM_C.K2_OnLogout
 // 0x0008 (0x0008 - 0x0000)
@@ -132,5 +142,5 @@ public:
 };
 DUMPER7_ASSERTS_Base_GM_C_GetPlayerControllerFromPlayerState;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

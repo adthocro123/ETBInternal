@@ -14,8 +14,7 @@
 #include "BP_Smiler_Zone_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Smiler_Zone.BP_Smiler_Zone_C.ExecuteUbergraph_BP_Smiler_Zone
 // (Final, UbergraphFunction, HasDefaults)
@@ -92,5 +91,5 @@ void ABP_Smiler_Zone_C::BndEvt__BP_NoClip_Zone_CollisionComponent_K2Node_Compone
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

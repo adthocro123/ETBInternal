@@ -13,8 +13,7 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct FoliageToSpawnInArea.FoliageToSpawnInArea
 // 0x0030 (0x0030 - 0x0000)
@@ -30,5 +29,4 @@ public:
 };
 DUMPER7_ASSERTS_FFoliageToSpawnInArea;
 
-}
-
+SDK_NAMESPACE_END

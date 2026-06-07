@@ -14,8 +14,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Smiler_Zone.BP_Smiler_Zone_C
 // 0x0010 (0x0238 - 0x0228)
@@ -46,5 +45,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_Smiler_Zone_C;
 
-}
-
+SDK_NAMESPACE_END

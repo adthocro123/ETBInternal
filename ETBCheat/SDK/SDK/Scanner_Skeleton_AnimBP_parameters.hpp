@@ -14,8 +14,8 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function Scanner_Skeleton_AnimBP.Scanner_Skeleton_AnimBP_C.ExecuteUbergraph_Scanner_Skeleton_AnimBP
 // 0x0040 (0x0040 - 0x0000)
@@ -43,5 +43,5 @@ public:
 };
 DUMPER7_ASSERTS_Scanner_Skeleton_AnimBP_C_AnimGraph;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

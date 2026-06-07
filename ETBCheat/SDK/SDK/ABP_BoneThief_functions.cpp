@@ -14,8 +14,7 @@
 #include "ABP_BoneThief_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function ABP_BoneThief.ABP_BoneThief_C.ExecuteUbergraph_ABP_BoneThief
 // (Final, UbergraphFunction)
@@ -77,5 +76,5 @@ void UABP_BoneThief_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 		*AnimGraph_0 = std::move(Parms.AnimGraph_0);
 }
 
-}
 
+SDK_NAMESPACE_END

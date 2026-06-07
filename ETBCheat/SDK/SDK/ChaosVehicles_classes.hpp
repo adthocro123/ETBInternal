@@ -16,8 +16,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class ChaosVehicles.ChaosVehicleMovementComponent
 // 0x0268 (0x03A0 - 0x0138)
@@ -297,5 +296,4 @@ public:
 };
 DUMPER7_ASSERTS_AWheeledVehiclePawn;
 
-}
-
+SDK_NAMESPACE_END

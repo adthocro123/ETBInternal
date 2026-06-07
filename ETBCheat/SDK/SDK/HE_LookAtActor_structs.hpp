@@ -13,8 +13,7 @@
 #include "HE_LookAtActorSeq_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct HE_LookAtActor.HE_LookAtActor
 // 0x0018 (0x0018 - 0x0000)
@@ -26,5 +25,4 @@ public:
 };
 DUMPER7_ASSERTS_FHE_LookAtActor;
 
-}
-
+SDK_NAMESPACE_END

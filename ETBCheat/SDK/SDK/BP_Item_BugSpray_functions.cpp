@@ -14,8 +14,7 @@
 #include "BP_Item_BugSpray_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Item_BugSpray.BP_Item_BugSpray_C.ExecuteUbergraph_BP_Item_BugSpray
 // (Final, UbergraphFunction, HasDefaults)
@@ -200,5 +199,5 @@ void ABP_Item_BugSpray_C::UseItem()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

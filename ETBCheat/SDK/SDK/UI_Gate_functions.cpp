@@ -14,8 +14,7 @@
 #include "UI_Gate_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function UI_Gate.UI_Gate_C.ExecuteUbergraph_UI_Gate
 // (Final, UbergraphFunction)
@@ -107,20 +106,6 @@ void UUI_Gate_C::BndEvt__UI_SecurityPopup_CancelButton_K2Node_ComponentBoundEven
 }
 
 
-// Function UI_Gate.UI_Gate_C.CheckFont
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UUI_Gate_C::CheckFont()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Gate_C", "CheckFont");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function UI_Gate.UI_Gate_C.CustomNavigation
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -143,5 +128,5 @@ class UWidget* UUI_Gate_C::CustomNavigation(EUINavigation Navigation_0)
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

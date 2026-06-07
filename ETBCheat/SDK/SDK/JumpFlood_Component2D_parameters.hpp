@@ -13,8 +13,8 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function JumpFlood_Component2D.JumpFlood_Component2D_C.ExecuteUbergraph_JumpFlood_Component2D
 // 0x00C8 (0x00C8 - 0x0000)
@@ -200,5 +200,5 @@ public:
 };
 DUMPER7_ASSERTS_JumpFlood_Component2D_C_SingleBlurStep;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

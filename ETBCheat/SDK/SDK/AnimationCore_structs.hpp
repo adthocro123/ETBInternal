@@ -13,8 +13,7 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum AnimationCore.ETransformConstraintType
 // NumValues: 0x0005
@@ -251,5 +250,4 @@ public:
 };
 DUMPER7_ASSERTS_FTransformNoScale;
 
-}
-
+SDK_NAMESPACE_END

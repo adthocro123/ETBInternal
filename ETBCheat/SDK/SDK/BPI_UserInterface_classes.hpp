@@ -13,8 +13,7 @@
 #include "CoreUObject_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPI_UserInterface.BPI_UserInterface_C
 // 0x0000 (0x0000 - 0x0000)
@@ -50,5 +49,4 @@ public:
 };
 DUMPER7_ASSERTS_IBPI_UserInterface_C;
 
-}
-
+SDK_NAMESPACE_END

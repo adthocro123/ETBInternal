@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum OnlineSubsystem.EInAppPurchaseState
 // NumValues: 0x0009
@@ -66,6 +65,16 @@ public:
 };
 DUMPER7_ASSERTS_FInAppPurchaseProductInfo;
 
+// ScriptStruct OnlineSubsystem.NamedInterface
+// 0x0010 (0x0010 - 0x0000)
+struct FNamedInterface final
+{
+public:
+	class FName                                   InterfaceName;                                     // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                InterfaceObject;                                   // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FNamedInterface;
+
 // ScriptStruct OnlineSubsystem.InAppPurchaseRestoreInfo
 // 0x0030 (0x0030 - 0x0000)
 struct FInAppPurchaseRestoreInfo final
@@ -87,16 +96,6 @@ public:
 };
 DUMPER7_ASSERTS_FNamedInterfaceDef;
 
-// ScriptStruct OnlineSubsystem.NamedInterface
-// 0x0010 (0x0010 - 0x0000)
-struct FNamedInterface final
-{
-public:
-	class FName                                   InterfaceName;                                     // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UObject*                                InterfaceObject;                                   // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FNamedInterface;
-
 // ScriptStruct OnlineSubsystem.InAppPurchaseProductRequest
 // 0x0018 (0x0018 - 0x0000)
 struct FInAppPurchaseProductRequest final
@@ -108,5 +107,4 @@ public:
 };
 DUMPER7_ASSERTS_FInAppPurchaseProductRequest;
 
-}
-
+SDK_NAMESPACE_END

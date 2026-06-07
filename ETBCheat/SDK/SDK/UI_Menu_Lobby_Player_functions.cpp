@@ -14,8 +14,7 @@
 #include "UI_Menu_Lobby_Player_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function UI_Menu_Lobby_Player.UI_Menu_Lobby_Player_C.ExecuteUbergraph_UI_Menu_Lobby_Player
 // (Final, UbergraphFunction, HasDefaults)
@@ -119,31 +118,23 @@ void UUI_Menu_Lobby_Player_C::UpdateStatus(bool bReady_0)
 }
 
 
-// Function UI_Menu_Lobby_Player.UI_Menu_Lobby_Player_C.BndEvt__UI_Menu_Lobby_Player_UI_Menu_Button_Kick_K2Node_ComponentBoundEvent_0_OnClick__DelegateSignature
-// (BlueprintEvent)
+// Function UI_Menu_Lobby_Player.UI_Menu_Lobby_Player_C.ToggleHover
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsHovered_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UUI_Menu_Lobby_Player_C::BndEvt__UI_Menu_Lobby_Player_UI_Menu_Button_Kick_K2Node_ComponentBoundEvent_0_OnClick__DelegateSignature()
+void UUI_Menu_Lobby_Player_C::ToggleHover(bool IsHovered_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Menu_Lobby_Player_C", "BndEvt__UI_Menu_Lobby_Player_UI_Menu_Button_Kick_K2Node_ComponentBoundEvent_0_OnClick__DelegateSignature");
+		Func = Class->GetFunction("UI_Menu_Lobby_Player_C", "ToggleHover");
 
-	UObject::ProcessEvent(Func, nullptr);
-}
+	Params::UI_Menu_Lobby_Player_C_ToggleHover Parms{};
 
+	Parms.IsHovered_0 = IsHovered_0;
 
-// Function UI_Menu_Lobby_Player.UI_Menu_Lobby_Player_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UUI_Menu_Lobby_Player_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Menu_Lobby_Player_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -167,23 +158,31 @@ void UUI_Menu_Lobby_Player_C::ToggleEnabled(bool IsEnabled)
 }
 
 
-// Function UI_Menu_Lobby_Player.UI_Menu_Lobby_Player_C.ToggleHover
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsHovered_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// Function UI_Menu_Lobby_Player.UI_Menu_Lobby_Player_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UUI_Menu_Lobby_Player_C::ToggleHover(bool IsHovered_0)
+void UUI_Menu_Lobby_Player_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Menu_Lobby_Player_C", "ToggleHover");
+		Func = Class->GetFunction("UI_Menu_Lobby_Player_C", "Construct");
 
-	Params::UI_Menu_Lobby_Player_C_ToggleHover Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.IsHovered_0 = IsHovered_0;
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function UI_Menu_Lobby_Player.UI_Menu_Lobby_Player_C.BndEvt__UI_Menu_Lobby_Player_UI_Menu_Button_Kick_K2Node_ComponentBoundEvent_0_OnClick__DelegateSignature
+// (BlueprintEvent)
+
+void UUI_Menu_Lobby_Player_C::BndEvt__UI_Menu_Lobby_Player_UI_Menu_Button_Kick_K2Node_ComponentBoundEvent_0_OnClick__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UI_Menu_Lobby_Player_C", "BndEvt__UI_Menu_Lobby_Player_UI_Menu_Button_Kick_K2Node_ComponentBoundEvent_0_OnClick__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -344,5 +343,5 @@ struct FEventReply UUI_Menu_Lobby_Player_C::OnKeyDown(const struct FGeometry& My
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

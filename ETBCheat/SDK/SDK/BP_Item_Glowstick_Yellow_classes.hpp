@@ -13,8 +13,7 @@
 #include "BP_Item_Glowstick_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Item_Glowstick_Yellow.BP_Item_Glowstick_Yellow_C
 // 0x0000 (0x0298 - 0x0298)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_Item_Glowstick_Yellow_C;
 
-}
-
+SDK_NAMESPACE_END

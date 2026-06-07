@@ -14,8 +14,7 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass AIC_Moth.AIC_Moth_C
 // 0x0040 (0x0368 - 0x0328)
@@ -58,5 +57,4 @@ public:
 };
 DUMPER7_ASSERTS_AAIC_Moth_C;
 
-}
-
+SDK_NAMESPACE_END

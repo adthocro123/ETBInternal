@@ -15,8 +15,8 @@
 #include "SlateCore_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function W_Map_Selection.W_Map_Selection_C.ExecuteUbergraph_W_Map_Selection
 // 0x0038 (0x0038 - 0x0000)
@@ -173,5 +173,5 @@ public:
 };
 DUMPER7_ASSERTS_W_Map_Selection_C_Generate_Encrypted_Name;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

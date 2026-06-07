@@ -14,8 +14,7 @@
 #include "W_MainMenu_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function W_MainMenu.W_MainMenu_C.ExecuteUbergraph_W_MainMenu
 // (Final, UbergraphFunction, HasDefaults)
@@ -242,34 +241,6 @@ void UW_MainMenu_C::BndEvt__Button_Create_K2Node_ComponentBoundEvent_8269_OnButt
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("W_MainMenu_C", "BndEvt__Button_Create_K2Node_ComponentBoundEvent_8269_OnButtonHoverEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function W_MainMenu.W_MainMenu_C.BndEvt__Button_Refresh_K2Node_ComponentBoundEvent_1222_OnButtonHoverEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UW_MainMenu_C::BndEvt__Button_Refresh_K2Node_ComponentBoundEvent_1222_OnButtonHoverEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_MainMenu_C", "BndEvt__Button_Refresh_K2Node_ComponentBoundEvent_1222_OnButtonHoverEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function W_MainMenu.W_MainMenu_C.BndEvt__Button_Refresh_K2Node_ComponentBoundEvent_1277_OnButtonHoverEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UW_MainMenu_C::BndEvt__Button_Refresh_K2Node_ComponentBoundEvent_1277_OnButtonHoverEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_MainMenu_C", "BndEvt__Button_Refresh_K2Node_ComponentBoundEvent_1277_OnButtonHoverEvent__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -667,23 +638,31 @@ void UW_MainMenu_C::BndEvt__W_MainMenu_Button_NewSave_K2Node_ComponentBoundEvent
 }
 
 
-// Function W_MainMenu.W_MainMenu_C.OnActiveUserChanged
+// Function W_MainMenu.W_MainMenu_C.HandleCostumeSelectorClosed
 // (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bIsSameUser                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UW_MainMenu_C::OnActiveUserChanged(bool bIsSameUser)
+void UW_MainMenu_C::HandleCostumeSelectorClosed()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("W_MainMenu_C", "OnActiveUserChanged");
+		Func = Class->GetFunction("W_MainMenu_C", "HandleCostumeSelectorClosed");
 
-	Params::W_MainMenu_C_OnActiveUserChanged Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.bIsSameUser = bIsSameUser;
 
-	UObject::ProcessEvent(Func, &Parms);
+// Function W_MainMenu.W_MainMenu_C.OpenCostumes
+// (BlueprintCallable, BlueprintEvent)
+
+void UW_MainMenu_C::OpenCostumes()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("W_MainMenu_C", "OpenCostumes");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -1065,20 +1044,6 @@ void UW_MainMenu_C::BndEvt__W_MainMenu_Button_NewSave_K2Node_ComponentBoundEvent
 }
 
 
-// Function W_MainMenu.W_MainMenu_C.LoadSaves
-// (BlueprintCallable, BlueprintEvent)
-
-void UW_MainMenu_C::LoadSaves()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_MainMenu_C", "LoadSaves");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function W_MainMenu.W_MainMenu_C.BndEvt__W_MainMenu_Button_2_K2Node_ComponentBoundEvent_3_OnButtonHoverEvent__DelegateSignature
 // (BlueprintEvent)
 
@@ -1202,40 +1167,6 @@ void UW_MainMenu_C::RefreshServerList()
 		Func = Class->GetFunction("W_MainMenu_C", "RefreshServerList");
 
 	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function W_MainMenu.W_MainMenu_C.BndEvt__Button_Refresh_K2Node_ComponentBoundEvent_1207_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UW_MainMenu_C::BndEvt__Button_Refresh_K2Node_ComponentBoundEvent_1207_OnButtonClickedEvent__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_MainMenu_C", "BndEvt__Button_Refresh_K2Node_ComponentBoundEvent_1207_OnButtonClickedEvent__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function W_MainMenu.W_MainMenu_C.BndEvt__EditableTextBox_ServerIP_K2Node_ComponentBoundEvent_699_OnEditableTextBoxChangedEvent__DelegateSignature
-// (HasOutParams, BlueprintEvent)
-// Parameters:
-// const class FText&                      Text                                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UW_MainMenu_C::BndEvt__EditableTextBox_ServerIP_K2Node_ComponentBoundEvent_699_OnEditableTextBoxChangedEvent__DelegateSignature(const class FText& Text)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_MainMenu_C", "BndEvt__EditableTextBox_ServerIP_K2Node_ComponentBoundEvent_699_OnEditableTextBoxChangedEvent__DelegateSignature");
-
-	Params::W_MainMenu_C_BndEvt__EditableTextBox_ServerIP_K2Node_ComponentBoundEvent_699_OnEditableTextBoxChangedEvent__DelegateSignature Parms{};
-
-	Parms.Text = std::move(Text);
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -1385,6 +1316,74 @@ void UW_MainMenu_C::Construct()
 }
 
 
+// Function W_MainMenu.W_MainMenu_C.OnLoginDone_JoinGame
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Success                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UW_MainMenu_C::OnLoginDone_JoinGame(bool Success)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("W_MainMenu_C", "OnLoginDone_JoinGame");
+
+	Params::W_MainMenu_C_OnLoginDone_JoinGame Parms{};
+
+	Parms.Success = Success;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function W_MainMenu.W_MainMenu_C.OnLoginDone_PlayGame
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    Success                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UW_MainMenu_C::OnLoginDone_PlayGame(bool Success)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("W_MainMenu_C", "OnLoginDone_PlayGame");
+
+	Params::W_MainMenu_C_OnLoginDone_PlayGame Parms{};
+
+	Parms.Success = Success;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function W_MainMenu.W_MainMenu_C.BndEvt__W_MainMenu_LobbyButton_K2Node_ComponentBoundEvent_4_OnClick__DelegateSignature
+// (BlueprintEvent)
+
+void UW_MainMenu_C::BndEvt__W_MainMenu_LobbyButton_K2Node_ComponentBoundEvent_4_OnClick__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("W_MainMenu_C", "BndEvt__W_MainMenu_LobbyButton_K2Node_ComponentBoundEvent_4_OnClick__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function W_MainMenu.W_MainMenu_C.BndEvt__W_MainMenu_CostumesButton_K2Node_ComponentBoundEvent_0_OnClick__DelegateSignature
+// (BlueprintEvent)
+
+void UW_MainMenu_C::BndEvt__W_MainMenu_CostumesButton_K2Node_ComponentBoundEvent_0_OnClick__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("W_MainMenu_C", "BndEvt__W_MainMenu_CostumesButton_K2Node_ComponentBoundEvent_0_OnClick__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function W_MainMenu.W_MainMenu_C.BndEvt__W_MainMenu_CreditsButton_K2Node_ComponentBoundEvent_10_OnClick__DelegateSignature
 // (BlueprintEvent)
 
@@ -1523,46 +1522,6 @@ void UW_MainMenu_C::OnFailure_7ABA6D504D57A8EC3C475E8249B35A52()
 }
 
 
-// Function W_MainMenu.W_MainMenu_C.OnSuccess_BAC5E09C4569184A2BE7FEB7948DE1C1
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const TArray<struct FBlueprintSessionResult>&Results                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UW_MainMenu_C::OnSuccess_BAC5E09C4569184A2BE7FEB7948DE1C1(const TArray<struct FBlueprintSessionResult>& Results)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_MainMenu_C", "OnSuccess_BAC5E09C4569184A2BE7FEB7948DE1C1");
-
-	Params::W_MainMenu_C_OnSuccess_BAC5E09C4569184A2BE7FEB7948DE1C1 Parms{};
-
-	Parms.Results = std::move(Results);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function W_MainMenu.W_MainMenu_C.OnFailure_BAC5E09C4569184A2BE7FEB7948DE1C1
-// (HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const TArray<struct FBlueprintSessionResult>&Results                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UW_MainMenu_C::OnFailure_BAC5E09C4569184A2BE7FEB7948DE1C1(const TArray<struct FBlueprintSessionResult>& Results)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_MainMenu_C", "OnFailure_BAC5E09C4569184A2BE7FEB7948DE1C1");
-
-	Params::W_MainMenu_C_OnFailure_BAC5E09C4569184A2BE7FEB7948DE1C1 Parms{};
-
-	Parms.Results = std::move(Results);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function W_MainMenu.W_MainMenu_C.UpdateDifficultyToolTips
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -1600,7 +1559,7 @@ void UW_MainMenu_C::GetSavedGame()
 
 
 // Function W_MainMenu.W_MainMenu_C.CustomNavigation_Right
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1659,7 +1618,7 @@ void UW_MainMenu_C::FocusFirstButtonMenu(bool Reset_, EUINavigation Navigation_0
 
 
 // Function W_MainMenu.W_MainMenu_C.CustomNavigation_Up
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1682,7 +1641,7 @@ class UWidget* UW_MainMenu_C::CustomNavigation_Up(EUINavigation Navigation_0)
 
 
 // Function W_MainMenu.W_MainMenu_C.CustomNavigation_Down
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1729,30 +1688,6 @@ struct FEventReply UW_MainMenu_C::OnKeyUp(const struct FGeometry& MyGeometry, co
 }
 
 
-// Function W_MainMenu.W_MainMenu_C.FocusFirstSlot
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UWidget*                          Owner                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// E_MainMenu                              From                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UW_MainMenu_C::FocusFirstSlot(class UWidget* Owner, E_MainMenu From, EUINavigation Navigation_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_MainMenu_C", "FocusFirstSlot");
-
-	Params::W_MainMenu_C_FocusFirstSlot Parms{};
-
-	Parms.Owner = Owner;
-	Parms.From = From;
-	Parms.Navigation_0 = Navigation_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function W_MainMenu.W_MainMenu_C.GetCustomFocus
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -1776,98 +1711,6 @@ void UW_MainMenu_C::GetCustomFocus(E_MainMenu Selection, class UWidget* Object, 
 
 	if (Found != nullptr)
 		*Found = Parms.Found;
-}
-
-
-// Function W_MainMenu.W_MainMenu_C.CustomNavigation_LeftMulti
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-class UWidget* UW_MainMenu_C::CustomNavigation_LeftMulti(EUINavigation Navigation_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_MainMenu_C", "CustomNavigation_LeftMulti");
-
-	Params::W_MainMenu_C_CustomNavigation_LeftMulti Parms{};
-
-	Parms.Navigation_0 = Navigation_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function W_MainMenu.W_MainMenu_C.CustomNavigation_RightMulti
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-class UWidget* UW_MainMenu_C::CustomNavigation_RightMulti(EUINavigation Navigation_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_MainMenu_C", "CustomNavigation_RightMulti");
-
-	Params::W_MainMenu_C_CustomNavigation_RightMulti Parms{};
-
-	Parms.Navigation_0 = Navigation_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function W_MainMenu.W_MainMenu_C.CustomNavigation_UpMulti
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-class UWidget* UW_MainMenu_C::CustomNavigation_UpMulti(EUINavigation Navigation_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_MainMenu_C", "CustomNavigation_UpMulti");
-
-	Params::W_MainMenu_C_CustomNavigation_UpMulti Parms{};
-
-	Parms.Navigation_0 = Navigation_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function W_MainMenu.W_MainMenu_C.CustomNavigation_DownMulti
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-class UWidget* UW_MainMenu_C::CustomNavigation_DownMulti(EUINavigation Navigation_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_MainMenu_C", "CustomNavigation_DownMulti");
-
-	Params::W_MainMenu_C_CustomNavigation_DownMulti Parms{};
-
-	Parms.Navigation_0 = Navigation_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
 }
 
 
@@ -1950,29 +1793,6 @@ class UVerticalBox* UW_MainMenu_C::GetActualNav(E_MainMenu Index_0)
 		Func = Class->GetFunction("W_MainMenu_C", "GetActualNav");
 
 	Params::W_MainMenu_C_GetActualNav Parms{};
-
-	Parms.Index_0 = Index_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function W_MainMenu.W_MainMenu_C.GetActualList
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// E_MainMenu                              Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UScrollBox*                       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-class UScrollBox* UW_MainMenu_C::GetActualList(E_MainMenu Index_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_MainMenu_C", "GetActualList");
-
-	Params::W_MainMenu_C_GetActualList Parms{};
 
 	Parms.Index_0 = Index_0;
 
@@ -2129,20 +1949,6 @@ void UW_MainMenu_C::Toggle_Warning_Main()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("W_MainMenu_C", "Toggle Warning_Main");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function W_MainMenu.W_MainMenu_C.CheckFont
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UW_MainMenu_C::CheckFont()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_MainMenu_C", "CheckFont");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -2312,5 +2118,48 @@ ESlateVisibility UW_MainMenu_C::OnlyVisibleOnXSX()
 	return Parms.ReturnValue;
 }
 
+
+// Function W_MainMenu.W_MainMenu_C.GetAccountPickerVis
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// ESlateVisibility                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+ESlateVisibility UW_MainMenu_C::GetAccountPickerVis()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("W_MainMenu_C", "GetAccountPickerVis");
+
+	Params::W_MainMenu_C_GetAccountPickerVis Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
+
+// Function W_MainMenu.W_MainMenu_C.CustomNavigation_SkipExit
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// EUINavigation                           Navigation_0                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWidget*                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+class UWidget* UW_MainMenu_C::CustomNavigation_SkipExit(EUINavigation Navigation_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("W_MainMenu_C", "CustomNavigation_SkipExit");
+
+	Params::W_MainMenu_C_CustomNavigation_SkipExit Parms{};
+
+	Parms.Navigation_0 = Navigation_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+SDK_NAMESPACE_END

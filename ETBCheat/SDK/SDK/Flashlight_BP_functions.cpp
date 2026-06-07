@@ -14,8 +14,7 @@
 #include "Flashlight_BP_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function Flashlight_BP.Flashlight_BP_C.ExecuteUbergraph_Flashlight_BP
 // (Final, UbergraphFunction, HasDefaults)
@@ -50,5 +49,5 @@ void AFlashlight_BP_C::ReceiveBeginPlay()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

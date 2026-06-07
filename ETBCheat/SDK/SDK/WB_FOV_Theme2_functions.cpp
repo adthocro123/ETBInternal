@@ -14,8 +14,7 @@
 #include "WB_FOV_Theme2_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WB_FOV_Theme2.WB_FOV_Theme2_C.ExecuteUbergraph_WB_FOV_Theme2
 // (Final, UbergraphFunction)
@@ -189,5 +188,5 @@ struct FEventReply UWB_FOV_Theme2_C::OnPreviewKeyDown(const struct FGeometry& My
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

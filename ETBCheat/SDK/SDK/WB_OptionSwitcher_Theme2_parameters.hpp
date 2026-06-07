@@ -16,23 +16,21 @@
 #include "InputCore_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WB_OptionSwitcher_Theme2.WB_OptionSwitcher_Theme2_C.ExecuteUbergraph_WB_OptionSwitcher_Theme2
-// 0x0068 (0x0068 - 0x0000)
+// 0x000C (0x000C - 0x0000)
 struct WB_OptionSwitcher_Theme2_C_ExecuteUbergraph_WB_OptionSwitcher_Theme2 final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsHovered;                            // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateFontInfo                         CallFunc_Get_Font_Culture_Checked_OutFont;         // 0x0008(0x0058)(HasGetValueTypeHash)
-	bool                                          K2Node_Event_IsEnabled;                            // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_IsDesignTime;                         // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_Event_IsFocused;                            // 0x0062(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	EFancyInputDevice                             CallFunc_GetCurrentInputDevice_ReturnValue;        // 0x0063(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	EFancyInputDevice                             CallFunc_GetCurrentInputDevice_ReturnValue;        // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_IsHovered;                            // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_IsEnabled;                            // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_IsDesignTime;                         // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_Event_IsFocused;                            // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 DUMPER7_ASSERTS_WB_OptionSwitcher_Theme2_C_ExecuteUbergraph_WB_OptionSwitcher_Theme2;
 
@@ -96,22 +94,14 @@ public:
 DUMPER7_ASSERTS_WB_OptionSwitcher_Theme2_C_Switch_Option;
 
 // Function WB_OptionSwitcher_Theme2.WB_OptionSwitcher_Theme2_C.Set_SelectedOption
-// 0x0018 (0x0018 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct WB_OptionSwitcher_Theme2_C_Set_SelectedOption final
 {
 public:
 	class FText                                   SelectedOption_0;                                  // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
+	int32                                         OptionIndex;                                       // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_WB_OptionSwitcher_Theme2_C_Set_SelectedOption;
-
-// Function WB_OptionSwitcher_Theme2.WB_OptionSwitcher_Theme2_C.Setup
-// 0x0018 (0x0018 - 0x0000)
-struct WB_OptionSwitcher_Theme2_C_Setup final
-{
-public:
-	class FText                                   CallFunc_Array_Get_Item;                           // 0x0000(0x0018)()
-};
-DUMPER7_ASSERTS_WB_OptionSwitcher_Theme2_C_Setup;
 
 // Function WB_OptionSwitcher_Theme2.WB_OptionSwitcher_Theme2_C.OnKeyDown
 // 0x02B8 (0x02B8 - 0x0000)
@@ -130,5 +120,5 @@ public:
 };
 DUMPER7_ASSERTS_WB_OptionSwitcher_Theme2_C_OnKeyDown;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "BP_FluidSim_01_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_FluidSim_01.BP_FluidSim_01_C.ExecuteUbergraph_BP_FluidSim_01
 // (Final, UbergraphFunction, HasDefaults)
@@ -623,5 +622,5 @@ void ABP_FluidSim_01_C::Get_Frames_Since_Last_Active_Force()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

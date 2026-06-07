@@ -14,8 +14,7 @@
 #include "BP_DroppedItem_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_DroppedItem_LiquidPain.BP_DroppedItem_LiquidPain_C
 // 0x0030 (0x02A0 - 0x0270)
@@ -53,5 +52,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_DroppedItem_LiquidPain_C;
 
-}
-
+SDK_NAMESPACE_END

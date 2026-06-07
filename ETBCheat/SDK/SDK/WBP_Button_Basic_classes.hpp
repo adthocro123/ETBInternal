@@ -10,33 +10,32 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
 #include "EModifierKeys_structs.hpp"
+#include "SlateCore_structs.hpp"
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WBP_Button_Basic.WBP_Button_Basic_C
-// 0x0310 (0x0570 - 0x0260)
+// 0x0310 (0x0580 - 0x0270)
 class UWBP_Button_Basic_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0260(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UTextBlock*                             ButtonText;                                        // 0x0268(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UButton*                                KeyboardButton;                                    // 0x0270(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   CurrentText;                                       // 0x0278(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
-	class FText                                   LowercaseText;                                     // 0x0290(0x0018)(Edit, BlueprintVisible)
-	class FText                                   UppercaseText;                                     // 0x02A8(0x0018)(Edit, BlueprintVisible)
-	class UWidgetInteractionComponent*            WidgetInteractor;                                  // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(class FText ButtonText, EModifierKeys Modifier)> ButtonPressed;    // 0x02C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class FText                                   SecondaryText;                                     // 0x02D8(0x0018)(Edit, BlueprintVisible)
-	EModifierKeys                                 ModifierKey;                                       // 0x02F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bUseCustomStyle;                                   // 0x02F1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2F2[0x6];                                      // 0x02F2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FButtonStyle                           CustomStyle;                                       // 0x02F8(0x0278)(Edit, BlueprintVisible)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0270(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             ButtonText;                                        // 0x0278(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UButton*                                KeyboardButton;                                    // 0x0280(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FText                                   CurrentText;                                       // 0x0288(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class FText                                   LowercaseText;                                     // 0x02A0(0x0018)(Edit, BlueprintVisible)
+	class FText                                   UppercaseText;                                     // 0x02B8(0x0018)(Edit, BlueprintVisible)
+	class UWidgetInteractionComponent*            WidgetInteractor;                                  // 0x02D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(class FText ButtonText, EModifierKeys Modifier)> ButtonPressed;    // 0x02D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	class FText                                   SecondaryText;                                     // 0x02E8(0x0018)(Edit, BlueprintVisible)
+	EModifierKeys                                 ModifierKey;                                       // 0x0300(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bUseCustomStyle;                                   // 0x0301(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_302[0x6];                                      // 0x0302(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FButtonStyle                           CustomStyle;                                       // 0x0308(0x0278)(Edit, BlueprintVisible)
 
 public:
 	void ExecuteUbergraph_WBP_Button_Basic(int32 EntryPoint);
@@ -69,5 +68,4 @@ public:
 };
 DUMPER7_ASSERTS_UWBP_Button_Basic_C;
 
-}
-
+SDK_NAMESPACE_END

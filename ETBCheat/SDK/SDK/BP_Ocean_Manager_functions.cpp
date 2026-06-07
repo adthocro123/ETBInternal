@@ -14,8 +14,7 @@
 #include "BP_Ocean_Manager_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Ocean_Manager.BP_Ocean_Manager_C.ExecuteUbergraph_BP_Ocean_Manager
 // (Final, UbergraphFunction, HasDefaults)
@@ -251,5 +250,5 @@ void ABP_Ocean_Manager_C::Find_Target_Player(class ABPCharacter_Demo_C** TargetP
 		*TargetPlayer = Parms.TargetPlayer;
 }
 
-}
 
+SDK_NAMESPACE_END

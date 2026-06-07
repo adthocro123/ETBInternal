@@ -14,8 +14,7 @@
 #include "InteractiveGrassManager_BP_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function InteractiveGrassManager_BP.InteractiveGrassManager_BP_C.ExecuteUbergraph_InteractiveGrassManager_BP
 // (Final, UbergraphFunction, HasDefaults)
@@ -183,11 +182,11 @@ void AInteractiveGrassManager_BP_C::WindDirectionChanger__FinishedFunc()
 // const struct FVector&                   normalIfNotUnderCursor                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FVector&                   minScale                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FVector&                   MaxScale                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FFoliageToSpawn_Struct&    foliageToSpawn                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FFoliageToSpawn_Struct&    FoliageToSpawn                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    fromCluster                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // bool                                    clusterLastIndex                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void AInteractiveGrassManager_BP_C::SpawnFoliage(bool spawnUnderCursor, const struct FVector& locationIfNotUnderCursor, const struct FVector& normalIfNotUnderCursor, const struct FVector& minScale, const struct FVector& MaxScale, const struct FFoliageToSpawn_Struct& foliageToSpawn, bool fromCluster, bool clusterLastIndex)
+void AInteractiveGrassManager_BP_C::SpawnFoliage(bool spawnUnderCursor, const struct FVector& locationIfNotUnderCursor, const struct FVector& normalIfNotUnderCursor, const struct FVector& minScale, const struct FVector& MaxScale, const struct FFoliageToSpawn_Struct& FoliageToSpawn, bool fromCluster, bool clusterLastIndex)
 {
 	static class UFunction* Func = nullptr;
 
@@ -201,7 +200,7 @@ void AInteractiveGrassManager_BP_C::SpawnFoliage(bool spawnUnderCursor, const st
 	Parms.normalIfNotUnderCursor = std::move(normalIfNotUnderCursor);
 	Parms.minScale = std::move(minScale);
 	Parms.MaxScale = std::move(MaxScale);
-	Parms.foliageToSpawn = std::move(foliageToSpawn);
+	Parms.FoliageToSpawn = std::move(FoliageToSpawn);
 	Parms.fromCluster = fromCluster;
 	Parms.clusterLastIndex = clusterLastIndex;
 
@@ -217,13 +216,13 @@ void AInteractiveGrassManager_BP_C::SpawnFoliage(bool spawnUnderCursor, const st
 // float                                   sizeY_                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // float                                   density_                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // float                                   nonUniformDistribution                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// const struct FFoliageToSpawn_Struct&    foliageToSpawn                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FFoliageToSpawn_Struct&    FoliageToSpawn                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FVector&                   minScale                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FVector&                   MaxScale                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    useGrassSpawnAreas                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // class AGrassSpawnArea_BP_C*             grassSpawnArea                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void AInteractiveGrassManager_BP_C::SpawnFoliageCluster(const struct FVector& CenterLocation, float sizeX_, float sizeY_, float density_, float nonUniformDistribution, const struct FFoliageToSpawn_Struct& foliageToSpawn, const struct FVector& minScale, const struct FVector& MaxScale, bool useGrassSpawnAreas, class AGrassSpawnArea_BP_C* grassSpawnArea)
+void AInteractiveGrassManager_BP_C::SpawnFoliageCluster(const struct FVector& CenterLocation, float sizeX_, float sizeY_, float density_, float nonUniformDistribution, const struct FFoliageToSpawn_Struct& FoliageToSpawn, const struct FVector& minScale, const struct FVector& MaxScale, bool useGrassSpawnAreas, class AGrassSpawnArea_BP_C* grassSpawnArea)
 {
 	static class UFunction* Func = nullptr;
 
@@ -237,7 +236,7 @@ void AInteractiveGrassManager_BP_C::SpawnFoliageCluster(const struct FVector& Ce
 	Parms.sizeY_ = sizeY_;
 	Parms.density_ = density_;
 	Parms.nonUniformDistribution = nonUniformDistribution;
-	Parms.foliageToSpawn = std::move(foliageToSpawn);
+	Parms.FoliageToSpawn = std::move(FoliageToSpawn);
 	Parms.minScale = std::move(minScale);
 	Parms.MaxScale = std::move(MaxScale);
 	Parms.useGrassSpawnAreas = useGrassSpawnAreas;
@@ -359,5 +358,5 @@ void AInteractiveGrassManager_BP_C::PopulateMapWithGrass()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

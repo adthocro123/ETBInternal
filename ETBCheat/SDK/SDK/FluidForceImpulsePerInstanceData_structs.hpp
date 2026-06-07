@@ -13,8 +13,7 @@
 #include "FluidForceImpulse_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct FluidForceImpulsePerInstanceData.FluidForceImpulsePerInstanceData
 // 0x0060 (0x0060 - 0x0000)
@@ -28,5 +27,4 @@ public:
 };
 DUMPER7_ASSERTS_FFluidForceImpulsePerInstanceData;
 
-}
-
+SDK_NAMESPACE_END

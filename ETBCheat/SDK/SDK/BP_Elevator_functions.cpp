@@ -14,8 +14,7 @@
 #include "BP_Elevator_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Elevator.BP_Elevator_C.ExecuteUbergraph_BP_Elevator
 // (Final, UbergraphFunction, HasDefaults)
@@ -160,5 +159,5 @@ void ABP_Elevator_C::OnRep_Is_Moving_()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

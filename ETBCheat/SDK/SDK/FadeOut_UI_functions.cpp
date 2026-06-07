@@ -14,8 +14,7 @@
 #include "FadeOut_UI_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function FadeOut_UI.FadeOut_UI_C.ExecuteUbergraph_FadeOut_UI
 // (Final, UbergraphFunction)
@@ -64,5 +63,5 @@ void UFadeOut_UI_C::CanClose()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

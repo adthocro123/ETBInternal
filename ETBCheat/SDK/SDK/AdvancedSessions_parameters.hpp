@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "OnlineSubsystemUtils_structs.hpp"
 #include "AdvancedSessions_structs.hpp"
+#include "OnlineSubsystemUtils_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function AdvancedSessions.AccountUpgradeDialogCallbackProxy.ShowAccountUpgradeUI
 // 0x0038 (0x0038 - 0x0000)
@@ -279,8 +279,9 @@ DUMPER7_ASSERTS_AdvancedFriendsGameInstance_OnPlayerTalkingStateChanged;
 struct AdvancedFriendsGameInstance_OnSessionInviteAccepted final
 {
 public:
-	int32                                         LocalPlayerNum;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bWasSuccessful;                                    // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         LocalPlayerNum;                                    // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FBPUniqueNetId                         PersonInvited;                                     // 0x0008(0x0028)(Parm, NativeAccessSpecifierPublic)
 	struct FBlueprintSessionResult                SessionToJoin;                                     // 0x0030(0x0108)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
@@ -294,7 +295,7 @@ public:
 	int32                                         LocalPlayerNum;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBPUniqueNetId                         PersonInviting;                                    // 0x0008(0x0028)(Parm, NativeAccessSpecifierPublic)
-	class FString                                 AppId;                                             // 0x0030(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 AppID;                                             // 0x0030(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FBlueprintSessionResult                SessionToJoin;                                     // 0x0040(0x0108)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_AdvancedFriendsGameInstance_OnSessionInviteReceived;
@@ -1223,5 +1224,5 @@ public:
 };
 DUMPER7_ASSERTS_UpdateSessionCallbackProxyAdvanced_UpdateSession;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

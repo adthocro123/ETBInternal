@@ -13,8 +13,7 @@
 #include "BP_DroppedItem_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_DroppedItem_LiDAR.BP_DroppedItem_LiDAR_C
 // 0x0010 (0x0280 - 0x0270)
@@ -40,5 +39,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_DroppedItem_LiDAR_C;
 
-}
-
+SDK_NAMESPACE_END

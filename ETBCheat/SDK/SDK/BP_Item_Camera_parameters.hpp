@@ -13,8 +13,8 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_Item_Camera.BP_Item_Camera_C.ExecuteUbergraph_BP_Item_Camera
 // 0x02E8 (0x02E8 - 0x0000)
@@ -342,5 +342,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_Item_Camera_C_SetMaterial;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "BP_FireworkProjectile_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_FireworkProjectile.BP_FireworkProjectile_C.ExecuteUbergraph_BP_FireworkProjectile
 // (Final, UbergraphFunction, HasDefaults)
@@ -78,5 +77,5 @@ void ABP_FireworkProjectile_C::ReceiveBeginPlay()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

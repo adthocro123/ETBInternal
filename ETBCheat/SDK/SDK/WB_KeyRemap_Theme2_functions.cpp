@@ -14,8 +14,7 @@
 #include "WB_KeyRemap_Theme2_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WB_KeyRemap_Theme2.WB_KeyRemap_Theme2_C.ExecuteUbergraph_WB_KeyRemap_Theme2
 // (Final, UbergraphFunction, HasDefaults)
@@ -71,21 +70,21 @@ void UWB_KeyRemap_Theme2_C::ToggleFocus(bool IsFocused)
 }
 
 
-// Function WB_KeyRemap_Theme2.WB_KeyRemap_Theme2_C.ToggleHover
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WB_KeyRemap_Theme2.WB_KeyRemap_Theme2_C.BndEvt__WB_KeyRemap_InputKeySelector_K2Node_ComponentBoundEvent_0_OnKeySelected__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// bool                                    IsHovered_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const struct FInputChord&               SelectedKey                                            (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void UWB_KeyRemap_Theme2_C::ToggleHover(bool IsHovered_0)
+void UWB_KeyRemap_Theme2_C::BndEvt__WB_KeyRemap_InputKeySelector_K2Node_ComponentBoundEvent_0_OnKeySelected__DelegateSignature(const struct FInputChord& SelectedKey)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WB_KeyRemap_Theme2_C", "ToggleHover");
+		Func = Class->GetFunction("WB_KeyRemap_Theme2_C", "BndEvt__WB_KeyRemap_InputKeySelector_K2Node_ComponentBoundEvent_0_OnKeySelected__DelegateSignature");
 
-	Params::WB_KeyRemap_Theme2_C_ToggleHover Parms{};
+	Params::WB_KeyRemap_Theme2_C_BndEvt__WB_KeyRemap_InputKeySelector_K2Node_ComponentBoundEvent_0_OnKeySelected__DelegateSignature Parms{};
 
-	Parms.IsHovered_0 = IsHovered_0;
+	Parms.SelectedKey = std::move(SelectedKey);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -111,21 +110,21 @@ void UWB_KeyRemap_Theme2_C::ToggleEnabled(bool IsEnabled)
 }
 
 
-// Function WB_KeyRemap_Theme2.WB_KeyRemap_Theme2_C.BndEvt__WB_KeyRemap_InputKeySelector_K2Node_ComponentBoundEvent_0_OnKeySelected__DelegateSignature
-// (BlueprintEvent)
+// Function WB_KeyRemap_Theme2.WB_KeyRemap_Theme2_C.ToggleHover
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FInputChord&               SelectedKey                                            (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// bool                                    IsHovered_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void UWB_KeyRemap_Theme2_C::BndEvt__WB_KeyRemap_InputKeySelector_K2Node_ComponentBoundEvent_0_OnKeySelected__DelegateSignature(const struct FInputChord& SelectedKey)
+void UWB_KeyRemap_Theme2_C::ToggleHover(bool IsHovered_0)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WB_KeyRemap_Theme2_C", "BndEvt__WB_KeyRemap_InputKeySelector_K2Node_ComponentBoundEvent_0_OnKeySelected__DelegateSignature");
+		Func = Class->GetFunction("WB_KeyRemap_Theme2_C", "ToggleHover");
 
-	Params::WB_KeyRemap_Theme2_C_BndEvt__WB_KeyRemap_InputKeySelector_K2Node_ComponentBoundEvent_0_OnKeySelected__DelegateSignature Parms{};
+	Params::WB_KeyRemap_Theme2_C_ToggleHover Parms{};
 
-	Parms.SelectedKey = std::move(SelectedKey);
+	Parms.IsHovered_0 = IsHovered_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -144,5 +143,29 @@ void UWB_KeyRemap_Theme2_C::Update_Key_Value()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
+
+// Function WB_KeyRemap_Theme2.WB_KeyRemap_Theme2_C.FindMatchingKeyInput_Index
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FKey&                      Key                                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// int32&                                  OutMatchingIndex                                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWB_KeyRemap_Theme2_C::FindMatchingKeyInput_Index(const struct FKey& Key, int32& OutMatchingIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WB_KeyRemap_Theme2_C", "FindMatchingKeyInput_Index");
+
+	Params::WB_KeyRemap_Theme2_C_FindMatchingKeyInput_Index Parms{};
+
+	Parms.Key = std::move(Key);
+	Parms.OutMatchingIndex = OutMatchingIndex;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	OutMatchingIndex = Parms.OutMatchingIndex;
 }
 
+
+SDK_NAMESPACE_END

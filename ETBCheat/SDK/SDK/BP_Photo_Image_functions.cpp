@@ -14,8 +14,7 @@
 #include "BP_Photo_Image_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Photo_Image.BP_Photo_Image_C.ExecuteUbergraph_BP_Photo_Image
 // (Final, UbergraphFunction)
@@ -90,5 +89,5 @@ void ABP_Photo_Image_C::UserConstructionScript()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

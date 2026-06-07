@@ -14,8 +14,7 @@
 #include "LevelSequence_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass ClimbSequence.SequenceDirector_C
 // 0x0008 (0x0040 - 0x0038)
@@ -44,5 +43,4 @@ public:
 };
 DUMPER7_ASSERTS_ClimbSequence__USequenceDirector_C;
 
-}
-
+SDK_NAMESPACE_END

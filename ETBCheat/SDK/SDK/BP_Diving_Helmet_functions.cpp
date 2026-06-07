@@ -14,8 +14,7 @@
 #include "BP_Diving_Helmet_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Diving_Helmet.BP_Diving_Helmet_C.ExecuteUbergraph_BP_Diving_Helmet
 // (Final, UbergraphFunction, HasDefaults)
@@ -234,5 +233,5 @@ void ABP_Diving_Helmet_C::UseItem()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

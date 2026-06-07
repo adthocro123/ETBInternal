@@ -14,8 +14,7 @@
 #include "XShip_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function XShip.XShipComponent.DisableAllEngines
 // (Final, Native, Public, BlueprintCallable)
@@ -326,5 +325,5 @@ class UXShipComponent* AXShipPawn::GetXShipComponent()
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

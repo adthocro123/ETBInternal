@@ -14,8 +14,7 @@
 #include "UI_Menu_Lobby_Switcher_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function UI_Menu_Lobby_Switcher.UI_Menu_Lobby_Switcher_C.ExecuteUbergraph_UI_Menu_Lobby_Switcher
 // (Final, UbergraphFunction, HasDefaults)
@@ -32,6 +31,26 @@ void UUI_Menu_Lobby_Switcher_C::ExecuteUbergraph_UI_Menu_Lobby_Switcher(int32 En
 	Params::UI_Menu_Lobby_Switcher_C_ExecuteUbergraph_UI_Menu_Lobby_Switcher Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function UI_Menu_Lobby_Switcher.UI_Menu_Lobby_Switcher_C.ManualSetCurrentIndex
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   CurrentModeIndex_0                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UUI_Menu_Lobby_Switcher_C::ManualSetCurrentIndex(int32 CurrentModeIndex_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UI_Menu_Lobby_Switcher_C", "ManualSetCurrentIndex");
+
+	Params::UI_Menu_Lobby_Switcher_C_ManualSetCurrentIndex Parms{};
+
+	Parms.CurrentModeIndex_0 = CurrentModeIndex_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -173,20 +192,6 @@ void UUI_Menu_Lobby_Switcher_C::Construct()
 }
 
 
-// Function UI_Menu_Lobby_Switcher.UI_Menu_Lobby_Switcher_C.UpdateButtons
-// (BlueprintCallable, BlueprintEvent)
-
-void UUI_Menu_Lobby_Switcher_C::UpdateButtons()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Menu_Lobby_Switcher_C", "UpdateButtons");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function UI_Menu_Lobby_Switcher.UI_Menu_Lobby_Switcher_C.BndEvt__UI_Menu_Lobby_Switcher_Btn_Right_K2Node_ComponentBoundEvent_1_OnClick__DelegateSignature
 // (BlueprintEvent)
 
@@ -210,6 +215,20 @@ void UUI_Menu_Lobby_Switcher_C::BndEvt__UI_Menu_Lobby_Switcher_Btn_Left_K2Node_C
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("UI_Menu_Lobby_Switcher_C", "BndEvt__UI_Menu_Lobby_Switcher_Btn_Left_K2Node_ComponentBoundEvent_0_OnClick__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function UI_Menu_Lobby_Switcher.UI_Menu_Lobby_Switcher_C.UpdateButtons
+// (BlueprintCallable, BlueprintEvent)
+
+void UUI_Menu_Lobby_Switcher_C::UpdateButtons()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UI_Menu_Lobby_Switcher_C", "UpdateButtons");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -260,5 +279,5 @@ struct FEventReply UUI_Menu_Lobby_Switcher_C::OnPreviewKeyDown(const struct FGeo
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

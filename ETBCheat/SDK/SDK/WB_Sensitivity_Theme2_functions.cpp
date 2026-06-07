@@ -14,8 +14,7 @@
 #include "WB_Sensitivity_Theme2_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WB_Sensitivity_Theme2.WB_Sensitivity_Theme2_C.ExecuteUbergraph_WB_Sensitivity_Theme2
 // (Final, UbergraphFunction)
@@ -189,5 +188,5 @@ struct FEventReply UWB_Sensitivity_Theme2_C::OnPreviewKeyDown(const struct FGeom
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

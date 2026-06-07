@@ -14,8 +14,7 @@
 #include "Scoreboard_UI_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function Scoreboard_UI.Scoreboard_UI_C.ExecuteUbergraph_Scoreboard_UI
 // (Final, UbergraphFunction, HasDefaults)
@@ -141,5 +140,5 @@ void UScoreboard_UI_C::FocusChildAtIndex(int32 Index_0)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

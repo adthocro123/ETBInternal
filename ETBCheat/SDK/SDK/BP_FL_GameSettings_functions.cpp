@@ -14,8 +14,7 @@
 #include "BP_FL_GameSettings_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_FL_GameSettings.BP_FL_GameSettings_C.Set_AudioSettings
 // (Static, Public, BlueprintCallable, BlueprintEvent)
@@ -156,5 +155,5 @@ void UBP_FL_GameSettings_C::LoadSettings(class UObject* __WorldContext, class UB
 		*SaveGame = Parms.SaveGame;
 }
 
-}
 
+SDK_NAMESPACE_END

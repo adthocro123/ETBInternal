@@ -14,8 +14,7 @@
 #include "AudioMixer_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function AudioMixer.SynthComponent.SetLowPassFilterEnabled
 // (Final, Native, Public, BlueprintCallable)
@@ -204,100 +203,6 @@ bool USynthComponent::IsPlaying() const
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
-}
-
-
-// Function AudioMixer.SubmixEffectDynamicsProcessorPreset.ResetKey
-// (Final, Native, Public, BlueprintCallable)
-
-void USubmixEffectDynamicsProcessorPreset::ResetKey()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SubmixEffectDynamicsProcessorPreset", "ResetKey");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AudioMixer.SubmixEffectDynamicsProcessorPreset.SetAudioBus
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UAudioBus*                        AudioBus                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USubmixEffectDynamicsProcessorPreset::SetAudioBus(class UAudioBus* AudioBus)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SubmixEffectDynamicsProcessorPreset", "SetAudioBus");
-
-	Params::SubmixEffectDynamicsProcessorPreset_SetAudioBus Parms{};
-
-	Parms.AudioBus = AudioBus;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AudioMixer.SubmixEffectDynamicsProcessorPreset.SetExternalSubmix
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class USoundSubmix*                     Submix                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void USubmixEffectDynamicsProcessorPreset::SetExternalSubmix(class USoundSubmix* Submix)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SubmixEffectDynamicsProcessorPreset", "SetExternalSubmix");
-
-	Params::SubmixEffectDynamicsProcessorPreset_SetExternalSubmix Parms{};
-
-	Parms.Submix = Submix;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AudioMixer.SubmixEffectDynamicsProcessorPreset.SetSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const struct FSubmixEffectDynamicsProcessorSettings&Settings_0                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-
-void USubmixEffectDynamicsProcessorPreset::SetSettings(const struct FSubmixEffectDynamicsProcessorSettings& Settings_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SubmixEffectDynamicsProcessorPreset", "SetSettings");
-
-	Params::SubmixEffectDynamicsProcessorPreset_SetSettings Parms{};
-
-	Parms.Settings_0 = std::move(Settings_0);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
 }
 
 
@@ -2081,6 +1986,100 @@ float UQuartzClockHandle::GetTicksPerSecond(const class UObject* WorldContextObj
 }
 
 
+// Function AudioMixer.SubmixEffectDynamicsProcessorPreset.ResetKey
+// (Final, Native, Public, BlueprintCallable)
+
+void USubmixEffectDynamicsProcessorPreset::ResetKey()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SubmixEffectDynamicsProcessorPreset", "ResetKey");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioMixer.SubmixEffectDynamicsProcessorPreset.SetAudioBus
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UAudioBus*                        AudioBus                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USubmixEffectDynamicsProcessorPreset::SetAudioBus(class UAudioBus* AudioBus)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SubmixEffectDynamicsProcessorPreset", "SetAudioBus");
+
+	Params::SubmixEffectDynamicsProcessorPreset_SetAudioBus Parms{};
+
+	Parms.AudioBus = AudioBus;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioMixer.SubmixEffectDynamicsProcessorPreset.SetExternalSubmix
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class USoundSubmix*                     Submix                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USubmixEffectDynamicsProcessorPreset::SetExternalSubmix(class USoundSubmix* Submix)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SubmixEffectDynamicsProcessorPreset", "SetExternalSubmix");
+
+	Params::SubmixEffectDynamicsProcessorPreset_SetExternalSubmix Parms{};
+
+	Parms.Submix = Submix;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioMixer.SubmixEffectDynamicsProcessorPreset.SetSettings
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FSubmixEffectDynamicsProcessorSettings&Settings_0                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+
+void USubmixEffectDynamicsProcessorPreset::SetSettings(const struct FSubmixEffectDynamicsProcessorSettings& Settings_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SubmixEffectDynamicsProcessorPreset", "SetSettings");
+
+	Params::SubmixEffectDynamicsProcessorPreset_SetSettings Parms{};
+
+	Parms.Settings_0 = std::move(Settings_0);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function AudioMixer.SubmixEffectSubmixEQPreset.SetSettings
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -2703,5 +2702,5 @@ bool UQuartzSubsystem::IsQuartzEnabled()
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -15,8 +15,7 @@
 #include "AdvancedSessions_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Old_Instance.Old_Instance_C
 // 0x0070 (0x0298 - 0x0228)
@@ -40,7 +39,7 @@ public:
 	void ExecuteUbergraph_Old_Instance(int32 EntryPoint);
 	void UnlockAchievement(class FName AchievementName);
 	void OnPlayerTalkingStateChanged(const struct FBPUniqueNetId& PlayerId, bool bIsTalking);
-	void OnSessionInviteAccepted(int32 LocalPlayerNum, const struct FBPUniqueNetId& PersonInvited, const struct FBlueprintSessionResult& SessionToJoin);
+	void OnSessionInviteAccepted(bool bWasSuccessful, int32 LocalPlayerNum, const struct FBPUniqueNetId& PersonInvited, const struct FBlueprintSessionResult& SessionToJoin);
 	void ReceiveInit();
 	void Initialize_AudioSettings();
 	void ResetAfterErrorFocus(class APlayerController* PlayerController, class UWidget* Widget);
@@ -82,5 +81,4 @@ public:
 };
 DUMPER7_ASSERTS_UOld_Instance_C;
 
-}
-
+SDK_NAMESPACE_END

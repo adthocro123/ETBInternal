@@ -15,36 +15,41 @@
 #include "Backrooms_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass MP_PlayerController.MP_PlayerController_C
-// 0x0048 (0x05D0 - 0x0588)
+// 0x0050 (0x0670 - 0x0620)
 class AMP_PlayerController_C final : public ABP_BasePlayerController_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_MP_PlayerController_C;              // 0x0588(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UVoipManagerComponent*                  VoipManager;                                       // 0x0590(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UChatComponent_C*                       Chat_Component;                                    // 0x0598(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UScoreboard_UI_C*                       ScoreboardUI_Ref;                                  // 0x05A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWB_SettingsPanel_Theme2_C*             SettingsUI_Ref;                                    // 0x05A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USubtitleTextWB_C*                      SubtitleUI_Ref;                                    // 0x05B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USpectator_UI_C*                        SpectatorUI_Ref;                                   // 0x05B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UW_VOIPInGame_C*                        W_VOIPHUDRef;                                      // 0x05C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsPushingToTalk;                                   // 0x05C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_612[0x6];                                      // 0x0612(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPointerToUberGraphFrame               UberGraphFrame_MP_PlayerController_C;              // 0x0618(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UFancyVoipManagerComponent*             FancyVoipManager;                                  // 0x0620(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UChatComponent_C*                       Chat_Component;                                    // 0x0628(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UScoreboard_UI_C*                       ScoreboardUI_Ref;                                  // 0x0630(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWB_SettingsPanel_Theme2_C*             SettingsUI_Ref;                                    // 0x0638(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USubtitleTextWB_C*                      SubtitleUI_Ref;                                    // 0x0640(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USpectator_UI_C*                        SpectatorUI_Ref;                                   // 0x0648(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UW_VOIP_PlayerList_C*                   VOIPPlayerList;                                    // 0x0650(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UW_VOIPInGame_C*                        W_VOIPHUDRef;                                      // 0x0658(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsPushingToTalk;                                   // 0x0660(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_661[0x7];                                      // 0x0661(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWB_SimpleNonModalMessageQueueDisplay_C* NonmodalWidget;                                   // 0x0668(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_MP_PlayerController(int32 EntryPoint);
-	void ReceiveBeginPlay();
-	void ClientHUDInit();
+	void HandleHostConnectionLoss();
+	void ResetInputModeToDefault(class UWidget* PreviousFocusedWidget);
+	void ShowNonModalMessage(const class FText& Message);
 	void OC_CompleteMission(const struct FMissionStructure& Mission, bool Failed);
+	void Client_RecieveVoiceData(class ABPCharacter_Demo_C* Player_0, const TArray<uint8>& Voice, bool bUseRadio, const struct FBPUniqueNetId& Sender);
 	void CaveHint();
+	void SRV_SendVoiceData(const TArray<uint8>& CompressedVoiceData, bool bUseRadio, bool IsUnderwater, const struct FBPUniqueNetId& Sender);
 	void VR_Subtitle(const struct FHE_SubtitleSeq& Subtitle);
 	void OnPlayerTravel();
 	void ValveHint();
 	void ShowEndCutscene();
 	void ShowCameraFade();
-	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
 	void ScoreboardDelay();
 	void OC_KickedFromLobby();
 	void SetSpawnRotation(const struct FRotator& Rotation);
@@ -53,35 +58,36 @@ public:
 	void UpdateScoreboard();
 	void ToggleScoreboard(bool Pressed);
 	void OC_RemoveKillScreen();
-	void OC_SetSpectating(const class FString& Spectating);
+	void OC_SetSpectating(const class FString& Spectating, EFancyPlatform PlayerPlatform);
 	void StartSpectating();
+	void BndEvt__MP_PlayerController_FancyVoipManager_K2Node_ComponentBoundEvent_0_VoiceGenerated__DelegateSignature(const TArray<uint8>& VoiceData, const float MicLevel);
+	void Client_ReceiveVoiceDataViaInteractable(class AInteractablePawn* InteractablePawn, const TArray<uint8>& Voice, bool bUseRadio, const struct FBPUniqueNetId& Sender);
 	void Unlock_HUB();
-	void PlayNoiseAtLocation();
-	void OC_SetupVoice();
-	void BndEvt__VoipManager_K2Node_ComponentBoundEvent_1_VoiceGenerated__DelegateSignature(const TArray<uint8>& VoiceData, const float MicLevel);
-	void SRV_SendVoiceData(const TArray<uint8>& CompressedVoiceData, bool bUseRadio, bool IsUnderwater);
-	void BndEvt__MP_PlayerController_VoipManager_K2Node_ComponentBoundEvent_2_PlayerStartTalking__DelegateSignature();
-	void BndEvt__MP_PlayerController_VoipManager_K2Node_ComponentBoundEvent_0_PlayerStopTalking__DelegateSignature();
-	void Client_RecieveVoiceData(class ABPCharacter_Demo_C* Player_0, const TArray<uint8>& Voice, bool bUseRadio, bool IsUnderwater);
 	void UpdatePushToTalk();
+	void PlayNoiseAtLocation();
 	void DeleteVoice();
-	void InpActEvt_PlayerList_K2Node_InputActionEvent_0(const struct FKey& Key);
-	void InpActEvt_PlayerList_K2Node_InputActionEvent_1(const struct FKey& Key);
+	void OC_SetupVoice();
+	void OnSuccess_D92EF3EE4A6E7A975F8BCA9D183D866E();
+	void OnFailure_D92EF3EE4A6E7A975F8BCA9D183D866E();
 	void OnSuccess_BF5727364B76E93ECB1A5EB5C2750E7E();
 	void OnFailure_BF5727364B76E93ECB1A5EB5C2750E7E();
-	void InpActEvt_Chat_K2Node_InputActionEvent_2(const struct FKey& Key);
+	void InpActEvt_Chat_K2Node_InputActionEvent_0(const struct FKey& Key);
 	void OnSuccess_C095D11342852DAE8D2D159151BDAA40();
 	void OnFailure_C095D11342852DAE8D2D159151BDAA40();
-	void InpActEvt_Settings_K2Node_InputActionEvent_3(const struct FKey& Key);
-	void InpActEvt_Talk_K2Node_InputActionEvent_4(const struct FKey& Key);
-	void InpActEvt_Talk_K2Node_InputActionEvent_5(const struct FKey& Key);
+	void InpActEvt_Settings_K2Node_InputActionEvent_1(const struct FKey& Key);
+	void InpActEvt_Talk_K2Node_InputActionEvent_2(const struct FKey& Key);
+	void InpActEvt_Talk_K2Node_InputActionEvent_3(const struct FKey& Key);
 	void OpenVRSettings();
 	void TogglePushToTalk(bool Activated);
-	void GetCanTalk(bool* CanTalk);
+	void GetGameplayAllowTalking(bool* CanTalk);
 	void GetUsingRadio(bool* UsingRadio);
 	void GetUsingPushToTalk(bool* UsingPushToTalk);
 	void AddMissionStructUIData(const struct FMissionStructure& MissionStructureIn, bool Failed, struct FMissionStructure* MissionStructureOut);
 	void SaveMissionProgress(const struct FMissionStructure& MissionStructure);
+	void CreateVoipPlayerList();
+	void ReceiveBeginPlay();
+	void ClientHUDInit();
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
 
 public:
 	static class UClass* StaticClass()
@@ -99,5 +105,4 @@ public:
 };
 DUMPER7_ASSERTS_AMP_PlayerController_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum LocationServicesBPLibrary.ELocationAccuracy
 // NumValues: 0x0007
@@ -41,5 +40,4 @@ public:
 };
 DUMPER7_ASSERTS_FLocationServicesData;
 
-}
-
+SDK_NAMESPACE_END

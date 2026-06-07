@@ -13,8 +13,8 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_Underwater.BP_Underwater_C.UserConstructionScript
 // 0x019C (0x019C - 0x0000)
@@ -28,5 +28,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_Underwater_C_UserConstructionScript;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

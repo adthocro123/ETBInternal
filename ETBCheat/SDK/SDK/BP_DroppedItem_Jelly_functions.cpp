@@ -14,8 +14,7 @@
 #include "BP_DroppedItem_Jelly_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_DroppedItem_Jelly.BP_DroppedItem_Jelly_C.ExecuteUbergraph_BP_DroppedItem_Jelly
 // (Final, UbergraphFunction, HasDefaults)
@@ -118,5 +117,5 @@ void ABP_DroppedItem_Jelly_C::Lerp__FinishedFunc()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

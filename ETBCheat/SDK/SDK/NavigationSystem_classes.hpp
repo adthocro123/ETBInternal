@@ -10,15 +10,14 @@
 
 #include "Basic.hpp"
 
+#include "NavigationSystem_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "NavigationSystem_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class NavigationSystem.NavigationData
 // 0x0208 (0x0428 - 0x0220)
@@ -1168,5 +1167,4 @@ public:
 };
 DUMPER7_ASSERTS_URecastNavMeshDataChunk;
 
-}
-
+SDK_NAMESPACE_END

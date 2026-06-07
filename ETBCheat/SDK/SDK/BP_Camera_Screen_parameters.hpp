@@ -13,8 +13,8 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_Camera_Screen.BP_Camera_Screen_C.ExecuteUbergraph_BP_Camera_Screen
 // 0x0048 (0x0048 - 0x0000)
@@ -73,5 +73,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_Camera_Screen_C_SetFirstTexture;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

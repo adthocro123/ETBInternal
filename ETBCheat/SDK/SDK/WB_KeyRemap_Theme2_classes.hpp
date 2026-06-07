@@ -11,34 +11,35 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "Backrooms_structs.hpp"
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass WB_KeyRemap_Theme2.WB_KeyRemap_Theme2_C
-// 0x0028 (0x0288 - 0x0260)
+// 0x0028 (0x0298 - 0x0270)
 class UWB_KeyRemap_Theme2_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0260(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UBorder*                                FocusBorder;                                       // 0x0268(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UInputKeySelector*                      InputKeySelector;                                  // 0x0270(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	int32                                         KeyInput_Index;                                    // 0x0278(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   InputAction_Name;                                  // 0x027C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsKeyboardKey;                                     // 0x0284(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          IsGamepadKey;                                      // 0x0285(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          LockOnKeySelectedEvent;                            // 0x0286(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0270(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UBorder*                                FocusBorder;                                       // 0x0278(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UInputKeySelector*                      InputKeySelector;                                  // 0x0280(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	int32                                         KeyInput_Index;                                    // 0x0288(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   InputAction_Name;                                  // 0x028C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsKeyboardKey;                                     // 0x0294(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          IsGamepadKey;                                      // 0x0295(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          LockOnKeySelectedEvent;                            // 0x0296(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_WB_KeyRemap_Theme2(int32 EntryPoint);
 	void OnInitialized();
 	void ToggleFocus(bool IsFocused);
-	void ToggleHover(bool IsHovered_0);
-	void ToggleEnabled(bool IsEnabled);
 	void BndEvt__WB_KeyRemap_InputKeySelector_K2Node_ComponentBoundEvent_0_OnKeySelected__DelegateSignature(const struct FInputChord& SelectedKey);
+	void ToggleEnabled(bool IsEnabled);
+	void ToggleHover(bool IsHovered_0);
 	void Update_Key_Value();
+	void FindMatchingKeyInput_Index(const struct FKey& Key, int32& OutMatchingIndex);
 
 public:
 	static class UClass* StaticClass()
@@ -56,5 +57,4 @@ public:
 };
 DUMPER7_ASSERTS_UWB_KeyRemap_Theme2_C;
 
-}
-
+SDK_NAMESPACE_END

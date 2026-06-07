@@ -14,8 +14,7 @@
 #include "BP_DroppedItem_LiquidPain_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_DroppedItem_LiquidPain.BP_DroppedItem_LiquidPain_C.ExecuteUbergraph_BP_DroppedItem_LiquidPain
 // (Final, UbergraphFunction)
@@ -78,5 +77,5 @@ void ABP_DroppedItem_LiquidPain_C::Flicker__FinishedFunc()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

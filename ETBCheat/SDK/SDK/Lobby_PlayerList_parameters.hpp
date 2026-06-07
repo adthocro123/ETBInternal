@@ -14,8 +14,8 @@
 #include "S_ConnectedPlayer_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function Lobby_PlayerList.Lobby_PlayerList_C.ExecuteUbergraph_Lobby_PlayerList
 // 0x0018 (0x0018 - 0x0000)
@@ -87,5 +87,5 @@ public:
 };
 DUMPER7_ASSERTS_Lobby_PlayerList_C_Update_PlayerCount;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

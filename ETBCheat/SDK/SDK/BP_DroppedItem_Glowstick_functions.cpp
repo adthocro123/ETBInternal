@@ -14,8 +14,7 @@
 #include "BP_DroppedItem_Glowstick_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_DroppedItem_Glowstick.BP_DroppedItem_Glowstick_C.ExecuteUbergraph_BP_DroppedItem_Glowstick
 // (Final, UbergraphFunction, HasDefaults)
@@ -64,5 +63,5 @@ void ABP_DroppedItem_Glowstick_C::ReceiveDestroyed()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

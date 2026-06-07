@@ -14,8 +14,7 @@
 #include "WB_Confirmation_PopUp_ResetSettings_Theme2_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WB_Confirmation_PopUp_ResetSettings_Theme2.WB_Confirmation_PopUp_ResetSettings_Theme2_C.ExecuteUbergraph_WB_Confirmation_PopUp_ResetSettings_Theme2
 // (Final, UbergraphFunction)
@@ -174,5 +173,5 @@ struct FEventReply UWB_Confirmation_PopUp_ResetSettings_Theme2_C::OnKeyDown(cons
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

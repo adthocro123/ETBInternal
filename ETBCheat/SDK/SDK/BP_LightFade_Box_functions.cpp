@@ -14,8 +14,7 @@
 #include "BP_LightFade_Box_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_LightFade_Box.BP_LightFade_Box_C.ExecuteUbergraph_BP_LightFade_Box
 // (Final, UbergraphFunction)
@@ -76,5 +75,5 @@ void ABP_LightFade_Box_C::ReceiveActorBeginOverlap(class AActor* OtherActor)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

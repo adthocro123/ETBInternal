@@ -14,8 +14,7 @@
 #include "UI_TheHubStats_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function UI_TheHubStats.UI_TheHubStats_C.ExecuteUbergraph_UI_TheHubStats
 // (Final, UbergraphFunction, HasDefaults)
@@ -423,5 +422,5 @@ struct FEventReply UUI_TheHubStats_C::OnMouseButtonUp(const struct FGeometry& My
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

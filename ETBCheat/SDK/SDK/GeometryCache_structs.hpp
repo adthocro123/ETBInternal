@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct GeometryCache.TrackRenderData
 // 0x0070 (0x0070 - 0x0000)
@@ -50,5 +49,4 @@ public:
 };
 DUMPER7_ASSERTS_FGeometryCacheMeshBatchInfo;
 
-}
-
+SDK_NAMESPACE_END

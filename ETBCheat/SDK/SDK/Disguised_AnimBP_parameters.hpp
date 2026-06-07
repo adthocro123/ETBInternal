@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "PhysicsCore_structs.hpp"
-#include "FootstepActionsEnum_structs.hpp"
 #include "Engine_structs.hpp"
+#include "FootstepActionsEnum_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "PhysicsCore_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function Disguised_AnimBP.Disguised_AnimBP_C.ExecuteUbergraph_Disguised_AnimBP
 // 0x0040 (0x0040 - 0x0000)
@@ -132,5 +132,5 @@ public:
 };
 DUMPER7_ASSERTS_Disguised_AnimBP_C_AnimGraph;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

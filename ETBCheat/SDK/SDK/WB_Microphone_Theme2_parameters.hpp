@@ -15,8 +15,8 @@
 #include "InputCore_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function WB_Microphone_Theme2.WB_Microphone_Theme2_C.ExecuteUbergraph_WB_Microphone_Theme2
 // 0x0010 (0x0010 - 0x0000)
@@ -102,5 +102,5 @@ public:
 };
 DUMPER7_ASSERTS_WB_Microphone_Theme2_C_OnPreviewKeyDown;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

@@ -10,16 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "AudioMixer_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "MediaAssets_structs.hpp"
+#include "AudioMixer_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class MediaAssets.MediaSource
 // 0x0058 (0x0080 - 0x0028)
@@ -53,30 +52,42 @@ public:
 };
 DUMPER7_ASSERTS_UMediaSource;
 
-// Class MediaAssets.MediaBlueprintFunctionLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UMediaBlueprintFunctionLibrary final : public UBlueprintFunctionLibrary
+// Class MediaAssets.MediaPlaylist
+// 0x0010 (0x0038 - 0x0028)
+class UMediaPlaylist final : public UObject
 {
 public:
-	static void EnumerateAudioCaptureDevices(TArray<struct FMediaCaptureDevice>* OutDevices, int32 Filter);
-	static void EnumerateVideoCaptureDevices(TArray<struct FMediaCaptureDevice>* OutDevices, int32 Filter);
-	static void EnumerateWebcamCaptureDevices(TArray<struct FMediaCaptureDevice>* OutDevices, int32 Filter);
+	TArray<class UMediaSource*>                   Items;                                             // 0x0028(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+
+public:
+	bool Add(class UMediaSource* MediaSource);
+	bool AddFile(const class FString& FilePath);
+	bool AddUrl(const class FString& URL);
+	class UMediaSource* Get(int32 Index_0);
+	class UMediaSource* GetNext(int32* InOutIndex);
+	class UMediaSource* GetPrevious(int32* InOutIndex);
+	class UMediaSource* GetRandom(int32* OutIndex);
+	void Insert(class UMediaSource* MediaSource, int32 Index_0);
+	int32 Num();
+	bool Remove(class UMediaSource* MediaSource);
+	bool RemoveAt(int32 Index_0);
+	bool Replace(int32 Index_0, class UMediaSource* Replacement);
 
 public:
 	static class UClass* StaticClass()
 	{
-		STATIC_CLASS_IMPL("MediaBlueprintFunctionLibrary")
+		STATIC_CLASS_IMPL("MediaPlaylist")
 	}
 	static const class FName& StaticName()
 	{
-		STATIC_NAME_IMPL(L"MediaBlueprintFunctionLibrary")
+		STATIC_NAME_IMPL(L"MediaPlaylist")
 	}
-	static class UMediaBlueprintFunctionLibrary* GetDefaultObj()
+	static class UMediaPlaylist* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UMediaBlueprintFunctionLibrary>();
+		return GetDefaultObjImpl<UMediaPlaylist>();
 	}
 };
-DUMPER7_ASSERTS_UMediaBlueprintFunctionLibrary;
+DUMPER7_ASSERTS_UMediaPlaylist;
 
 // Class MediaAssets.BaseMediaSource
 // 0x0008 (0x0088 - 0x0080)
@@ -128,6 +139,31 @@ public:
 	}
 };
 DUMPER7_ASSERTS_UFileMediaSource;
+
+// Class MediaAssets.MediaBlueprintFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UMediaBlueprintFunctionLibrary final : public UBlueprintFunctionLibrary
+{
+public:
+	static void EnumerateAudioCaptureDevices(TArray<struct FMediaCaptureDevice>* OutDevices, int32 Filter);
+	static void EnumerateVideoCaptureDevices(TArray<struct FMediaCaptureDevice>* OutDevices, int32 Filter);
+	static void EnumerateWebcamCaptureDevices(TArray<struct FMediaCaptureDevice>* OutDevices, int32 Filter);
+
+public:
+	static class UClass* StaticClass()
+	{
+		STATIC_CLASS_IMPL("MediaBlueprintFunctionLibrary")
+	}
+	static const class FName& StaticName()
+	{
+		STATIC_NAME_IMPL(L"MediaBlueprintFunctionLibrary")
+	}
+	static class UMediaBlueprintFunctionLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMediaBlueprintFunctionLibrary>();
+	}
+};
+DUMPER7_ASSERTS_UMediaBlueprintFunctionLibrary;
 
 // Class MediaAssets.MediaComponent
 // 0x0010 (0x00C0 - 0x00B0)
@@ -305,43 +341,6 @@ public:
 };
 DUMPER7_ASSERTS_UMediaPlayer;
 
-// Class MediaAssets.MediaPlaylist
-// 0x0010 (0x0038 - 0x0028)
-class UMediaPlaylist final : public UObject
-{
-public:
-	TArray<class UMediaSource*>                   Items;                                             // 0x0028(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-
-public:
-	bool Add(class UMediaSource* MediaSource);
-	bool AddFile(const class FString& FilePath);
-	bool AddUrl(const class FString& URL);
-	class UMediaSource* Get(int32 Index_0);
-	class UMediaSource* GetNext(int32* InOutIndex);
-	class UMediaSource* GetPrevious(int32* InOutIndex);
-	class UMediaSource* GetRandom(int32* OutIndex);
-	void Insert(class UMediaSource* MediaSource, int32 Index_0);
-	int32 Num();
-	bool Remove(class UMediaSource* MediaSource);
-	bool RemoveAt(int32 Index_0);
-	bool Replace(int32 Index_0, class UMediaSource* Replacement);
-
-public:
-	static class UClass* StaticClass()
-	{
-		STATIC_CLASS_IMPL("MediaPlaylist")
-	}
-	static const class FName& StaticName()
-	{
-		STATIC_NAME_IMPL(L"MediaPlaylist")
-	}
-	static class UMediaPlaylist* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UMediaPlaylist>();
-	}
-};
-DUMPER7_ASSERTS_UMediaPlaylist;
-
 // Class MediaAssets.MediaSoundComponent
 // 0x0160 (0x0820 - 0x06C0)
 class UMediaSoundComponent final : public USynthComponent
@@ -502,5 +501,4 @@ public:
 };
 DUMPER7_ASSERTS_UTimeSynchronizableMediaSource;
 
-}
-
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "BP_Item_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Item_Camera.BP_Item_Camera_C
 // 0x01A8 (0x0400 - 0x0258)
@@ -131,5 +130,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_Item_Camera_C;
 
-}
-
+SDK_NAMESPACE_END

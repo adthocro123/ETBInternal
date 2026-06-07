@@ -14,8 +14,7 @@
 #include "BP_Fish_Scare_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Fish_Scare.BP_Fish_Scare_C.ExecuteUbergraph_BP_Fish_Scare
 // (Final, UbergraphFunction, HasDefaults)
@@ -302,5 +301,5 @@ void ABP_Fish_Scare_C::CheckIsTarget()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

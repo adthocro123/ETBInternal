@@ -11,13 +11,12 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "EN_ItemRarity_structs.hpp"
 #include "Backrooms_structs.hpp"
 #include "Backrooms_classes.hpp"
-#include "EN_ItemRarity_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_DroppedItem.BP_DroppedItem_C
 // 0x0018 (0x0270 - 0x0258)
@@ -56,5 +55,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_DroppedItem_C;
 
-}
-
+SDK_NAMESPACE_END

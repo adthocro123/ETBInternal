@@ -14,8 +14,7 @@
 #include "VineGrow_BP_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function VineGrow_BP.VineGrow_BP_C.ExecuteUbergraph_VineGrow_BP
 // (Final, UbergraphFunction, HasDefaults)
@@ -161,5 +160,5 @@ void AVineGrow_BP_C::Get_Max_Number_Of_Segments(int32* Segments)
 		*Segments = Parms.Segments;
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "FluidForceSocketInfo_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct FluidForceDynamic.FluidForceDynamic
 // 0x0070 (0x0070 - 0x0000)
@@ -33,5 +32,4 @@ public:
 };
 DUMPER7_ASSERTS_FFluidForceDynamic;
 
-}
-
+SDK_NAMESPACE_END

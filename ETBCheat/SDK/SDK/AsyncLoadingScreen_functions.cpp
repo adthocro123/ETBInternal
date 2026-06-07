@@ -14,8 +14,7 @@
 #include "AsyncLoadingScreen_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function AsyncLoadingScreen.AsyncLoadingScreenLibrary.GetIsEnableLoadingScreen
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
@@ -160,5 +159,5 @@ void UAsyncLoadingScreenLibrary::StopLoadingScreen()
 	Func->FunctionFlags = Flgs;
 }
 
-}
 
+SDK_NAMESPACE_END

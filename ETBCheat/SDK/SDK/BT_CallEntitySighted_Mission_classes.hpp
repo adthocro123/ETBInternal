@@ -14,8 +14,7 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BT_CallEntitySighted_Mission.BT_CallEntitySighted_Mission_C
 // 0x0008 (0x00B0 - 0x00A8)
@@ -44,5 +43,4 @@ public:
 };
 DUMPER7_ASSERTS_UBT_CallEntitySighted_Mission_C;
 
-}
-
+SDK_NAMESPACE_END

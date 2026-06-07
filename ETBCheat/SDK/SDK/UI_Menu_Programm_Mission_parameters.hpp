@@ -16,11 +16,11 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function UI_Menu_Programm_Mission.UI_Menu_Programm_Mission_C.ExecuteUbergraph_UI_Menu_Programm_Mission
-// 0x0410 (0x0410 - 0x0000)
+// 0x0360 (0x0360 - 0x0000)
 struct UI_Menu_Programm_Mission_C_ExecuteUbergraph_UI_Menu_Programm_Mission final
 {
 public:
@@ -80,8 +80,6 @@ public:
 	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x02F8(0x0040)(HasGetValueTypeHash)
 	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0338(0x0010)(ReferenceParm)
 	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0348(0x0018)()
-	struct FSlateFontInfo                         CallFunc_Get_Font_Culture_Checked_OutFont;         // 0x0360(0x0058)(HasGetValueTypeHash)
-	struct FSlateFontInfo                         CallFunc_Get_Font_Culture_Checked_OutFont_1;       // 0x03B8(0x0058)(HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_UI_Menu_Programm_Mission_C_ExecuteUbergraph_UI_Menu_Programm_Mission;
 
@@ -173,5 +171,5 @@ public:
 };
 DUMPER7_ASSERTS_UI_Menu_Programm_Mission_C_Get_Text_Color;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

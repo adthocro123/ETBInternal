@@ -14,8 +14,7 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass AIC_SkinStealer.AIC_SkinStealer_C
 // 0x0038 (0x0360 - 0x0328)
@@ -55,5 +54,4 @@ public:
 };
 DUMPER7_ASSERTS_AAIC_SkinStealer_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "BP_FlareGun_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_FlareGun.BP_FlareGun_C.ExecuteUbergraph_BP_FlareGun
 // (Final, UbergraphFunction, HasDefaults)
@@ -192,5 +191,5 @@ void ABP_FlareGun_C::UseItem()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -13,8 +13,7 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum Foliage.EFoliageScaling
 // NumValues: 0x0006
@@ -114,5 +113,4 @@ public:
 };
 DUMPER7_ASSERTS_FProceduralFoliageInstance;
 
-}
-
+SDK_NAMESPACE_END

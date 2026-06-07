@@ -14,8 +14,7 @@
 #include "W_JoinServer_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function W_JoinServer.W_JoinServer_C.ExecuteUbergraph_W_JoinServer
 // (Final, UbergraphFunction, HasDefaults)
@@ -279,5 +278,5 @@ void UW_JoinServer_C::Check_Server_Name()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

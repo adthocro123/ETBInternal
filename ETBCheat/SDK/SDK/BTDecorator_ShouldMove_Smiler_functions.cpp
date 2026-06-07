@@ -14,8 +14,7 @@
 #include "BTDecorator_ShouldMove_Smiler_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BTDecorator_ShouldMove_Smiler.BTDecorator_ShouldMove_Smiler_C.PerformConditionCheckAI
 // (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
@@ -41,5 +40,5 @@ bool UBTDecorator_ShouldMove_Smiler_C::PerformConditionCheckAI(class AAIControll
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

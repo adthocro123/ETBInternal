@@ -14,8 +14,7 @@
 #include "UI_Desktop_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function UI_Desktop.UI_Desktop_C.ExecuteUbergraph_UI_Desktop
 // (Final, UbergraphFunction, HasDefaults)
@@ -583,5 +582,5 @@ struct FEventReply UUI_Desktop_C::OnKeyDown(const struct FGeometry& MyGeometry, 
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

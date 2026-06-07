@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct S_UI_AudioSettings.S_UI_AudioSettings
 // 0x0040 (0x0040 - 0x0000)
@@ -34,5 +33,4 @@ public:
 };
 DUMPER7_ASSERTS_FS_UI_AudioSettings;
 
-}
-
+SDK_NAMESPACE_END

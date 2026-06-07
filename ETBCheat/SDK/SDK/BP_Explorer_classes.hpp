@@ -14,8 +14,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Explorer.BP_Explorer_C
 // 0x0020 (0x04E0 - 0x04C0)
@@ -55,5 +54,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_Explorer_C;
 
-}
-
+SDK_NAMESPACE_END

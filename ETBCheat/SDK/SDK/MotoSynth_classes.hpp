@@ -11,13 +11,12 @@
 #include "Basic.hpp"
 
 #include "MotoSynth_structs.hpp"
-#include "AudioMixer_classes.hpp"
 #include "CoreUObject_classes.hpp"
 #include "Engine_structs.hpp"
+#include "AudioMixer_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class MotoSynth.MotoSynthPreset
 // 0x0068 (0x0090 - 0x0028)
@@ -106,5 +105,4 @@ public:
 };
 DUMPER7_ASSERTS_USynthComponentMoto;
 
-}
-
+SDK_NAMESPACE_END

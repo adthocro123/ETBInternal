@@ -14,8 +14,7 @@
 #include "JumpFlood_Component2D_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function JumpFlood_Component2D.JumpFlood_Component2D_C.ExecuteUbergraph_JumpFlood_Component2D
 // (Final, UbergraphFunction)
@@ -188,5 +187,5 @@ void UJumpFlood_Component2D_C::SingleBlurStep(class UTextureRenderTarget2D** Res
 		*Result_RT = Parms.Result_RT;
 }
 
-}
 
+SDK_NAMESPACE_END

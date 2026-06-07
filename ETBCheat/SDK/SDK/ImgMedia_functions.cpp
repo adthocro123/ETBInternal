@@ -14,8 +14,7 @@
 #include "ImgMedia_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function ImgMedia.ImgMediaSource.AddGlobalCamera
 // (Final, Native, Public, BlueprintCallable)
@@ -219,5 +218,5 @@ const class FString UImgMediaSource::GetSequencePath() const
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

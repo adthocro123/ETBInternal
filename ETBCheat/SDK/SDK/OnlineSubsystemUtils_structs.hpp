@@ -14,8 +14,7 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum OnlineSubsystemUtils.EInAppPurchaseStatus
 // NumValues: 0x0007
@@ -126,6 +125,17 @@ enum class ESpectatorReservationResult : uint8
 	ESpectatorReservationResult_MAX          = 16,
 };
 
+// ScriptStruct OnlineSubsystemUtils.InAppPurchaseProductRequest2
+// 0x0018 (0x0018 - 0x0000)
+struct FInAppPurchaseProductRequest2 final
+{
+public:
+	class FString                                 ProductIdentifier;                                 // 0x0000(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsConsumable;                                     // 0x0010(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+DUMPER7_ASSERTS_FInAppPurchaseProductRequest2;
+
 // ScriptStruct OnlineSubsystemUtils.BlueprintSessionResult
 // 0x0108 (0x0108 - 0x0000)
 struct alignas(0x08) FBlueprintSessionResult final
@@ -134,6 +144,30 @@ public:
 	uint8                                         Pad_0[0x108];                                      // 0x0000(0x0108)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 DUMPER7_ASSERTS_FBlueprintSessionResult;
+
+// ScriptStruct OnlineSubsystemUtils.PlayerReservation
+// 0x0050 (0x0050 - 0x0000)
+struct FPlayerReservation final
+{
+public:
+	struct FUniqueNetIdRepl                       UniqueId;                                          // 0x0000(0x0028)(Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ValidationStr;                                     // 0x0028(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Platform;                                          // 0x0038(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowCrossplay;                                   // 0x0048(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ElapsedTime;                                       // 0x004C(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPlayerReservation;
+
+// ScriptStruct OnlineSubsystemUtils.SpectatorReservation
+// 0x0078 (0x0078 - 0x0000)
+struct FSpectatorReservation final
+{
+public:
+	struct FUniqueNetIdRepl                       SpectatorId;                                       // 0x0000(0x0028)(Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPlayerReservation                     Spectator;                                         // 0x0028(0x0050)(Transient, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FSpectatorReservation;
 
 // ScriptStruct OnlineSubsystemUtils.InAppPurchaseReceiptInfo2
 // 0x0030 (0x0030 - 0x0000)
@@ -145,17 +179,6 @@ public:
 	class FString                                 ValidationInfo;                                    // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FInAppPurchaseReceiptInfo2;
-
-// ScriptStruct OnlineSubsystemUtils.InAppPurchaseReceiptInfo
-// 0x0030 (0x0030 - 0x0000)
-struct FInAppPurchaseReceiptInfo final
-{
-public:
-	class FString                                 ItemName;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ItemId;                                            // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ValidationInfo;                                    // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FInAppPurchaseReceiptInfo;
 
 // ScriptStruct OnlineSubsystemUtils.OnlineProxyStoreOffer
 // 0x0110 (0x0110 - 0x0000)
@@ -181,16 +204,6 @@ public:
 };
 DUMPER7_ASSERTS_FOnlineProxyStoreOffer;
 
-// ScriptStruct OnlineSubsystemUtils.PartyBeaconCrossplayPlatformMapping
-// 0x0020 (0x0020 - 0x0000)
-struct FPartyBeaconCrossplayPlatformMapping final
-{
-public:
-	class FString                                 PlatformName;                                      // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 PlatformType;                                      // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FPartyBeaconCrossplayPlatformMapping;
-
 // ScriptStruct OnlineSubsystemUtils.InAppPurchaseRestoreInfo2
 // 0x0030 (0x0030 - 0x0000)
 struct FInAppPurchaseRestoreInfo2 final
@@ -201,6 +214,17 @@ public:
 	class FString                                 ValidationInfo;                                    // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FInAppPurchaseRestoreInfo2;
+
+// ScriptStruct OnlineSubsystemUtils.InAppPurchaseReceiptInfo
+// 0x0030 (0x0030 - 0x0000)
+struct FInAppPurchaseReceiptInfo final
+{
+public:
+	class FString                                 ItemName;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ItemId;                                            // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ValidationInfo;                                    // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FInAppPurchaseReceiptInfo;
 
 // ScriptStruct OnlineSubsystemUtils.InAppPurchaseProductInfo2
 // 0x00F8 (0x00F8 - 0x0000)
@@ -223,31 +247,6 @@ public:
 };
 DUMPER7_ASSERTS_FInAppPurchaseProductInfo2;
 
-// ScriptStruct OnlineSubsystemUtils.InAppPurchaseProductRequest2
-// 0x0018 (0x0018 - 0x0000)
-struct FInAppPurchaseProductRequest2 final
-{
-public:
-	class FString                                 ProductIdentifier;                                 // 0x0000(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsConsumable;                                     // 0x0010(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-DUMPER7_ASSERTS_FInAppPurchaseProductRequest2;
-
-// ScriptStruct OnlineSubsystemUtils.PlayerReservation
-// 0x0050 (0x0050 - 0x0000)
-struct FPlayerReservation final
-{
-public:
-	struct FUniqueNetIdRepl                       UniqueId;                                          // 0x0000(0x0028)(Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ValidationStr;                                     // 0x0028(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Platform;                                          // 0x0038(0x0010)(ZeroConstructor, Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowCrossplay;                                   // 0x0048(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ElapsedTime;                                       // 0x004C(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FPlayerReservation;
-
 // ScriptStruct OnlineSubsystemUtils.PIELoginSettingsInternal
 // 0x0040 (0x0040 - 0x0000)
 struct FPIELoginSettingsInternal final
@@ -259,6 +258,16 @@ public:
 	TArray<uint8>                                 TokenBytes;                                        // 0x0030(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FPIELoginSettingsInternal;
+
+// ScriptStruct OnlineSubsystemUtils.PartyBeaconCrossplayPlatformMapping
+// 0x0020 (0x0020 - 0x0000)
+struct FPartyBeaconCrossplayPlatformMapping final
+{
+public:
+	class FString                                 PlatformName;                                      // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 PlatformType;                                      // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FPartyBeaconCrossplayPlatformMapping;
 
 // ScriptStruct OnlineSubsystemUtils.PartyReservation
 // 0x0050 (0x0050 - 0x0000)
@@ -273,15 +282,4 @@ public:
 };
 DUMPER7_ASSERTS_FPartyReservation;
 
-// ScriptStruct OnlineSubsystemUtils.SpectatorReservation
-// 0x0078 (0x0078 - 0x0000)
-struct FSpectatorReservation final
-{
-public:
-	struct FUniqueNetIdRepl                       SpectatorId;                                       // 0x0000(0x0028)(Transient, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPlayerReservation                     Spectator;                                         // 0x0028(0x0050)(Transient, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FSpectatorReservation;
-
-}
-
+SDK_NAMESPACE_END

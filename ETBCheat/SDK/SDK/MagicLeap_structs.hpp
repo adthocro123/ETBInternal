@@ -13,8 +13,7 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum MagicLeap.PurchaseType
 // NumValues: 0x0004
@@ -212,16 +211,6 @@ public:
 };
 DUMPER7_ASSERTS_FMagicLeapMeshBlockRequest;
 
-// ScriptStruct MagicLeap.MagicLeapTrackingMeshInfo
-// 0x0018 (0x0018 - 0x0000)
-struct FMagicLeapTrackingMeshInfo final
-{
-public:
-	struct FTimespan                              timestamp;                                         // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FMagicLeapMeshBlockInfo>        BlockData;                                         // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-};
-DUMPER7_ASSERTS_FMagicLeapTrackingMeshInfo;
-
 // ScriptStruct MagicLeap.MagicLeapGraphicsClientPerformanceInfo
 // 0x001C (0x001C - 0x0000)
 struct FMagicLeapGraphicsClientPerformanceInfo final
@@ -236,6 +225,16 @@ public:
 	float                                         FrameInternalDurationGPUTimeMs;                    // 0x0018(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 DUMPER7_ASSERTS_FMagicLeapGraphicsClientPerformanceInfo;
+
+// ScriptStruct MagicLeap.MagicLeapTrackingMeshInfo
+// 0x0018 (0x0018 - 0x0000)
+struct FMagicLeapTrackingMeshInfo final
+{
+public:
+	struct FTimespan                              timestamp;                                         // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FMagicLeapMeshBlockInfo>        BlockData;                                         // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+};
+DUMPER7_ASSERTS_FMagicLeapTrackingMeshInfo;
 
 // ScriptStruct MagicLeap.MagicLeapHeadTrackingState
 // 0x0008 (0x0008 - 0x0000)
@@ -260,5 +259,4 @@ public:
 };
 DUMPER7_ASSERTS_FMagicLeapResult;
 
-}
-
+SDK_NAMESPACE_END

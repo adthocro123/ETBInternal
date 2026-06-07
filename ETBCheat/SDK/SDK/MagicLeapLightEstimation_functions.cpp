@@ -14,8 +14,7 @@
 #include "MagicLeapLightEstimation_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function MagicLeapLightEstimation.MagicLeapLightEstimationFunctionLibrary.CreateTracker
 // (Final, Native, Static, Public, BlueprintCallable)
@@ -143,5 +142,5 @@ bool UMagicLeapLightEstimationFunctionLibrary::IsTrackerValid()
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct S_CameraTarget.S_CameraTarget
 // 0x0010 (0x0010 - 0x0000)
@@ -24,5 +23,4 @@ public:
 };
 DUMPER7_ASSERTS_FS_CameraTarget;
 
-}
-
+SDK_NAMESPACE_END

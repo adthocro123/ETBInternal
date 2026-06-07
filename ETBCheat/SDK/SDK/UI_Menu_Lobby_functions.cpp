@@ -14,8 +14,7 @@
 #include "UI_Menu_Lobby_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function UI_Menu_Lobby.UI_Menu_Lobby_C.ExecuteUbergraph_UI_Menu_Lobby
 // (Final, UbergraphFunction, HasDefaults)
@@ -37,17 +36,37 @@ void UUI_Menu_Lobby_C::ExecuteUbergraph_UI_Menu_Lobby(int32 EntryPoint)
 }
 
 
+// Function UI_Menu_Lobby.UI_Menu_Lobby_C.OnInitialized
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UUI_Menu_Lobby_C::OnInitialized()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UI_Menu_Lobby_C", "OnInitialized");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function UI_Menu_Lobby.UI_Menu_Lobby_C.ManualSwitchDifficulty
 // (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   DifficultyOverride                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UUI_Menu_Lobby_C::ManualSwitchDifficulty()
+void UUI_Menu_Lobby_C::ManualSwitchDifficulty(int32 DifficultyOverride)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("UI_Menu_Lobby_C", "ManualSwitchDifficulty");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::UI_Menu_Lobby_C_ManualSwitchDifficulty Parms{};
+
+	Parms.DifficultyOverride = DifficultyOverride;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -594,7 +613,7 @@ void UUI_Menu_Lobby_C::OnFailure_D1CC000D4466CEB0658C09A04E4AFDF3()
 
 
 // Function UI_Menu_Lobby.UI_Menu_Lobby_C.AllPlayersAreReady
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
@@ -610,28 +629,6 @@ bool UUI_Menu_Lobby_C::AllPlayersAreReady()
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
-}
-
-
-// Function UI_Menu_Lobby.UI_Menu_Lobby_C.AddPlayer
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FText&                      PlayerName                                             (BlueprintVisible, BlueprintReadOnly, Parm)
-// const struct FS_ConnectedPlayer&        ConnectedPlayer                                        (BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference, HasGetValueTypeHash)
-
-void UUI_Menu_Lobby_C::AddPlayer(const class FText& PlayerName, const struct FS_ConnectedPlayer& ConnectedPlayer)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Menu_Lobby_C", "AddPlayer");
-
-	Params::UI_Menu_Lobby_C_AddPlayer Parms{};
-
-	Parms.PlayerName = std::move(PlayerName);
-	Parms.ConnectedPlayer = std::move(ConnectedPlayer);
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -1067,5 +1064,73 @@ void UUI_Menu_Lobby_C::CleanUpMainSave()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
+
+// Function UI_Menu_Lobby.UI_Menu_Lobby_C.GetLobbyText
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm)
+
+class FText UUI_Menu_Lobby_C::GetLobbyText()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UI_Menu_Lobby_C", "GetLobbyText");
+
+	Params::UI_Menu_Lobby_C_GetLobbyText Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
+
+// Function UI_Menu_Lobby.UI_Menu_Lobby_C.CanStealFocus
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool UUI_Menu_Lobby_C::CanStealFocus()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UI_Menu_Lobby_C", "CanStealFocus");
+
+	Params::UI_Menu_Lobby_C_CanStealFocus Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function UI_Menu_Lobby.UI_Menu_Lobby_C.HideInviteOnSwitch
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UUI_Menu_Lobby_C::HideInviteOnSwitch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UI_Menu_Lobby_C", "HideInviteOnSwitch");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function UI_Menu_Lobby.UI_Menu_Lobby_C.ResetNewGameIndexAvoidInput
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UUI_Menu_Lobby_C::ResetNewGameIndexAvoidInput()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UI_Menu_Lobby_C", "ResetNewGameIndexAvoidInput");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+SDK_NAMESPACE_END

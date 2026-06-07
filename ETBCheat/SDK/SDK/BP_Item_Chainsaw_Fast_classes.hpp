@@ -13,8 +13,7 @@
 #include "BP_Item_Chainsaw_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Item_Chainsaw_Fast.BP_Item_Chainsaw_Fast_C
 // 0x0000 (0x02B0 - 0x02B0)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_Item_Chainsaw_Fast_C;
 
-}
-
+SDK_NAMESPACE_END

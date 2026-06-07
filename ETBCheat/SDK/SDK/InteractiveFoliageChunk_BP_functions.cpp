@@ -13,8 +13,7 @@
 #include "InteractiveFoliageChunk_BP_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function InteractiveFoliageChunk_BP.InteractiveFoliageChunk_BP_C.UserConstructionScript
 // (Event, Public, BlueprintCallable, BlueprintEvent)
@@ -29,5 +28,5 @@ void AInteractiveFoliageChunk_BP_C::UserConstructionScript()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "BP_Pool_Ladder_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Pool_Ladder.BP_Pool_Ladder_C.ExecuteUbergraph_BP_Pool_Ladder
 // (Final, UbergraphFunction, HasDefaults)
@@ -143,5 +142,5 @@ struct FVector ABP_Pool_Ladder_C::GetHeightPoint()
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedEnum 2_FFT_Resolution.2_FFT_Resolution
 // NumValues: 0x0006
@@ -26,5 +25,4 @@ enum class ETwo_FFT_Resolution : uint8
 	Two_FFT_MAX                              = 5,
 };
 
-}
-
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Fish.BP_Fish_C
 // 0x0040 (0x0500 - 0x04C0)
@@ -70,5 +69,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_Fish_C;
 
-}
-
+SDK_NAMESPACE_END

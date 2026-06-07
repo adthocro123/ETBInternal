@@ -11,14 +11,14 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
+#include "HE_LookAtLocation_structs.hpp"
 #include "AIModule_structs.hpp"
 #include "Engine_structs.hpp"
 #include "HE_LookAtLocationSeq_structs.hpp"
-#include "HE_LookAtLocation_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_Roaming_Smiler.BP_Roaming_Smiler_C.ExecuteUbergraph_BP_Roaming_Smiler
 // 0x0300 (0x0300 - 0x0000)
@@ -225,5 +225,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_Roaming_Smiler_C_SetupSmilerParticles;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

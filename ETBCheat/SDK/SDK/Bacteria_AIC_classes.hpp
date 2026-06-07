@@ -15,8 +15,7 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Bacteria_AIC.Bacteria_AIC_C
 // 0x0038 (0x0360 - 0x0328)
@@ -56,5 +55,4 @@ public:
 };
 DUMPER7_ASSERTS_ABacteria_AIC_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_AimAssistComponent.BP_AimAssistComponent_C.ExecuteUbergraph_BP_AimAssistComponent
 // 0x0040 (0x0040 - 0x0000)
@@ -62,5 +62,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_AimAssistComponent_C_CheckCanMove;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

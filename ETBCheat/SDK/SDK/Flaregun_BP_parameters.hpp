@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function Flaregun_BP.Flaregun_BP_C.ExecuteUbergraph_Flaregun_BP
 // 0x0004 (0x0004 - 0x0000)
@@ -23,5 +23,5 @@ public:
 };
 DUMPER7_ASSERTS_Flaregun_BP_C_ExecuteUbergraph_Flaregun_BP;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

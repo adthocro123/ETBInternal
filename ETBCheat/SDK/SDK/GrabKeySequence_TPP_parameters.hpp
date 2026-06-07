@@ -11,12 +11,12 @@
 #include "Basic.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function GrabKeySequence_TPP.SequenceDirector_C.ExecuteUbergraph_SequenceDirector
 // 0x00A0 (0x00A0 - 0x0000)
-struct SequenceDirector_C_ExecuteUbergraph_SequenceDirector_Grabkey final
+struct SequenceDirector_C_ExecuteUbergraph_SequenceDirector final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -37,7 +37,7 @@ public:
 	class FName                                   K2Node_CustomEvent_NotifyName;                     // 0x008C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   Temp_name_Variable;                                // 0x0094(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-//DUMPER7_ASSERTS_SequenceDirector_C_ExecuteUbergraph_SequenceDirector;
+DUMPER7_ASSERTS_SequenceDirector_C_ExecuteUbergraph_SequenceDirector;
 
 // Function GrabKeySequence_TPP.SequenceDirector_C.SkeletalMeshComponent0_Event_0
 // 0x0008 (0x0008 - 0x0000)
@@ -102,5 +102,5 @@ public:
 };
 DUMPER7_ASSERTS_SequenceDirector_C_SequenceEvent__ENTRYPOINTSequenceDirector_0;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

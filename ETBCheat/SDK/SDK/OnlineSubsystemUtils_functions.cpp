@@ -14,8 +14,7 @@
 #include "OnlineSubsystemUtils_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function OnlineSubsystemUtils.AchievementWriteCallbackProxy.WriteAchievementProgress
 // (Final, Native, Static, Public, BlueprintCallable)
@@ -667,36 +666,6 @@ class UInAppPurchaseCallbackProxy2* UInAppPurchaseCallbackProxy2::CreateProxyObj
 }
 
 
-// Function OnlineSubsystemUtils.LeaderboardQueryCallbackProxy.CreateProxyObjectForIntQuery
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             StatName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class ULeaderboardQueryCallbackProxy*   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class ULeaderboardQueryCallbackProxy* ULeaderboardQueryCallbackProxy::CreateProxyObjectForIntQuery(class APlayerController* PlayerController, class FName StatName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("LeaderboardQueryCallbackProxy", "CreateProxyObjectForIntQuery");
-
-	Params::LeaderboardQueryCallbackProxy_CreateProxyObjectForIntQuery Parms{};
-
-	Parms.PlayerController = PlayerController;
-	Parms.StatName = StatName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy.CreateProxyObjectForInAppPurchaseQuery
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -901,6 +870,36 @@ class ULeaderboardFlushCallbackProxy* ULeaderboardFlushCallbackProxy::CreateProx
 
 	Parms.PlayerController = PlayerController;
 	Parms.SessionName = SessionName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemUtils.LeaderboardQueryCallbackProxy.CreateProxyObjectForIntQuery
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             StatName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class ULeaderboardQueryCallbackProxy*   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class ULeaderboardQueryCallbackProxy* ULeaderboardQueryCallbackProxy::CreateProxyObjectForIntQuery(class APlayerController* PlayerController, class FName StatName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LeaderboardQueryCallbackProxy", "CreateProxyObjectForIntQuery");
+
+	Params::LeaderboardQueryCallbackProxy_CreateProxyObjectForIntQuery Parms{};
+
+	Parms.PlayerController = PlayerController;
+	Parms.StatName = StatName;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1593,5 +1592,5 @@ bool UVoipListenerSynthComponent::IsIdling()
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

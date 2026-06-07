@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum MagicLeapEyeTracker.EMagicLeapEyeTrackingCalibrationStatus
 // NumValues: 0x0004
@@ -46,5 +45,4 @@ public:
 };
 DUMPER7_ASSERTS_FMagicLeapEyeBlinkState;
 
-}
-
+SDK_NAMESPACE_END

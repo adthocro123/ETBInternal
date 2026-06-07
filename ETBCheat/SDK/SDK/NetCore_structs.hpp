@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // ScriptStruct NetCore.NetAnalyticsDataConfig
 // 0x000C (0x000C - 0x0000)
@@ -25,5 +24,4 @@ public:
 };
 DUMPER7_ASSERTS_FNetAnalyticsDataConfig;
 
-}
-
+SDK_NAMESPACE_END

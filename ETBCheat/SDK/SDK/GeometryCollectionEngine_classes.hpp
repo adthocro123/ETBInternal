@@ -10,16 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "CoreUObject_classes.hpp"
 #include "GeometryCollectionEngine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "Chaos_structs.hpp"
 #include "ChaosSolverEngine_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "CoreUObject_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class GeometryCollectionEngine.ChaosDestructionListener
 // 0x0220 (0x0420 - 0x0200)
@@ -498,5 +497,4 @@ public:
 };
 DUMPER7_ASSERTS_UStaticMeshSimulationComponent;
 
-}
-
+SDK_NAMESPACE_END

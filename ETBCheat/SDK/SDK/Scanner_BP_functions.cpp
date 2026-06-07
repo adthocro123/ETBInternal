@@ -14,8 +14,7 @@
 #include "Scanner_BP_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function Scanner_BP.Scanner_BP_C.ExecuteUbergraph_Scanner_BP
 // (Final, UbergraphFunction)
@@ -50,5 +49,5 @@ void AScanner_BP_C::ReceiveBeginPlay()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

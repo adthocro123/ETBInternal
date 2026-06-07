@@ -14,8 +14,7 @@
 #include "MagicLeapARPin_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function MagicLeapARPin.MagicLeapARPinComponent.AttemptPinDataRestoration
 // (Final, Native, Public, BlueprintCallable)
@@ -1021,5 +1020,5 @@ void AMagicLeapARPinRenderer::SetVisibilityOverride(const bool InVisibilityOverr
 	Func->FunctionFlags = Flgs;
 }
 
-}
 
+SDK_NAMESPACE_END

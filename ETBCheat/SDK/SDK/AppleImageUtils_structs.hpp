@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum AppleImageUtils.EAppleTextureType
 // NumValues: 0x0006
@@ -51,5 +50,4 @@ public:
 };
 DUMPER7_ASSERTS_FAppleImageUtilsImageConversionResult;
 
-}
-
+SDK_NAMESPACE_END

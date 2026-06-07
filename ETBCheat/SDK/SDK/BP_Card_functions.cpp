@@ -14,8 +14,7 @@
 #include "BP_Card_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Card.BP_Card_C.ToggleVisibility
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -37,20 +36,6 @@ void ABP_Card_C::ToggleVisibility(bool IsVisible_0)
 }
 
 
-// Function BP_Card.BP_Card_C.OnRep_PlayerName
-// (HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_Card_C::OnRep_PlayerName()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Card_C", "OnRep_PlayerName");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_Card.BP_Card_C.OnRep_IsVisible
 // (BlueprintCallable, BlueprintEvent)
 
@@ -64,5 +49,19 @@ void ABP_Card_C::OnRep_IsVisible()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
+
+// Function BP_Card.BP_Card_C.RefreshPlayerInfo
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_Card_C::RefreshPlayerInfo()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Card_C", "RefreshPlayerInfo");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
+
+SDK_NAMESPACE_END

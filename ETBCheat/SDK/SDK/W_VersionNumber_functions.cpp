@@ -14,8 +14,7 @@
 #include "W_VersionNumber_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function W_VersionNumber.W_VersionNumber_C.ExecuteUbergraph_W_VersionNumber
 // (Final, UbergraphFunction, HasDefaults)
@@ -70,5 +69,5 @@ ESlateVisibility UW_VersionNumber_C::Get_VersionText_Visibility_0()
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

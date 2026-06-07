@@ -10,19 +10,18 @@
 
 #include "Basic.hpp"
 
-#include "S_PlayerData_structs.hpp"
 #include "S_Glowstick_Data_structs.hpp"
+#include "S_PlayerData_structs.hpp"
 #include "S_LevelStats_structs.hpp"
-#include "S_UploadStatus_structs.hpp"
+#include "E_Mailbox_structs.hpp"
 #include "E_Difficulty_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "E_Mailbox_structs.hpp"
+#include "S_UploadStatus_structs.hpp"
 #include "S_TV_Data_structs.hpp"
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_New_SaveGame.BP_New_SaveGame_C
 // 0x03D8 (0x0400 - 0x0028)
@@ -164,5 +163,4 @@ public:
 };
 DUMPER7_ASSERTS_UBP_New_SaveGame_C;
 
-}
-
+SDK_NAMESPACE_END

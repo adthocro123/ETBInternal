@@ -13,8 +13,8 @@
 #include "Backrooms_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_Item.BP_Item_C.ExecuteUbergraph_BP_Item
 // 0x0098 (0x0098 - 0x0000)
@@ -90,5 +90,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_Item_C_SetMaterial;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

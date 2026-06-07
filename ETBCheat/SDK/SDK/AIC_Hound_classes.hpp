@@ -14,8 +14,7 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass AIC_Hound.AIC_Hound_C
 // 0x0038 (0x0360 - 0x0328)
@@ -57,5 +56,4 @@ public:
 };
 DUMPER7_ASSERTS_AAIC_Hound_C;
 
-}
-
+SDK_NAMESPACE_END

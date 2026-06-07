@@ -14,8 +14,7 @@
 #include "BTService_CheckVisiblePlayers_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BTService_CheckVisiblePlayers.BTService_CheckVisiblePlayers_C.ExecuteUbergraph_BTService_CheckVisiblePlayers
 // (Final, UbergraphFunction, HasDefaults)
@@ -60,5 +59,5 @@ void UBTService_CheckVisiblePlayers_C::ReceiveTickAI(class AAIController* OwnerC
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

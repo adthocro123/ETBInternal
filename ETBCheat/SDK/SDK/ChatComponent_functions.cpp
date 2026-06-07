@@ -14,8 +14,7 @@
 #include "ChatComponent_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function ChatComponent.ChatComponent_C.ExecuteUbergraph_ChatComponent
 // (Final, UbergraphFunction, HasDefaults)
@@ -178,5 +177,54 @@ void UChatComponent_C::Clear_Chat()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
+
+// Function ChatComponent.ChatComponent_C.Get All ChatComponents
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<class UChatComponent_C*>*        PlayerControllers                                      (Parm, OutParm, ContainsInstancedReference)
+
+void UChatComponent_C::Get_All_ChatComponents(TArray<class UChatComponent_C*>* PlayerControllers)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChatComponent_C", "Get All ChatComponents");
+
+	Params::ChatComponent_C_Get_All_ChatComponents Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (PlayerControllers != nullptr)
+		*PlayerControllers = std::move(Parms.PlayerControllers);
 }
 
+
+// Function ChatComponent.ChatComponent_C.GetSenderPlayerState
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FS_ChatMessage&            ChatMessage                                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, HasGetValueTypeHash)
+// class APlayerState**                    PlayerState                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool*                                   Success                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UChatComponent_C::GetSenderPlayerState(const struct FS_ChatMessage& ChatMessage, class APlayerState** PlayerState, bool* Success)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChatComponent_C", "GetSenderPlayerState");
+
+	Params::ChatComponent_C_GetSenderPlayerState Parms{};
+
+	Parms.ChatMessage = std::move(ChatMessage);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (PlayerState != nullptr)
+		*PlayerState = Parms.PlayerState;
+
+	if (Success != nullptr)
+		*Success = Parms.Success;
+}
+
+
+SDK_NAMESPACE_END

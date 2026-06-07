@@ -14,8 +14,7 @@
 #include "BP_Thermometer_Display_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Thermometer_Display.BP_Thermometer_Display_C.UserConstructionScript
 // (Event, Public, BlueprintCallable, BlueprintEvent)
@@ -148,5 +147,5 @@ void ABP_Thermometer_Display_C::SetDisplayValue(class UMeshComponent* Mesh, cons
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

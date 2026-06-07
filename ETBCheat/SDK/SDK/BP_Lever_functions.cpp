@@ -14,8 +14,7 @@
 #include "BP_Lever_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Lever.BP_Lever_C.ExecuteUbergraph_BP_Lever
 // (Final, UbergraphFunction)
@@ -84,5 +83,5 @@ void ABP_Lever_C::ToggleElevator()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

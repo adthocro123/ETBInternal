@@ -10,14 +10,13 @@
 
 #include "Basic.hpp"
 
+#include "GrassInteractionType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "GrassInteractionType_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass InteractWithGrass_BP.InteractWithGrass_BP_C
 // 0x0140 (0x0340 - 0x0200)
@@ -107,7 +106,7 @@ public:
 	void FreeUpInteractionChannel();
 	void CheckNearbyGrass();
 	void ReceiveBeginPlay();
-	void IsInDistanceToViewTarget(float InDistance, bool* isInDistance, float* currentDistance);
+	void IsInDistanceToViewTarget(float inDistance, bool* isInDistance, float* currentDistance);
 
 public:
 	static class UClass* StaticClass()
@@ -125,5 +124,4 @@ public:
 };
 DUMPER7_ASSERTS_UInteractWithGrass_BP_C;
 
-}
-
+SDK_NAMESPACE_END

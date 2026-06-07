@@ -14,8 +14,7 @@
 #include "BP_Item_Ticket_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Item_Ticket.BP_Item_Ticket_C.ExecuteUbergraph_BP_Item_Ticket
 // (Final, UbergraphFunction)
@@ -64,5 +63,5 @@ void ABP_Item_Ticket_C::UseItem()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

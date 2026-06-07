@@ -14,8 +14,7 @@
 #include "BPI_KeyboardInteraction_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPI_KeyboardInteraction.BPI_KeyboardInteraction_C.CapsLock
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -106,5 +105,5 @@ void IBPI_KeyboardInteraction_C::SetComponentReference(class UWidgetInteractionC
 	AsUObject()->ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

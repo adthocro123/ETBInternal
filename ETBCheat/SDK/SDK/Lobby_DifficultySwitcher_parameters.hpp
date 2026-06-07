@@ -13,8 +13,8 @@
 #include "SlateCore_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function Lobby_DifficultySwitcher.Lobby_DifficultySwitcher_C.ExecuteUbergraph_Lobby_DifficultySwitcher
 // 0x0008 (0x0008 - 0x0000)
@@ -70,9 +70,9 @@ public:
 };
 DUMPER7_ASSERTS_Lobby_DifficultySwitcher_C_Set_SelectedOption;
 
-// Function Lobby_DifficultySwitcher.Lobby_DifficultySwitcher_C.Setup
+// Function Lobby_DifficultySwitcher.Lobby_DifficultySwitcher_C.SetUp
 // 0x0070 (0x0070 - 0x0000)
-struct Lobby_DifficultySwitcher_C_Setup final
+struct Lobby_DifficultySwitcher_C_SetUp final
 {
 public:
 	struct FSlateFontInfo                         K2Node_MakeStruct_SlateFontInfo;                   // 0x0000(0x0058)(HasGetValueTypeHash)
@@ -80,7 +80,7 @@ public:
 	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Array_Get_Item;                           // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
-DUMPER7_ASSERTS_Lobby_DifficultySwitcher_C_Setup;
+DUMPER7_ASSERTS_Lobby_DifficultySwitcher_C_SetUp;
 
 // Function Lobby_DifficultySwitcher.Lobby_DifficultySwitcher_C.Set_OptionButtons_Visibility
 // 0x0001 (0x0001 - 0x0000)
@@ -91,5 +91,5 @@ public:
 };
 DUMPER7_ASSERTS_Lobby_DifficultySwitcher_C_Set_OptionButtons_Visibility;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

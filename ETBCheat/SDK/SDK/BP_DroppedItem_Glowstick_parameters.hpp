@@ -15,8 +15,8 @@
 #include "S_Glowstick_Data_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_DroppedItem_Glowstick.BP_DroppedItem_Glowstick_C.ExecuteUbergraph_BP_DroppedItem_Glowstick
 // 0x0270 (0x0270 - 0x0000)
@@ -49,5 +49,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_DroppedItem_Glowstick_C_ExecuteUbergraph_BP_DroppedItem_Glowstick;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

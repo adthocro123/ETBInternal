@@ -14,8 +14,7 @@
 #include "Lobby_DifficultySwitcher_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function Lobby_DifficultySwitcher.Lobby_DifficultySwitcher_C.ExecuteUbergraph_Lobby_DifficultySwitcher
 // (Final, UbergraphFunction)
@@ -139,15 +138,15 @@ void ULobby_DifficultySwitcher_C::Set_SelectedOption(const class FString& Select
 }
 
 
-// Function Lobby_DifficultySwitcher.Lobby_DifficultySwitcher_C.Setup
+// Function Lobby_DifficultySwitcher.Lobby_DifficultySwitcher_C.SetUp
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ULobby_DifficultySwitcher_C::Setup()
+void ULobby_DifficultySwitcher_C::SetUp()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Lobby_DifficultySwitcher_C", "Setup");
+		Func = Class->GetFunction("Lobby_DifficultySwitcher_C", "SetUp");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -172,5 +171,5 @@ void ULobby_DifficultySwitcher_C::Set_OptionButtons_Visibility(bool ShowOptionBu
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

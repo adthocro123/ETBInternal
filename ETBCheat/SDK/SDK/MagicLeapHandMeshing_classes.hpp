@@ -13,8 +13,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class MagicLeapHandMeshing.MagicLeapHandMeshingComponent
 // 0x0000 (0x00B0 - 0x00B0)
@@ -67,5 +66,4 @@ public:
 };
 DUMPER7_ASSERTS_UMagicLeapHandMeshingFunctionLibrary;
 
-}
-
+SDK_NAMESPACE_END

@@ -13,8 +13,7 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum MagicLeapImageTracker.EMagicLeapImageTargetOrientation
 // NumValues: 0x0003
@@ -61,5 +60,4 @@ public:
 };
 DUMPER7_ASSERTS_FMagicLeapImageTargetSettings;
 
-}
-
+SDK_NAMESPACE_END

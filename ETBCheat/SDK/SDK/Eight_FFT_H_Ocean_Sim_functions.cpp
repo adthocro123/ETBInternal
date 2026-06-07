@@ -14,8 +14,7 @@
 #include "Eight_FFT_H_Ocean_Sim_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function 8_FFT_H_Ocean_Sim.8_FFT_H_Ocean_Sim_C.ExecuteUbergraph_8_FFT_H_Ocean_Sim
 // (Final, UbergraphFunction, HasDefaults)
@@ -425,5 +424,5 @@ void AEight_FFT_H_Ocean_Sim_C::GetHeightAtLoc(class UPrimitiveComponent* C, stru
 		*L = std::move(Parms.L);
 }
 
-}
 
+SDK_NAMESPACE_END

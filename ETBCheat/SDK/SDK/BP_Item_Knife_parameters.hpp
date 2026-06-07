@@ -14,8 +14,8 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_Item_Knife.BP_Item_Knife_C.ExecuteUbergraph_BP_Item_Knife
 // 0x03F0 (0x03F0 - 0x0000)
@@ -260,5 +260,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_Item_Knife_C_OnNotifyEnd_DCFF09A94F2F9174E32D89AADA2A2E4E;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

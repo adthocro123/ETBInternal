@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function EndCutscene_UI.EndCutscene_UI_C.ExecuteUbergraph_EndCutscene_UI
 // 0x0040 (0x0040 - 0x0000)
@@ -42,5 +42,5 @@ public:
 };
 DUMPER7_ASSERTS_EndCutscene_UI_C_PreConstruct;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

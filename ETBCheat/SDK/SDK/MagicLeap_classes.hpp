@@ -10,15 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "MagicLeap_structs.hpp"
-#include "HeadMountedDisplay_classes.hpp"
-#include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "MagicLeap_structs.hpp"
+#include "Engine_classes.hpp"
+#include "HeadMountedDisplay_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class MagicLeap.MagicLeapSettings
 // 0x0008 (0x0030 - 0x0028)
@@ -308,5 +307,4 @@ public:
 };
 DUMPER7_ASSERTS_UMagicLeapRaycastFunctionLibrary;
 
-}
-
+SDK_NAMESPACE_END

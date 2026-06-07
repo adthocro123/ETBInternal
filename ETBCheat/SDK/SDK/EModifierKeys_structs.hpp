@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedEnum EModifierKeys.EModifierKeys
 // NumValues: 0x000A
@@ -30,5 +29,4 @@ enum class EModifierKeys : uint8
 	EModifierKeys_MAX                        = 9,
 };
 
-}
-
+SDK_NAMESPACE_END

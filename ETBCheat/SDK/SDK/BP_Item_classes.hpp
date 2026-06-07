@@ -15,8 +15,7 @@
 #include "Backrooms_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Item.BP_Item_C
 // 0x0038 (0x0258 - 0x0220)
@@ -58,5 +57,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_Item_C;
 
-}
-
+SDK_NAMESPACE_END

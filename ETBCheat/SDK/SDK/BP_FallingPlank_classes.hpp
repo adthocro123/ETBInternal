@@ -15,8 +15,7 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_FallingPlank.BP_FallingPlank_C
 // 0x0050 (0x0270 - 0x0220)
@@ -62,5 +61,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_FallingPlank_C;
 
-}
-
+SDK_NAMESPACE_END

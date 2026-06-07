@@ -15,8 +15,7 @@
 #include "AnimGraphRuntime_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // AnimBlueprintGeneratedClass Boat_AnimBP.Boat_AnimBP_C
 // 0x0210 (0x04D0 - 0x02C0)
@@ -52,5 +51,4 @@ public:
 };
 DUMPER7_ASSERTS_UBoat_AnimBP_C;
 
-}
-
+SDK_NAMESPACE_END

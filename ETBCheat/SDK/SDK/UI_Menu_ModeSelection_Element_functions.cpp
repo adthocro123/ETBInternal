@@ -14,8 +14,7 @@
 #include "UI_Menu_ModeSelection_Element_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function UI_Menu_ModeSelection_Element.UI_Menu_ModeSelection_Element_C.ExecuteUbergraph_UI_Menu_ModeSelection_Element
 // (Final, UbergraphFunction, HasDefaults)
@@ -242,5 +241,5 @@ struct FEventReply UUI_Menu_ModeSelection_Element_C::OnKeyDown(const struct FGeo
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

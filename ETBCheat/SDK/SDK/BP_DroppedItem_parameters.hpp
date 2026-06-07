@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "Backrooms_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "ST_Item_structs.hpp"
 #include "EN_ItemRarity_structs.hpp"
+#include "Backrooms_structs.hpp"
+#include "ST_Item_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "SlateCore_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_DroppedItem.BP_DroppedItem_C.ExecuteUbergraph_BP_DroppedItem
 // 0x01A0 (0x01A0 - 0x0000)
@@ -79,5 +79,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_DroppedItem_C_OnEventLoaded;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

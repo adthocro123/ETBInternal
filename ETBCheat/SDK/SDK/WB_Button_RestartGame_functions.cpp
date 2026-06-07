@@ -14,8 +14,7 @@
 #include "WB_Button_RestartGame_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function WB_Button_RestartGame.WB_Button_RestartGame_C.ExecuteUbergraph_WB_Button_RestartGame
 // (Final, UbergraphFunction)
@@ -50,5 +49,5 @@ void UWB_Button_RestartGame_C::BndEvt__WB_Button_Close_Button_K2Node_ComponentBo
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -13,8 +13,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_MainMenu_Shake.BP_MainMenu_Shake_C
 // 0x0000 (0x00B0 - 0x00B0)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_UBP_MainMenu_Shake_C;
 
-}
-
+SDK_NAMESPACE_END

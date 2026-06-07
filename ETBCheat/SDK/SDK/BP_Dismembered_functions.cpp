@@ -14,8 +14,7 @@
 #include "BP_Dismembered_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Dismembered.BP_Dismembered_C.ExecuteUbergraph_BP_Dismembered
 // (Final, UbergraphFunction)
@@ -78,5 +77,5 @@ void ABP_Dismembered_C::UserConstructionScript()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

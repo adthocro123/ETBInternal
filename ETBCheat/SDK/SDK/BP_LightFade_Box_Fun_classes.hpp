@@ -14,8 +14,7 @@
 #include "BP_LightFade_Box_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_LightFade_Box_Fun.BP_LightFade_Box_Fun_C
 // 0x0008 (0x0238 - 0x0230)
@@ -45,5 +44,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_LightFade_Box_Fun_C;
 
-}
-
+SDK_NAMESPACE_END

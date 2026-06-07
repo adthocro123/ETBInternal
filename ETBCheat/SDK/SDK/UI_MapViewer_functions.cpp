@@ -14,8 +14,7 @@
 #include "UI_MapViewer_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function UI_MapViewer.UI_MapViewer_C.ExecuteUbergraph_UI_MapViewer
 // (Final, UbergraphFunction, HasDefaults)
@@ -132,18 +131,4 @@ void UUI_MapViewer_C::RoundedTime(float TimeIn, class FString* Timeout)
 }
 
 
-// Function UI_MapViewer.UI_MapViewer_C.CheckFont
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void UUI_MapViewer_C::CheckFont()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_MapViewer_C", "CheckFont");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-}
-
+SDK_NAMESPACE_END

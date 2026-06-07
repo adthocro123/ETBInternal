@@ -13,8 +13,7 @@
 #include "BP_DroppedItem_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_DroppedItem_DivingHelmet.BP_DroppedItem_DivingHelmet_C
 // 0x0000 (0x0270 - 0x0270)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_DroppedItem_DivingHelmet_C;
 
-}
-
+SDK_NAMESPACE_END

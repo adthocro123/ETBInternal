@@ -13,8 +13,7 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct InstanceData.InstanceData
 // 0x0024 (0x0024 - 0x0000)
@@ -29,5 +28,4 @@ public:
 };
 DUMPER7_ASSERTS_FInstanceData;
 
-}
-
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "GeometryCache_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function GeometryCache.GeometryCacheActor.GetGeometryCacheComponent
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
@@ -691,5 +690,5 @@ void UGeometryCacheTrack_TransformGroupAnimation::SetMesh(const struct FGeometry
 	Func->FunctionFlags = Flgs;
 }
 
-}
 
+SDK_NAMESPACE_END

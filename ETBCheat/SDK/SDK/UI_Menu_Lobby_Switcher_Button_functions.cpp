@@ -14,8 +14,7 @@
 #include "UI_Menu_Lobby_Switcher_Button_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function UI_Menu_Lobby_Switcher_Button.UI_Menu_Lobby_Switcher_Button_C.ExecuteUbergraph_UI_Menu_Lobby_Switcher_Button
 // (Final, UbergraphFunction, HasDefaults)
@@ -208,5 +207,5 @@ struct FEventReply UUI_Menu_Lobby_Switcher_Button_C::OnMouseButtonUp(const struc
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

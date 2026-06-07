@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "E_Mailbox_structs.hpp"
 #include "Engine_classes.hpp"
 #include "E_Difficulty_structs.hpp"
-#include "E_Mailbox_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPFL_SaveSystem.BPFL_SaveSystem_C
 // 0x0000 (0x0028 - 0x0028)
@@ -30,7 +29,7 @@ public:
 	static void SetCurrentLevel(class FName Level, class UObject* __WorldContext);
 	static void Get_Difficulty(class UObject* __WorldContext, E_Difficulty* Difficulty);
 	static void Set_Collected_Key(class UObject* __WorldContext);
-	static void Create_New_Slot(const class FString& SlotName, const class FString& SaveType, class UObject* __WorldContext, bool* Success);
+	static void Create_New_Slot(const class FString& SaveGameName, E_Difficulty Difficulty, class UObject* __WorldContext, bool* Success, class FString* SlotName);
 	static void SetOpenedVendingMachine(class UObject* __WorldContext);
 	static void SetUnlockedMEG(class UObject* __WorldContext);
 	static void SetMEGPowerOn(class UObject* __WorldContext);
@@ -123,6 +122,7 @@ public:
 	static void SetNPCDropped(TArray<bool>& InputPin, class UObject* __WorldContext);
 	static void CalculateGameTime(TArray<class FName>& AdditionalLevelsToCount, class UObject* __WorldContext, float* Time);
 	static void SetCollectedAllPlushies(class UObject* __WorldContext);
+	static class FString GetSlotNameForSaveGameName(const class FString& SaveGameName, E_Difficulty Difficulty, class UObject* __WorldContext);
 
 public:
 	static class UClass* StaticClass()
@@ -140,5 +140,4 @@ public:
 };
 DUMPER7_ASSERTS_UBPFL_SaveSystem_C;
 
-}
-
+SDK_NAMESPACE_END

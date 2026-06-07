@@ -14,8 +14,7 @@
 #include "ClothingSystemRuntimeInterface_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum ClothingSystemRuntimeCommon.EClothMassMode
 // NumValues: 0x0005
@@ -160,5 +159,4 @@ public:
 };
 DUMPER7_ASSERTS_FClothParameterMask_Legacy;
 
-}
-
+SDK_NAMESPACE_END

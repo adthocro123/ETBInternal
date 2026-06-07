@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum BlockoutToolsPlugin.EBlockoutMaterialType
 // NumValues: 0x0003
@@ -23,5 +22,4 @@ enum class EBlockoutMaterialType : uint8
 	BlockoutMaterialType_MAX                 = 2,
 };
 
-}
-
+SDK_NAMESPACE_END

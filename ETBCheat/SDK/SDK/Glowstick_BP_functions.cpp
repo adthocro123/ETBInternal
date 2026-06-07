@@ -14,8 +14,7 @@
 #include "Glowstick_BP_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function Glowstick_BP.Glowstick_BP_C.ExecuteUbergraph_Glowstick_BP
 // (Final, UbergraphFunction)
@@ -64,5 +63,5 @@ void AGlowstick_BP_C::UserConstructionScript()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

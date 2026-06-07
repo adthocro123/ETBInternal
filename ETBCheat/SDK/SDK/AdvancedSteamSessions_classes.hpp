@@ -15,8 +15,7 @@
 #include "AdvancedSessions_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class AdvancedSteamSessions.AdvancedSteamFriendsLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -28,7 +27,7 @@ public:
 	static int32 GetFriendSteamLevel(const struct FBPUniqueNetId& UniqueNetId);
 	static struct FBPUniqueNetId GetLocalSteamIDFromSteam();
 	static class UTexture2D* GetSteamFriendAvatar(const struct FBPUniqueNetId& UniqueNetId, EBlueprintAsyncResultSwitch* Result, ESteamAvatarSize AvatarSize);
-	static void GetSteamFriendGamePlayed(const struct FBPUniqueNetId& UniqueNetId, EBlueprintResultSwitch* Result, int32* AppId);
+	static void GetSteamFriendGamePlayed(const struct FBPUniqueNetId& UniqueNetId, EBlueprintResultSwitch* Result, int32* AppID);
 	static void GetSteamGroups(TArray<struct FBPSteamGroupInfo>* SteamGroups);
 	static class FString GetSteamPersonaName(const struct FBPUniqueNetId& UniqueNetId);
 	static bool InitTextFiltering();
@@ -133,5 +132,4 @@ public:
 };
 DUMPER7_ASSERTS_USteamWSRequestUGCDetailsCallbackProxy;
 
-}
-
+SDK_NAMESPACE_END

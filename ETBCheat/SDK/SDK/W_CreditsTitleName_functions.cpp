@@ -14,8 +14,7 @@
 #include "W_CreditsTitleName_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function W_CreditsTitleName.W_CreditsTitleName_C.ExecuteUbergraph_W_CreditsTitleName
 // (Final, UbergraphFunction)
@@ -56,5 +55,5 @@ void UW_CreditsTitleName_C::PreConstruct(bool IsDesignTime)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

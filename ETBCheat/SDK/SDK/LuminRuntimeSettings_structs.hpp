@@ -13,8 +13,7 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum LuminRuntimeSettings.ELuminPrivilege
 // NumValues: 0x002C
@@ -157,5 +156,4 @@ public:
 };
 DUMPER7_ASSERTS_FLuminComponentElement;
 
-}
-
+SDK_NAMESPACE_END

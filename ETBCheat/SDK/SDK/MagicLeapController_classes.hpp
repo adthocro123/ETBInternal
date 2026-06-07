@@ -15,31 +15,30 @@
 #include "MagicLeapController_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class MagicLeapController.MagicLeapControllerFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
 class UMagicLeapControllerFunctionLibrary final : public UBlueprintFunctionLibrary
 {
 public:
-	static bool GetControllerMapping(int32 ControllerIndex, EControllerHand* hand);
+	static bool GetControllerMapping(int32 ControllerIndex, EControllerHand* Hand);
 	static EMagicLeapControllerTrackingMode GetControllerTrackingMode();
 	static EMagicLeapControllerType GetControllerType(class FName MotionSource);
 	static EControllerHand GetHandForMotionSource(class FName MotionSource);
-	static EMagicLeapControllerType GetMLControllerType(EControllerHand hand);
-	static class FName GetMotionSourceForHand(EControllerHand hand);
+	static EMagicLeapControllerType GetMLControllerType(EControllerHand Hand);
+	static class FName GetMotionSourceForHand(EControllerHand Hand);
 	static void InvertControllerMapping();
 	static bool IsMLControllerConnected(class FName MotionSource);
 	static int32 MaxSupportedMagicLeapControllers();
-	static bool PlayControllerHapticFeedback(EControllerHand hand, EMagicLeapControllerHapticPattern HapticPattern, EMagicLeapControllerHapticIntensity Intensity);
-	static bool PlayControllerLED(EControllerHand hand, EMagicLeapControllerLEDPattern LEDPattern, EMagicLeapControllerLEDColor LEDColor, float DurationInSec);
-	static bool PlayControllerLEDEffect(EControllerHand hand, EMagicLeapControllerLEDEffect LEDEffect, EMagicLeapControllerLEDSpeed LEDSpeed, EMagicLeapControllerLEDPattern LEDPattern, EMagicLeapControllerLEDColor LEDColor, float DurationInSec);
+	static bool PlayControllerHapticFeedback(EControllerHand Hand, EMagicLeapControllerHapticPattern HapticPattern, EMagicLeapControllerHapticIntensity Intensity);
+	static bool PlayControllerLED(EControllerHand Hand, EMagicLeapControllerLEDPattern LEDPattern, EMagicLeapControllerLEDColor LEDColor, float DurationInSec);
+	static bool PlayControllerLEDEffect(EControllerHand Hand, EMagicLeapControllerLEDEffect LEDEffect, EMagicLeapControllerLEDSpeed LEDSpeed, EMagicLeapControllerLEDPattern LEDPattern, EMagicLeapControllerLEDColor LEDColor, float DurationInSec);
 	static bool PlayHapticPattern(class FName MotionSource, EMagicLeapControllerHapticPattern HapticPattern, EMagicLeapControllerHapticIntensity Intensity);
 	static bool PlayLEDEffect(class FName MotionSource, EMagicLeapControllerLEDEffect LEDEffect, EMagicLeapControllerLEDSpeed LEDSpeed, EMagicLeapControllerLEDPattern LEDPattern, EMagicLeapControllerLEDColor LEDColor, float DurationInSec);
 	static bool PlayLEDPattern(class FName MotionSource, EMagicLeapControllerLEDPattern LEDPattern, EMagicLeapControllerLEDColor LEDColor, float DurationInSec);
 	static bool SetControllerTrackingMode(EMagicLeapControllerTrackingMode TrackingMode);
-	static bool SetMotionSourceForHand(EControllerHand hand, class FName MotionSource);
+	static bool SetMotionSourceForHand(EControllerHand Hand, class FName MotionSource);
 
 public:
 	static class UClass* StaticClass()
@@ -84,5 +83,4 @@ public:
 };
 DUMPER7_ASSERTS_UMagicLeapTouchpadGesturesComponent;
 
-}
-
+SDK_NAMESPACE_END

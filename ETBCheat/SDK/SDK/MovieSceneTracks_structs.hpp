@@ -15,8 +15,7 @@
 #include "Engine_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum MovieSceneTracks.MovieScene3DPathSection_Axis
 // NumValues: 0x0007
@@ -688,5 +687,4 @@ struct FMovieSceneVisibilitySectionTemplate final : public FMovieSceneBoolProper
 };
 DUMPER7_ASSERTS_FMovieSceneVisibilitySectionTemplate;
 
-}
-
+SDK_NAMESPACE_END

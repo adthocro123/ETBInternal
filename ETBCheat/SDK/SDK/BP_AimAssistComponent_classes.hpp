@@ -14,8 +14,7 @@
 #include "Backrooms_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_AimAssistComponent.BP_AimAssistComponent_C
 // 0x0008 (0x01C0 - 0x01B8)
@@ -46,5 +45,4 @@ public:
 };
 DUMPER7_ASSERTS_UBP_AimAssistComponent_C;
 
-}
-
+SDK_NAMESPACE_END

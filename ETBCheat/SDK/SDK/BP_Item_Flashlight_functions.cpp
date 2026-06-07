@@ -14,8 +14,7 @@
 #include "BP_Item_Flashlight_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Item_Flashlight.BP_Item_Flashlight_C.ExecuteUbergraph_BP_Item_Flashlight
 // (Final, UbergraphFunction, HasDefaults)
@@ -446,5 +445,5 @@ void ABP_Item_Flashlight_C::SetMaterial(bool EnabledFOV)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -14,18 +14,17 @@
 #include "UMG_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // WidgetBlueprintGeneratedClass UI_Checklist_Item.UI_Checklist_Item_C
-// 0x0030 (0x0290 - 0x0260)
+// 0x0030 (0x02A0 - 0x0270)
 class UUI_Checklist_Item_C final : public UUserWidget
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0260(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UTextBlock*                             TextBlock_54;                                      // 0x0268(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class FText                                   Name_0;                                            // 0x0270(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
-	bool                                          WasFound;                                          // 0x0288(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0270(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UTextBlock*                             TextBlock_54;                                      // 0x0278(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FText                                   Name_0;                                            // 0x0280(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
+	bool                                          WasFound;                                          // 0x0298(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
 
 public:
 	void ExecuteUbergraph_UI_Checklist_Item(int32 EntryPoint);
@@ -47,5 +46,4 @@ public:
 };
 DUMPER7_ASSERTS_UUI_Checklist_Item_C;
 
-}
-
+SDK_NAMESPACE_END

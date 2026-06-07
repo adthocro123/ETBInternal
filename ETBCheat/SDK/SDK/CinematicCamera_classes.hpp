@@ -14,8 +14,7 @@
 #include "CinematicCamera_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class CinematicCamera.CameraRig_Crane
 // 0x0030 (0x0250 - 0x0220)
@@ -159,5 +158,4 @@ public:
 };
 DUMPER7_ASSERTS_UCineCameraComponent;
 
-}
-
+SDK_NAMESPACE_END

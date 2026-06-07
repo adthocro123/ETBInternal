@@ -14,8 +14,7 @@
 #include "UI_Menu_Evaluation_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function UI_Menu_Evaluation.UI_Menu_Evaluation_C.ExecuteUbergraph_UI_Menu_Evaluation
 // (Final, UbergraphFunction, HasDefaults)
@@ -32,6 +31,48 @@ void UUI_Menu_Evaluation_C::ExecuteUbergraph_UI_Menu_Evaluation(int32 EntryPoint
 	Params::UI_Menu_Evaluation_C_ExecuteUbergraph_UI_Menu_Evaluation Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function UI_Menu_Evaluation.UI_Menu_Evaluation_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UUI_Menu_Evaluation_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UI_Menu_Evaluation_C", "PreConstruct");
+
+	Params::UI_Menu_Evaluation_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function UI_Menu_Evaluation.UI_Menu_Evaluation_C.Select
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FText&                      Name_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UUI_Menu_Evaluation_C::Select(const class FText& Name_0, int32 Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UI_Menu_Evaluation_C", "Select");
+
+	Params::UI_Menu_Evaluation_C_Select Parms{};
+
+	Parms.Name_0 = std::move(Name_0);
+	Parms.Index_0 = Index_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -88,6 +129,26 @@ void UUI_Menu_Evaluation_C::BndEvt__UI_Menu_Evaluation_UI_Menu_Evalution_XpBar_K
 	Params::UI_Menu_Evaluation_C_BndEvt__UI_Menu_Evaluation_UI_Menu_Evalution_XpBar_K2Node_ComponentBoundEvent_2_UpdateLevel__DelegateSignature Parms{};
 
 	Parms.Level = Level;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function UI_Menu_Evaluation.UI_Menu_Evaluation_C.ToggleEnabled
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsEnabled                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UUI_Menu_Evaluation_C::ToggleEnabled(bool IsEnabled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UI_Menu_Evaluation_C", "ToggleEnabled");
+
+	Params::UI_Menu_Evaluation_C_ToggleEnabled Parms{};
+
+	Parms.IsEnabled = IsEnabled;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -155,6 +216,26 @@ void UUI_Menu_Evaluation_C::BndEvt__UI_Menu_Evaluation_UI_Menu_Evalution_XpBar_K
 }
 
 
+// Function UI_Menu_Evaluation.UI_Menu_Evaluation_C.ToggleHover
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsHovered_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UUI_Menu_Evaluation_C::ToggleHover(bool IsHovered_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("UI_Menu_Evaluation_C", "ToggleHover");
+
+	Params::UI_Menu_Evaluation_C_ToggleHover Parms{};
+
+	Parms.IsHovered_0 = IsHovered_0;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function UI_Menu_Evaluation.UI_Menu_Evaluation_C.Init
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -212,68 +293,6 @@ void UUI_Menu_Evaluation_C::UpdateStatList(bool bPlayAnim)
 	Params::UI_Menu_Evaluation_C_UpdateStatList Parms{};
 
 	Parms.bPlayAnim = bPlayAnim;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function UI_Menu_Evaluation.UI_Menu_Evaluation_C.Select
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FText&                      Name_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
-// int32                                   Index_0                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UUI_Menu_Evaluation_C::Select(const class FText& Name_0, int32 Index_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Menu_Evaluation_C", "Select");
-
-	Params::UI_Menu_Evaluation_C_Select Parms{};
-
-	Parms.Name_0 = std::move(Name_0);
-	Parms.Index_0 = Index_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function UI_Menu_Evaluation.UI_Menu_Evaluation_C.ToggleEnabled
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsEnabled                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UUI_Menu_Evaluation_C::ToggleEnabled(bool IsEnabled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Menu_Evaluation_C", "ToggleEnabled");
-
-	Params::UI_Menu_Evaluation_C_ToggleEnabled Parms{};
-
-	Parms.IsEnabled = IsEnabled;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function UI_Menu_Evaluation.UI_Menu_Evaluation_C.ToggleHover
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsHovered_0                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UUI_Menu_Evaluation_C::ToggleHover(bool IsHovered_0)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("UI_Menu_Evaluation_C", "ToggleHover");
-
-	Params::UI_Menu_Evaluation_C_ToggleHover Parms{};
-
-	Parms.IsHovered_0 = IsHovered_0;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -447,5 +466,5 @@ bool UUI_Menu_Evaluation_C::Is_Settings_Menu_Open()
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

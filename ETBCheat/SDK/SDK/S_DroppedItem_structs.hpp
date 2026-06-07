@@ -13,8 +13,7 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct S_DroppedItem.S_DroppedItem
 // 0x0014 (0x0014 - 0x0000)
@@ -26,5 +25,4 @@ public:
 };
 DUMPER7_ASSERTS_FS_DroppedItem;
 
-}
-
+SDK_NAMESPACE_END

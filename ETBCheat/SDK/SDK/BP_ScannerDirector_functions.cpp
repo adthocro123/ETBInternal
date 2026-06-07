@@ -14,8 +14,7 @@
 #include "BP_ScannerDirector_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_ScannerDirector.BP_ScannerDirector_C.ExecuteUbergraph_BP_ScannerDirector
 // (Final, UbergraphFunction, HasDefaults)
@@ -162,5 +161,5 @@ void ABP_ScannerDirector_C::InitializeMaterials()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

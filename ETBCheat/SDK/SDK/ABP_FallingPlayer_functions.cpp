@@ -14,8 +14,7 @@
 #include "ABP_FallingPlayer_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function ABP_FallingPlayer.ABP_FallingPlayer_C.ExecuteUbergraph_ABP_FallingPlayer
 // (Final, UbergraphFunction)
@@ -77,5 +76,5 @@ void UABP_FallingPlayer_C::AnimGraph(struct FPoseLink* AnimGraph_0)
 		*AnimGraph_0 = std::move(Parms.AnimGraph_0);
 }
 
-}
 
+SDK_NAMESPACE_END

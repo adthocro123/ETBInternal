@@ -14,8 +14,7 @@
 #include "Spectator_UI_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function Spectator_UI.Spectator_UI_C.ExecuteUbergraph_Spectator_UI
 // (Final, UbergraphFunction)
@@ -55,8 +54,9 @@ void USpectator_UI_C::CanClose()
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const class FString&                    Name_0                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// EFancyPlatform                          Platform                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void USpectator_UI_C::SetPlayerName(const class FString& Name_0)
+void USpectator_UI_C::SetPlayerName(const class FString& Name_0, EFancyPlatform Platform)
 {
 	static class UFunction* Func = nullptr;
 
@@ -66,9 +66,34 @@ void USpectator_UI_C::SetPlayerName(const class FString& Name_0)
 	Params::Spectator_UI_C_SetPlayerName Parms{};
 
 	Parms.Name_0 = std::move(Name_0);
+	Parms.Platform = Platform;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
+
+// Function Spectator_UI.Spectator_UI_C.GetPlayerPlatformIcon
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// EFancyPlatform                          PlayerPlatform                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UTexture2D**                      PlatformIcon_0                                         (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void USpectator_UI_C::GetPlayerPlatformIcon(EFancyPlatform PlayerPlatform, class UTexture2D** PlatformIcon_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Spectator_UI_C", "GetPlayerPlatformIcon");
+
+	Params::Spectator_UI_C_GetPlayerPlatformIcon Parms{};
+
+	Parms.PlayerPlatform = PlayerPlatform;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (PlatformIcon_0 != nullptr)
+		*PlatformIcon_0 = Parms.PlatformIcon_0;
 }
 
+
+SDK_NAMESPACE_END

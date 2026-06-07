@@ -14,8 +14,7 @@
 #include "BP_Item_Knife_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Item_Knife.BP_Item_Knife_C.ExecuteUbergraph_BP_Item_Knife
 // (Final, UbergraphFunction, HasDefaults)
@@ -366,5 +365,5 @@ void ABP_Item_Knife_C::UseItem()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

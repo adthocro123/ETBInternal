@@ -15,8 +15,7 @@
 #include "Backrooms_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_DroppedItem_AlmondWater.BP_DroppedItem_AlmondWater_C
 // 0x0008 (0x0278 - 0x0270)
@@ -46,5 +45,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_DroppedItem_AlmondWater_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "UI_Invemtory_DropItem_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function UI_Invemtory_DropItem.UI_Invemtory_DropItem_C.ExecuteUbergraph_UI_Invemtory_DropItem
 // (Final, UbergraphFunction)
@@ -117,5 +116,5 @@ struct FEventReply UUI_Invemtory_DropItem_C::OnMouseButtonDown_0(const struct FG
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

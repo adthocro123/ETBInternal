@@ -14,11 +14,10 @@
 #include "W_ControllerScheme_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function W_ControllerScheme.W_ControllerScheme_C.ExecuteUbergraph_W_ControllerScheme
-// (Final, UbergraphFunction, HasDefaults)
+// (Final, UbergraphFunction)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -37,20 +36,6 @@ void UW_ControllerScheme_C::ExecuteUbergraph_W_ControllerScheme(int32 EntryPoint
 }
 
 
-// Function W_ControllerScheme.W_ControllerScheme_C.CheckFont
-// (BlueprintCallable, BlueprintEvent)
-
-void UW_ControllerScheme_C::CheckFont()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_ControllerScheme_C", "CheckFont");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function W_ControllerScheme.W_ControllerScheme_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
@@ -64,5 +49,5 @@ void UW_ControllerScheme_C::Construct()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

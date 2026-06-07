@@ -13,8 +13,8 @@
 #include "ST_Item_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function UI_Inventory_SlotPanel.UI_Inventory_SlotPanel_C.ExecuteUbergraph_UI_Inventory_SlotPanel
 // 0x00C0 (0x00C0 - 0x0000)
@@ -38,5 +38,5 @@ public:
 };
 DUMPER7_ASSERTS_UI_Inventory_SlotPanel_C_SetIcon;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "S_LevelIntel_structs.hpp"
 #include "S_LevelStats_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function UI_MapViewer.UI_MapViewer_C.ExecuteUbergraph_UI_MapViewer
 // 0x0120 (0x0120 - 0x0000)
@@ -95,16 +94,5 @@ public:
 };
 DUMPER7_ASSERTS_UI_MapViewer_C_RoundedTime;
 
-// Function UI_MapViewer.UI_MapViewer_C.CheckFont
-// 0x0070 (0x0070 - 0x0000)
-struct UI_MapViewer_C_CheckFont final
-{
-public:
-	struct FSlateFontInfo                         K2Node_MakeStruct_SlateFontInfo;                   // 0x0000(0x0058)(HasGetValueTypeHash)
-	class FString                                 CallFunc_GetCurrentCulture_ReturnValue;            // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_StrStr_ReturnValue;              // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-DUMPER7_ASSERTS_UI_MapViewer_C_CheckFont;
-
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

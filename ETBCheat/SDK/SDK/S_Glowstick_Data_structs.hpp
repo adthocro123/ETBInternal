@@ -13,8 +13,7 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct S_Glowstick_Data.S_Glowstick_Data
 // 0x0040 (0x0040 - 0x0000)
@@ -28,5 +27,4 @@ public:
 };
 DUMPER7_ASSERTS_FS_Glowstick_Data;
 
-}
-
+SDK_NAMESPACE_END

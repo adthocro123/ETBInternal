@@ -14,8 +14,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Flashlight_BP.Flashlight_BP_C
 // 0x0020 (0x0240 - 0x0220)
@@ -47,5 +46,4 @@ public:
 };
 DUMPER7_ASSERTS_AFlashlight_BP_C;
 
-}
-
+SDK_NAMESPACE_END

@@ -14,8 +14,7 @@
 #include "BP_Fish_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Fish.BP_Fish_C.ExecuteUbergraph_BP_Fish
 // (Final, UbergraphFunction, HasDefaults)
@@ -334,5 +333,5 @@ void ABP_Fish_C::CanSeePlayer(class ABPCharacter_Demo_C* Target, bool* CanSee)
 		*CanSee = Parms.CanSee;
 }
 
-}
 
+SDK_NAMESPACE_END

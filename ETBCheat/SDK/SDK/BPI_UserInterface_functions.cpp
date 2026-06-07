@@ -14,8 +14,7 @@
 #include "BPI_UserInterface_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPI_UserInterface.BPI_UserInterface_C.ToggleFocus
 // (Public, BlueprintCallable, BlueprintEvent)
@@ -76,5 +75,5 @@ void IBPI_UserInterface_C::ToggleEnabled(bool IsEnabled)
 	AsUObject()->ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

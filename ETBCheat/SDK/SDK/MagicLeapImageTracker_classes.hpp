@@ -15,8 +15,7 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class MagicLeapImageTracker.MagicLeapImageTrackerComponent
 // 0x0070 (0x0270 - 0x0200)
@@ -83,5 +82,4 @@ public:
 };
 DUMPER7_ASSERTS_UMagicLeapImageTrackerFunctionLibrary;
 
-}
-
+SDK_NAMESPACE_END

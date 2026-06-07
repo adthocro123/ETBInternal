@@ -14,8 +14,7 @@
 #include "GameEnd_UI_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function GameEnd_UI.GameEnd_UI_C.ExecuteUbergraph_GameEnd_UI
 // (Final, UbergraphFunction)
@@ -78,5 +77,5 @@ void UGameEnd_UI_C::CanClose()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

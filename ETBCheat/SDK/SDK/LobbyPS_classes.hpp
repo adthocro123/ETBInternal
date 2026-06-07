@@ -14,19 +14,18 @@
 #include "BasePS_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass LobbyPS.LobbyPS_C
-// 0x0020 (0x0380 - 0x0360)
+// 0x0020 (0x03B8 - 0x0398)
 class ALobbyPS_C final : public ABasePS_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_LobbyPS_C;                          // 0x0360(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	bool                                          CanHostForceLaunchGame_;                           // 0x0368(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_369[0x3];                                      // 0x0369(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Level;                                             // 0x036C(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	TMulticastInlineDelegate<void(int32 NewLevel)> OnLevelChanged;                                   // 0x0370(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	struct FPointerToUberGraphFrame               UberGraphFrame_LobbyPS_C;                          // 0x0398(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	bool                                          CanHostForceLaunchGame_;                           // 0x03A0(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3A1[0x3];                                      // 0x03A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Level;                                             // 0x03A4(0x0004)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
+	TMulticastInlineDelegate<void(int32 NewLevel)> OnLevelChanged;                                   // 0x03A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	void ExecuteUbergraph_LobbyPS(int32 EntryPoint);
@@ -58,5 +57,4 @@ public:
 };
 DUMPER7_ASSERTS_ALobbyPS_C;
 
-}
-
+SDK_NAMESPACE_END

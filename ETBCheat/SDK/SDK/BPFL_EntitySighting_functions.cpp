@@ -14,8 +14,7 @@
 #include "BPFL_EntitySighting_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BPFL_EntitySighting.BPFL_EntitySighting_C.CallOnEntitySighted_Controller
 // (Static, Public, BlueprintCallable, BlueprintEvent)
@@ -60,5 +59,5 @@ void UBPFL_EntitySighting_C::CallOnEntitySighted_Actor(class AActor* OwningActor
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

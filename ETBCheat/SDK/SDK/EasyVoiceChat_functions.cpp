@@ -14,8 +14,7 @@
 #include "EasyVoiceChat_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function EasyVoiceChat.VoiceFunctionLibrary.GetAllPawnsFromState
 // (Final, Native, Static, Private, BlueprintCallable, BlueprintPure)
@@ -204,5 +203,5 @@ void UVoipManagerComponent::OnVoiceGeneratedBP(const TArray<uint8>& VoiceBuffer,
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

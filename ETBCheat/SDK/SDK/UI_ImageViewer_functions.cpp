@@ -14,8 +14,7 @@
 #include "UI_ImageViewer_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function UI_ImageViewer.UI_ImageViewer_C.ExecuteUbergraph_UI_ImageViewer
 // (Final, UbergraphFunction)
@@ -56,5 +55,5 @@ void UUI_ImageViewer_C::SetImage(class UTexture2D* Texture)
 	UObject::ProcessEvent(Func, &Parms);
 }
 
-}
 
+SDK_NAMESPACE_END

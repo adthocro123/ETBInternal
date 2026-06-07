@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedEnum FluidSimSolverMode.FluidSimSolverMode
 // NumValues: 0x0003
@@ -23,5 +22,4 @@ enum class EFluidSimSolverMode : uint8
 	FluidSimSolverMode_MAX                   = 2,
 };
 
-}
-
+SDK_NAMESPACE_END

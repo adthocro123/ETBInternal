@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct S_PlayerConnectionInfo.S_PlayerConnectionInfo
 // 0x0008 (0x0008 - 0x0000)
@@ -26,5 +25,4 @@ public:
 };
 DUMPER7_ASSERTS_FS_PlayerConnectionInfo;
 
-}
-
+SDK_NAMESPACE_END

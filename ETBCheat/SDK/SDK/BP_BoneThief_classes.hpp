@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_BoneThief.BP_BoneThief_C
 // 0x0130 (0x03B0 - 0x0280)
@@ -65,6 +64,7 @@ public:
 
 public:
 	void ExecuteUbergraph_BP_BoneThief(int32 EntryPoint);
+	void Apply_Costume_To_Skeletal_Mesh(class ABPCharacter_Demo_C* InTargetPlayer);
 	void MC_SlowBreathe();
 	void MC_Montage();
 	void MC_Breathe();
@@ -98,6 +98,7 @@ public:
 	void FindClosestPlayer();
 	void OnRep_ShouldTick();
 	void OnRep_IsHidden();
+	void OnRep_TargetPlayer();
 
 public:
 	static class UClass* StaticClass()
@@ -115,5 +116,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_BoneThief_C;
 
-}
-
+SDK_NAMESPACE_END

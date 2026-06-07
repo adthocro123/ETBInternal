@@ -13,11 +13,10 @@
 #include "Engine_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_Card.BP_Card_C
-// 0x0048 (0x0268 - 0x0220)
+// 0x0040 (0x0260 - 0x0220)
 class ABP_Card_C final : public AActor
 {
 public:
@@ -28,13 +27,12 @@ public:
 	class UStaticMeshComponent*                   id_card_03_Metal_02;                               // 0x0240(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   id_card_03_Metal_01;                               // 0x0248(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0250(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class FName                                   PlayerName;                                        // 0x0258(0x0008)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsVisible;                                         // 0x0260(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor)
+	bool                                          IsVisible;                                         // 0x0258(0x0001)(Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, RepNotify, NoDestructor)
 
 public:
 	void ToggleVisibility(bool IsVisible_0);
-	void OnRep_PlayerName();
 	void OnRep_IsVisible();
+	void RefreshPlayerInfo();
 
 public:
 	static class UClass* StaticClass()
@@ -52,5 +50,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_Card_C;
 
-}
-
+SDK_NAMESPACE_END

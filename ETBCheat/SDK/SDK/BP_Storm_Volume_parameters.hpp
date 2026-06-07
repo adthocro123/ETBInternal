@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_Storm_Volume.BP_Storm_Volume_C.ExecuteUbergraph_BP_Storm_Volume
 // 0x00A0 (0x00A0 - 0x0000)
@@ -76,5 +76,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_Storm_Volume_C_ReceiveActorBeginOverlap;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

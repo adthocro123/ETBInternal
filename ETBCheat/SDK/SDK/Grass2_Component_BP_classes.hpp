@@ -13,8 +13,7 @@
 #include "INTERACTIVE_FoliageComp_BP_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass Grass2_Component_BP.Grass2_Component_BP_C
 // 0x0000 (0x0800 - 0x0800)
@@ -36,5 +35,4 @@ public:
 };
 DUMPER7_ASSERTS_UGrass2_Component_BP_C;
 
-}
-
+SDK_NAMESPACE_END

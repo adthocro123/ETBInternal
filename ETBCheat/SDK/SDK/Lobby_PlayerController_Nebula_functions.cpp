@@ -14,8 +14,7 @@
 #include "Lobby_PlayerController_Nebula_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function Lobby_PlayerController_Nebula.Lobby_PlayerController_Nebula_C.ExecuteUbergraph_Lobby_PlayerController_Nebula
 // (Final, UbergraphFunction, HasDefaults)
@@ -62,6 +61,60 @@ void ALobby_PlayerController_Nebula_C::CreateMissionCompleteScreen()
 		Func = Class->GetFunction("Lobby_PlayerController_Nebula_C", "CreateMissionCompleteScreen");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Lobby_PlayerController_Nebula.Lobby_PlayerController_Nebula_C.HandleHostConnectionLoss
+// (Net, NetReliable, NetClient, BlueprintCallable, BlueprintEvent)
+
+void ALobby_PlayerController_Nebula_C::HandleHostConnectionLoss()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Lobby_PlayerController_Nebula_C", "HandleHostConnectionLoss");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function Lobby_PlayerController_Nebula.Lobby_PlayerController_Nebula_C.ShowNonModalMessage
+// (Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// const class FText&                      Message                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void ALobby_PlayerController_Nebula_C::ShowNonModalMessage(const class FText& Message)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Lobby_PlayerController_Nebula_C", "ShowNonModalMessage");
+
+	Params::Lobby_PlayerController_Nebula_C_ShowNonModalMessage Parms{};
+
+	Parms.Message = std::move(Message);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Lobby_PlayerController_Nebula.Lobby_PlayerController_Nebula_C.ResetInputModeToDefault
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class UWidget*                          PreviousFocusedWidget                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ALobby_PlayerController_Nebula_C::ResetInputModeToDefault(class UWidget* PreviousFocusedWidget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Lobby_PlayerController_Nebula_C", "ResetInputModeToDefault");
+
+	Params::Lobby_PlayerController_Nebula_C_ResetInputModeToDefault Parms{};
+
+	Parms.PreviousFocusedWidget = PreviousFocusedWidget;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -159,20 +212,6 @@ void ALobby_PlayerController_Nebula_C::OC_Update_ServerName(const class FText& S
 }
 
 
-// Function Lobby_PlayerController_Nebula.Lobby_PlayerController_Nebula_C.StartVoice
-// (Net, NetReliable, NetClient, BlueprintCallable, BlueprintEvent)
-
-void ALobby_PlayerController_Nebula_C::StartVoice()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Lobby_PlayerController_Nebula_C", "StartVoice");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function Lobby_PlayerController_Nebula.Lobby_PlayerController_Nebula_C.OC_Launchevent
 // (Net, NetReliable, NetClient, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -253,29 +292,95 @@ void ALobby_PlayerController_Nebula_C::ReceiveBeginPlay()
 }
 
 
-// Function Lobby_PlayerController_Nebula.Lobby_PlayerController_Nebula_C.BndEvt__MP_PlayerController_VoipManager_K2Node_ComponentBoundEvent_2_PlayerStartTalking__DelegateSignature
-// (BlueprintEvent)
+// Function Lobby_PlayerController_Nebula.Lobby_PlayerController_Nebula_C.Client_RecieveVoiceData
+// (Net, NetReliable, HasOutParams, NetClient, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const TArray<uint8>&                    Voice                                                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FBPUniqueNetId&            Sender                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ALobby_PlayerController_Nebula_C::BndEvt__MP_PlayerController_VoipManager_K2Node_ComponentBoundEvent_2_PlayerStartTalking__DelegateSignature()
+void ALobby_PlayerController_Nebula_C::Client_RecieveVoiceData(const TArray<uint8>& Voice, const struct FBPUniqueNetId& Sender)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Lobby_PlayerController_Nebula_C", "BndEvt__MP_PlayerController_VoipManager_K2Node_ComponentBoundEvent_2_PlayerStartTalking__DelegateSignature");
+		Func = Class->GetFunction("Lobby_PlayerController_Nebula_C", "Client_RecieveVoiceData");
+
+	Params::Lobby_PlayerController_Nebula_C_Client_RecieveVoiceData Parms{};
+
+	Parms.Voice = std::move(Voice);
+	Parms.Sender = std::move(Sender);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Lobby_PlayerController_Nebula.Lobby_PlayerController_Nebula_C.SRV_SendVoiceData
+// (Net, NetReliable, NetServer, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const TArray<uint8>&                    CompressedVoiceData                                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FBPUniqueNetId&            Sender                                                 (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void ALobby_PlayerController_Nebula_C::SRV_SendVoiceData(const TArray<uint8>& CompressedVoiceData, const struct FBPUniqueNetId& Sender)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Lobby_PlayerController_Nebula_C", "SRV_SendVoiceData");
+
+	Params::Lobby_PlayerController_Nebula_C_SRV_SendVoiceData Parms{};
+
+	Parms.CompressedVoiceData = std::move(CompressedVoiceData);
+	Parms.Sender = std::move(Sender);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Lobby_PlayerController_Nebula.Lobby_PlayerController_Nebula_C.BndEvt__Lobby_PlayerController_Nebula_FancyVoipManager_K2Node_ComponentBoundEvent_4_VoiceGenerated__DelegateSignature
+// (HasOutParams, BlueprintEvent)
+// Parameters:
+// const TArray<uint8>&                    VoiceData                                              (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const float                             MicLevel                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ALobby_PlayerController_Nebula_C::BndEvt__Lobby_PlayerController_Nebula_FancyVoipManager_K2Node_ComponentBoundEvent_4_VoiceGenerated__DelegateSignature(const TArray<uint8>& VoiceData, const float MicLevel)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Lobby_PlayerController_Nebula_C", "BndEvt__Lobby_PlayerController_Nebula_FancyVoipManager_K2Node_ComponentBoundEvent_4_VoiceGenerated__DelegateSignature");
+
+	Params::Lobby_PlayerController_Nebula_C_BndEvt__Lobby_PlayerController_Nebula_FancyVoipManager_K2Node_ComponentBoundEvent_4_VoiceGenerated__DelegateSignature Parms{};
+
+	Parms.VoiceData = std::move(VoiceData);
+	Parms.MicLevel = MicLevel;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Lobby_PlayerController_Nebula.Lobby_PlayerController_Nebula_C.OnSuccess_0B60F19142F94648185D16851451CBE9
+// (BlueprintCallable, BlueprintEvent)
+
+void ALobby_PlayerController_Nebula_C::OnSuccess_0B60F19142F94648185D16851451CBE9()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Lobby_PlayerController_Nebula_C", "OnSuccess_0B60F19142F94648185D16851451CBE9");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Lobby_PlayerController_Nebula.Lobby_PlayerController_Nebula_C.BndEvt__MP_PlayerController_VoipManager_K2Node_ComponentBoundEvent_0_PlayerStopTalking__DelegateSignature
-// (BlueprintEvent)
+// Function Lobby_PlayerController_Nebula.Lobby_PlayerController_Nebula_C.OnFailure_0B60F19142F94648185D16851451CBE9
+// (BlueprintCallable, BlueprintEvent)
 
-void ALobby_PlayerController_Nebula_C::BndEvt__MP_PlayerController_VoipManager_K2Node_ComponentBoundEvent_0_PlayerStopTalking__DelegateSignature()
+void ALobby_PlayerController_Nebula_C::OnFailure_0B60F19142F94648185D16851451CBE9()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Lobby_PlayerController_Nebula_C", "BndEvt__MP_PlayerController_VoipManager_K2Node_ComponentBoundEvent_0_PlayerStopTalking__DelegateSignature");
+		Func = Class->GetFunction("Lobby_PlayerController_Nebula_C", "OnFailure_0B60F19142F94648185D16851451CBE9");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -298,74 +403,6 @@ void ALobby_PlayerController_Nebula_C::InpActEvt_Chat_K2Node_InputActionEvent_0(
 	Parms.Key = std::move(Key);
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Lobby_PlayerController_Nebula.Lobby_PlayerController_Nebula_C.InpActEvt_Talk_K2Node_InputActionEvent_1
-// (BlueprintEvent)
-// Parameters:
-// const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-
-void ALobby_PlayerController_Nebula_C::InpActEvt_Talk_K2Node_InputActionEvent_1(const struct FKey& Key)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Lobby_PlayerController_Nebula_C", "InpActEvt_Talk_K2Node_InputActionEvent_1");
-
-	Params::Lobby_PlayerController_Nebula_C_InpActEvt_Talk_K2Node_InputActionEvent_1 Parms{};
-
-	Parms.Key = std::move(Key);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Lobby_PlayerController_Nebula.Lobby_PlayerController_Nebula_C.InpActEvt_Talk_K2Node_InputActionEvent_2
-// (BlueprintEvent)
-// Parameters:
-// const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-
-void ALobby_PlayerController_Nebula_C::InpActEvt_Talk_K2Node_InputActionEvent_2(const struct FKey& Key)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Lobby_PlayerController_Nebula_C", "InpActEvt_Talk_K2Node_InputActionEvent_2");
-
-	Params::Lobby_PlayerController_Nebula_C_InpActEvt_Talk_K2Node_InputActionEvent_2 Parms{};
-
-	Parms.Key = std::move(Key);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Lobby_PlayerController_Nebula.Lobby_PlayerController_Nebula_C.OnSuccess_42489E9B45F87297AAF674BCE53BFF40
-// (BlueprintCallable, BlueprintEvent)
-
-void ALobby_PlayerController_Nebula_C::OnSuccess_42489E9B45F87297AAF674BCE53BFF40()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Lobby_PlayerController_Nebula_C", "OnSuccess_42489E9B45F87297AAF674BCE53BFF40");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function Lobby_PlayerController_Nebula.Lobby_PlayerController_Nebula_C.OnFailure_42489E9B45F87297AAF674BCE53BFF40
-// (BlueprintCallable, BlueprintEvent)
-
-void ALobby_PlayerController_Nebula_C::OnFailure_42489E9B45F87297AAF674BCE53BFF40()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Lobby_PlayerController_Nebula_C", "OnFailure_42489E9B45F87297AAF674BCE53BFF40");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -397,19 +434,59 @@ void ALobby_PlayerController_Nebula_C::OnFailure_5E765EE548557C3B653D32A12A136B0
 }
 
 
-// Function Lobby_PlayerController_Nebula.Lobby_PlayerController_Nebula_C.InpActEvt_Settings_K2Node_InputActionEvent_3
+// Function Lobby_PlayerController_Nebula.Lobby_PlayerController_Nebula_C.InpActEvt_Settings_K2Node_InputActionEvent_1
 // (BlueprintEvent)
 // Parameters:
 // const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
 
-void ALobby_PlayerController_Nebula_C::InpActEvt_Settings_K2Node_InputActionEvent_3(const struct FKey& Key)
+void ALobby_PlayerController_Nebula_C::InpActEvt_Settings_K2Node_InputActionEvent_1(const struct FKey& Key)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Lobby_PlayerController_Nebula_C", "InpActEvt_Settings_K2Node_InputActionEvent_3");
+		Func = Class->GetFunction("Lobby_PlayerController_Nebula_C", "InpActEvt_Settings_K2Node_InputActionEvent_1");
 
-	Params::Lobby_PlayerController_Nebula_C_InpActEvt_Settings_K2Node_InputActionEvent_3 Parms{};
+	Params::Lobby_PlayerController_Nebula_C_InpActEvt_Settings_K2Node_InputActionEvent_1 Parms{};
+
+	Parms.Key = std::move(Key);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Lobby_PlayerController_Nebula.Lobby_PlayerController_Nebula_C.InpActEvt_Talk_K2Node_InputActionEvent_2
+// (BlueprintEvent)
+// Parameters:
+// const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+
+void ALobby_PlayerController_Nebula_C::InpActEvt_Talk_K2Node_InputActionEvent_2(const struct FKey& Key)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Lobby_PlayerController_Nebula_C", "InpActEvt_Talk_K2Node_InputActionEvent_2");
+
+	Params::Lobby_PlayerController_Nebula_C_InpActEvt_Talk_K2Node_InputActionEvent_2 Parms{};
+
+	Parms.Key = std::move(Key);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Lobby_PlayerController_Nebula.Lobby_PlayerController_Nebula_C.InpActEvt_Talk_K2Node_InputActionEvent_3
+// (BlueprintEvent)
+// Parameters:
+// const struct FKey&                      Key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+
+void ALobby_PlayerController_Nebula_C::InpActEvt_Talk_K2Node_InputActionEvent_3(const struct FKey& Key)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Lobby_PlayerController_Nebula_C", "InpActEvt_Talk_K2Node_InputActionEvent_3");
+
+	Params::Lobby_PlayerController_Nebula_C_InpActEvt_Talk_K2Node_InputActionEvent_3 Parms{};
 
 	Parms.Key = std::move(Key);
 
@@ -590,7 +667,7 @@ void ALobby_PlayerController_Nebula_C::CreateLoadingScreen(const class FText& Lo
 
 
 // Function Lobby_PlayerController_Nebula.Lobby_PlayerController_Nebula_C.Update Player Speaking
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    IsSpeaking                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // const struct FBPUniqueNetId&            UniqueId                                               (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -608,20 +685,6 @@ void ALobby_PlayerController_Nebula_C::Update_Player_Speaking(bool IsSpeaking, c
 	Parms.UniqueId = std::move(UniqueId);
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Lobby_PlayerController_Nebula.Lobby_PlayerController_Nebula_C.OnRep_CanTalk
-// (BlueprintCallable, BlueprintEvent)
-
-void ALobby_PlayerController_Nebula_C::OnRep_CanTalk()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Lobby_PlayerController_Nebula_C", "OnRep_CanTalk");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -646,18 +709,28 @@ void ALobby_PlayerController_Nebula_C::IsMissionSelectOpen(bool* Yes)
 }
 
 
-// Function Lobby_PlayerController_Nebula.Lobby_PlayerController_Nebula_C.On Push to Talk Changed
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function Lobby_PlayerController_Nebula.Lobby_PlayerController_Nebula_C.GetAudioComponentForRemoteSpeaker
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    RemoteId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class UVoipAudioComponent**             Component                                              (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ALobby_PlayerController_Nebula_C::On_Push_to_Talk_Changed()
+void ALobby_PlayerController_Nebula_C::GetAudioComponentForRemoteSpeaker(const class FString& RemoteId, class UVoipAudioComponent** Component)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Lobby_PlayerController_Nebula_C", "On Push to Talk Changed");
+		Func = Class->GetFunction("Lobby_PlayerController_Nebula_C", "GetAudioComponentForRemoteSpeaker");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::Lobby_PlayerController_Nebula_C_GetAudioComponentForRemoteSpeaker Parms{};
+
+	Parms.RemoteId = std::move(RemoteId);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (Component != nullptr)
+		*Component = Parms.Component;
 }
 
-}
 
+SDK_NAMESPACE_END

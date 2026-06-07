@@ -11,8 +11,7 @@
 #include "Basic.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedEnum Dyn_Foam_O.Dyn_Foam_O
 // NumValues: 0x0004
@@ -24,5 +23,4 @@ enum class EDyn_Foam_O : uint8
 	Dyn_Foam_MAX                             = 3,
 };
 
-}
-
+SDK_NAMESPACE_END

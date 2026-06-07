@@ -14,8 +14,7 @@
 #include "UI_Menu_Button_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function UI_Menu_Button.UI_Menu_Button_C.ExecuteUbergraph_UI_Menu_Button
 // (Final, UbergraphFunction, HasDefaults)
@@ -267,5 +266,5 @@ struct FEventReply UUI_Menu_Button_C::OnPreviewKeyDown(const struct FGeometry& M
 	return Parms.ReturnValue;
 }
 
-}
 
+SDK_NAMESPACE_END

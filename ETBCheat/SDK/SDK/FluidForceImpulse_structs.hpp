@@ -14,8 +14,7 @@
 #include "FluidForceImpulseTimedEffects_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // UserDefinedStruct FluidForceImpulse.FluidForceImpulse
 // 0x0050 (0x0050 - 0x0000)
@@ -33,5 +32,4 @@ public:
 };
 DUMPER7_ASSERTS_FFluidForceImpulse;
 
-}
-
+SDK_NAMESPACE_END

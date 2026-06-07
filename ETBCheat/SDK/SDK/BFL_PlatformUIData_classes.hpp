@@ -12,19 +12,21 @@
 
 #include "Engine_classes.hpp"
 #include "Backrooms_structs.hpp"
+#include "E_InputActions_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BFL_PlatformUIData.BFL_PlatformUIData_C
 // 0x0000 (0x0028 - 0x0028)
 class UBFL_PlatformUIData_C final : public UBlueprintFunctionLibrary
 {
 public:
-	static void GetRichImageText(class FName InputName, class UObject* __WorldContext, class FText* RichText);
-	static void GetInputActionKeyName(const class FName ActionName, class UObject* __WorldContext, class FText* Name_0);
-	static void GetKeybindByInputName(class FName InputName, class UObject* __WorldContext, class FText* Name_0);
+	static void GetRichTextInputImage(E_InputActions InputName, class UObject* __WorldContext, class FText* RichText);
+	static void GetInputActionKeyName_DEPRECATED(const class FName ActionName, class UObject* __WorldContext, class FText* Name_0);
+	static void GetKeybindByInputName(E_InputActions InputName, class UObject* __WorldContext, class FText* Name_0, class FString* Platform);
+	static void GetInputPlatform(class UObject* __WorldContext, class FString* Platform);
+	static void GetRichTextImage(const class FText& DTRow, class UObject* __WorldContext, class FText* RichText);
 
 public:
 	static class UClass* StaticClass()
@@ -42,5 +44,4 @@ public:
 };
 DUMPER7_ASSERTS_UBFL_PlatformUIData_C;
 
-}
-
+SDK_NAMESPACE_END

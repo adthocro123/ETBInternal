@@ -14,8 +14,7 @@
 #include "Base_GM_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function Base_GM.Base_GM_C.ExecuteUbergraph_Base_GM
 // (Final, UbergraphFunction)
@@ -32,6 +31,26 @@ void ABase_GM_C::ExecuteUbergraph_Base_GM(int32 EntryPoint)
 	Params::Base_GM_C_ExecuteUbergraph_Base_GM Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Base_GM.Base_GM_C.HandleStartingNewPlayer
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class APlayerController*                NewPlayer                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABase_GM_C::HandleStartingNewPlayer(class APlayerController* NewPlayer)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Base_GM_C", "HandleStartingNewPlayer");
+
+	Params::Base_GM_C_HandleStartingNewPlayer Parms{};
+
+	Parms.NewPlayer = NewPlayer;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -202,5 +221,5 @@ void ABase_GM_C::GetPlayerControllerFromPlayerState(class APlayerState* PlayerSt
 		*PlayerController = Parms.PlayerController;
 }
 
-}
 
+SDK_NAMESPACE_END

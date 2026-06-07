@@ -14,8 +14,7 @@
 #include "BP_Item_Toy_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function BP_Item_Toy.BP_Item_Toy_C.ExecuteUbergraph_BP_Item_Toy
 // (Final, UbergraphFunction, HasDefaults)
@@ -178,5 +177,5 @@ void ABP_Item_Toy_C::UseItem()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

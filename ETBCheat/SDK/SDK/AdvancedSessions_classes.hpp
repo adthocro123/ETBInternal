@@ -12,13 +12,12 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "OnlineSubsystemUtils_structs.hpp"
 #include "AdvancedSessions_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "OnlineSubsystemUtils_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Class AdvancedSessions.AdvancedGameSession
 // 0x0050 (0x0288 - 0x0238)
@@ -149,8 +148,8 @@ public:
 	void OnPlayerLoginChanged(int32 PlayerNum);
 	void OnPlayerLoginStatusChanged(int32 PlayerNum, EBPLoginStatus PreviousStatus, EBPLoginStatus NewStatus, const struct FBPUniqueNetId& NewPlayerUniqueNetID);
 	void OnPlayerTalkingStateChanged(const struct FBPUniqueNetId& PlayerId, bool bIsTalking);
-	void OnSessionInviteAccepted(int32 LocalPlayerNum, const struct FBPUniqueNetId& PersonInvited, const struct FBlueprintSessionResult& SessionToJoin);
-	void OnSessionInviteReceived(int32 LocalPlayerNum, const struct FBPUniqueNetId& PersonInviting, const class FString& AppId, const struct FBlueprintSessionResult& SessionToJoin);
+	void OnSessionInviteAccepted(bool bWasSuccessful, int32 LocalPlayerNum, const struct FBPUniqueNetId& PersonInvited, const struct FBlueprintSessionResult& SessionToJoin);
+	void OnSessionInviteReceived(int32 LocalPlayerNum, const struct FBPUniqueNetId& PersonInviting, const class FString& AppID, const struct FBlueprintSessionResult& SessionToJoin);
 
 public:
 	static class UClass* StaticClass()
@@ -778,5 +777,4 @@ public:
 };
 DUMPER7_ASSERTS_UUpdateSessionCallbackProxyAdvanced;
 
-}
-
+SDK_NAMESPACE_END

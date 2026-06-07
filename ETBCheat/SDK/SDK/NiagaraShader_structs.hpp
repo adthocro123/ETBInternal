@@ -13,8 +13,7 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Enum NiagaraShader.FNiagaraCompileEventSeverity
 // NumValues: 0x0004
@@ -81,5 +80,4 @@ public:
 };
 DUMPER7_ASSERTS_FNiagaraCompileEvent;
 
-}
-
+SDK_NAMESPACE_END

@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_LightFade_Box_Fun.BP_LightFade_Box_Fun_C.ExecuteUbergraph_BP_LightFade_Box_Fun
 // 0x0058 (0x0058 - 0x0000)
@@ -59,5 +59,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_LightFade_Box_Fun_C_ReceiveActorBeginOverlap;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

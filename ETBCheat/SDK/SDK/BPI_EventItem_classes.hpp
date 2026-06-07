@@ -13,8 +13,7 @@
 #include "CoreUObject_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BPI_EventItem.BPI_EventItem_C
 // 0x0000 (0x0000 - 0x0000)
@@ -48,5 +47,4 @@ public:
 };
 DUMPER7_ASSERTS_IBPI_EventItem_C;
 
-}
-
+SDK_NAMESPACE_END

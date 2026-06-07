@@ -10,13 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "Backrooms_classes.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // BlueprintGeneratedClass BP_RopeZone.BP_RopeZone_C
 // 0x00A8 (0x02F0 - 0x0248)
@@ -63,5 +62,4 @@ public:
 };
 DUMPER7_ASSERTS_ABP_RopeZone_C;
 
-}
-
+SDK_NAMESPACE_END

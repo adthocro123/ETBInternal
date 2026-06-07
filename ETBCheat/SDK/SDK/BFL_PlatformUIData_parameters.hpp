@@ -12,42 +12,40 @@
 
 #include "Engine_structs.hpp"
 #include "Backrooms_structs.hpp"
+#include "E_InputActions_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
-// Function BFL_PlatformUIData.BFL_PlatformUIData_C.GetRichImageText
-// 0x0188 (0x0188 - 0x0000)
-struct BFL_PlatformUIData_C_GetRichImageText final
+// Function BFL_PlatformUIData.BFL_PlatformUIData_C.GetRichTextInputImage
+// 0x0160 (0x0160 - 0x0000)
+struct BFL_PlatformUIData_C_GetRichTextInputImage final
 {
 public:
-	class FName                                   InputName;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_InputActions                                InputName;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FText                                   RichText;                                          // 0x0010(0x0018)(Parm, OutParm)
 	class FString                                 PlatformSuffix;                                    // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	EFancyInputDevice                             CallFunc_GetCurrentInputDevice_ReturnValue;        // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EFancyInputDevice                             Temp_byte_Variable;                                // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_GetKeybindByInputName_Name;               // 0x0040(0x0018)()
-	class FText                                   CallFunc_GetInputActionKeyName_Name;               // 0x0058(0x0018)()
-	class FText                                   K2Node_Select_Default;                             // 0x0070(0x0018)(ConstParm)
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0088(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0098(0x0018)()
-	class FString                                 CallFunc_Replace_ReturnValue;                      // 0x00B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x00C0(0x0040)(HasGetValueTypeHash)
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x0100(0x0018)()
-	bool                                          CallFunc_IsOnAnySonyPlatform_ReturnValue;          // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x0120(0x0040)(HasGetValueTypeHash)
-	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0160(0x0010)(ReferenceParm)
-	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0170(0x0018)()
+	class FText                                   CallFunc_GetKeybindByInputName_Name;               // 0x0038(0x0018)()
+	class FString                                 CallFunc_GetKeybindByInputName_Platform;           // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchString_CmpSuccess;                    // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_61[0x7];                                       // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x0068(0x0018)()
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0080(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0090(0x0040)(HasGetValueTypeHash)
+	class FString                                 CallFunc_Replace_ReturnValue;                      // 0x00D0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue_1;          // 0x00E0(0x0018)()
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData_1;            // 0x00F8(0x0040)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0138(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0148(0x0018)()
 };
-DUMPER7_ASSERTS_BFL_PlatformUIData_C_GetRichImageText;
+DUMPER7_ASSERTS_BFL_PlatformUIData_C_GetRichTextInputImage;
 
-// Function BFL_PlatformUIData.BFL_PlatformUIData_C.GetInputActionKeyName
+// Function BFL_PlatformUIData.BFL_PlatformUIData_C.GetInputActionKeyName_DEPRECATED
 // 0x0148 (0x0148 - 0x0000)
-struct BFL_PlatformUIData_C_GetInputActionKeyName final
+struct BFL_PlatformUIData_C_GetInputActionKeyName_DEPRECATED final
 {
 public:
 	class FName                                   ActionName;                                        // 0x0000(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -94,19 +92,57 @@ public:
 	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0141(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_StartsWith_ReturnValue;                   // 0x0142(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-DUMPER7_ASSERTS_BFL_PlatformUIData_C_GetInputActionKeyName;
+DUMPER7_ASSERTS_BFL_PlatformUIData_C_GetInputActionKeyName_DEPRECATED;
 
 // Function BFL_PlatformUIData.BFL_PlatformUIData_C.GetKeybindByInputName
-// 0x0030 (0x0030 - 0x0000)
+// 0x0060 (0x0060 - 0x0000)
 struct BFL_PlatformUIData_C_GetKeybindByInputName final
 {
 public:
-	class FName                                   InputName;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_InputActions                                InputName;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FText                                   Name_0;                                            // 0x0010(0x0018)(Parm, OutParm)
-	bool                                          K2Node_SwitchName_CmpSuccess;                      // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	class FString                                 Platform;                                          // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 PlatformName;                                      // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_SwitchString_CmpSuccess;                    // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_SwitchString_CmpSuccess_1;                  // 0x004A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_SwitchString_CmpSuccess_2;                  // 0x004B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_SwitchString_CmpSuccess_3;                  // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_SwitchString_CmpSuccess_4;                  // 0x004D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_4E[0x2];                                       // 0x004E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetInputPlatform_Platform;                // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 };
 DUMPER7_ASSERTS_BFL_PlatformUIData_C_GetKeybindByInputName;
 
-}
+// Function BFL_PlatformUIData.BFL_PlatformUIData_C.GetInputPlatform
+// 0x0020 (0x0020 - 0x0000)
+struct BFL_PlatformUIData_C_GetInputPlatform final
+{
+public:
+	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 Platform;                                          // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash)
+	EFancyPlatform                                CallFunc_GetPlatform_ReturnValue;                  // 0x0018(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	EFancyInputDevice                             CallFunc_GetCurrentInputDevice_ReturnValue;        // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x001B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+DUMPER7_ASSERTS_BFL_PlatformUIData_C_GetInputPlatform;
 
+// Function BFL_PlatformUIData.BFL_PlatformUIData_C.GetRichTextImage
+// 0x00A0 (0x00A0 - 0x0000)
+struct BFL_PlatformUIData_C_GetRichTextImage final
+{
+public:
+	class FText                                   DTRow;                                             // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FText                                   RichText;                                          // 0x0020(0x0018)(Parm, OutParm)
+	struct FFormatArgumentData                    K2Node_MakeStruct_FormatArgumentData;              // 0x0038(0x0040)(HasGetValueTypeHash)
+	TArray<struct FFormatArgumentData>            K2Node_MakeArray_Array;                            // 0x0078(0x0010)(ReferenceParm)
+	class FText                                   CallFunc_Format_ReturnValue;                       // 0x0088(0x0018)()
+};
+DUMPER7_ASSERTS_BFL_PlatformUIData_C_GetRichTextImage;
+
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END

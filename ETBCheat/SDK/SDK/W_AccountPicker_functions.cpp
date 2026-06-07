@@ -14,8 +14,7 @@
 #include "W_AccountPicker_parameters.hpp"
 
 
-namespace SDK
-{
+SDK_NAMESPACE_START
 
 // Function W_AccountPicker.W_AccountPicker_C.ExecuteUbergraph_W_AccountPicker
 // (Final, UbergraphFunction, HasDefaults)
@@ -37,46 +36,6 @@ void UW_AccountPicker_C::ExecuteUbergraph_W_AccountPicker(int32 EntryPoint)
 }
 
 
-// Function W_AccountPicker.W_AccountPicker_C.UpdateAvatarName
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bIsSameUser                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-
-void UW_AccountPicker_C::UpdateAvatarName(bool bIsSameUser)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_AccountPicker_C", "UpdateAvatarName");
-
-	Params::W_AccountPicker_C_UpdateAvatarName Parms{};
-
-	Parms.bIsSameUser = bIsSameUser;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function W_AccountPicker.W_AccountPicker_C.UpdateAvatarIcon
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const struct FSlateBrush&               Icon                                                   (BlueprintVisible, BlueprintReadOnly, Parm)
-
-void UW_AccountPicker_C::UpdateAvatarIcon(const struct FSlateBrush& Icon)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("W_AccountPicker_C", "UpdateAvatarIcon");
-
-	Params::W_AccountPicker_C_UpdateAvatarIcon Parms{};
-
-	Parms.Icon = std::move(Icon);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function W_AccountPicker.W_AccountPicker_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
@@ -90,5 +49,5 @@ void UW_AccountPicker_C::Construct()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
-}
 
+SDK_NAMESPACE_END

@@ -13,8 +13,8 @@
 #include "CoreUObject_structs.hpp"
 
 
-namespace SDK::Params
-{
+SDK_NAMESPACE_START
+SDK_PARAM_NAMESPACE_START
 
 // Function BP_Rope_Trigger.BP_Rope_Trigger_C.ExecuteUbergraph_BP_Rope_Trigger
 // 0x0080 (0x0080 - 0x0000)
@@ -45,5 +45,5 @@ public:
 };
 DUMPER7_ASSERTS_BP_Rope_Trigger_C_BreakRope;
 
-}
-
+SDK_PARAM_NAMESPACE_END
+SDK_NAMESPACE_END
